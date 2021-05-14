@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Source+Sans+Pro:wght@200;300&display=swap");
+
+/* ---------- elements ------------ */ 
+
+html, 
+body {
+  background-color: #ffffff;
+
+  /* Height and width fallback for older browsers. */
+  height: 100%;
+  width: 100%;
+
+  /* Set the height to match that of the viewport. */
+  height: 100vh;
+
+  /* Remove any browser-default margins. */
+  margin: 0;
+}
+

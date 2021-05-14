@@ -1,0 +1,555 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.backgroundImage {
+  background-image: url("./images/tribar-md.png");
+  background-color: white;
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin: 1rem 1rem auto 1rem;
+}
+.navbarContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navLinkContainer {
+  background-color: white;
+}
+.navLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.5rem;
+  transition: all 1s;
+}
+.navLink:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+
+; /* Footer */
+footer {
+  margin: 0;
+}
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerLinkContainer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.footerGitHubLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black; 
+  transition: all 1s;
+}
+.footerGitHubLink:hover {
+  background-color: rgb(166, 230, 255);
+}
+.footerLinkedInLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black; 
+  transition: all 1s;
+}
+.footerLinkedInLink:hover {
+  background-color: rgb(255, 212, 155);
+}
+.footerMyCVLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black; 
+  transition: all 1s;
+}
+.footerMyCVLink:hover {
+  background-color: rgb(188, 255, 161);
+}
+
+
+/* Page name */
+@keyframes scrollPageNameIn {
+  from {margin-left: -15%;}
+  to {margin-left: 0;}
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.pageNameContainer {
+  text-align: right;
+  width: 12rem;
+  background-color: rgb(240, 240, 240);
+  padding: 0.3rem 2rem 0.3rem 1rem;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 4rem;
+  animation: scrollPageNameIn 2s forwards;
+}
+.pageNameContainer h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* Home page */
+@keyframes fadeLogoIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.homePageContainer {
+  animation: fadeLogoIn 3s forwards;
+}
+
+/* "WELCOME" */
+.welcomeText h1 {
+  font-size: 4.7rem; 
+}
+@keyframes fadeWelcomeTextIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.welcomeText {
+  text-align: center;
+  margin-top: 0.2rem;
+  animation: fadeWelcomeTextIn 4.5s forwards;
+  }
+
+/* "to my" */
+.toMyText h4 {
+  font-size: 2.5rem;
+}
+@media (min-device-width: 20em) {
+  @keyframes scrollToMyTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .toMyText {
+    margin-top: 0.3rem;  
+    margin-left: 25%;
+    animation: scrollToMyTextIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollToMyTextIn {
+    from {margin-left: -10%;}
+    to {margin-left: 25%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .toMyText {
+    margin-top: 0.3rem;  
+    animation: scrollToMyTextIn 2s forwards;
+  }
+}
+
+/* "creative" */
+.creativeText h2,
+.galleryText h2 {
+  font-size: 4rem;
+}
+@media (min-device-width: 20em) {
+  @keyframes scrollCreativeTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .creativeText {
+    margin-top: 0.3rem;
+    margin-left: 36%;
+    animation: scrollCreativeTextIn 1.6s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollCreativeTextIn {
+    from {margin-left: -15%;}
+    to {margin-left: 36%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .creativeText {
+    margin-top: 0.3rem;
+    animation: scrollCreativeTextIn 1.6s forwards;
+  }
+}
+
+/* "gallery" */
+@media (min-device-width: 20em) {
+  @keyframes scrollGalleryTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .galleryText {
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+    margin-left: 47%;
+    animation: scrollGalleryTextIn 1.4s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollGalleryTextIn {
+    from {margin-left: -20%;}
+    to {margin-left: 47%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .galleryText {
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+    animation: scrollGalleryTextIn 1.4s forwards;
+  }
+}
+
+
+/* About page */
+@media (min-device-width: 20em) {
+  @keyframes scrollDetailsContainerIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .aboutDetailsContainer {
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 8.3rem;
+    margin-left: 2%;
+    animation: scrollDetailsContainerIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollDetailsContainerIn {
+    from {margin-left: -150%;}
+    to {margin-left: 2%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .aboutDetailsContainer {
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 8.3rem;
+    animation: scrollDetailsContainerIn 2s forwards;
+  }
+}
+.aboutDetailsText {
+  padding: 0.5rem 2rem;
+  border: 1px solid black;
+  margin: 2rem 1rem;
+  background-color: rgb(245, 245, 245);
+}
+.aboutDetailsText h2 {
+  margin-top: 0rem;
+}
+.aboutDetailsText p {
+  font-size: 1.1rem;
+}
+.aboutPicture {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.aboutPicture img {
+  width: 19rem;
+}
+
+
+/* Projects page */
+@media (min-device-width: 20em) {
+  @keyframes scrollprojectsContainerIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .projectsContainer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2%;
+    animation: scrollprojectsContainerIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollprojectsContainerIn {
+    from {margin-left: -350%;}
+    to {margin-left: 2%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .projectsContainer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+    animation: scrollprojectsContainerIn 2s forwards;
+  }
+}
+.projectDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  padding: 0.3rem;
+  border: 1px solid black;
+  margin: 2rem;
+}
+.projectDetailsContainer img {
+  margin-top: 1rem;
+}
+.projectDetailsContainer img,
+.projectDetailsContainer p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.projectLinksContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.projectTryItLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 1s;
+}
+.projectTryItLink:hover {
+  background-color: rgb(188, 255, 161);
+}
+.gitHubLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 1s;
+}
+.gitHubLink:hover {
+  background-color: rgb(166, 230, 255);
+}
+
+
+/* Contact page */
+@keyframes scrollContactContainerIn {
+  from {margin-left: -50%;}
+  to {margin-left: 20%;}
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  text-align: center;
+  flex-direction: column;
+  width: 30%;
+  background-color: rgb(240, 240, 240);
+  padding-top: .5rem;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-bottom: 2.9rem;
+  animation: scrollContactContainerIn 2s forwards;
+}
+.contactContainer div h2,
+.contactContainer div h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.contactWaysContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+.contactWaysContainer div {
+  padding-top: 1rem;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.contactEmailContainer h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.contactPhoneContainer h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+form h3 {
+  padding-bottom: 1rem;
+}
+form input {
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  width: 100%;
+}
+form textarea {
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+form button {
+  background-color: white;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  transition: all 1s;
+}
+form button:hover {
+  background-color: rgb(188, 255, 161);
+}
+
+
+/* Not found page */
+.notFoundPageContainer {
+  animation: fadeLogoIn 3s forwards;
+}
+
+/* "something" */
+.somethingText h3 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+@media (min-device-width: 20em) {
+  @keyframes scrollSomethingTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .somethingText {
+    margin-top: 0.3rem;  
+    margin-left: 25%;
+    animation: scrollSomethingIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollSomethingTextIn {
+    from {margin-left: -10%;}
+    to {margin-left: 25%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .somethingText {
+    margin-top: 0.3rem;  
+    animation: scrollSomethingTextIn 2s forwards;
+  }
+}
+
+/* "went" */
+.wentText h4 {
+  font-size: 3.5rem;
+}
+@media (min-device-width: 20em) {
+  @keyframes scrollWentTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .wentText {
+    margin-top: 0.3rem;
+    margin-left: 35%;
+    animation: scrollWentTextIn 1.6s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollWentTextIn {
+    from {margin-left: -15%;}
+    to {margin-left: 35%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .wentText {
+    margin-top: 0.3rem;
+    animation: scrollWentTextIn 1.6s forwards;
+  }
+}
+
+/* "wrong" */
+.wrongText h2 {
+  font-size: 5rem;
+}
+@media (min-device-width: 20em) {
+  @keyframes scrollWrongTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .wrongText {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    margin-left: 47%;
+    animation: scrollWrongTextIn 1.4s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollWrongTextIn {
+    from {margin-left: -20%;}
+    to {margin-left: 47%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .wrongText {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    animation: scrollWrongTextIn 1.4s forwards;
+  }
+}
+.notFoundGetBackContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  margin-bottom: 3.2rem;
+}
+.notFoundGetBackLink {
+  text-decoration: none;
+  background-color:white;
+  color: black;
+  padding: 0.3rem;
+  border: 1px solid black; 
+  transition: all 1s;
+}
+.notFoundGetBackLink:hover {
+  background-color: rgb(188, 255, 161);
+}
