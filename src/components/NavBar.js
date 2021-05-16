@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/tribar-sm.png";
 
 function NavBar(props) {
   // const myRef = React.createRef();
@@ -7,6 +8,9 @@ function NavBar(props) {
     <>
       <nav>
         <div className="navbarContainer">
+          <div>
+            <img src={logo} alt="app logo" class="logo"/>
+          </div>
           <div className="navLinkContainer">
             <Link to={{ pathname: "/" }} class="navLink"> Home </Link>
           </div>

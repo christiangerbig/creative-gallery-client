@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500;600;700&family=Noto+Serif:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -31,6 +33,9 @@ nav {
   justify-content: flex-end;
   align-items: center;
 }
+.logo {
+  padding-right: 0.4rem;
+}
 .navLinkContainer {
   background-color: white;
 }
@@ -38,8 +43,8 @@ nav {
   text-decoration: none;
   background-color:white;
   color: black;
-  padding: 0.5rem;
-  transition: all 1s;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.5s;
 }
 .navLink:hover {
   background-color: rgb(230, 230, 230);
@@ -55,42 +60,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.footerLinkContainer {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-.footerGitHubLink {
-  text-decoration: none;
-  background-color:white;
-  color: black;
-  padding: 0.3rem;
-  border: 1px solid black; 
-  transition: all 1s;
-}
-.footerGitHubLink:hover {
-  background-color: rgb(166, 230, 255);
-}
-.footerLinkedInLink {
-  text-decoration: none;
-  background-color:white;
-  color: black;
-  padding: 0.3rem;
-  border: 1px solid black; 
-  transition: all 1s;
-}
-.footerLinkedInLink:hover {
-  background-color: rgb(255, 212, 155);
-}
-.footerMyCVLink {
-  text-decoration: none;
-  background-color:white;
-  color: black;
-  padding: 0.3rem;
-  border: 1px solid black; 
-  transition: all 1s;
-}
-.footerMyCVLink:hover {
-  background-color: rgb(188, 255, 161);
+.footerContainer p {
+  padding-right: 0.7rem;
 }
 
 
@@ -104,11 +75,9 @@ footer {
 .pageNameContainer {
   text-align: right;
   width: 12rem;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(230, 230, 166);
   padding: 0.3rem 2rem 0.3rem 1rem;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+
   margin-top: 4rem;
   animation: scrollPageNameIn 2s forwards;
 }
@@ -128,9 +97,6 @@ footer {
 }
 
 /* "WELCOME" */
-.welcomeText h1 {
-  font-size: 4.7rem; 
-}
 @keyframes fadeWelcomeTextIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -139,12 +105,12 @@ footer {
   text-align: center;
   margin-top: 0.2rem;
   animation: fadeWelcomeTextIn 4.5s forwards;
-  }
+}
+.welcomeText h1 {
+  font-size: 4.7rem; 
+}
 
 /* "to my" */
-.toMyText h4 {
-  font-size: 2.5rem;
-}
 @media (min-device-width: 20em) {
   @keyframes scrollToMyTextIn {
     from {opacity: 0;}
@@ -168,12 +134,11 @@ footer {
     animation: scrollToMyTextIn 2s forwards;
   }
 }
+.toMyText h4 {
+  font-size: 2.5rem;
+}
 
 /* "creative" */
-.creativeText h2,
-.galleryText h2 {
-  font-size: 4rem;
-}
 @media (min-device-width: 20em) {
   @keyframes scrollCreativeTextIn {
     from {opacity: 0;}
@@ -197,6 +162,10 @@ footer {
     animation: scrollCreativeTextIn 1.6s forwards;
   }
 }
+.creativeText h2,
+.galleryText h2 {
+  font-size: 4rem;
+}
 
 /* "gallery" */
 @media (min-device-width: 20em) {
@@ -205,8 +174,9 @@ footer {
     to {opacity: 1;}
   }
   .galleryText {
+    padding-bottom: 0.3rem;
     margin-top: 0.3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     margin-left: 47%;
     animation: scrollGalleryTextIn 1.4s forwards;
   }
@@ -219,8 +189,9 @@ footer {
     to {opacity: 1;}
   }
   .galleryText {
+    padding-bottom: 0.3rem;
     margin-top: 0.3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     animation: scrollGalleryTextIn 1.4s forwards;
   }
 }
@@ -238,7 +209,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    margin-bottom: 8.3rem;
+    margin-bottom: 0.1rem;
     margin-left: 2%;
     animation: scrollDetailsContainerIn 2s forwards;
   }
@@ -256,15 +227,15 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    margin-bottom: 8.3rem;
+    margin-bottom: 8.7rem;
     animation: scrollDetailsContainerIn 2s forwards;
   }
 }
 .aboutDetailsText {
+  font-family: Source Sans Pro;
   padding: 0.5rem 2rem;
-  border: 1px solid black;
   margin: 2rem 1rem;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(240, 240, 240);
 }
 .aboutDetailsText h2 {
   margin-top: 0rem;
@@ -278,6 +249,52 @@ footer {
 }
 .aboutPicture img {
   width: 19rem;
+}
+.aboutLinksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.aboutGitHubLink {
+  text-decoration: none;
+  font-weight: 600;
+  background-color:white;
+  color: black;
+  padding: 0.3rem 0.8rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s;
+}
+.aboutGitHubLink:hover {
+  background-color: rgb(166, 230, 255);
+}
+.aboutLinkedInLink {
+  text-decoration: none;
+  font-weight: 600;
+  background-color:white;
+  color: black;
+  padding: 0.3rem 0.7rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s;
+}
+.aboutLinkedInLink:hover {
+  background-color: rgb(255, 212, 155);
+}
+.aboutMyCVLink {
+  text-decoration: none;
+  font-weight: 600;
+  background-color:white;
+  color: black;
+  padding: 0.3rem 0.8rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s;
+}
+.aboutMyCVLink:hover {
+  background-color: rgb(188, 255, 161);
 }
 
 
@@ -293,7 +310,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.1rem;
     margin-left: 2%;
     animation: scrollprojectsContainerIn 2s forwards;
   }
@@ -311,11 +328,12 @@ footer {
     justify-content: space-evenly;
     align-items: start;
     margin-top: 0.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.1rem;
     animation: scrollprojectsContainerIn 2s forwards;
   }
 }
 .projectDetailsContainer {
+  font-family: Source Sans Pro;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,13 +341,12 @@ footer {
   text-align: center;
   background-color: rgb(240, 240, 240);
   padding: 0.3rem;
-  border: 1px solid black;
-  margin: 2rem;
+  margin: 3rem 2rem 1.8rem 2rem;
 }
-.projectDetailsContainer img {
+.projectDetailsContainer video {
   margin-top: 1rem;
 }
-.projectDetailsContainer img,
+.projectDetailsContainer video,
 .projectDetailsContainer p {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -337,6 +354,7 @@ footer {
 .projectLinksContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -344,8 +362,7 @@ footer {
   text-decoration: none;
   background-color:white;
   color: black;
-  padding: 0.3rem;
-  border: 1px solid black;
+  padding: 0.3rem 0.8rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   transition: all 1s;
@@ -353,17 +370,16 @@ footer {
 .projectTryItLink:hover {
   background-color: rgb(188, 255, 161);
 }
-.gitHubLink {
+.projectGitHubLink {
   text-decoration: none;
   background-color:white;
   color: black;
-  padding: 0.3rem;
-  border: 1px solid black;
+  padding: 0.3rem 0.8rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   transition: all 1s;
 }
-.gitHubLink:hover {
+.projectGitHubLink:hover {
   background-color: rgb(166, 230, 255);
 }
 
@@ -376,9 +392,9 @@ footer {
   to {opacity: 1;}
 }
 .contactContainer {
+  font-family: Source Sans Pro;
   display: flex;
   justify-content: center;
-  border: 1px solid black;
   text-align: center;
   flex-direction: column;
   width: 30%;
@@ -386,9 +402,9 @@ footer {
   padding-top: .5rem;
   padding-right: 15%;
   padding-left: 15%;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-right: auto;
-  margin-bottom: 2.9rem;
+  margin-bottom: 2.4rem;
   animation: scrollContactContainerIn 2s forwards;
 }
 .contactContainer div h2,
@@ -403,30 +419,32 @@ footer {
   flex-flow: wrap;
 }
 .contactWaysContainer div {
-  padding-top: 1rem;
+  padding-top: 0rem;
   padding-right: 5%;
   padding-left: 5%;
 }
 .contactEmailContainer h4 {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   margin-bottom: 0.7rem;
 }
 .contactPhoneContainer h4 {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   margin-bottom: 0.7rem;
 }
 form h3 {
   padding-bottom: 1rem;
 }
 form input {
-  margin-bottom: 1rem;
-  padding: 0.3rem;
   width: 100%;
+  padding: 0.3rem;
+  border: none;
+  margin-bottom: 1rem;
 }
 form textarea {
-  margin-bottom: 1rem;
-  padding: 0.3rem;
   width: 100%;
+  padding: 0.3rem;
+  border: none;
+  margin-bottom: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -435,9 +453,10 @@ form textarea {
 }
 form button {
   background-color: white;
-  padding: 0.4rem;
-  margin-bottom: 1rem;
-  transition: all 1s;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  margin-bottom: 1.5rem;
+  transition: all 0.5s;
 }
 form button:hover {
   background-color: rgb(188, 255, 161);
@@ -450,10 +469,6 @@ form button:hover {
 }
 
 /* "something" */
-.somethingText h3 {
-  margin-top: 3rem;
-  font-size: 2.5rem;
-}
 @media (min-device-width: 20em) {
   @keyframes scrollSomethingTextIn {
     from {opacity: 0;}
@@ -477,11 +492,12 @@ form button:hover {
     animation: scrollSomethingTextIn 2s forwards;
   }
 }
+.somethingText h3 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
 
 /* "went" */
-.wentText h4 {
-  font-size: 3.5rem;
-}
 @media (min-device-width: 20em) {
   @keyframes scrollWentTextIn {
     from {opacity: 0;}
@@ -505,11 +521,11 @@ form button:hover {
     animation: scrollWentTextIn 1.6s forwards;
   }
 }
+.wentText h4 {
+  font-size: 3.5rem;
+}
 
 /* "wrong" */
-.wrongText h2 {
-  font-size: 5rem;
-}
 @media (min-device-width: 20em) {
   @keyframes scrollWrongTextIn {
     from {opacity: 0;}
@@ -535,6 +551,9 @@ form button:hover {
     animation: scrollWrongTextIn 1.4s forwards;
   }
 }
+.wrongText h2 {
+  font-size: 5rem;
+}
 .notFoundGetBackContainer {
   display: flex;
   justify-content: center;
@@ -547,8 +566,9 @@ form button:hover {
   background-color:white;
   color: black;
   padding: 0.3rem;
-  border: 1px solid black; 
-  transition: all 1s;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  transition: all 0.5s;
 }
 .notFoundGetBackLink:hover {
   background-color: rgb(188, 255, 161);

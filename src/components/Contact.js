@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeSquare, faMobileAlt, faPen } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,11 +9,14 @@ class Contact extends Component {
       <>
         <div className="contactPageContainer">
           <div className="pageNameContainer">
-            <h2> Contact </h2>
+            <h2> Contact me </h2>
           </div>
           <div className="contactContainer">
             <div>
-              <h2> Christian Gerbig - Web Developer </h2>
+              <h2> Christian Gerbig </h2>
+            </div>
+            <div>
+              <h3> Web Developer </h3>
             </div>
             <div className="contactWaysContainer">
               <div className="contactEmailContainer">
