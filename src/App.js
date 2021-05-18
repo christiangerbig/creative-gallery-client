@@ -13,11 +13,44 @@ import NotFound from './components/NotFound';
 
 class App extends Component {
 
-  //state = {
-  //}
+  state = {
+    error: null
+  }
 
   // -------------- Request Form --------------
   handleRequestSubmit = (event) => {
+    event.preventDefault();
+    const {email, subject, message} = event.target;
+    let request = {
+      email: email.value,
+      subject: subject.value,
+      message: message.value
+    };
+    //1. Make an API call to the server side Route to create a request
+    axios.post(`${config.API_URL}/api/request`, request)
+      .then(
+        () => {
+          this.setState(
+            () => {
+              this.props.history.push("/");
+            }
+          );
+        }
+      )
+      .catch(
+        (err) => {
+          this.setState(
+            {
+              error: err.response.data.errorMessage
+            }
+          );
+          console.log("Fehler",err.response.data.errorMessage);
+        }
+      );
+  }
+
+
+  /*handleRequestSubmit = (event) => {
     event.preventDefault();
     const {email, subject, message} = event.target;
     //1. Make an API call to the server side Route to create a request
@@ -40,13 +73,18 @@ class App extends Component {
       )
       .catch(
         (err) => {
-          console.log("Create request failed", err);
+          this.setState(
+            {
+              errorMessage: err.response.data.errorMessage
+            }
+          );
         }
       );
-  }
+  }*/
 
   // -------------- Render ---------------
   render() {
+    const { error } = this.state;
     return (
       <div>
         <NavBar/>
@@ -66,11 +104,18 @@ class App extends Component {
               return <Projects/>
             }
           }/>
+
           <Route path="/contact" render={
             (routeProps) => {
-              return <Contact onRequest={this.handleRequestSubmit} {...routeProps}/>
+              return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps} />
             }
-          }/>
+          } />
+
+          {/*<Route path="/contact" render={
+            (routeProps) => {
+              return <Contact onRequest={this.handleRequestSubmit} errorMessage={errorMessage} {...routeProps}/>
+            }
+          }/>*/}
          
           {
            <Route component={NotFound}/>
