@@ -457,7 +457,7 @@ form input[type="submit"] {
   padding: 0.3rem 0.8rem;
   border: none;
   margin-bottom: 1.5rem;
-  transition: all 0.5s;
+  /*transition: all 0.5s;*/
 }
 form input[type="submit"]:hover {
   background-color: rgb(188, 255, 161);

@@ -31,6 +31,9 @@ function Contact(props) {
             <div>
               <h3> <FontAwesomeIcon icon={faPen}/> or write me </h3>
             </div>
+            {
+              (props.error) ? <p style={{ color: "red" }}>{ props.error }</p> : null
+            }
             <div>
               <input type="email" name="email" placeholder="email"/>
             </div>
@@ -40,9 +43,6 @@ function Contact(props) {
             <div>
               <textarea name="message" cols="35" rows="7" placeholder="message"/>
             </div>
-            {
-              (props.error) ? <p style={{ color: "red" }}>{ props.error }</p> : null
-            }
             <div>
               <input type="submit" value="Submit"/>
             </div>
