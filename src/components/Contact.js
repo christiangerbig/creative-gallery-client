@@ -43,9 +43,9 @@ function Contact(props) {
             <div>
               <textarea name="message" cols="35" rows="7" placeholder="message" className="formTextarea"/>
             </div>
-            <div>
+           
               <input type="submit" value="Submit" className="formSubmit"/>
-            </div>
+           
           </form>
         </div>
       </div>
