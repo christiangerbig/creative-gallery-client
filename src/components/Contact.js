@@ -35,16 +35,16 @@ function Contact(props) {
               (props.error) ? <p style={{ color: "red" }}>{ props.error }</p> : null
             }
             <div>
-              <input type="email" name="email" placeholder="email"/>
+              <input type="email" name="email" placeholder="email" className="formInput"/>
             </div>
             <div>
-              <input type="text" name="subject" placeholder="subject"/>
+              <input type="text" name="subject" placeholder="subject" className="formInput"/>
             </div>
             <div>
-              <textarea name="message" cols="35" rows="7" placeholder="message"/>
+              <textarea name="message" cols="35" rows="7" placeholder="message" className="formTextarea"/>
             </div>
             <div>
-              <input type="submit" value="Submit"/>
+              <input type="submit" value="Submit" className="formSubmit"/>
             </div>
           </form>
         </div>

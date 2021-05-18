@@ -434,13 +434,13 @@ footer {
 form h3 {
   padding-bottom: 1rem;
 }
-form input {
+.formInput {
   width: 100%;
   padding: 0.3rem;
   border: none;
   margin-bottom: 1rem;
 }
-form textarea {
+.formTextarea {
   width: 100%;
   padding: 0.3rem;
   border: none;
@@ -451,15 +451,15 @@ form textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-form input[type="submit"] {
+ .formSubmit{
   width: auto;
   background-color: white;
   padding: 0.3rem 0.8rem;
   border: none;
   margin-bottom: 1.5rem;
-  /*transition: all 0.5s;*/
+  transition: all 0.5s;
 }
-form input[type="submit"]:hover {
+.formSubmit:hover {
   background-color: rgb(188, 255, 161);
 }
 
