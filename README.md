@@ -70,10 +70,10 @@ Request model
 
 ### Git
 
-The url to your repository and to your deployed project
-
 [Client repository Link](https://github.com/christiangerbig/creative-gallery-client)
 
 [Server repository Link](https://github.com/christiangerbig/creative-gallery-server)
+
+### Heroku
 
 [Deployed App Link](https://creativegallery.herokuapp.com/)
