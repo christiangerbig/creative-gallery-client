@@ -31,11 +31,6 @@ This is my portfolio to show my projects.
 - Projects
 - Contact
 
-## Services
-
-- External API
-  - API for Message
-
 # Server / Backend
 
 ## Models
