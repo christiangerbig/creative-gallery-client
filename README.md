@@ -42,8 +42,6 @@ This is my portfolio to show my projects.
 - External API
   - API for Message
 
-<br>
-
 # Server / Backend
 
 ## Models
@@ -67,15 +65,12 @@ Request model
   }
 ```
 
-<br>
-
 ## API Endpoints (backend routes)
 
 | HTTP Method | URL                         | Request Body                 | Success status | Error Status | Description                |
 | ----------- | --------------------------- | ---------------------------- | -------------- | ------------ | -------------------------- |
 | POST        | `/request`                  | {email, subject, message}    | 200            | 500          | Checks if fields not empty |
 
-<br>
 
 ## Links
 
