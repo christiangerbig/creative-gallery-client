@@ -1,7 +1,5 @@
 # Creative Gallery
 
-<br>
-
 ## Description
 
 This is my portfolio to show my projects.
