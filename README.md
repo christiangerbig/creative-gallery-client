@@ -7,14 +7,10 @@ This is my portfolio to show my projects.
 ## User Stories
 
 -  **Home:** Logo + Title
--  **About** Personal details about me 
--  **Projects** Presentation of my projects
--  **Contact** Different ways how to contact me, also includes a form to send me a message
+-  **About:** Personal details about me 
+-  **Projects:** Presentation of my projects
+-  **Contact:** Different ways how to contact me, also includes a form to send me a message
 -  **404:** As an user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
-
-## Backlog
-
-<br>
 
 # Client / Frontend
 
