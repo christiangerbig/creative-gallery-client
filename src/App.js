@@ -26,7 +26,7 @@ class App extends Component {
       subject: subject.value,
       message: message.value
     };
-    //1. Make an API call to the server side Route to create a request
+    // Make an API call to the server side route to create a request
     axios.post(`${config.API_URL}/api/request`, request)
       .then(
         () => {
@@ -94,17 +94,16 @@ class App extends Component {
               return <Home/>
             }
           }/>
-          <Route exact path="/about" render={
+          <Route path="/about" render={
             () => {
               return <About/>
             }
           }/>
-          <Route exact path="/projects" render={
+          <Route path="/projects" render={
             () => {
               return <Projects/>
             }
           }/>
-
           <Route path="/contact" render={
             (routeProps) => {
               return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps} />

@@ -5,7 +5,6 @@ import portrait from "../images/portrait-mono.png";
 class About extends Component {
   render() {
     return (
-      <>
       <div className="aboutPageContainer">
         <div className="pageNameContainer">
           <h2> About me </h2>
@@ -29,14 +28,13 @@ class About extends Component {
                 <Link to={{ pathname: "https://docs.google.com/document/d/e/2PACX-1vTV5IRdlsCKdyj5JFSbGROVLEe26CLi4BJMOYjLMmSWBioLgvWCJKDswBPwgUF7UJT85ImdFR36RF8H/pub" }} target="_blank" className="aboutMyCVLink">  CV </Link>
               </div>
             </div>
-           
+            
           </div>
           <div className="aboutPicture">
             <img src={portrait} alt="potrait"/>
           </div>
         </div>
       </div>
-    </>
     );
   }
 }

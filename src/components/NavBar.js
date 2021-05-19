@@ -5,7 +5,7 @@ import logo from "../images/tribar-sm.png";
 function NavBar(props) {
   // const myRef = React.createRef();
   return (
-    <>
+    <div>
       <nav>
         <div className="navbarContainer">
           <div>
@@ -25,7 +25,7 @@ function NavBar(props) {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 
