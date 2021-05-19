@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my portfolio to show my projects.
+This is my portfolio to present all my projects and another exercise to apply my React knowledge.
 
 ## User Stories
 
