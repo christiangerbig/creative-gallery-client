@@ -7,7 +7,7 @@ class Footer extends Component {
         <footer>
           <div className="footerContainer">
             <div>
-              <p> © 2021 by Christian Gerbig </p>
+              <span> © 2021 Christian Gerbig </span>
             </div>
           </div>
         </footer>

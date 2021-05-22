@@ -9,11 +9,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import CV from "./components/CV";
 import NotFound from './components/NotFound';
 
 class App extends Component {
   state = {
-    error: null
+    error: null,
   }
 
   // -------------- Request Form --------------
@@ -72,6 +73,11 @@ class App extends Component {
           <Route path="/contact" render={
             (routeProps) => {
               return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps} />
+            }
+          }/>
+           <Route path="/cv" render={
+            () => {
+              return <CV/>
             }
           }/>
           <Route component={NotFound}/>

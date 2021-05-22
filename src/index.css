@@ -7,9 +7,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
+}
+@media only screen and (min-device-width: 60em) {
+  body {
+    background-image: url("./images/concentric-pattern.jpg");
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
 
-.backgroundImage {
+.logoImage {
   background-image: url("./images/tribar-md.png");
   background-color: white;
   background-size: 23rem;
@@ -44,10 +54,13 @@ nav {
   background-color:white;
   color: black;
   padding: 0.3rem 0.8rem;
-  transition: all 0.5s;
+  /*transition: all 0.5s;*/
 }
 .navLink:hover {
   background-color: rgb(230, 230, 230);
+}
+.textEnlighted {
+  color: rgb(255, 163, 43);
 }
 
 
@@ -60,7 +73,10 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.footerContainer p {
+.footerContainer span {
+  font-weight:500;
+  text-shadow: 0px 0px 1px black;
+  color:rgb(255, 163, 43);
   padding-right: 0.7rem;
 }
 
@@ -87,6 +103,9 @@ footer {
 
 
 /* Home page */
+.homePageContainer {
+  margin-bottom: 2rem;
+}
 @keyframes fadeLogoIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -102,6 +121,7 @@ footer {
 }
 .welcomeText {
   text-align: center;
+  color: rgb(255, 163, 43);
   margin-top: 0.2rem;
   animation: fadeWelcomeTextIn 4.5s forwards;
 }
@@ -109,48 +129,81 @@ footer {
   font-size: 4.7rem; 
 }
 
-/* "to my" */
+/* "to" */
 @media (min-device-width: 20em) {
-  @keyframes scrollToMyTextIn {
+  @keyframes scrollToTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-  .toMyText {
-    margin-top: 0.3rem;  
-    margin-left: 25%;
+  .toText {
+    margin-top: 0;  
+    margin-left: 50%;
     animation: scrollToMyTextIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
-  @keyframes scrollToMyTextIn {
+  @keyframes scrollToTextIn {
     from {margin-left: -10%;}
-    to {margin-left: 25%;}
+    to {margin-left: 50%;}
     from {opacity: 0;}
     to {opacity: 1;}
   }
-  .toMyText {
-    margin-top: 0.3rem;  
-    animation: scrollToMyTextIn 2s forwards;
+  .toText {
+    margin-top: 0;
+    animation: scrollToTextIn 2s forwards;
   }
 }
-.toMyText h4 {
+.toText h4 {
   font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* "my" */
+@media (min-device-width: 20em) {
+  @keyframes scrollMyTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .myText {
+    margin-top: 0.3rem;  
+    margin-left: 42%;
+    animation: scrollMyTextIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollMyTextIn {
+    from {margin-left: -10%;}
+    to {margin-left: 42%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .myText {
+    margin-top: 0.3rem;  
+    animation: scrollMyTextIn 2s forwards;
+  }
+}
+.myText h4 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* "creative" */
 @media (min-device-width: 20em) {
-  @keyframes scrollCreativeTextIn {
+  @keyframes scrollcreativeTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .creativeText {
     margin-top: 0.3rem;
+    margin-bottom: 0;
     margin-left: 36%;
-    animation: scrollCreativeTextIn 1.6s forwards;
+    animation: scrollcreativeTextIn 1.6s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
-  @keyframes scrollCreativeTextIn {
+  @keyframes scrollcreativeTextIn {
     from {margin-left: -15%;}
     to {margin-left: 36%;}
     from {opacity: 0;}
@@ -158,13 +211,17 @@ footer {
   }
   .creativeText {
     margin-top: 0.3rem;
-    animation: scrollCreativeTextIn 1.6s forwards;
+    margin-bottom: 0;
+    animation: scrollcreativeTextIn 1.6s forwards;
   }
 }
-.creativeText h2,
-.galleryText h2 {
+.creativeText h2 {
+  color: rgb(161, 161, 60);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 4rem;
 }
+
 
 /* "gallery" */
 @media (min-device-width: 20em) {
@@ -174,25 +231,33 @@ footer {
   }
   .galleryText {
     padding-bottom: 0.3rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0rem;
-    margin-left: 47%;
+    margin-top: 0;
+    margin-left: 44%;
     animation: scrollGalleryTextIn 1.4s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
   @keyframes scrollGalleryTextIn {
     from {margin-left: -20%;}
-    to {margin-left: 47%;}
+    to {margin-left: 44%;}
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .galleryText {
     padding-bottom: 0.3rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0rem;
+    margin-top: 0rem;
     animation: scrollGalleryTextIn 1.4s forwards;
   }
+}
+.galleryText h2 {
+  font-size: 4rem;
+  color: rgb(56, 199, 255);
+  margin-top: 0.5;
+  margin-bottom: 4rem;
+}
+.homeLink {
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -226,14 +291,15 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    margin-bottom: 8.7rem;
+    margin-bottom: 5rem;
     animation: scrollDetailsContainerIn 2s forwards;
   }
 }
 .aboutDetailsText {
   font-family: Source Sans Pro;
+  width: 60%;
   padding: 0.5rem 2rem;
-  margin: 2rem 1rem;
+  margin: 2rem 1%;
   background-color: rgb(240, 240, 240);
 }
 .aboutDetailsText h2 {
@@ -242,12 +308,12 @@ footer {
 .aboutDetailsText p {
   font-size: 1.1rem;
 }
-.aboutPicture {
+.aboutPictureContainer {
   padding-right: 2rem;
   padding-left: 2rem;
 }
-.aboutPicture img {
-  width: 19rem;
+.aboutPictureContainer img {
+  width: 22rem;
 }
 .aboutLinksContainer {
   display: flex;
@@ -460,6 +526,118 @@ form h3 {
 }
 .formSubmit:hover {
   background-color: rgb(188, 255, 161);
+}
+
+
+/* CV page */
+@media (min-device-width: 20em) {
+  @keyframes scrollCvContainerIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .cvContainer {
+    display: flex;
+    justify-content: flex-center;
+    align-items: flex-center;
+    background-color: rgb(240, 240, 240);
+    margin: 2rem 0;
+    animation: scrollCvContainerIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollCvContainerIn {
+    from {margin-left: -150%;}
+    to {margin-left: 5%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .cvContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(240, 240, 240);
+    margin-top: 2rem;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+    animation: scrollCvContainerIn 2s forwards;
+  }
+}
+.cvContainer a {
+  text-decoration: none;
+  color: rgb(81, 32, 128);
+}
+.cvDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 3 auto;
+  background-color: rgb(240, 240, 240);
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cvDetailsContainer h1 {
+  margin-bottom: 0;
+}
+.cvDetailsContainer h2 {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+.cvDetailsContainer h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+.cvPictureContainer img {
+  width: 15rem;
+}
+.cvProjectsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  background-color: rgb(240, 240, 240);
+  padding-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.cvProjectsContainer h3 {
+  margin-bottom: 0;
+}
+.cvProjectContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.cvProjectContainer h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cvProjectLink {
+  font-size: 1rem;
+  padding-left: 0.7rem;
+}
+.cvEducationDetailsContainer {
+  margin-top: 0.3rem;
+} 
+.cvEducationDetailsContainer h4,
+.cvEducationDetailsContainer h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cvWorkDetailsContainer {
+  margin-top: 0.3rem;
+}
+.cvWorkDetailsContainer h4,
+.cvWorkDetailsContainer h5 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 

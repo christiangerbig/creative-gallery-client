@@ -1,23 +1,27 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
     return (
-      <div className="homePageContainer backgroundImage">
+      <div className="homePageContainer logoImage">
         <div className="pageNameContainer">
-          <h2> Home </h2>
+         <h2> Intro </h2>
         </div>
         <div className="welcomeText">
-          <h1> WELCOME </h1>
+           <h1> WELCOME </h1>
         </div>
-        <div className="toMyText">
-          <h4> to my </h4>
+        <div className="toText">
+          <h4> to </h4>
+        </div>
+        <div className="myText">
+          <Link to={{ pathname: "/about" }} className="homeLink"> <h4> my </h4> </Link>
         </div>
         <div className="creativeText">
-          <h2> creative </h2>
+          <Link to={{ pathname: "/projects" }} className="homeLink"> <h2> creative </h2> </Link>
         </div>
         <div className="galleryText">
-          <h2> gallery </h2>
+          <Link to={{ pathname: "/projects" }} className="homeLink"> <h2> gallery </h2> </Link>
         </div>
       </div>
     );

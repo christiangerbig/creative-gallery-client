@@ -11,26 +11,40 @@ class About extends Component {
         </div>
         <div className="aboutDetailsContainer">
           <div className="aboutDetailsText">
-            <h3> Hi, </h3>
-            <p> I'm <b> Christian</b>. </p>
-            <p> I'm a <b> Web Developer </b> and my homebase in Germany is <b> Hamburg</b>. </p>
-            <p> My motto: <b> I want to learn things and improve them</b>. </p>
-            <p> I believe in the <b> positive power </b> of working together <b> in a team </b> with different points of views. </p>
-            <p> I love to code <b> individual solutions </b> to meet the target. </p>
+            <h3> Hello, </h3>
+            <p> I'm <b> Christian. </b> </p>
+            <p>
+              A <b> passionate and dedicated Web Developer </b>
+              using every aspect of the New Technology available to reach the goals.
+              Actually living in <b> Hamburg </b> in Germany.
+            </p>
+            <p>
+              I believe in a <b> positive power </b> of communication, trust and <b> cooperative team working </b>
+              making an asset from <b> sharing different points of views </b>.
+            </p>
+            <p>
+              I love to code <b> optimized solutions suiting individual requirements </b> with respect to time, 
+              budget and target.
+            </p>
+            <p>
+              My motto: <b> "Learning things, improving (them) and reach the goals" </b>.
+            </p>
+            <p>
+              My goal is to <b> become part of a great team </b> where I can <b> apply and develop my skills</b>.
+            </p>
             <div className="aboutLinksContainer">
               <div>
-                <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank" className="aboutGitHubLink">  GitHub </Link>
+                <Link to={{ pathname: "/cv" }} className="aboutMyCVLink"> CV </Link>
               </div>
               <div>
                 <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank" className="aboutLinkedInLink">  LinkedIn </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://docs.google.com/document/d/e/2PACX-1vTV5IRdlsCKdyj5JFSbGROVLEe26CLi4BJMOYjLMmSWBioLgvWCJKDswBPwgUF7UJT85ImdFR36RF8H/pub" }} target="_blank" className="aboutMyCVLink">  CV </Link>
+                <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank" className="aboutGitHubLink">  GitHub </Link>
               </div>
             </div>
-            
           </div>
-          <div className="aboutPicture">
+          <div className="aboutPictureContainer">
             <img src={portrait} alt="potrait"/>
           </div>
         </div>
