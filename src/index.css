@@ -54,7 +54,7 @@ nav {
   background-color:white;
   color: black;
   padding: 0.3rem 0.8rem;
-  /*transition: all 0.5s;*/
+  transition: all 0.5s;
 }
 .navLink:hover {
   background-color: rgb(230, 230, 230);
@@ -322,7 +322,7 @@ footer {
   padding-left: 2rem;
 }
 .aboutPictureContainer img {
-  width: 22rem;
+  width: 24rem;
 }
 .aboutLinksContainer {
   display: flex;
@@ -370,7 +370,14 @@ footer {
 .aboutMyCVLink:hover {
   background-color: rgb(188, 255, 161);
 }
-
+.aboutContactLink a {
+  text-decoration: none;
+  color: rgb(81, 32, 128);
+  transition: all 0.5s;
+}
+.aboutContactLink a:hover {
+  color: rgb(146, 110, 172);
+}
 
 /* Projects page */
 @media (min-device-width: 20em) {
@@ -574,7 +581,12 @@ form h3 {
 .cvContainer a {
   text-decoration: none;
   color: rgb(81, 32, 128);
+  transition: all 0.5s;
 }
+.cvContainer a:hover {
+  color: rgb(146, 110, 172);
+}
+
 .cvDetailsContainer {
   display: flex;
   flex-direction: column;

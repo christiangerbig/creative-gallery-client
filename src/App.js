@@ -15,6 +15,37 @@ import NotFound from './components/NotFound';
 class App extends Component {
   state = {
     error: null,
+    menuNumber: null
+  }
+
+  // --------------- Handle clicked links ---------------
+  handleHomeClicked = () => {
+    this.setState(
+      {
+        menuNumber: 0
+      }
+    );
+  }
+  handleAboutClicked = () => {
+    this.setState(
+      {
+        menuNumber: 1
+      }
+    );
+  }
+  handleProjectsClicked = () => {
+    this.setState(
+      {
+        menuNumber: 2
+      }
+    );
+  }
+  handleContactClicked = () => {
+    this.setState(
+      {
+        menuNumber: 3
+      }
+    );
   }
 
   // -------------- Request Form --------------
@@ -50,19 +81,19 @@ class App extends Component {
 
   // -------------- Render ---------------
   render() {
-    const { error } = this.state;
+    const { error, menuNumber } = this.state;
     return (
       <div>
-        <NavBar/>
+        <NavBar onHomeClicked={this.handleHomeClicked} onAboutClicked={this.handleAboutClicked} onProjectsClicked={this.handleProjectsClicked} onContactClicked={this.handleContactClicked} menuNumber={menuNumber}/>
         <Switch>
           <Route exact path="/" render={
-            () => {
-              return <Home/>
+            (routeProps) => {
+              return <Home onAboutClicked={this.handleAboutClicked} onProjectsClicked={this.handleProjectsClicked} {...routeProps}/>
             }
           }/>
           <Route path="/about" render={
-            () => {
-              return <About/>
+            (routeProps) => {
+              return <About onContactClicked={this.handleContactClicked} {...routeProps}/>
             }
           }/>
           <Route path="/projects" render={
@@ -72,7 +103,7 @@ class App extends Component {
           }/>
           <Route path="/contact" render={
             (routeProps) => {
-              return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps} />
+              return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps}/>
             }
           }/>
            <Route path="/cv" render={
