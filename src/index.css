@@ -73,11 +73,20 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.footerContainer span {
-  font-weight:500;
-  text-shadow: 0px 0px 1px black;
-  color:rgb(255, 163, 43);
-  padding-right: 0.7rem;
+@media (min-device-width: 20em) {
+  .footerContainer span {
+    font-weight:500;
+    color:rgb(255, 163, 43);
+    padding-right: 0.7rem;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  .footerContainer span {
+    font-weight:500;
+    text-shadow: 0px 0px 1px black;
+    color:rgb(255, 163, 43);
+    padding-right: 0.7rem;
+  }
 }
 
 
@@ -222,7 +231,6 @@ footer {
   margin-bottom: 0rem;
   font-size: 4rem;
 }
-
 
 /* "gallery" */
 @media (min-device-width: 20em) {
