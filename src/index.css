@@ -44,7 +44,7 @@ nav {
   align-items: center;
 }
 .logo {
-  padding-right: 0.4rem;
+  padding-right: 15%;
 }
 .navLinkContainer {
   background-color: white;
@@ -77,7 +77,6 @@ footer {
   .footerContainer span {
     font-weight:500;
     color:rgb(255, 163, 43);
-    padding-right: 0.7rem;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -85,7 +84,6 @@ footer {
     font-weight:500;
     text-shadow: 0px 0px 1px black;
     color:rgb(255, 163, 43);
-    padding-right: 0.7rem;
   }
 }
 
@@ -330,31 +328,29 @@ footer {
   font-size: 1.1rem;
 }
 .aboutPictureContainer {
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 .aboutPictureContainer img {
   width: 24rem;
 }
 .aboutLinksContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
-.aboutGitHubLink {
+.aboutCVLink {
   text-decoration: none;
   font-weight: 600;
   background-color:white;
   color: black;
   padding: 0.3rem 0.8rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   transition: all 0.5s;
 }
-.aboutGitHubLink:hover {
-  background-color: rgb(166, 230, 255);
+.aboutMyCVLink:hover {
+  background-color: rgb(188, 255, 161);
 }
 .aboutLinkedInLink {
   text-decoration: none;
@@ -362,25 +358,21 @@ footer {
   background-color:white;
   color: black;
   padding: 0.3rem 0.7rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   transition: all 0.5s;
 }
 .aboutLinkedInLink:hover {
   background-color: rgb(255, 212, 155);
 }
-.aboutMyCVLink {
+.aboutGitHubLink {
   text-decoration: none;
   font-weight: 600;
   background-color:white;
   color: black;
   padding: 0.3rem 0.8rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   transition: all 0.5s;
 }
-.aboutMyCVLink:hover {
-  background-color: rgb(188, 255, 161);
+.aboutGitHubLink:hover {
+  background-color: rgb(166, 230, 255);
 }
 .aboutContactLink a {
   text-decoration: none;
@@ -563,6 +555,7 @@ footer {
 }
 .projectLinksContainer {
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
