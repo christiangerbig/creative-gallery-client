@@ -39,6 +39,7 @@ class CV extends Component {
               </div>
               <div>
                 <h3> ABOUT ME </h3>
+                <hr/>
                 <p>
                   I am a passionate and dedicated Web Developer using every aspect of the New Technology available to reach the goals. 
                   I believe in a positive power of communication, trust and cooperative team working making an asset from sharing different 
@@ -50,6 +51,7 @@ class CV extends Component {
               </div>
               <div>
                 <h3> SKILLS </h3>
+                <hr/>
                 <ul>
                   <li> JavaScript (ES6) </li>
                   <li> HTML5 / CSS3 </li>
@@ -65,6 +67,7 @@ class CV extends Component {
               </div>
               <div>
                 <h3> LANGUAGES </h3>
+                <hr/>
                 <ul>
                   <li> German: native </li>
                   <li> English: fluent </li>
@@ -72,6 +75,7 @@ class CV extends Component {
               </div>
               <div>
                 <h3> PERSONAL ACTIVITIES </h3>
+                <hr/>
                 <ul>
                   <li> Music and composing </li>
                   <li> Learning languages </li>
@@ -187,7 +191,11 @@ class CV extends Component {
               <h5> 05/2019 - 10/2019 </h5>
               <ul>
                 <li> Accounting Clerk </li>
+                <h5> Account assignment </h5>
+                <h5> Master data maintenance </h5>
+                <h5> Reconciliation of subledger accounts </h5>
               </ul>
+              
             </div>
             <div className="cvWorkDetailsContainer">
               <h4> Fieldfisher Hamburg </h4>
