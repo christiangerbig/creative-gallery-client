@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class NotFound extends Component {
   render() {
     return (
-      <div className="notFoundPageContainer backgroundImage">
+      <div className="notFoundPageContainer logoImage">
         <div className="pageNameContainer">
           <h2> Not found </h2>
         </div>
@@ -18,7 +18,7 @@ class NotFound extends Component {
           <h2> wrong </h2>
         </div>
         <div className="notFoundGetBackContainer">
-          <Link to={{ pathname: "/" }} className="notFoundGetBackLink">  Get back </Link>
+          <Link to={{ pathname: "/" }} className="notFoundGetBackLink textEnlighted">  Get back </Link>
         </div>
       </div>
     );

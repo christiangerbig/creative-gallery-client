@@ -52,9 +52,9 @@ class Projects extends Component {
                 Bootstrap | MongoDB | Responsive
               </h4>
               <p> 
-                This collection includes four powerful <br/>
-                tools to make the work with music editor <br/>
-                Protracker modules more comfortable. <br/>
+                Four powerful tools to make the work <br/>
+                with the music editor Protracker and <br/>
+                its modules comfortable. <br/>
                 <br/>
               </p>
             </div>

@@ -10,10 +10,10 @@ function Contact(props) {
       </div>
       <div className="contactContainer">
         <div>
-          <h2> Christian Gerbig </h2>
+          <h1> Christian Gerbig </h1>
         </div>
         <div>
-          <h3> Web Developer </h3>
+          <h2> Web Developer </h2>
         </div>
         <div className="contactWaysContainer">
           <div className="contactEmailContainer">

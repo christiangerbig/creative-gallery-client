@@ -71,7 +71,7 @@ class CV extends Component {
                 </ul>
               </div>
               <div>
-                <h3> HOBBIES </h3>
+                <h3> PERSONAL ACTIVITIES </h3>
                 <ul>
                   <li> Music and composing </li>
                   <li> Learning languages </li>
