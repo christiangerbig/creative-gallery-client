@@ -135,7 +135,7 @@ class CV extends Component {
                   </div>
                 </div>
                 <p> Full stack project using Express | Handlebars | JavaScript | CSS3 | Bootstrap | MongoDB </p>
-                <p> This app includes four powerful tools to make working with music editor Protracker and its modules more comfortable. </p>
+                <p> This app includes four powerful tools to make working with the music editor Protracker and its modules more comfortable. </p>
               </div>
               <div className="cvProjectDetailContainer">
                 <div className="cvProjectContainer">
