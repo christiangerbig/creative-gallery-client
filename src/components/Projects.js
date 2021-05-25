@@ -11,6 +11,9 @@ class Projects extends Component {
         <div className="pageNameContainer">
           <h2> My projects </h2>
         </div>
+        <div className="projectsIntroTextContainer">
+          <h3 className="projectsIntroText"> Here below you can see some of my projects I was working recently on </h3>
+        </div>
         <div className="projectsContainer">
           <div className="projectDetailsContainer">
             <div>

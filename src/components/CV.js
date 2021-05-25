@@ -42,11 +42,11 @@ class CV extends Component {
                 <hr/>
                 <p>
                   I am a passionate and dedicated Web Developer using every aspect of the New Technology available to reach the goals. 
-                  I believe in a positive power of communication, trust and cooperative team working making an asset from sharing different 
+                  I believe in a positive power of communication, trust in cooperative team working making an asset from sharing different 
                   points of views. 
                   I love to code optimized solutions suiting individual requirements with respect to time, budget and target. 
                   My motto: "Learning things, improving (them) and reach the goals". 
-                  My goal is to become part of a great team where I can apply and develop my skills.
+                  My goal is to become part of a team where I can apply, develop and share my skills.
                 </p>
               </div>
               <div>
@@ -78,6 +78,8 @@ class CV extends Component {
                 <hr/>
                 <ul>
                   <li> Music and composing </li>
+                  <li> Books about Contemporary History </li>
+                  <li> Arthouse movies and museums </li>
                   <li> Learning languages </li>
                   <li> Retro computer productions </li>
                 </ul>

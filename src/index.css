@@ -139,14 +139,14 @@ footer {
 
 /* "to" */
 @media (min-device-width: 20em) {
-  @keyframes scrollToTextIn {
+  @keyframes fadeToTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .toText {
     margin-top: 0;  
     margin-left: 50%;
-    animation: scrollToMyTextIn 2s forwards;
+    animation: fadeToMyTextIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -169,14 +169,14 @@ footer {
 
 /* "my" */
 @media (min-device-width: 20em) {
-  @keyframes scrollMyTextIn {
+  @keyframes fadeMyTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .myText {
     margin-top: 0.3rem;  
     margin-left: 42%;
-    animation: scrollMyTextIn 2s forwards;
+    animation: fadeMyTextIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -195,7 +195,7 @@ footer {
   font-size: 2.5rem;
   color: rgb(68, 138, 199);
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
   transition: all 0.5s;
 }
 .myText h4:hover {
@@ -204,19 +204,19 @@ footer {
 
 /* "creative" */
 @media (min-device-width: 20em) {
-  @keyframes scrollcreativeTextIn {
+  @keyframes fadeCreativeTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .creativeText {
     margin-top: 0.3rem;
     margin-bottom: 0;
-    margin-left: 36%;
-    animation: scrollcreativeTextIn 1.6s forwards;
+    margin-left: 5%;
+    animation: fadeCreativeTextIn 1.6s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
-  @keyframes scrollcreativeTextIn {
+  @keyframes scrollCreativeTextIn {
     from {margin-left: -15%;}
     to {margin-left: 36%;}
     from {opacity: 0;}
@@ -225,7 +225,7 @@ footer {
   .creativeText {
     margin-top: 0.3rem;
     margin-bottom: 0;
-    animation: scrollcreativeTextIn 1.6s forwards;
+    animation: scrollCreativeTextIn 1.6s forwards;
   }
 }
 .creativeText h2 {
@@ -241,21 +241,21 @@ footer {
 
 /* "gallery" */
 @media (min-device-width: 20em) {
-  @keyframes scrollGalleryTextIn {
+  @keyframes fadeGalleryTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .galleryText {
     padding-bottom: 0.3rem;
     margin-top: 0;
-    margin-left: 44%;
-    animation: scrollGalleryTextIn 1.4s forwards;
+    margin-left: 48%;
+    animation: fadeGalleryTextIn 1.4s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
   @keyframes scrollGalleryTextIn {
     from {margin-left: -20%;}
-    to {margin-left: 44%;}
+    to {margin-left: 52%;}
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -282,7 +282,7 @@ footer {
 
 /* About page */
 @media (min-device-width: 20em) {
-  @keyframes scrollDetailsContainerIn {
+  @keyframes fadeDetailsContainerIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -294,7 +294,7 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.1rem;
     margin-left: 2%;
-    animation: scrollDetailsContainerIn 2s forwards;
+    animation: fadeDetailsContainerIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -386,7 +386,7 @@ footer {
 
 /* CV page */
 @media (min-device-width: 20em) {
-  @keyframes scrollCvContainerIn {
+  @keyframes fadeCvContainerIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -396,7 +396,7 @@ footer {
     align-items: flex-center;
     background-color: rgb(240, 240, 240);
     margin: 2rem 0;
-    animation: scrollCvContainerIn 2s forwards;
+    animation: fadeCvContainerIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -457,7 +457,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 55rem;
+  width: 50rem;
   background-color: rgb(240, 240, 240);
   padding-top: 4rem;
   padding-left: 3%;
@@ -502,8 +502,40 @@ footer {
 
 
 /* Projects page */
+.projectsIntroTextContainer {
+  margin: 0;
+}
 @media (min-device-width: 20em) {
-  @keyframes scrollprojectsContainerIn {
+  @keyframes fadeProjectsInfoTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .projectsIntroText {
+    text-align: center;
+    background-color: white;
+    padding-top: 0.3rem;
+    padding-bottom: 0.5rem;
+    margin-left: 0;
+    animation: fadeProjectsInfoTextIn 2s forwards;
+  }
+}
+@media only screen and (min-device-width: 60em) {
+  @keyframes scrollProjectsInfoTextIn {
+    from {margin-left: -350%;}
+    to {margin-left: 0;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .projectsIntroText {
+    text-align: center;
+    background-color: white;
+    padding-top: 0.3rem;
+    padding-bottom: 0.5rem;
+    animation: scrollProjectsInfoTextIn 2s forwards;
+  }
+}
+@media (min-device-width: 20em) {
+  @keyframes fadeProjectsContainerIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -515,11 +547,11 @@ footer {
     margin-top: 0.5rem;
     margin-bottom: 0.1rem;
     margin-left: 2%;
-    animation: scrollprojectsContainerIn 2s forwards;
+    animation: fadeProjectsContainerIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
-  @keyframes scrollprojectsContainerIn {
+  @keyframes scrollProjectsContainerIn {
     from {margin-left: -350%;}
     to {margin-left: 2%;}
     from {opacity: 0;}
@@ -532,7 +564,7 @@ footer {
     align-items: flex-start;
     margin-top: 0.2rem;
     margin-bottom: 0.1rem;
-    animation: scrollprojectsContainerIn 2s forwards;
+    animation: scrollProjectsContainerIn 2s forwards;
   }
 }
 .projectDetailsContainer {
@@ -544,7 +576,7 @@ footer {
   text-align: center;
   background-color: rgb(240, 240, 240);
   padding: 0.3rem;
-  margin: 3rem 2rem 1.8rem 2rem;
+  margin: 1rem 2rem 1.8rem 2rem;
 }
 .projectDetailsContainer video {
   margin-top: 1rem;
@@ -559,7 +591,7 @@ footer {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
 }
 .projectTryItLink {
@@ -685,14 +717,14 @@ form h3 {
 
 /* "something" */
 @media (min-device-width: 20em) {
-  @keyframes scrollSomethingTextIn {
+  @keyframes fadeSomethingTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .somethingText {
     margin-top: 0.3rem;  
     margin-left: 25%;
-    animation: scrollSomethingIn 2s forwards;
+    animation: fadeSomethingIn 2s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -714,14 +746,14 @@ form h3 {
 
 /* "went" */
 @media (min-device-width: 20em) {
-  @keyframes scrollWentTextIn {
+  @keyframes fadeWentTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   .wentText {
     margin-top: 0.3rem;
     margin-left: 35%;
-    animation: scrollWentTextIn 1.6s forwards;
+    animation: fadeWentTextIn 1.6s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {
@@ -742,7 +774,7 @@ form h3 {
 
 /* "wrong" */
 @media (min-device-width: 20em) {
-  @keyframes scrollWrongTextIn {
+  @keyframes fadeWrongTextIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
@@ -750,7 +782,7 @@ form h3 {
     margin-top: 0.3rem;
     margin-bottom: 2rem;
     margin-left: 47%;
-    animation: scrollWrongTextIn 1.4s forwards;
+    animation: fadeWrongTextIn 1.4s forwards;
   }
 }
 @media only screen and (min-device-width: 60em) {

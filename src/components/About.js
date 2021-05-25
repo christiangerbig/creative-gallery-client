@@ -18,7 +18,7 @@ function About(props) {
               Actually living in <b> Hamburg </b> in Germany.
             </p>
             <p>
-              I believe in a <b> positive power </b> of communication, trust and <b> cooperative team working </b>
+              I believe in a <b> positive power </b> of communication, trust in <b> cooperative team working </b>
               making an asset from <b> sharing different points of views </b>.
             </p>
             <p>
@@ -29,7 +29,7 @@ function About(props) {
               My motto: <b> "Learning things, improving (them) and reach the goals" </b>.
             </p>
             <p>
-              My goal is to <b> become part of a great team </b> where I can <b> apply and develop my skills</b>.
+              My goal is to <b> become part of a team </b> where I can <b> apply, develop and share my skills</b>.
             </p>
             <p>
               Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={props.onContactClicked}> <Link to={{ pathname: "/contact" }}> hearing from you </Link> </span>.

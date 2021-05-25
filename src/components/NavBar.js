@@ -14,7 +14,7 @@ function NavBar(props) {
             <Link to={{ pathname: "/about" }} className={(props.menuNumber === 1) ? "navLink textEnlighted" : "navLink"}> About </Link>
           </div>
           <div className="navLinkContainer" onClick={props.onProjectsClicked}>
-            <Link to={{ pathname: "/projects" }} className={(props.menuNumber === 2) ? "navLink textEnlighted" : "navLink"} id="projectsLink"> Projects </Link>
+            <Link to={{ pathname: "/projects" }} className={(props.menuNumber === 2) ? "navLink textEnlighted" : "navLink"} id="projectsLink"> Gallery </Link>
           </div>
           <div className="navLinkContainer" onClick={props.onContactClicked}>
             <Link to={{ pathname: "/contact" }} className={(props.menuNumber === 3) ? "navLink textEnlighted" : "navLink"}> Contact </Link>
