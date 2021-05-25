@@ -677,6 +677,14 @@ footer {
   margin-top: 0rem;
   margin-bottom: 0.7rem;
 }
+.contactLink a {
+  text-decoration: none;
+  color: rgb(60, 138, 240);
+  transition: all 0.5s;
+}
+.contactLink a:hover {
+  color: rgb(129, 176, 241);
+}
 form h3 {
   padding-bottom: 0;
   margin-bottom: 0.3rem;

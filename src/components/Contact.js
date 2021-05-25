@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeSquare, faMobileAlt, faPen } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,11 +19,11 @@ function Contact(props) {
         <div className="contactWaysContainer">
           <div className="contactEmailContainer">
             <h3> <FontAwesomeIcon icon={faEnvelopeSquare}/> e-mail </h3>
-            <h4> chr_gerbig@web.de  </h4>
+            <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> <h4> chr_gerbig@web.de </h4>  </Link> </span>
           </div>
           <div className="contactPhoneContainer">
             <h3> <FontAwesomeIcon icon={faMobileAlt}/> phone </h3>
-            <h4> +49 151 548 242 88 </h4>
+            <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> <h4> +49 151 548 242 88 </h4> </Link> </span>
           </div>
         </div>
         <form onSubmit={ props.onRequest }>
