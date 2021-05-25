@@ -28,8 +28,8 @@ class CV extends Component {
                 Germany
               </p>
               <p>
-                (+49) 151  54824288 <br/>
-                chr_gerbig@web.de
+                <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> +49 151 548 242 88 </Link> </span> <br/>
+                <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> chr_gerbig@web.de </Link> </span>
               </p>
               <div>
                 <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank">  linkedin.com/in/christian-gerbig/ </Link>
@@ -135,7 +135,7 @@ class CV extends Component {
                   </div>
                 </div>
                 <p> Full stack project using Express | Handlebars | JavaScript | CSS3 | Bootstrap | MongoDB </p>
-                <p> This app includes four powerful tools to make the work with music editor Protracker modules more comfortable. </p>
+                <p> This app includes four powerful tools to make working with music editor Protracker and its modules more comfortable. </p>
               </div>
               <div className="cvProjectDetailContainer">
                 <div className="cvProjectContainer">
@@ -148,7 +148,7 @@ class CV extends Component {
                   </div>
                 </div>
                 <p> Front-end project build with HTML5 | Canvas | JavaScript | CSS3 </p>
-                <p> A coordination and strategy game with the goal to hit the missing letters with your precise shots. </p>
+                <p> A coordination and strategy game with the goal to hit the missing letters with precise shots. </p>
               </div>
             </div>
             <div>

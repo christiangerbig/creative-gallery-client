@@ -55,9 +55,9 @@ class Projects extends Component {
                 Bootstrap | MongoDB | Responsive
               </h4>
               <p> 
-                Four powerful tools to make the work <br/>
+                Four powerful tools to make working <br/>
                 with the music editor Protracker and <br/>
-                its modules comfortable. <br/>
+                its modules more comfortable. <br/>
                 <br/>
               </p>
             </div>
@@ -82,7 +82,7 @@ class Projects extends Component {
               <p> 
                 A coordination and strategy game <br/> 
                 with the goal to hit the missing <br/> 
-                letters with your precise shots. <br/>
+                letters with precise shots. <br/>
                 <br/>
                 <br/>
               </p>
