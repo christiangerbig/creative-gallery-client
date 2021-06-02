@@ -106,7 +106,7 @@ class CV extends Component {
                   </div>
                 </div>
                 <p> Single page vanilla CSS application using React | JavaScript | CSS3 | NodeJs | MongoDB | Axios </p>
-                <p> This is my portfolio to present all my projects and another exercise to apply my React knowledge. </p>
+                <p> This is my portfolio to present my projects and another exercise to apply my React/JavaScript knowledge. </p>
               </div>
               <div className="cvProjectDetailContainer">
                 <div className="cvProjectContainer">
