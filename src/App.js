@@ -18,7 +18,7 @@ class App extends Component {
     menuNumber: null
   }
 
-  // --------------- Handle clicked links ---------------
+  // Handle clicked navlinks
   handleHomeClicked = () => {
     this.setState(
       {
@@ -48,7 +48,7 @@ class App extends Component {
     );
   }
 
-  // -------------- Request Form --------------
+  // Handle request
   handleRequestSubmit = (event) => {
     event.preventDefault();
     const {email, subject, message} = event.target;
@@ -57,7 +57,6 @@ class App extends Component {
       subject: subject.value,
       message: message.value
     };
-    // Make an API call to the server side route to create a request
     axios.post(`${config.API_URL}/api/request`, request)
       .then(
         () => {
@@ -79,7 +78,6 @@ class App extends Component {
       );
   }
 
-  // -------------- Render ---------------
   render() {
     const { error, menuNumber } = this.state;
     return (

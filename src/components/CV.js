@@ -112,13 +112,13 @@ class CV extends Component {
                 <div className="cvProjectContainer">
                   <h4> JungleSwap </h4>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/JUNGLE_SWAP-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
+                    <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/JUNGLE_SWAP-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
+                    <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://jungle-swap.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
+                    <Link to={{ pathname: "https://jungleswap.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
                   </div>
                 </div>
                 <p> Single page application using React | JavaScript | CSS3 | Bootstrap | NodeJs MongoDB |  Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot) </p>
