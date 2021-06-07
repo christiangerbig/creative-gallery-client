@@ -44,7 +44,7 @@ nav {
   align-items: center;
 }
 .logo {
-  padding-right: 15%;
+  padding-right: 20%;
 }
 .navLinkContainer {
   background-color: white;
@@ -352,7 +352,7 @@ footer {
   padding: 0.3rem 0.8rem;
   transition: all 0.5s;
 }
-.aboutMyCVLink:hover {
+.aboutCVLink:hover {
   background-color: rgb(188, 255, 161);
 }
 .aboutLinkedInLink {
