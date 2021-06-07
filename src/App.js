@@ -18,7 +18,7 @@ class App extends Component {
     menuNumber: null
   }
 
-  // Handle clicked navlinks
+  // Clicked navlinks
   handleHomeClicked = () => {
     this.setState(
       {
@@ -48,7 +48,7 @@ class App extends Component {
     );
   }
 
-  // Handle request
+  // Create request
   handleRequestSubmit = (event) => {
     event.preventDefault();
     const {email, subject, message} = event.target;
