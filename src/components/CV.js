@@ -156,7 +156,7 @@ class CV extends Component {
               <hr/>
             </div>
             <div className="cvEducationDetailsContainer">
-              <h4> Ironhack Full-Stack Web Developer boot camp </h4>
+              <h4> Ironhack - Full-Stack Web Developer boot camp </h4>
               <h5> 01/2021 - 03/2021 </h5>
               <ul>
                 <li> Front end technologies learned: HTML5 | CSS3 | JavaScript (ES6) | React </li>
@@ -164,17 +164,17 @@ class CV extends Component {
               </ul>
             </div>
             <div className="cvEducationDetailsContainer">
-              <h4> Udemy The complete Web Developer Masterclass </h4>
+              <h4> Udemy - The complete Web Developer Masterclass </h4>
               <h5> 10/2020 - 11/2020 </h5>
               <ul>
                 <li> HTML | CSS | SCSS | Javascript | jQuery | Bootstrap | PHP </li>
               </ul>
             </div>
             <div className="cvEducationDetailsContainer">
-              <h4> Multimedia and Visual presentations </h4>
+              <h4> Multimedia and visual presentations </h4>
               <h5> 2015 - 2019 </h5>
               <ul>
-                <li> 68k assembly realtime 3D matrix objects </li>
+                <li> 68k assembler - realtime 3D matrix objects </li>
               </ul>
             </div>
             <div className="cvEducationDetailsContainer">
