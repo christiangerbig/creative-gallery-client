@@ -29,7 +29,7 @@ class CV extends Component {
               </p>
               <p>
                 <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> +49 151 548 242 88 </Link> </span> <br/>
-                <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> chr_gerbig@web.de </Link> </span>
+                <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> chr_gerbig web.de </Link> </span>
               </p>
               <div>
                 <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank">  linkedin.com/in/christian-gerbig/ </Link>

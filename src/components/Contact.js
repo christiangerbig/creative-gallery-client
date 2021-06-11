@@ -19,7 +19,7 @@ function Contact(props) {
         <div className="contactWaysContainer">
           <div className="contactEmailContainer">
             <h3> <FontAwesomeIcon icon={faEnvelopeSquare}/> e-mail </h3>
-            <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> <h4> chr_gerbig@web.de </h4>  </Link> </span>
+            <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> <h4> chr_gerbig web.de </h4>  </Link> </span>
           </div>
           <div className="contactPhoneContainer">
             <h3> <FontAwesomeIcon icon={faMobileAlt}/> phone </h3>
