@@ -13,6 +13,7 @@ import CV from "./components/CV";
 import NotFound from './components/NotFound';
 
 class App extends Component {
+
   state = {
     error: null,
     menuNumber: null
@@ -51,8 +52,8 @@ class App extends Component {
   // Create request
   handleRequestSubmit = (event) => {
     event.preventDefault();
-    const {email, subject, message} = event.target;
-    let request = {
+    const { email, subject, message } = event.target;
+    const request = {
       email: email.value,
       subject: subject.value,
       message: message.value
@@ -82,16 +83,16 @@ class App extends Component {
     const { error, menuNumber } = this.state;
     return (
       <div>
-        <NavBar onHomeClicked={this.handleHomeClicked} onAboutClicked={this.handleAboutClicked} onProjectsClicked={this.handleProjectsClicked} onContactClicked={this.handleContactClicked} menuNumber={menuNumber}/>
+        <NavBar onHomeClicked={ this.handleHomeClicked } onAboutClicked={ this.handleAboutClicked } onProjectsClicked={ this.handleProjectsClicked } onContactClicked={ this.handleContactClicked } menuNumber= {menuNumber }/>
         <Switch>
           <Route exact path="/" render={
             (routeProps) => {
-              return <Home onAboutClicked={this.handleAboutClicked} onProjectsClicked={this.handleProjectsClicked} {...routeProps}/>
+              return <Home onAboutClicked={ this.handleAboutClicked } onProjectsClicked={ this.handleProjectsClicked } { ...routeProps }/>
             }
           }/>
           <Route path="/about" render={
             (routeProps) => {
-              return <About onContactClicked={this.handleContactClicked} {...routeProps}/>
+              return <About onContactClicked={ this.handleContactClicked }  {...routeProps }/>
             }
           }/>
           <Route path="/projects" render={
@@ -101,7 +102,7 @@ class App extends Component {
           }/>
           <Route path="/contact" render={
             (routeProps) => {
-              return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps}/>
+              return <Contact onRequest={ this.handleRequestSubmit } error={ error } { ...routeProps }/>
             }
           }/>
            <Route path="/cv" render={
