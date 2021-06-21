@@ -4,6 +4,7 @@ import portrait from "../images/portrait-mono.png";
 
 class About extends Component {
   render() {
+    const { onContactClicked } = this.props;
     return (
       <div className="aboutPageContainer">
         <div className="pageNameContainer">
@@ -16,7 +17,7 @@ class About extends Component {
             <p>
               A <b> passionate and dedicated Web Developer </b>
               using every aspect of the New Technology available to reach the goals.
-              Actually living in <b> Hamburg </b> in Germany.
+              My homebase is <b> Hamburg </b> in Germany.
             </p>
             <p>
               I believe in a <b> positive power </b> of communication, trust in <b> cooperative team working </b>
@@ -33,7 +34,7 @@ class About extends Component {
               My goal is to <b> become part of a team </b> where I can <b> apply, develop and share my skills</b>.
             </p>
             <p>
-              Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={ this.props.onContactClicked }> <Link to={{ pathname: "/contact" }}> hearing from you </Link> </span>.
+              Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={ onContactClicked }> <Link to={{ pathname: "/contact" }}> hearing from you </Link> </span>.
             </p>
             <div className="aboutLinksContainer">
               <div>

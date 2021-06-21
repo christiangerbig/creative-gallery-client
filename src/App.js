@@ -15,8 +15,8 @@ import NotFound from './components/NotFound';
 class App extends Component {
 
   state = {
-    error: null,
-    menuNumber: null
+    menuNumber: null,
+    error: null
   }
 
   // Clicked navlinks
@@ -80,10 +80,10 @@ class App extends Component {
   }
 
   render() {
-    const { error, menuNumber } = this.state;
+    const { menuNumber, error } = this.state;
     return (
       <div>
-        <NavBar onHomeClicked={ this.handleHomeClicked } onAboutClicked={ this.handleAboutClicked } onProjectsClicked={ this.handleProjectsClicked } onContactClicked={ this.handleContactClicked } menuNumber= {menuNumber }/>
+        <NavBar onHomeClicked={ this.handleHomeClicked } onAboutClicked={ this.handleAboutClicked } onProjectsClicked={ this.handleProjectsClicked } onContactClicked={ this.handleContactClicked } menuNumber= { menuNumber }/>
         <Switch>
           <Route exact path="/" render={
             (routeProps) => {
@@ -92,7 +92,7 @@ class App extends Component {
           }/>
           <Route path="/about" render={
             (routeProps) => {
-              return <About onContactClicked={ this.handleContactClicked }  {...routeProps }/>
+              return <About onContactClicked={ this.handleContactClicked } {...routeProps }/>
             }
           }/>
           <Route path="/projects" render={
@@ -110,7 +110,7 @@ class App extends Component {
               return <CV/>
             }
           }/>
-          <Route component={NotFound}/>
+          <Route component={ NotFound }/>
         </Switch>
         <Footer/>
       </div>

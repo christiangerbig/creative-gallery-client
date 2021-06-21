@@ -12,7 +12,7 @@ class CV extends Component {
         <div className="cvContainer">
           <div className="cvDetailsContainer">
             <div className="cvPictureContainer">
-              <img src={portrait} alt="potrait"/>
+              <img src={ portrait } alt="potrait"/>
             </div>
             <div>
               <h1> Christian Gerbig </h1>
@@ -38,15 +38,10 @@ class CV extends Component {
                 <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank">  github.com/christiangerbig </Link>
               </div>
               <div>
-                <h3> ABOUT ME </h3>
+                <h3> MY GOAL </h3>
                 <hr/>
                 <p>
-                  I am a passionate and dedicated Web Developer using every aspect of the New Technology available to reach the goals. 
-                  I believe in a positive power of communication, trust in cooperative team working making an asset from sharing different 
-                  points of views. 
-                  I love to code optimized solutions suiting individual requirements with respect to time, budget and target. 
-                  My motto: "Learning things, improving (them) and reach the goals". 
-                  My goal is to become part of a team where I can apply, develop and share my skills.
+                  Learning things, improving (them) and become part of a team where I can apply, develop and share my skills.
                 </p>
               </div>
               <div>
@@ -86,7 +81,59 @@ class CV extends Component {
               </div>
             </div>
           </div>
-          <div className="cvProjectsContainer">
+
+          <div className="cvCareerContainer">
+            <div>
+              <h3> TRAINING </h3>
+              <hr/>
+            </div>
+            <div className="cvTrainingDetailsContainer">
+              <h4> Full-Stack Web Developer - Ironhack boot camp</h4>
+              <h5> 01/2021 - 03/2021 </h5>
+              <ul>
+                <li> Front end technologies learned: HTML5 | CSS3 | JavaScript (ES6) | React </li>
+                <li> Back end technologies learned: ExpressJS | NodeJS | MongoDB | Axios </li>
+              </ul>
+            </div>
+            <div className="cvTrainingDetailsContainer">
+              <h4> The complete Web Developer Masterclass - Udemy </h4>
+              <h5> 10/2020 - 11/2020 </h5>
+              <ul>
+                <li> HTML | CSS | SCSS | Javascript | jQuery | Bootstrap | PHP </li>
+              </ul>
+            </div>
+            <div className="cvTrainingDetailsContainer">
+              <h4> Multimedia and visual presentations </h4>
+              <h5> 2015 - 2019 </h5>
+              <ul>
+                <li> 68k assembler - realtime 3D matrix objects </li>
+              </ul>
+            </div>
+            <div>
+              <h3> WORK EXPERIENCE </h3>
+              <hr/>
+            </div>
+            <div className="cvWorkDetailsContainer">
+              <h4> Accounting Clerk - Deutsche Extrakt Kaffee GmbH Hamburg </h4>
+              <h5> 05/2019 - 10/2019 </h5>
+              <ul>
+                <li> Account assignment </li>
+                <li> Master data maintenance </li>
+                <li> Reconciliation of subledger accounts </li>
+              </ul>
+            </div>
+            <div className="cvWorkDetailsContainer">
+              <h4> Accounting Clerk - Fieldfisher Hamburg </h4>
+              <h5> 02/2017 - 01/2019 </h5>
+            </div>
+            <div>
+              <h3> EDUCATION </h3>
+              <hr/>
+            </div>
+            <div className="cvEducationDetailsContainer">
+              <h4> Qualified Social Education Worker - Fachhochschule Darmstadt </h4>
+              <h5> 10/1993 - 02/1999 </h5>
+            </div>
             <div>
               <h3> PROJECTS </h3>
               <hr/>
@@ -150,68 +197,6 @@ class CV extends Component {
                 <p> Front-end project build with HTML5 | Canvas | JavaScript | CSS3 </p>
                 <p> A coordination and strategy game with the goal to hit the missing letters with precise shots. </p>
               </div>
-            </div>
-            <div>
-              <h3> EDUCATION </h3>
-              <hr/>
-            </div>
-            <div className="cvEducationDetailsContainer">
-              <h4> Ironhack - Full-Stack Web Developer boot camp </h4>
-              <h5> 01/2021 - 03/2021 </h5>
-              <ul>
-                <li> Front end technologies learned: HTML5 | CSS3 | JavaScript (ES6) | React </li>
-                <li> Back end technologies learned: ExpressJS | NodeJS | MongoDB | Axios </li>
-              </ul>
-            </div>
-            <div className="cvEducationDetailsContainer">
-              <h4> Udemy - The complete Web Developer Masterclass </h4>
-              <h5> 10/2020 - 11/2020 </h5>
-              <ul>
-                <li> HTML | CSS | SCSS | Javascript | jQuery | Bootstrap | PHP </li>
-              </ul>
-            </div>
-            <div className="cvEducationDetailsContainer">
-              <h4> Multimedia and visual presentations </h4>
-              <h5> 2015 - 2019 </h5>
-              <ul>
-                <li> 68k assembler - realtime 3D matrix objects </li>
-              </ul>
-            </div>
-            <div className="cvEducationDetailsContainer">
-              <h4> Fachhochschule Darmstadt </h4>
-              <h5> 10/1993 - 02/1999 </h5>
-              <ul>
-                <li> Qualified Social Education Worker </li>
-              </ul>
-            </div>
-            <div>
-              <h3> WORK EXPERIENCE </h3>
-              <hr/>
-            </div>
-            <div className="cvWorkDetailsContainer">
-              <h4> Deutsche Extrakt Kaffee GmbH Hamburg </h4>
-              <h5> 05/2019 - 10/2019 </h5>
-              <ul>
-                <li> Accounting Clerk </li>
-                <h5> Account assignment </h5>
-                <h5> Master data maintenance </h5>
-                <h5> Reconciliation of subledger accounts </h5>
-              </ul>
-              
-            </div>
-            <div className="cvWorkDetailsContainer">
-              <h4> Fieldfisher Hamburg </h4>
-              <h5> 02/2017 - 01/2019 </h5>
-              <ul>
-                <li> Accounting Clerk </li>
-              </ul>
-            </div>
-            <div className="cvWorkDetailsContainer">
-              <h4> EDEKA Versorgungsgesellschaft mbH Hamburg </h4>
-              <h5> 10/2012 - 01/2017 </h5>
-              <ul>
-                <li> Accounting Clerk </li>
-              </ul>
             </div>
           </div>
         </div>

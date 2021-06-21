@@ -458,7 +458,7 @@ footer {
 .cvPictureContainer img {
   width: 15rem;
 }
-.cvProjectsContainer {
+.cvCareerContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -470,29 +470,20 @@ footer {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.cvProjectsContainer h3 {
+.cvCareerContainer h3 {
   margin-bottom: 0;
   text-align: center;
 }
-.cvProjectContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-.cvProjectContainer h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.cvProjectLink {
-  display: inline-block;
-  font-size: 1rem;
-  padding-left: 0.7rem;
-}
+.cvTrainingDetailsContainer,
 .cvEducationDetailsContainer {
   margin-top: 0.3rem;
 } 
+.cvTrainingDetailsContainer h4,
+.cvWorkDetailsContainer h4,
 .cvEducationDetailsContainer h4,
+.cvProjectContainer h4,
+.cvTrainingDetailsContainer h5,
+.cvWorkDetailsContainer h5,
 .cvEducationDetailsContainer h5 {
   margin-top: 0;
   margin-bottom: 0;
@@ -500,10 +491,16 @@ footer {
 .cvWorkDetailsContainer {
   margin-top: 0.3rem;
 }
-.cvWorkDetailsContainer h4,
-.cvWorkDetailsContainer h5 {
-  margin-top: 0;
-  margin-bottom: 0;
+.cvProjectContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.cvProjectLink {
+  display: inline-block;
+  font-size: 1rem;
+  padding-left: 0.7rem;
 }
 
 
