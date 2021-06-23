@@ -73,9 +73,7 @@ class CV extends Component {
                 <hr/>
                 <ul>
                   <li> Music and composing </li>
-                  <li> Books about Contemporary History </li>
-                  <li> Arthouse movies and museums </li>
-                  <li> Learning languages </li>
+                  <li> Contemporary History </li>
                   <li> Retro computer productions </li>
                 </ul>
               </div>
