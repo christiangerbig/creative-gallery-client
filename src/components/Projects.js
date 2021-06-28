@@ -34,13 +34,13 @@ class Projects extends Component {
             </div>
             <div className="projectLinksContainer">
               <div>
-                <Link to={{ pathname: "https://jungle-swap.herokuapp.com/" }} target="_blank" className="projectTryItLink"> Try it out </Link>
+                <Link to={{ pathname: "https://jungleswap.herokuapp.com/" }} target="_blank" className="projectTryItLink"> Try it out </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://github.com/christiangerbig/JUNGLE_SWAP-client" }} target="_blank" className="projectGitHubLink"> GitHub Client </Link>
+                <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-client" }} target="_blank" className="projectGitHubLink"> GitHub Client </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://github.com/christiangerbig/JUNGLE_SWAP-server" }} target="_blank" className="projectGitHubLink"> GitHub Server </Link>
+                <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-server" }} target="_blank" className="projectGitHubLink"> GitHub Server </Link>
               </div>
             </div>
           </div>
