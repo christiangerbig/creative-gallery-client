@@ -3,6 +3,7 @@ import "./App.css";
 import { Route, Switch, withRouter } from "react-router-dom";
 import config from "./config";
 import axios from "axios";
+
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -20,34 +21,10 @@ class App extends Component {
   }
 
   // Clicked navlinks
-  handleHomeClicked = () => {
-    this.setState(
-      {
-        menuNumber: 0
-      }
-    );
-  }
-  handleAboutClicked = () => {
-    this.setState(
-      {
-        menuNumber: 1
-      }
-    );
-  }
-  handleProjectsClicked = () => {
-    this.setState(
-      {
-        menuNumber: 2
-      }
-    );
-  }
-  handleContactClicked = () => {
-    this.setState(
-      {
-        menuNumber: 3
-      }
-    );
-  }
+  handleHomeClicked = () => this.setState({ menuNumber: 0 })
+  handleAboutClicked = () => this.setState({ menuNumber: 1 })
+  handleProjectsClicked = () => this.setState({ menuNumber: 2 })
+  handleContactClicked = () => this.setState({ menuNumber: 3 })
 
   // Create request
   handleRequestSubmit = (event) => {
@@ -60,22 +37,10 @@ class App extends Component {
     };
     axios.post(`${config.API_URL}/api/request`, request)
       .then(
-        () => {
-          this.setState(
-            () => {
-              this.props.history.push("/");
-            }
-          );
-        }
+        () => this.setState(() => this.props.history.push("/"))
       )
       .catch(
-        (err) => {
-          this.setState(
-            {
-              error: err.response.data.errorMessage
-            }
-          );
-        }
+        (err) => this.setState({ error: err.response.data.errorMessage })
       );
   }
 
