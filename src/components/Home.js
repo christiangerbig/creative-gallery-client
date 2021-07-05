@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 class Home extends Component {
   render() {
-    const { onAboutClicked, onProjectsClicked } = this.props;
+    const {onAboutClicked, onProjectsClicked} = this.props;
     return (
       <div className="homePageContainer logoImage">
         <div className="pageNameContainer">
@@ -15,14 +15,14 @@ class Home extends Component {
         <div className="toText">
           <h4> to </h4>
         </div>
-        <div className="myText" onClick={ onAboutClicked }>
-          <Link to={{ pathname: "/about" }} className="homeLink"> <h4> my </h4> </Link>
+        <div className="myText" onClick={onAboutClicked}>
+          <Link to={{pathname: "/about"}} className="homeLink"> <h4> my </h4> </Link>
         </div>
-        <div className="creativeText" onClick={ onProjectsClicked }>
-          <Link to={{ pathname: "/projects" }} className="homeLink"> <h2> creative </h2> </Link>
+        <div className="creativeText" onClick={onProjectsClicked}>
+          <Link to={{pathname: "/projects"}} className="homeLink"> <h2> creative </h2> </Link>
         </div>
-        <div className="galleryText" onClick={ onProjectsClicked }>
-          <Link to={{ pathname: "/projects" }} className="homeLink"> <h2> gallery </h2> </Link>
+        <div className="galleryText" onClick={onProjectsClicked}>
+          <Link to={{pathname: "/projects"}} className="homeLink"> <h2> gallery </h2> </Link>
         </div>
       </div>
     );

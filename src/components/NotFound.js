@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 class NotFound extends Component {
   render() {
@@ -18,7 +18,7 @@ class NotFound extends Component {
           <h2> wrong </h2>
         </div>
         <div className="notFoundGetBackContainer">
-          <Link to={{ pathname: "/" }} className="notFoundGetBackLink textEnlighted">  Get back </Link>
+          <Link to={{pathname: "/"}} className="notFoundGetBackLink textEnlighted">  Get back </Link>
         </div>
       </div>
     );

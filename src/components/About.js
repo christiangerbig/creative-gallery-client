@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import portrait from "../images/portrait-mono.png";
 
 class About extends Component {
   render() {
-    const { onContactClicked } = this.props;
+    const {onContactClicked} = this.props;
     return (
       <div className="aboutPageContainer">
         <div className="pageNameContainer">
@@ -34,22 +34,22 @@ class About extends Component {
               My goal is to <b> become part of a team </b> where I can <b> apply, develop and share my skills</b>.
             </p>
             <p>
-              Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={ onContactClicked }> <Link to={{ pathname: "/contact" }}> hearing from you </Link> </span>.
+              Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={onContactClicked}> <Link to={{pathname: "/contact"}}> hearing from you </Link> </span>.
             </p>
             <div className="aboutLinksContainer">
               <div>
-                <Link to={{ pathname: "/cv" }} className="aboutCVLink"> CV </Link>
+                <Link to={{pathname: "/cv"}} className="aboutCVLink"> CV </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank" className="aboutLinkedInLink">  LinkedIn </Link>
+                <Link to={{pathname: "https://www.linkedin.com/in/christian-gerbig/"}} target="_blank" className="aboutLinkedInLink"> LinkedIn </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank" className="aboutGitHubLink">  GitHub </Link>
+                <Link to={{pathname: "https://github.com/christiangerbig/"}} target="_blank" className="aboutGitHubLink"> GitHub </Link>
               </div>
             </div>
           </div>
           <div className="aboutPictureContainer">
-            <img src={ portrait } alt="potrait"/>
+            <img src={portrait} alt="potrait"/>
           </div>
         </div>
       </div>

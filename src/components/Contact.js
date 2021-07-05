@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeSquare, faMobileAlt, faPen } from "@fortawesome/free-solid-svg-icons";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelopeSquare, faMobileAlt, faPen} from "@fortawesome/free-solid-svg-icons";
 
 class Contact extends Component {
   render() {
-    const { error, onRequest } = this.props;
+    const {error, onRequest} = this.props;
     return (
       <div className="contactPageContainer">
         <div className="pageNameContainer">
@@ -20,20 +20,20 @@ class Contact extends Component {
           </div>
           <div className="contactWaysContainer">
             <div className="contactEmailContainer">
-              <h3> <FontAwesomeIcon icon={ faEnvelopeSquare }/> e-mail </h3>
-              <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> <h4> chr_gerbig web.de </h4>  </Link> </span>
+              <h3> <FontAwesomeIcon icon={faEnvelopeSquare}/> e-mail </h3>
+              <span className="contactLink"> <Link to={{pathname: "mailto:chr_gerbig@web.de"}} target="_blank"> <h4> chr_gerbig web.de </h4>  </Link> </span>
             </div>
             <div className="contactPhoneContainer">
-              <h3> <FontAwesomeIcon icon={ faMobileAlt }/> phone </h3>
-              <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> <h4> +49 151 548 242 88 </h4> </Link> </span>
+              <h3> <FontAwesomeIcon icon={faMobileAlt}/> phone </h3>
+              <span className="contactLink"> <Link to={{pathname: "tel:+4915154824288"}} target="_blank"> <h4> +49 151 548 242 88 </h4> </Link> </span>
             </div>
           </div>
-          <form onSubmit={ onRequest }>
+          <form onSubmit={onRequest}>
             <div>
-              <h3> <FontAwesomeIcon icon={ faPen }/> or write me </h3>
+              <h3> <FontAwesomeIcon icon={faPen}/> or write me </h3>
             </div>
             {
-              (error) ? <p style={{ color: "red" }}>{ error }</p> : null
+              (error) ? <p className="warningColor"> {error} </p> : null
             }
             <div>
               <input type="email" name="email" placeholder="email" className="formInput"/>

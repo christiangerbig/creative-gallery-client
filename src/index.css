@@ -28,6 +28,10 @@ body {
   background-position: 50% 35%;
 }
 
+.warningColor {
+  color: red;
+}
+
 
 /* Navigation Bar */
 nav {

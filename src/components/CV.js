@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import portrait from "../images/portrait-mono.png";
 
 class CV extends Component {
@@ -12,7 +12,7 @@ class CV extends Component {
         <div className="cvContainer">
           <div className="cvDetailsContainer">
             <div className="cvPictureContainer">
-              <img src={ portrait } alt="potrait"/>
+              <img src={portrait} alt="potrait"/>
             </div>
             <div>
               <h1> Christian Gerbig </h1>
@@ -28,14 +28,14 @@ class CV extends Component {
                 Germany
               </p>
               <p>
-                <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> +49 151 548 242 88 </Link> </span> <br/>
-                <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> chr_gerbig web.de </Link> </span>
+                <span className="contactLink"> <Link to={{pathname: "tel:+4915154824288"}} target="_blank"> +49 151 548 242 88 </Link> </span> <br/>
+                <span className="contactLink"> <Link to={{pathname: "mailto:chr_gerbig@web.de"}} target="_blank"> chr_gerbig web.de </Link> </span>
               </p>
               <div>
-                <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank">  linkedin.com/in/christian-gerbig/ </Link>
+                <Link to={{pathname: "https://www.linkedin.com/in/christian-gerbig/"}} target="_blank">  linkedin.com/in/christian-gerbig/ </Link>
               </div>
               <div>
-                <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank">  github.com/christiangerbig </Link>
+                <Link to={{pathname: "https://github.com/christiangerbig/"}} target="_blank">  github.com/christiangerbig </Link>
               </div>
               <div>
                 <h3> MY GOAL </h3>
@@ -141,13 +141,13 @@ class CV extends Component {
                 <div className="cvProjectContainer">
                   <h4> CreativeGallery </h4>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/creative-gallery-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/creative-gallery-client"}} target="_blank" className="cvProjectLink"> GitHubClient </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/creative-gallery-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/creative-gallery-server"}} target="_blank" className="cvProjectLink"> GitHubServer </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://creativegallery.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
+                    <Link to={{pathname: "https://creativegallery.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                   </div>
                 </div>
                 <p> Single page vanilla CSS application using React | JavaScript | CSS3 | NodeJs | MongoDB | Axios </p>
@@ -157,13 +157,13 @@ class CV extends Component {
                 <div className="cvProjectContainer">
                   <h4> JungleSwap </h4>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/jungle-swap-client"}} target="_blank" className="cvProjectLink"> GitHubClient </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/jungle-swap-server"}} target="_blank" className="cvProjectLink"> GitHubServer </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://jungleswap.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
+                    <Link to={{pathname: "https://jungleswap.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                   </div>
                 </div>
                 <p> Single page application using React | JavaScript | CSS3 | Bootstrap | NodeJs MongoDB |  Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot) </p>
@@ -173,10 +173,10 @@ class CV extends Component {
                 <div className="cvProjectContainer">
                   <h4> Trackertools </h4>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/Trackertools" }} target="_blank" className="cvProjectLink"> GitHub </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/Trackertools"}} target="_blank" className="cvProjectLink"> GitHub </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://trackertools.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
+                    <Link to={{pathname: "https://trackertools.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                   </div>
                 </div>
                 <p> Full stack project using Express | Handlebars | JavaScript | CSS3 | Bootstrap | MongoDB </p>
@@ -186,10 +186,10 @@ class CV extends Component {
                 <div className="cvProjectContainer">
                   <h4> LetterShooter </h4>
                   <div>
-                    <Link to={{ pathname: "https://github.com/christiangerbig/letter-shooter" }} target="_blank" className="cvProjectLink"> GitHub </Link>
+                    <Link to={{pathname: "https://github.com/christiangerbig/letter-shooter"}} target="_blank" className="cvProjectLink"> GitHub </Link>
                   </div>
                   <div>
-                    <Link to={{ pathname: "https://christiangerbig.github.io/letter-shooter/" }} target="_blank"  className="cvProjectLink"> Deployment </Link>
+                    <Link to={{pathname: "https://christiangerbig.github.io/letter-shooter/"}} target="_blank"  className="cvProjectLink"> Deployment </Link>
                   </div>
                 </div>
                 <p> Front-end project build with HTML5 | Canvas | JavaScript | CSS3 </p>
