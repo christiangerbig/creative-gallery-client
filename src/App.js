@@ -23,6 +23,9 @@ class App extends Component {
     };
   }
 
+  // Clear error messages
+  resetError = () => this.setState({ error: null })
+
   // Handle clicked navlinks
   handleHomeClicked = () => this.setState({ menuNumber: 0 })
   handleAboutClicked = () => this.setState({ menuNumber: 1 })
@@ -70,7 +73,7 @@ class App extends Component {
           }/>
           <Route path="/contact" render={
             (routeProps) => {
-              return <Contact onRequest={this.handleRequestSubmit} error={error} {...routeProps}/>
+              return <Contact onRequest={this.handleRequestSubmit} onResetError={this.resetError} error={error} {...routeProps}/>
             }
           }/>
            <Route path="/cv" render={

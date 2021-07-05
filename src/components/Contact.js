@@ -4,6 +4,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeSquare, faMobileAlt, faPen} from "@fortawesome/free-solid-svg-icons";
 
 class Contact extends Component {
+
+  componentDidMount() {
+    this.props.onResetError();
+  }
+
   render() {
     const {error, onRequest} = this.props;
     return (
