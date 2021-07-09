@@ -21,19 +21,35 @@ class App extends Component {
       menuNumber: null,
       error: null
     };
+    this.resetError = this.resetError.bind(this);
+    this.handleHomeClicked = this.handleHomeClicked.bind(this);
+    this.handleAboutClicked = this.handleAboutClicked.bind(this);
+    this.handleProjectsClicked = this.handleProjectsClicked.bind(this);
+    this.handleContactClicked = this.handleContactClicked.bind(this);
+    this.handleRequestSubmit = this.handleRequestSubmit.bind(this);
   }
 
   // Clear error messages
-  resetError = () => this.setState({ error: null })
+  resetError() {
+    this.setState({ error: null });
+  }
 
   // Handle clicked navlinks
-  handleHomeClicked = () => this.setState({ menuNumber: 0 })
-  handleAboutClicked = () => this.setState({ menuNumber: 1 })
-  handleProjectsClicked = () => this.setState({ menuNumber: 2 })
-  handleContactClicked = () => this.setState({ menuNumber: 3 })
+  handleHomeClicked() {
+    this.setState({ menuNumber: 0 });
+  } 
+  handleAboutClicked() {
+    this.setState({ menuNumber: 1 });
+  } 
+  handleProjectsClicked() {
+    this.setState({ menuNumber: 2 });
+  } 
+  handleContactClicked() {
+    this.setState({ menuNumber: 3 });
+  } 
 
   // Create request
-  handleRequestSubmit = (event) => {
+  handleRequestSubmit(event) {
     event.preventDefault();
     const {email, subject, message} = event.target;
     const request = {
