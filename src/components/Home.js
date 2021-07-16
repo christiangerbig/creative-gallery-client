@@ -13,14 +13,14 @@ const Home = ({onAboutClicked, onProjectsClicked}) => {
       <div className="toText">
         <h4> to </h4>
       </div>
-      <div className="myText" onClick={onAboutClicked}>
-        <Link to={{pathname: "/about"}} className="homeLink"> <h4> my </h4> </Link>
+      <div className="myText">
+        <Link to={{pathname: "/about"}} className="homeLink" onClick={onAboutClicked}> <h4> my </h4> </Link>
       </div>
-      <div className="creativeText" onClick={onProjectsClicked}>
-        <Link to={{pathname: "/projects"}} className="homeLink"> <h2> creative </h2> </Link>
+      <div className="creativeText">
+        <Link to={{pathname: "/projects"}} className="homeLink" onClick={onProjectsClicked}> <h2> creative </h2> </Link>
       </div>
-      <div className="galleryText" onClick={onProjectsClicked}>
-        <Link to={{pathname: "/projects"}} className="homeLink"> <h2> gallery </h2> </Link>
+      <div className="galleryText">
+        <Link to={{pathname: "/projects"}} className="homeLink" onClick={onProjectsClicked}> <h2> gallery </h2> </Link>
       </div>
     </div>
   );
