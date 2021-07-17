@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import portrait from "../images/portrait-mono.png";
 
-const About = ({onContactClicked}) => {
+const About = ({onNavLinkClicked}) => {
   return (
     <div className="aboutPageContainer">
       <div className="pageNameContainer">
@@ -32,7 +32,7 @@ const About = ({onContactClicked}) => {
             My goal is to <b> become part of a team </b> where I can <b> apply, develop and share my skills</b>.
           </p>
           <p>
-            Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={onContactClicked}> <Link to={{pathname: "/contact"}}> hearing from you </Link> </span>.
+            Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={() => onNavLinkClicked(3)}> <Link to={{pathname: "/contact"}}> hearing from you </Link> </span>.
           </p>
           <div className="aboutLinksContainer">
             <div>

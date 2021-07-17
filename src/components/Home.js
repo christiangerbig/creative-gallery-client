@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Home = ({onAboutClicked, onProjectsClicked}) => {
+const Home = ({onNavLinkClicked}) => {
   return (
     <div className="homePageContainer logoImage">
       <div className="pageNameContainer">
@@ -14,13 +14,13 @@ const Home = ({onAboutClicked, onProjectsClicked}) => {
         <h4> to </h4>
       </div>
       <div className="myText">
-        <Link to={{pathname: "/about"}} className="homeLink" onClick={onAboutClicked}> <h4> my </h4> </Link>
+        <Link to={{pathname: "/about"}} className="homeLink" onClick={() => onNavLinkClicked(1)}> <h4> my </h4> </Link>
       </div>
       <div className="creativeText">
-        <Link to={{pathname: "/projects"}} className="homeLink" onClick={onProjectsClicked}> <h2> creative </h2> </Link>
+        <Link to={{pathname: "/projects"}} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> creative </h2> </Link>
       </div>
       <div className="galleryText">
-        <Link to={{pathname: "/projects"}} className="homeLink" onClick={onProjectsClicked}> <h2> gallery </h2> </Link>
+        <Link to={{pathname: "/projects"}} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> gallery </h2> </Link>
       </div>
     </div>
   );

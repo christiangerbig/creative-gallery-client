@@ -20,11 +20,8 @@ const App = (props) => {
   // Clear error message
   const handleClearError = () => setError(null)
 
-  // Handle clicked navlinks
-  const handleHomeClicked = () => setMenuNumber(0)
-  const handleAboutClicked = () => setMenuNumber(1)
-  const handleProjectsClicked = () => setMenuNumber(2)
-  const handleContactClicked = () => setMenuNumber(3)
+  // Handle click on navigation links
+  const handleNavLinkClicked = menuNumber => setMenuNumber(menuNumber)
 
   // Create request
   const handleSubmitRequest = event => {
@@ -46,16 +43,16 @@ const App = (props) => {
 
   return (
     <div>
-      <NavBar onHomeClicked={handleHomeClicked} onAboutClicked={handleAboutClicked} onProjectsClicked={handleProjectsClicked} onContactClicked={handleContactClicked} menuNumber={menuNumber}/>
+      <NavBar onNavLinkClicked={handleNavLinkClicked} menuNumber={menuNumber}/>
       <Switch>
         <Route exact path="/" render={
           (routeProps) => {
-            return <Home onAboutClicked={handleAboutClicked} onProjectsClicked={handleProjectsClicked} {...routeProps}/>
+            return <Home onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
           }
         }/>
         <Route path="/about" render={
           (routeProps) => {
-            return <About onContactClicked={handleContactClicked} {...routeProps}/>
+            return <About onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
           }
         }/>
         <Route path="/projects" render={
