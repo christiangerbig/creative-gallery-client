@@ -17,10 +17,7 @@ const App = (props) => {
   const [menuNumber, setMenuNumber] = useState(null);
   const [error, setError] = useState(null);
 
-  // Clear error message
-  const handleClearError = () => setError(null)
-
-  // Handle click on navigation links
+  // Analyze click on navigation links
   const handleNavLinkClicked = menuNumber => setMenuNumber(menuNumber)
 
   // Create request
@@ -40,6 +37,9 @@ const App = (props) => {
         (err) => setError(err.response.data.errorMessage)
       );
   }
+
+  // Clear error message
+  const handleClearError = () => setError(null)
 
   return (
     <div>
