@@ -49,6 +49,7 @@ const CV = () => {
               <ul>
                 <li> JavaScript (ES6) </li>
                 <li> HTML5 / CSS3 </li>
+                <li> jQuery </li>
                 <li> React </li>
                 <li> MongoDB </li>
                 <li> ExpressJs </li>
