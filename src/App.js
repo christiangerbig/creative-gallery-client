@@ -34,7 +34,7 @@ const App = (props) => {
         () => props.history.push("/")
       )
       .catch(
-        (err) => setError(err.response.data.errorMessage)
+        err => setError(err.response.data.errorMessage)
       );
   }
 
@@ -46,12 +46,12 @@ const App = (props) => {
       <NavBar onNavLinkClicked={handleNavLinkClicked} menuNumber={menuNumber}/>
       <Switch>
         <Route exact path="/" render={
-          (routeProps) => {
+          routeProps => {
             return <Home onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
           }
         }/>
         <Route path="/about" render={
-          (routeProps) => {
+          routeProps => {
             return <About onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
           }
         }/>
@@ -61,7 +61,7 @@ const App = (props) => {
           }
         }/>
         <Route path="/contact" render={
-          (routeProps) => {
+          routeProps => {
             return <Contact onRequest={handleSubmitRequest} onClearError={handleClearError} error={error} {...routeProps}/>
           }
         }/>
