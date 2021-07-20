@@ -48,7 +48,7 @@ const CV = () => {
               <hr/>
               <ul>
                 <li> JavaScript (ES6) </li>
-                <li> HTML5 / CSS3 </li>
+                <li> HTML5 / CSS3 / SCSS </li>
                 <li> jQuery </li>
                 <li> React </li>
                 <li> MongoDB </li>
@@ -57,7 +57,7 @@ const CV = () => {
                 <li> NodeJs </li>
                 <li> Axios </li>
                 <li> Bootstrap </li>
-                <li> GitHub </li>
+                <li> Git / GitHub </li>
               </ul>
             </div>
             <div>
