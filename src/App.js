@@ -13,7 +13,7 @@ import Contact from "./components/Contact";
 import CV from "./components/CV";
 import NotFound from "./components/NotFound";
 
-const App = (props) => {
+const App = props => {
   const [menuNumber, setMenuNumber] = useState(null);
   const [error, setError] = useState(null);
 
