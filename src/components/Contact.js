@@ -36,9 +36,7 @@ const Contact =({error, onClearError, onRequest}) => {
           <div>
             <h3> <FontAwesomeIcon icon={faPen}/> or write me </h3>
           </div>
-          {
-            error ? <p className="warningColor"> {error} </p> : null
-          }
+          {error && (<p className="warningColor"> {error} </p>)}
           <div>
             <input type="email" name="email" placeholder="email" className="formInput"/>
           </div>
