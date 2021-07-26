@@ -79,7 +79,8 @@ const App = props => {
               <Contact 
                 onRequest={handleSubmitRequest} 
                 onClearError={handleClearError} 
-                error={error} {...routeProps}
+                error={error} 
+                {...routeProps}
               />
             );
           }
