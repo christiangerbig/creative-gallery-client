@@ -43,16 +43,29 @@ const App = props => {
 
   return (
     <div>
-      <NavBar onNavLinkClicked={handleNavLinkClicked} menuNumber={menuNumber}/>
+      <NavBar 
+        onNavLinkClicked={handleNavLinkClicked} 
+        menuNumber={menuNumber}
+      />
       <Switch>
         <Route exact path="/" render={
           routeProps => {
-            return <Home onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
+            return (
+              <Home 
+                onNavLinkClicked={handleNavLinkClicked} 
+                {...routeProps}
+              />
+            );
           }
         }/>
         <Route path="/about" render={
           routeProps => {
-            return <About onNavLinkClicked={handleNavLinkClicked} {...routeProps}/>
+            return (
+              <About 
+                onNavLinkClicked={handleNavLinkClicked} 
+                {...routeProps}
+              />
+            );
           }
         }/>
         <Route path="/projects" render={
@@ -62,7 +75,13 @@ const App = props => {
         }/>
         <Route path="/contact" render={
           routeProps => {
-            return <Contact onRequest={handleSubmitRequest} onClearError={handleClearError} error={error} {...routeProps}/>
+            return (
+              <Contact 
+                onRequest={handleSubmitRequest} 
+                onClearError={handleClearError} 
+                error={error} {...routeProps}
+              />
+            );
           }
         }/>
           <Route path="/cv" render={
