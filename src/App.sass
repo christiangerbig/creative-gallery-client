@@ -1,0 +1,967 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Source+Sans+Pro:wght@200;300&display=swap")
+
+html, 
+body 
+  background-color: #ffffff
+
+  /* Height and width fallback for older browsers. */
+  height: 100%
+  width: 100%
+
+  /* Set the height to match that of the viewport. */
+  height: 100vh
+
+  /* Remove any browser-default margins. */
+  margin: 0
+
+
+@media only screen and (min-device-width: 60em) 
+  body 
+    background:
+      image: url("./images/bw-stripes.jpg")
+      color: white
+      size: cover
+      repeat: no-repeat
+      attachment: fixed
+  
+
+
+.logoImage 
+  background:
+    image: url("./images/tribar-md.png")
+    color: white
+    size: 23rem
+    repeat: no-repeat
+    attachment: fixed
+    position: 50% 35%
+
+
+.warningColor 
+  color: red
+
+
+
+/* Navigation Bar */
+nav 
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 1030
+  margin: 1rem 1rem auto 1rem
+
+.navbarContainer 
+  display: flex
+  justify-content: flex-end
+  align-items: center
+
+.logo 
+  padding-right: 20%
+
+.navLinkContainer 
+  background-color: white
+
+.navLink 
+  display: inline-block
+  text-decoration: none
+  background-color: white
+  color: black
+  padding: 0.3rem 0.8rem
+  transition: all 0.5s
+
+.navLink:hover 
+  background-color: rgb(230, 230, 230)
+
+.textEnlighted 
+  color: rgb(255, 163, 43)
+
+
+
+/* Footer */
+footer 
+  margin: 0
+
+.footerContainer 
+  display: flex
+  justify-content: center
+  align-items: center
+
+@media (min-device-width: 20em) 
+  .footerContainer span 
+    font-weight: 500
+    color: rgb(255, 163, 43)
+  
+
+@media only screen and (min-device-width: 60em) 
+  .footerContainer span 
+    font-weight: 500
+    text-shadow: 0px 0px 1px black
+    color: rgb(255, 163, 43)
+  
+
+
+/* Page name */
+@keyframes scrollPageNameIn 
+  from
+    margin-left: -15%
+  to
+    margin-left: 0
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.pageNameContainer 
+  text-align: right
+  width: 12rem
+  background-color: rgb(230, 230, 166)
+  padding: 0.3rem 2rem 0.3rem 1rem
+  margin-top: 4rem
+  animation: scrollPageNameIn 2s forwards
+
+.pageNameContainer h2 
+  margin:
+    top: 0
+    bottom: 0
+
+
+
+/* Home page */
+.homePageContainer 
+  margin-bottom: 2rem
+
+@keyframes fadeLogoIn 
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.homePageContainer 
+  animation: fadeLogoIn 3s forwards
+
+
+/* "WELCOME" */
+@keyframes fadeWelcomeTextIn 
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.welcomeText 
+  text-align: center
+  color: rgb(255, 163, 43)
+  margin-top: 0.2rem
+  animation: fadeWelcomeTextIn 4.5s forwards
+
+.welcomeText h1 
+  font-size: 4.7rem
+  margin-bottom: 0.5rem 
+
+
+/* "to" */
+@media (min-device-width: 20em) 
+  @keyframes fadeToTextIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .toText 
+    margin:
+      top: 0  
+      left: 50%
+    animation: fadeToMyTextIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollToTextIn 
+    from
+      margin-left: -10%
+    to
+      margin-left: 50%
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .toText 
+    margin-top: 0
+    animation: scrollToTextIn 2s forwards
+  
+
+.toText h4 
+  font-size: 2.5rem
+  margin:
+    top: 0
+    bottom: 0
+
+
+/* "my" */
+@media (min-device-width: 20em) 
+  @keyframes fadeMyTextIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .myText 
+    margin:
+      top: 0.3rem  
+      left: 42%
+    animation: fadeMyTextIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollMyTextIn 
+    from
+      margin-left: -10%
+    to
+      margin-left: 42%
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .myText 
+    margin-top: 0.3rem  
+    animation: scrollMyTextIn 2s forwards
+  
+
+.myText h4 
+  font-size: 2.5rem
+  color: rgb(68, 138, 199)
+  margin:
+    top: 0
+    bottom: 1.5rem
+  transition: all 0.5s
+
+.myText h4:hover 
+  color: rgb(118, 177, 230)
+
+
+/* "creative" */
+@media (min-device-width: 20em) 
+  @keyframes fadeCreativeTextIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .creativeText 
+    margin:
+      top: 0.3rem
+      bottom: 0
+      left: 5%
+    animation: fadeCreativeTextIn 1.6s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollCreativeTextIn 
+    from 
+      margin-left: -15%
+    to
+      margin-left: 36%
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .creativeText 
+    margin:
+      top: 0.3rem
+      bottom: 0
+    animation: scrollCreativeTextIn 1.6s forwards
+  
+
+.creativeText h2 
+  font-size: 4rem
+  color: rgb(161, 161, 60)
+  margin:
+    top: 0rem
+    bottom: 0rem
+  transition: all 0.5s
+
+.creativeText h2:hover 
+  color: rgb(185, 185, 55)
+
+
+/* "gallery" */
+@media (min-device-width: 20em) 
+  @keyframes fadeGalleryTextIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .galleryText 
+    padding-bottom: 0.3rem
+    margin:
+      top: 0
+      left: 47%
+    animation: fadeGalleryTextIn 1.4s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollGalleryTextIn 
+    from 
+      margin-left: -20%
+    to 
+      margin-left: 52%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .galleryText 
+    padding-bottom: 0.3rem
+    margin-top: 0rem
+    animation: scrollGalleryTextIn 1.4s forwards
+  
+
+.galleryText h2 
+  font-size: 4rem
+  color: rgb(56, 199, 255)
+  margin:
+    top: 0.7rem
+    bottom: 4rem
+  transition: all 0.5s
+
+.galleryText h2:hover 
+  color: rgb(98, 211, 255)
+
+.homeLink 
+  display: inline-block
+  text-decoration: none
+
+
+
+/* About page */
+@media (min-device-width: 20em) 
+  @keyframes fadeDetailsContainerIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .aboutDetailsContainer 
+    display: flex
+    flex-flow: wrap-reverse
+    justify-content: center
+    align-items: center
+    margin:
+      top: 2rem
+      bottom: 0.1rem
+      left: 2%
+    animation: fadeDetailsContainerIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollDetailsContainerIn 
+    from
+      margin-left: -150%
+    to
+      margin-left: 2%
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .aboutDetailsContainer 
+    display: flex
+    flex-flow: wrap-reverse
+    justify-content: center
+    align-items: center
+    margin:
+      top: 2rem
+      bottom: 4rem
+    animation: scrollDetailsContainerIn 2s forwards
+  
+
+.aboutDetailsText 
+  font-family: Source Sans Pro
+  width: 60%
+  padding: 0.5rem 2rem
+  margin: 2rem 1%
+  background-color: rgb(240, 240, 240)
+
+.aboutDetailsText h2 
+  margin-top: 0rem
+
+.aboutDetailsText p 
+  font-size: 1.1rem
+
+.aboutPictureContainer 
+  padding:
+    right: 3%
+    left: 3%
+
+.aboutPictureContainer img 
+  width: 24rem
+
+.aboutLinksContainer 
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  margin:
+    top: 3rem
+    bottom: 1.5rem
+
+.aboutCVLink 
+  display: inline-block
+  text-decoration: none
+  font-weight: 600
+  background-color: white
+  color: black
+  padding: 0.3rem 0.8rem
+  transition: all 0.5s
+
+.aboutCVLink:hover 
+  background-color: rgb(188, 255, 161)
+
+.aboutLinkedInLink 
+  display: inline-block
+  text-decoration: none
+  font-weight: 600
+  background-color: white
+  color: black
+  padding: 0.3rem 0.7rem
+  transition: all 0.5s
+
+.aboutLinkedInLink:hover 
+  background-color: rgb(255, 212, 155)
+
+.aboutGitHubLink 
+  display: inline-block
+  text-decoration: none
+  font-weight: 600
+  background: white
+  color: black
+  padding: 0.3rem 0.8rem
+  transition: all 0.5s
+
+.aboutGitHubLink:hover 
+  background-color: rgb(166, 230, 255)
+
+.aboutContactLink a 
+  text-decoration: none
+  color: rgb(60, 138, 240)
+  transition: all 0.5s
+
+.aboutContactLink a:hover 
+  color: rgb(129, 176, 241)
+
+
+
+/* CV page */
+@media (min-device-width: 20em) 
+  @keyframes fadeCvContainerIn 
+    from
+      opacity: 0
+    to
+      opacity: 1
+  
+  .cvContainer 
+    display: flex
+    justify-content: flex-center
+    align-items: flex-center
+    background-color: rgb(240, 240, 240)
+    margin: 2rem 0
+    animation: fadeCvContainerIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollCvContainerIn 
+    from
+      margin-left: -150%
+    to 
+      margin-left: 5%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .cvContainer 
+    display: flex
+    flex-flow: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    background-color: rgb(240, 240, 240)
+    margin:
+      top: 2rem
+      right: 5%
+      bottom: 2rem
+    animation: scrollCvContainerIn 2s forwards
+  
+
+.cvContainer a 
+  text-decoration: none
+  color: rgb(60, 138, 240)
+  transition: all 0.5s
+
+.cvContainer a:hover 
+  color: rgb(129, 176, 241)
+
+.cvDetailsContainer 
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 25rem
+  background-color: rgb(240, 240, 240)
+  padding:
+    top: 3%
+    left: 3%
+    right: 3%
+  margin:
+    top: 2rem
+    bottom: 2rem
+
+.cvDetailsContainer h1 
+  margin-bottom: 0
+
+.cvDetailsContainer h2 
+  margin:
+    top: 0.4rem
+    bottom: 0
+
+.cvDetailsContainer h3 
+  text-align: center
+  margin-bottom: 0
+
+.cvPictureContainer img 
+  width: 15rem
+
+.cvCareerContainer 
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  width: 50rem
+  background-color: rgb(240, 240, 240)
+  padding:
+    top: 4rem
+    left: 3%
+    right: 3%
+  margin:
+    top: 0
+    bottom: 2rem
+
+.cvCareerContainer h3 
+  margin-bottom: 0
+  text-align: center
+
+.cvTrainingDetailsContainer,
+.cvEducationDetailsContainer 
+  margin-top: 0.3rem
+ 
+.cvTrainingDetailsContainer h4,
+.cvWorkDetailsContainer h4,
+.cvEducationDetailsContainer h4,
+.cvProjectContainer h4,
+.cvTrainingDetailsContainer h5,
+.cvWorkDetailsContainer h5,
+.cvEducationDetailsContainer h5 
+  margin:
+    top: 0
+    bottom: 0
+
+.cvWorkDetailsContainer 
+  margin-top: 0.3rem
+
+.cvProjectContainer 
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-top: 1.5rem
+
+.cvProjectLink 
+  display: inline-block
+  font-size: 1rem
+  padding-left: 0.7rem
+
+
+
+/* Projects page */
+.projectsPageContainer 
+  margin-bottom: 3rem
+
+
+.projectsIntroTextContainer 
+  margin: 0
+
+@media (min-device-width: 20em) 
+  @keyframes fadeProjectsInfoTextIn 
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .projectsIntroText 
+    text-align: center
+    background-color: white
+    padding:
+      top: 0.3rem
+      bottom: 0.5rem
+      left: 5%
+    margin-left: 0
+    animation: fadeProjectsInfoTextIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollProjectsInfoTextIn 
+    from 
+      margin-left: -350%
+    to 
+      margin-left: 0
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .projectsIntroText 
+    text-align: center
+    background-color: white
+    padding:
+      top: 0.3rem
+      bottom: 0.5rem
+    animation: scrollProjectsInfoTextIn 2s forwards
+  
+
+@media (min-device-width: 20em) 
+  @keyframes fadeProjectsContainerIn 
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .projectsContainer 
+    display: flex
+    flex-flow: wrap
+    justify-content: space-evenly
+    align-items: center
+    margin:
+      top: 0.5rem
+      bottom: 0.1rem
+      left: 2%
+    animation: fadeProjectsContainerIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollProjectsContainerIn 
+    from 
+      margin-left: -350%
+    to 
+      margin-left: 2%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .projectsContainer 
+    display: flex
+    flex-flow: wrap
+    justify-content: space-evenly
+    align-items: flex-start
+    margin:
+      top: 0.2rem
+      bottom: 0.1rem
+    animation: scrollProjectsContainerIn 2s forwards
+  
+
+.projectDetailsContainer 
+  font-family: Source Sans Pro
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  text-align: center
+  background-color: rgb(240, 240, 240)
+  padding: 0.3rem
+  margin: 1rem 2rem 1.8rem 2rem
+
+.projectDetailsContainer video 
+  margin-top: 1rem
+
+.projectDetailsContainer video,
+.projectDetailsContainer p 
+  padding:
+    left: 1rem
+    right: 1rem
+
+.projectLinksContainer 
+  display: flex
+  flex-flow: wrap
+  justify-content: center
+  align-items: center
+  margin:
+    top: 0
+    bottom: 1.5rem
+
+.projectTryItLink 
+  display: inline-block
+  text-decoration: none
+  background-color: white
+  color: black
+  padding: 0.3rem 0.8rem
+  margin:
+    right: 0.5rem
+    left: 0.5rem
+  transition: all 1s
+
+.projectTryItLink:hover 
+  background-color: rgb(188, 255, 161)
+
+.projectGitHubLink 
+  display: inline-block
+  text-decoration: none
+  background-color: white
+  color: black
+  padding: 0.3rem 0.8rem
+  margin:
+    right: 0.5rem
+    left: 0.5rem
+  transition: all 1s
+
+.projectGitHubLink:hover 
+  background-color: rgb(166, 230, 255)
+
+
+
+/* Contact page */
+@keyframes scrollContactContainerIn 
+  from 
+    margin-left: -50%
+  to 
+    margin-left: 20%
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+
+.contactContainer 
+  font-family: Source Sans Pro
+  display: flex
+  justify-content: center
+  text-align: center
+  flex-direction: column
+  width: 30%
+  background-color: rgb(240, 240, 240)
+  padding:
+    top: .5rem
+    right: 15%
+    left: 15%
+  margin:
+    top: 3rem
+    right: auto
+    bottom: 2.4rem
+  animation: scrollContactContainerIn 2s forwards
+
+.contactContainer div h1 
+  margin:
+    top: 1rem
+    bottom: 0
+
+.contactContainer div h2 
+  margin:
+    top: 0.5rem
+    bottom: 0
+
+.contactWaysContainer 
+  display: flex
+  justify-content: center
+  flex:
+    direction: row
+    flow: wrap
+
+.contactWaysContainer div 
+  padding:
+    top: 0rem
+    right: 5%
+    left: 5%
+
+.contactEmailContainer h3 
+  margin-bottom: 0.6rem
+
+.contactEmailContainer h4 
+  margin:
+    top: 0rem
+    bottom: 0.7rem
+
+.contactPhoneContainer h3 
+  margin-bottom: 0.6rem
+
+.contactPhoneContainer h4 
+  margin:
+    top: 0rem
+    bottom: 0.7rem
+
+.contactLink a 
+  text-decoration: none
+  color: rgb(60, 138, 240)
+  transition: all 0.5s
+
+.contactLink a:hover 
+  color: rgb(129, 176, 241)
+
+form h3 
+  padding-bottom: 0
+  margin-bottom: 0.3rem
+
+.formInput 
+  width: 100%
+  padding: 0.3rem
+  border: none
+  margin-bottom: 1rem
+
+.formTextarea 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  width: 100%
+  padding: 0.3rem
+  border: none
+  margin-bottom: 1rem
+  
+.formSubmit
+  width: auto
+  background-color: white
+  padding: 0.3rem 0.8rem
+  border: none
+  margin-bottom: 1.5rem
+  transition: all 0.5s
+
+.formSubmit:hover 
+  background-color: rgb(188, 255, 161)
+
+
+
+/* Not found page */
+.notFoundPageContainer 
+  animation: fadeLogoIn 3s forwards
+
+
+/* "something" */
+@media (min-device-width: 20em) 
+  @keyframes fadeSomethingTextIn 
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .somethingText 
+    margin:
+      top: 0.3rem  
+      left: 25%
+    animation: fadeSomethingIn 2s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollSomethingTextIn 
+    from 
+      margin-left: -10%
+    to 
+      margin-left: 25%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .somethingText 
+    margin-top: 0.3rem  
+    animation: scrollSomethingTextIn 2s forwards
+  
+
+.somethingText h3 
+  font-size: 2.5rem
+  margin-top: 3rem
+
+
+/* "went" */
+@media (min-device-width: 20em) 
+  @keyframes fadeWentTextIn 
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .wentText 
+    margin:
+      top: 0.3rem
+      left: 35%
+    animation: fadeWentTextIn 1.6s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollWentTextIn 
+    from 
+      margin-left: -15%
+    to 
+      margin-left: 35%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .wentText 
+    margin-top: 0.3rem
+    animation: scrollWentTextIn 1.6s forwards
+  
+
+.wentText h4 
+  font-size: 3.5rem
+
+
+/* "wrong" */
+@media (min-device-width: 20em) 
+  @keyframes fadeWrongTextIn 
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .wrongText 
+    margin:
+      top: 0.3rem
+      bottom: 2rem
+      left: 47%
+    animation: fadeWrongTextIn 1.4s forwards
+  
+
+@media only screen and (min-device-width: 60em) 
+  @keyframes scrollWrongTextIn 
+    from 
+      margin-left: -20%
+    to 
+      margin-left: 47%
+    from 
+      opacity: 0
+    to 
+      opacity: 1
+  
+  .wrongText 
+    margin:
+      top: 0.3rem
+      bottom: 2rem
+    animation: scrollWrongTextIn 1.4s forwards
+  
+
+.wrongText h2 
+  font-size: 5rem
+
+.notFoundGetBackContainer 
+  display: flex
+  justify-content: center
+  align-items: center
+  margin:
+    top: 0rem
+    bottom: 3.2rem
+
+.notFoundGetBackLink 
+  display: inline-block
+  text-decoration: none
+  background-color: white
+  padding: 0.3rem
+  margin:
+    top: 1rem
+    bottom: 2rem
+  transition: all 0.5s
+
+.notFoundGetBackLink:hover 
+  background-color: rgb(188, 255, 161)

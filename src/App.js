@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import {Route, Switch, withRouter} from "react-router-dom";
 import config from "./config";
 import axios from "axios";
-import "./App.css";
+
+import "./App.min.css";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
