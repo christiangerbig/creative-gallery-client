@@ -150,7 +150,7 @@ const CV = () => {
                   <Link to={{pathname: "https://creativegallery.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
-              <p> Single page vanilla CSS application using React | JavaScript | CSS3 | NodeJs | MongoDB | Axios </p>
+              <p> Single page vanilla CSS application using React | JavaScript | SASS | NodeJs | MongoDB | Axios </p>
               <p> This is my portfolio to present my projects and another exercise to apply my React/JavaScript knowledge. </p>
             </div>
             <div className="cvProjectDetailContainer">
@@ -166,7 +166,7 @@ const CV = () => {
                   <Link to={{pathname: "https://jungleswap.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
-              <p> Single page application using React | JavaScript | CSS3 | Bootstrap | NodeJs MongoDB |  Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot) </p>
+              <p> Single page application using React | JavaScript | SASS | Bootstrap | NodeJs MongoDB |  Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot) </p>
               <p> With this app you can share your plant offshoots, sell, buy or swap them for another plant. Shop and give a plant a new home. </p>
             </div>
             <div className="cvProjectDetailContainer">
@@ -179,7 +179,7 @@ const CV = () => {
                   <Link to={{pathname: "https://trackertools.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
-              <p> Full stack project using Express | Handlebars | JavaScript | CSS3 | Bootstrap | MongoDB </p>
+              <p> Full stack project using Express | Handlebars | JavaScript | SASS | Bootstrap | MongoDB </p>
               <p> This app includes four powerful tools to make working with the music editor Protracker and its modules more comfortable. </p>
             </div>
             <div className="cvProjectDetailContainer">

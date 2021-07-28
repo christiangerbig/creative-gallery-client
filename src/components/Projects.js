@@ -21,7 +21,7 @@ const Projects = () => {
           <div>
             <h3> JungleSwap </h3>
             <h4> 
-              React | JavaScript | CSS3 | Bootstrap <br/> 
+              React | JavaScript | SASS | Bootstrap <br/> 
               NodeJs | MongoDB | Axios | Responsive
             </h4>
             <p>
@@ -50,7 +50,7 @@ const Projects = () => {
           <div>
             <h3> Trackertools </h3>
             <h4>
-              Express | Handlebars | JavaScript | CSS3 <br/> 
+              Express | Handlebars | JavaScript | SASS <br/> 
               Bootstrap | MongoDB | Responsive
             </h4>
             <p> 
