@@ -1,14 +1,39 @@
-import React, {useEffect} from "react";
-import {Link} from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import {Link, useHistory} from "react-router-dom";
+import config from "../config";
+import axios from "axios";
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeSquare, faMobileAlt, faPen} from "@fortawesome/free-solid-svg-icons";
 
-const Contact =({error, onClearError, onRequest}) => {
+const Contact =() => {
+  const [error, setError] = useState(null);
+
+  const history = useHistory();
+
   // Clear error test as soon as page loads
   useEffect(
-    () => onClearError(),
+    () => setError(null),
     []
   );
+
+  // Create request
+  const handleSubmitRequest = event => {
+    event.preventDefault();
+    const {email, subject, message} = event.target;
+    const request = {
+      email: email.value,
+      subject: subject.value,
+      message: message.value
+    };
+    axios.post(`${config.API_URL}/api/request`, request)
+      .then(
+        () => history.push("/")
+      )
+      .catch(
+        err => setError(err.response.data.errorMessage)
+      );
+  }
 
   return (
     <div className="contactPageContainer">
@@ -32,7 +57,7 @@ const Contact =({error, onClearError, onRequest}) => {
             <span className="contactLink"> <Link to={{pathname: "tel:+4915154824288"}} target="_blank"> <h4> +49 151 548 242 88 </h4> </Link> </span>
           </div>
         </div>
-        <form onSubmit={onRequest}>
+        <form onSubmit={handleSubmitRequest}>
           <div>
             <h3> <FontAwesomeIcon icon={faPen}/> or write me </h3>
           </div>
