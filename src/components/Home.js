@@ -14,13 +14,13 @@ const Home = ({onNavLinkClicked}) => {
         <h4> to </h4>
       </div>
       <div className="myText">
-        <Link to={{pathname: "/about"}} className="homeLink" onClick={() => onNavLinkClicked(1)}> <h4> my </h4> </Link>
+        <Link to={"/about"} className="homeLink" onClick={() => onNavLinkClicked(1)}> <h4> my </h4> </Link>
       </div>
       <div className="creativeText">
-        <Link to={{pathname: "/projects"}} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> creative </h2> </Link>
+        <Link to={"/projects"} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> creative </h2> </Link>
       </div>
       <div className="galleryText">
-        <Link to={{pathname: "/projects"}} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> gallery </h2> </Link>
+        <Link to={"/projects"} className="homeLink" onClick={() => onNavLinkClicked(2)}> <h2> gallery </h2> </Link>
       </div>
     </div>
   );

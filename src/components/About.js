@@ -36,7 +36,7 @@ const About = ({onNavLinkClicked}) => {
           </p>
           <div className="aboutLinksContainer">
             <div>
-              <Link to={{pathname: "/cv"}} className="aboutCVLink"> CV </Link>
+              <Link to={"/cv"} className="aboutCVLink"> CV </Link>
             </div>
             <div>
               <Link to={{pathname: "https://www.linkedin.com/in/christian-gerbig/"}} target="_blank" className="aboutLinkedInLink"> LinkedIn </Link>

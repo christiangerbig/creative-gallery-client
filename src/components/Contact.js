@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeSquare, faMobileAlt, faPen} from "@fortawesome/free-solid-svg-icons";
 
 const Contact =({error, onClearError, onRequest}) => {
-
+  // Clear error test as soon as page loads
   useEffect(
     () => onClearError(),
     []

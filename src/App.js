@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Route, Switch, withRouter} from "react-router-dom";
+import {Route, Switch, withRouter, useHistory} from "react-router-dom";
 import config from "./config";
 import axios from "axios";
 
@@ -14,9 +14,11 @@ import Contact from "./components/Contact";
 import CV from "./components/CV";
 import NotFound from "./components/NotFound";
 
-const App = props => {
+const App = () => {
   const [menuNumber, setMenuNumber] = useState(null);
   const [error, setError] = useState(null);
+
+  const history = useHistory();
 
   // Analyze click on navigation links
   const handleNavLinkClicked = menuNumber => setMenuNumber(menuNumber)
@@ -32,7 +34,7 @@ const App = props => {
     };
     axios.post(`${config.API_URL}/api/request`, request)
       .then(
-        () => props.history.push("/")
+        () => history.push("/")
       )
       .catch(
         err => setError(err.response.data.errorMessage)
@@ -49,48 +51,25 @@ const App = props => {
         menuNumber={menuNumber}
       />
       <Switch>
-        <Route exact path="/" render={
-          routeProps => {
-            return (
-              <Home 
-                onNavLinkClicked={handleNavLinkClicked} 
-                {...routeProps}
-              />
-            );
-          }
-        }/>
-        <Route path="/about" render={
-          routeProps => {
-            return (
-              <About 
-                onNavLinkClicked={handleNavLinkClicked} 
-                {...routeProps}
-              />
-            );
-          }
-        }/>
-        <Route path="/projects" render={
-          () => {
-            return <Projects/>
-          }
-        }/>
-        <Route path="/contact" render={
-          routeProps => {
-            return (
-              <Contact 
-                onRequest={handleSubmitRequest} 
-                onClearError={handleClearError} 
-                error={error} 
-                {...routeProps}
-              />
-            );
-          }
-        }/>
-          <Route path="/cv" render={
-          () => {
-            return <CV/>
-          }
-        }/>
+        <Route exact path="/">
+          <Home onNavLinkClicked={handleNavLinkClicked}/> 
+        </Route>
+        <Route path="/about">
+          <About onNavLinkClicked={handleNavLinkClicked}/>
+       </Route>
+        <Route path="/projects">
+          <Projects/>
+        </Route>
+        <Route path="/contact">
+          <Contact 
+            onRequest={handleSubmitRequest} 
+            onClearError={handleClearError} 
+            error={error}
+          />
+        </Route>
+        <Route path="/cv">
+          <CV/>
+        </Route>
         <Route component={NotFound}/>
       </Switch>
       <Footer/>

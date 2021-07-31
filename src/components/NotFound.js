@@ -17,7 +17,7 @@ const NotFound = () => {
         <h2> wrong </h2>
       </div>
       <div className="notFoundGetBackContainer">
-        <Link to={{pathname: "/"}} className="notFoundGetBackLink textEnlighted"> Get back </Link>
+        <Link to={"/"} className="notFoundGetBackLink textEnlighted"> Get back </Link>
       </div>
     </div>
   );
