@@ -18,6 +18,7 @@ export const createRequest = createAsyncThunk(
       history.push("/");
     }
     catch (err) {
+      console.log(err.response.data.errorMessage);
       dispatch(setError(err.response.data.errorMessage));
     }
   }
