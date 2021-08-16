@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import jungleSwap from "../images/jungle-swap.png";
-import trackertools from "../images/trackertools.png";
-import letterShooter from "../images/letter-shooter.png";
+import jungleSwap from "../Images/jungle-swap.png";
+import trackertools from "../Images/trackertools.png";
+import letterShooter from "../Images/letter-shooter.png";
 
 const Projects = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import portrait from "../images/portrait-mono.png";
+import { Link } from "react-router-dom";
+import portrait from "../Images/portrait-mono.png";
 
 const CV = () => {
   return (
@@ -11,7 +11,7 @@ const CV = () => {
       <div className="cvContainer">
         <div className="cvDetailsContainer">
           <div className="cvPictureContainer">
-            <img src={portrait} alt="potrait"/>
+            <img src={portrait} alt="potrait" />
           </div>
           <div>
             <h1> Christian Gerbig </h1>
@@ -20,37 +20,38 @@ const CV = () => {
             <h2> Frontend Developer </h2>
           </div>
           <div>
-            <p> Javascript (ES6) | HTML5 | CSS3 | Bootstrap React | MongoDB | NodeJS | Express | Axios </p>
+            <p> Javascript (ES6) | HTML5 | CSS3 | Bootstrap | React | Redux | MongoDB | NodeJS | Express | Axios </p>
             <p>
-              Flotowstraße 21 <br/>
-              22083 Hamburg <br/>
+              Flotowstraße 21 <br />
+              22083 Hamburg <br />
               Germany
             </p>
             <p>
-              <span className="contactLink"> <Link to={{pathname: "tel:+4915154824288"}} target="_blank"> +49 151 548 242 88 </Link> </span> <br/>
-              <span className="contactLink"> <Link to={{pathname: "mailto:chr_gerbig@web.de"}} target="_blank"> chr_gerbig web.de </Link> </span>
+              <span className="contactLink"> <Link to={{ pathname: "tel:+4915154824288" }} target="_blank"> +49 151 548 242 88 </Link> </span> <br />
+              <span className="contactLink"> <Link to={{ pathname: "mailto:chr_gerbig@web.de" }} target="_blank"> chr_gerbig web.de </Link> </span>
             </p>
             <div>
-              <Link to={{pathname: "https://www.linkedin.com/in/christian-gerbig/"}} target="_blank"> linkedin.com/in/christian-gerbig/ </Link>
+              <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank"> linkedin.com/in/christian-gerbig/ </Link>
             </div>
             <div>
-              <Link to={{pathname: "https://github.com/christiangerbig/"}} target="_blank"> github.com/christiangerbig </Link>
+              <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank"> github.com/christiangerbig </Link>
             </div>
             <div>
               <h3> MY GOAL </h3>
-              <hr/>
+              <hr />
               <p>
                 Learning things, improving (them) and become part of a team where I can apply, develop and share my skills.
               </p>
             </div>
             <div>
               <h3> SKILLS </h3>
-              <hr/>
+              <hr />
               <ul>
                 <li> JavaScript (ES6) </li>
                 <li> HTML5 / CSS3 / SASS </li>
                 <li> jQuery </li>
                 <li> React </li>
+                <li> Redux </li>
                 <li> MongoDB </li>
                 <li> ExpressJs </li>
                 <li> Handlebars </li>
@@ -62,7 +63,7 @@ const CV = () => {
             </div>
             <div>
               <h3> LANGUAGES </h3>
-              <hr/>
+              <hr />
               <ul>
                 <li> German: native </li>
                 <li> English: fluent </li>
@@ -70,7 +71,7 @@ const CV = () => {
             </div>
             <div>
               <h3> PERSONAL ACTIVITIES </h3>
-              <hr/>
+              <hr />
               <ul>
                 <li> Music and composing </li>
                 <li> Contemporary History </li>
@@ -83,7 +84,14 @@ const CV = () => {
         <div className="cvCareerContainer">
           <div>
             <h3> TRAINING </h3>
-            <hr/>
+            <hr />
+          </div>
+          <div className="cvTrainingDetailsContainer">
+            <h4> The essential React course incl. Hooks, Redux, React-Router - Udemy </h4>
+            <h5> 08/2021 </h5>
+            <ul>
+              <li> React | Hooks | Redux Toolkit | asynchronous Axios API calls </li>
+            </ul>
           </div>
           <div className="cvTrainingDetailsContainer">
             <h4> Full-Stack Web Developer - Ironhack boot camp</h4>
@@ -109,7 +117,7 @@ const CV = () => {
           </div>
           <div>
             <h3> WORK EXPERIENCE </h3>
-            <hr/>
+            <hr />
           </div>
           <div className="cvWorkDetailsContainer">
             <h4> Accounting Clerk - Deutsche Extrakt Kaffee GmbH Hamburg </h4>
@@ -126,7 +134,7 @@ const CV = () => {
           </div>
           <div>
             <h3> EDUCATION </h3>
-            <hr/>
+            <hr />
           </div>
           <div className="cvEducationDetailsContainer">
             <h4> Qualified Social Education Worker - Fachhochschule Darmstadt </h4>
@@ -134,20 +142,20 @@ const CV = () => {
           </div>
           <div>
             <h3> PROJECTS </h3>
-            <hr/>
+            <hr />
           </div>
           <div>
             <div className="cvProjectDetailContainer">
               <div className="cvProjectContainer">
                 <h4> CreativeGallery </h4>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/creative-gallery-client"}} target="_blank" className="cvProjectLink"> GitHubClient </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/creative-gallery-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/creative-gallery-server"}} target="_blank" className="cvProjectLink"> GitHubServer </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/creative-gallery-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://creativegallery.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
+                  <Link to={{ pathname: "https://creativegallery.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
               <p> Single page vanilla CSS application using React | JavaScript | SASS | NodeJs | MongoDB | Axios </p>
@@ -157,13 +165,13 @@ const CV = () => {
               <div className="cvProjectContainer">
                 <h4> JungleSwap </h4>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/jungle-swap-client"}} target="_blank" className="cvProjectLink"> GitHubClient </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-client" }} target="_blank" className="cvProjectLink"> GitHubClient </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/jungle-swap-server"}} target="_blank" className="cvProjectLink"> GitHubServer </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/jungle-swap-server" }} target="_blank" className="cvProjectLink"> GitHubServer </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://jungleswap.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
+                  <Link to={{ pathname: "https://jungleswap.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
               <p> Single page application using React | JavaScript | SASS | Bootstrap | NodeJs MongoDB |  Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot) </p>
@@ -173,10 +181,10 @@ const CV = () => {
               <div className="cvProjectContainer">
                 <h4> Trackertools </h4>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/Trackertools"}} target="_blank" className="cvProjectLink"> GitHub </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/Trackertools" }} target="_blank" className="cvProjectLink"> GitHub </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://trackertools.herokuapp.com/"}} target="_blank" className="cvProjectLink"> Deployment </Link>
+                  <Link to={{ pathname: "https://trackertools.herokuapp.com/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
               <p> Full stack project using Express | Handlebars | JavaScript | SASS | Bootstrap | MongoDB </p>
@@ -186,10 +194,10 @@ const CV = () => {
               <div className="cvProjectContainer">
                 <h4> LetterShooter </h4>
                 <div>
-                  <Link to={{pathname: "https://github.com/christiangerbig/letter-shooter"}} target="_blank" className="cvProjectLink"> GitHub </Link>
+                  <Link to={{ pathname: "https://github.com/christiangerbig/letter-shooter" }} target="_blank" className="cvProjectLink"> GitHub </Link>
                 </div>
                 <div>
-                  <Link to={{pathname: "https://christiangerbig.github.io/letter-shooter/"}} target="_blank"  className="cvProjectLink"> Deployment </Link>
+                  <Link to={{ pathname: "https://christiangerbig.github.io/letter-shooter/" }} target="_blank" className="cvProjectLink"> Deployment </Link>
                 </div>
               </div>
               <p> Front-end project build with HTML5 | Canvas | JavaScript | CSS3 </p>

@@ -1,8 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import portrait from "../images/portrait-mono.png";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setMenuNumber } from "../Reducer/creativeGallerySlice";
 
-const About = ({onNavLinkClicked}) => {
+import portrait from "../Images/portrait-mono.png";
+
+const About = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="aboutPageContainer">
       <div className="pageNameContainer">
@@ -22,7 +27,7 @@ const About = ({onNavLinkClicked}) => {
             making an asset from <b> sharing different points of views </b>.
           </p>
           <p>
-            I love to code <b> optimized solutions suiting individual requirements </b> with respect to time, 
+            I love to code <b> optimized solutions suiting individual requirements </b> with respect to time,
             budget and target.
           </p>
           <p>
@@ -32,22 +37,22 @@ const About = ({onNavLinkClicked}) => {
             My goal is to <b> become part of a team </b> where I can <b> apply, develop and share my skills</b>.
           </p>
           <p>
-            Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={() => onNavLinkClicked(3)}> <Link to={{pathname: "/contact"}}> hearing from you </Link> </span>.
+            Thank you for reading, your trust and hope <span className="aboutContactLink" onClick={() => dispatch(setMenuNumber(3))}> <Link to={{ pathname: "/contact" }}> hearing from you </Link> </span>.
           </p>
           <div className="aboutLinksContainer">
             <div>
               <Link to={"/cv"} className="aboutCVLink"> CV </Link>
             </div>
             <div>
-              <Link to={{pathname: "https://www.linkedin.com/in/christian-gerbig/"}} target="_blank" className="aboutLinkedInLink"> LinkedIn </Link>
+              <Link to={{ pathname: "https://www.linkedin.com/in/christian-gerbig/" }} target="_blank" className="aboutLinkedInLink"> LinkedIn </Link>
             </div>
             <div>
-              <Link to={{pathname: "https://github.com/christiangerbig/"}} target="_blank" className="aboutGitHubLink"> GitHub </Link>
+              <Link to={{ pathname: "https://github.com/christiangerbig/" }} target="_blank" className="aboutGitHubLink"> GitHub </Link>
             </div>
           </div>
         </div>
         <div className="aboutPictureContainer">
-          <img src={portrait} alt="potrait"/>
+          <img src={portrait} alt="potrait" />
         </div>
       </div>
     </div>

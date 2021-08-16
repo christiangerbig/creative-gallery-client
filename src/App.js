@@ -1,48 +1,40 @@
-import React, {useState} from "react";
-import {Route, Switch, withRouter} from "react-router-dom";
+import React from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
 
 import "./App.min.css";
 
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import CV from "./components/CV";
-import NotFound from "./components/NotFound";
+import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
+import Home from "./Screens/Home";
+import About from "./Screens/About";
+import Projects from "./Screens/Projects";
+import Contact from "./Screens/Contact";
+import CV from "./Screens/CV";
+import NotFound from "./Screens/NotFound";
 
 const App = () => {
-  const [menuNumber, setMenuNumber] = useState(null);
-
-  // Analyze click on navigation links
-  const handleNavLinkClicked = menuNumber => setMenuNumber(menuNumber)
-
   return (
     <div>
-      <NavBar 
-        onNavLinkClicked={handleNavLinkClicked} 
-        menuNumber={menuNumber}
-      />
+      <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home onNavLinkClicked={handleNavLinkClicked}/> 
+          <Home />
         </Route>
         <Route path="/about">
-          <About onNavLinkClicked={handleNavLinkClicked}/>
-       </Route>
+          <About />
+        </Route>
         <Route path="/projects">
-          <Projects/>
+          <Projects />
         </Route>
         <Route path="/contact">
-          <Contact/>
+          <Contact />
         </Route>
         <Route path="/cv">
-          <CV/>
+          <CV />
         </Route>
-        <Route component={NotFound}/>
+        <Route component={NotFound} />
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
