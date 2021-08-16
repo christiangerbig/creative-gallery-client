@@ -18,7 +18,6 @@ export const createRequest = createAsyncThunk(
       history.push("/");
     }
     catch (err) {
-      console.log(err.response.data.errorMessage);
       dispatch(setError(err.response.data.errorMessage));
     }
   }
@@ -33,7 +32,7 @@ export const creativeGallerySlice = createSlice({
     setMenuNumber: (state, action) => {
       state.menuNumber = action.payload;
     },
-    setError: (action, state) => {
+    setError: (state, action) => {
       state.error = action.payload;
     }
   }
