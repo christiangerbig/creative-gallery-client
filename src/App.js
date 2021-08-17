@@ -37,6 +37,6 @@ const App = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default withRouter(App);
