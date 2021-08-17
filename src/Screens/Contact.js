@@ -27,7 +27,7 @@ const Contact = () => {
       message: message.value
     };
     dispatch(createRequest({ request, history }));
-  }
+  };
 
   return (
     <div className="contactPageContainer">
@@ -70,6 +70,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
