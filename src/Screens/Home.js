@@ -18,13 +18,31 @@ const Home = () => {
         <h4> to </h4>
       </div>
       <div className="myText">
-        <Link to={"/about"} className="homeLink" onClick={() => dispatch(setMenuNumber(1))}> <h4> my </h4> </Link>
+        <Link
+          to={"/about"}
+          className="homeLink"
+          onClick={() => dispatch(setMenuNumber(1))}
+        >      
+          <h4> my </h4>
+        </Link>
       </div>
       <div className="creativeText">
-        <Link to={"/projects"} className="homeLink" onClick={() => dispatch(setMenuNumber(2))}> <h2> creative </h2> </Link>
+        <Link
+          to={"/projects"}
+          className="homeLink"
+          onClick={() => dispatch(setMenuNumber(2))}
+        >   
+          <h2> creative </h2>
+        </Link>
       </div>
       <div className="galleryText">
-        <Link to={"/projects"} className="homeLink" onClick={() => dispatch(setMenuNumber(2))}> <h2> gallery </h2> </Link>
+        <Link
+          to={"/projects"}
+          className="homeLink"
+          onClick={() => dispatch(setMenuNumber(2))}
+        >         
+          <h2> gallery </h2>
+        </Link>
       </div>
     </div>
   );

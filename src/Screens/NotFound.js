@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -17,7 +17,9 @@ const NotFound = () => {
         <h2> wrong </h2>
       </div>
       <div className="notFoundGetBackContainer">
-        <Link to={"/"} className="notFoundGetBackLink textEnlighted"> Get back </Link>
+        <Link to={"/"} className="notFoundGetBackLink textEnlighted">   
+          Get back
+        </Link>
       </div>
     </div>
   );

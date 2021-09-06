@@ -6,7 +6,7 @@ const apiPath = `${config.API_URL}/api`;
 
 const initialState = {
   menuNumber: null,
-  error: null
+  error: null,
 };
 
 // Create request
@@ -16,8 +16,7 @@ export const createRequest = createAsyncThunk(
     try {
       await axios.post(`${apiPath}/request`, request);
       history.push("/");
-    }
-    catch (err) {
+    } catch (err) {
       dispatch(setError(err.response.data.errorMessage));
     }
   }
@@ -34,8 +33,8 @@ export const creativeGallerySlice = createSlice({
     },
     setError: (state, action) => {
       state.error = action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const { setMenuNumber, setError } = creativeGallerySlice.actions;
