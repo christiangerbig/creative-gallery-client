@@ -14,7 +14,7 @@ body {
 
 @media only screen and (min-device-width: 60em) {
   body {
-    background-image: url("./Images/bw-stripes.jpg");
+    background-image: url("./images/bw-stripes.jpg");
     background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body {
 }
 
 .logoImage {
-  background-image: url("./Images/tribar-md.png");
+  background-image: url("./images/tribar-md.png");
   background-color: white;
   background-size: 23rem;
   background-repeat: no-repeat;

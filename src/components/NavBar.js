@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setMenuNumber } from "../Reducer/creativeGallerySlice";
-
-import logo from "../Images/tribar-sm.png";
+import { setMenuNumber } from "../reducer/creativeGallerySlice";
+import logo from "../images/tribar-sm.png";
 
 const NavBar = () => {
   const menuNumber = useSelector((state) => state.creativeGallery.menuNumber);

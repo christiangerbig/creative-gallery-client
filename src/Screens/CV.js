@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TrainingDetails from "../Components/TrainingDetails";
-import ProjectDetails from "../Components/ProjectDetails";
-import SkillItem from "../Components/SkillItem";
-import portrait from "../Images/portrait-mono.png";
+import TrainingDetails from "../components/TrainingDetails";
+import CVProjectDetails from "../components/CVProjectDetails";
+import SkillItem from "../components/SkillItem";
+import portrait from "../images/portrait-mono.png";
 
 const CV = () => {
   const skills = [
@@ -222,7 +222,7 @@ const CV = () => {
                 index
               ) => {
                 return (
-                  <ProjectDetails
+                  <CVProjectDetails
                     projectTitle={projectTitle}
                     gitHubClientPathname={gitHubClientPathname}
                     gitHubServerPathname={gitHubServerPathname}

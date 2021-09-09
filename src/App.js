@@ -3,14 +3,14 @@ import { Route, Switch, withRouter } from "react-router-dom";
 
 import "./App.min.css";
 
-import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer";
-import Home from "./Screens/Home";
-import About from "./Screens/About";
-import Projects from "./Screens/Projects";
-import Contact from "./Screens/Contact";
-import CV from "./Screens/CV";
-import NotFound from "./Screens/NotFound";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Home from "./screens/Home";
+import About from "./screens/About";
+import Projects from "./screens/Projects";
+import Contact from "./screens/Contact";
+import CV from "./screens/CV";
+import NotFound from "./screens/NotFound";
 
 const App = () => {
   return (
