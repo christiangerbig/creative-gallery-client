@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SkillItem from "../components/SkillItem";
 import TrainingDetails from "../components/TrainingDetails";
 import CVProjectDetails from "../components/CVProjectDetails";
-import SkillItem from "../components/SkillItem";
 import portrait from "../images/portrait-mono.png";
 
 const CV = () => {
@@ -193,46 +193,17 @@ const CV = () => {
             <h3> FURTHER TRAINING </h3>
             <hr />
           </div>
-          {trainings.map(
-            ({ trainingTitle, trainingPeriod, trainingContent }, index) => {
-              return (
-                <TrainingDetails
-                  trainingTitle={trainingTitle}
-                  trainingPeriod={trainingPeriod}
-                  trainingContent={trainingContent}
-                  key={index}
-                />
-              );
-            }
-          )}
+          {trainings.map((trainingItem, index) => {
+            return <TrainingDetails trainingItem={trainingItem} key={index} />;
+          })}
           <div>
             <h3> PROJECTS </h3>
             <hr />
           </div>
           <div>
-            {projects.map(
-              (
-                {
-                  projectTitle,
-                  gitHubClientPathname,
-                  gitHubServerPathname,
-                  deployedPathname,
-                  projectDescription,
-                },
-                index
-              ) => {
-                return (
-                  <CVProjectDetails
-                    projectTitle={projectTitle}
-                    gitHubClientPathname={gitHubClientPathname}
-                    gitHubServerPathname={gitHubServerPathname}
-                    deployedPathname={deployedPathname}
-                    projectDescription={projectDescription}
-                    key={index}
-                  />
-                );
-              }
-            )}
+            {projects.map((projectItem, index) => {
+              return <CVProjectDetails projectItem={projectItem} key={index} />;
+            })}
           </div>
           <div>
             <h3> WORK EXPERIENCE </h3>

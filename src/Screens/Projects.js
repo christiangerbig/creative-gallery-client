@@ -52,31 +52,9 @@ const Projects = () => {
         </h3>
       </div>
       <div className="projectsContainer">
-        {projects.map(
-          ({
-            projectName,
-            projectPicturePath,
-            projectVideoPath,
-            projectStack,
-            projectDescription,
-            deployedPath,
-            gitHubClientPath,
-            gitHubServerPath,
-          }) => {
-            return (
-              <ProjectDetails
-                projectName={projectName}
-                projectPicturePath={projectPicturePath}
-                projectVideoPath={projectVideoPath}
-                projectStack={projectStack}
-                projectDescription={projectDescription}
-                deployedPath={deployedPath}
-                gitHubClientPath={gitHubClientPath}
-                gitHubServerPath={gitHubServerPath}
-              />
-            );
-          }
-        )}
+        {projects.map((projectItem, index) => {
+          return <ProjectDetails projectItem={projectItem} key={index} />;
+        })}
       </div>
     </div>
   );

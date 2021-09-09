@@ -1,16 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const ProjectDetails = ({
-  projectName,
-  projectPicture,
-  projectVideoPath,
-  projectStack,
-  projectDescription,
-  deployedPath,
-  gitHubClientPath,
-  gitHubServerPath,
-}) => {
+const ProjectDetails = ({ projectItem }) => {
+  const {
+    projectName,
+    projectPicturePath,
+    projectVideoPath,
+    projectStack,
+    projectDescription,
+    deployedPath,
+    gitHubClientPath,
+    gitHubServerPath,
+  } = projectItem;
   const elementRef = useRef([]);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const ProjectDetails = ({
           autoplay
           muted
           controls
-          poster={projectPicture}
+          poster={projectPicturePath}
           src={projectVideoPath}
         />
       </div>

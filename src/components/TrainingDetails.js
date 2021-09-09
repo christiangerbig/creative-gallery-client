@@ -1,10 +1,8 @@
 import React from "react";
 
-const TrainingDetails = ({
-  trainingTitle,
-  trainingPeriod,
-  trainingContent,
-}) => {
+const TrainingDetails = ({ trainingItem }) => {
+  const { trainingTitle, trainingPeriod, trainingContent } = trainingItem;
+
   return (
     <div className="cvTrainingDetailsContainer">
       <h4> {trainingTitle} </h4>

@@ -1,20 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CVProjectDetails = ({
-  projectTitle,
-  gitHubClientPathname,
-  gitHubServerPathname,
-  deployedPathname,
-  projectDescription,
-}) => {
+const CVProjectDetails = ({ projectItem }) => {
+  const {
+    projectTitle,
+    gitHubClientPathname,
+    gitHubServerPathname,
+    deployedPathname,
+    projectDescription,
+  } = projectItem;
+
   return (
     <div className="cvProjectDetailContainer">
       <div className="cvProjectContainer">
         <h4> {projectTitle} </h4>
         <div>
           <Link
-            to={{pathname: gitHubClientPathname}}
+            to={{ pathname: gitHubClientPathname }}
             target="_blank"
             className="cvProjectLink"
           >
@@ -24,7 +26,7 @@ const CVProjectDetails = ({
         {gitHubServerPathname && (
           <div>
             <Link
-              to={{pathname: gitHubServerPathname}}
+              to={{ pathname: gitHubServerPathname }}
               target="_blank"
               className="cvProjectLink"
             >
@@ -34,7 +36,7 @@ const CVProjectDetails = ({
         )}
         <div>
           <Link
-            to={{pathname: deployedPathname}}
+            to={{ pathname: deployedPathname }}
             target="_blank"
             className="cvProjectLink"
           >
