@@ -240,7 +240,7 @@ const CV = () => {
           </div>
           <div className="cvWorkDetailsContainer">
             <h4> Accounting Clerk - Deutsche Extrakt Kaffee GmbH Hamburg </h4>
-            <h5> 05/2019 - 10/2019 </h5>
+            <h6> 05/2019 - 10/2019 </h6>
             <ul>
               <li> Account assignment </li>
               <li> Master data maintenance </li>
@@ -249,7 +249,7 @@ const CV = () => {
           </div>
           <div className="cvWorkDetailsContainer">
             <h4> Accounting Clerk - Fieldfisher Hamburg </h4>
-            <h5> 02/2017 - 01/2019 </h5>
+            <h6> 02/2017 - 01/2019 </h6>
           </div>
           <div>
             <h3> EDUCATION </h3>
@@ -259,7 +259,7 @@ const CV = () => {
             <h4>
               Qualified Social Education Worker - Fachhochschule Darmstadt
             </h4>
-            <h5> 10/1993 - 02/1999 </h5>
+            <h6> 10/1993 - 02/1999 </h6>
           </div>
         </div>
       </div>

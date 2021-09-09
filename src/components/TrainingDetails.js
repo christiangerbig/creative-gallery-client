@@ -8,7 +8,7 @@ const TrainingDetails = ({
   return (
     <div className="cvTrainingDetailsContainer">
       <h4> {trainingTitle} </h4>
-      <h5> {trainingPeriod} </h5>
+      <h6> {trainingPeriod} </h6>
       <ul>
         <li> {trainingContent} </li>
       </ul>
