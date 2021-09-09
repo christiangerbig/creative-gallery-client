@@ -1,8 +1,97 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TrainingDetails from "../Components/TrainingDetails";
+import ProjectDetails from "../Components/ProjectDetails";
+import SkillItem from "../Components/SkillItem";
 import portrait from "../Images/portrait-mono.png";
 
 const CV = () => {
+  const skills = [
+    "JavaScript (ES6) / TypeScript",
+    "HTML5 / CSS3 / SASS",
+    "jQuery",
+    "React",
+    "Redux",
+    "MongoDB",
+    "ExpressJs",
+    "Handlebars",
+    "NodeJs",
+    "Axios",
+    "Bootstrap",
+    "Git / GitHub",
+  ];
+
+  const trainings = [
+    {
+      trainingTitle: "Using TypeScript with React - Udemy",
+      trainingPeriod: "08/2021 - 09/2021",
+      trainingContent: "TypeScript | React | Redux | NextJS | GraphQL API",
+    },
+    {
+      trainingTitle:
+        "The essential React course incl. Hooks, Redux, React-Router - Udemy",
+      trainingPeriod: "08/2021",
+      trainingContent:
+        "React | Hooks | Redux Toolkit | asynchronous Axios API calls",
+    },
+    {
+      trainingTitle: "Full-Stack Web Developer - Ironhack boot camp",
+      trainingPeriod: "01/2021 - 03/2021",
+      trainingContent:
+        "HTML5 | CSS3 | JavaScript (ES6) | React | ExpressJS | NodeJS | MongoDB | Axios",
+    },
+    {
+      trainingTitle: "The complete Web Developer Masterclass - Udemy",
+      trainingPeriod: "10/2020 - 11/2020",
+      trainingContent:
+        "HTML | CSS | SCSS | Javascript | jQuery | Bootstrap | PHP",
+    },
+    {
+      trainingTitle: "Multimedia and visual presentations",
+      trainingPeriod: "2015 - 2019",
+      trainingContent: "68k assembler - realtime 3D matrix objects",
+    },
+  ];
+
+  const projects = [
+    {
+      projectTitle: "CreativeGallery",
+      gitHubClientPathname:
+        "https://github.com/christiangerbig/creative-gallery-client",
+      gitHubServerPathname:
+        "https://github.com/christiangerbig/creative-gallery-server",
+      deployedPathname: "https://creativegallery.herokuapp.com/",
+      projectDescription:
+        "Single page vanilla CSS application using React | JavaScript | SASS | NodeJs | MongoDB | Axios",
+    },
+    {
+      projectTitle: "JungleSwap",
+      gitHubClientPathname:
+        "https://github.com/christiangerbig/jungle-swap-client",
+      gitHubServerPathname:
+        "https://github.com/christiangerbig/jungle-swap-server",
+      deployedPathname: "https://jungleswap.herokuapp.com/",
+      projectDescription:
+        "Single page application using React | JavaScript | SASS | Bootstrap | NodeJs MongoDB | Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot)",
+    },
+    {
+      projectTitle: "Trackertools",
+      gitHubClientPathname: "https://github.com/christiangerbig/Trackertools",
+      gitHubServerPathname: "",
+      deployedPathname: "https://trackertools.herokuapp.com/",
+      projectDescription:
+        "Full stack project using Express | Handlebars | JavaScript | SASS | Bootstrap | MongoDB",
+    },
+    {
+      projectTitle: "LetterShooter",
+      gitHubClientPathname: "https://github.com/christiangerbig/letter-shooter",
+      gitHubServerPathname: "",
+      deployedPathname: "https://christiangerbig.github.io/letter-shooter/",
+      projectDescription:
+        "Front-end project build with HTML5 | Canvas | JavaScript | CSS3",
+    },
+  ];
+
   return (
     <div className="cvPageContainer">
       <div className="pageNameContainer">
@@ -40,7 +129,7 @@ const CV = () => {
                 <Link
                   to={{ pathname: "mailto:chr_gerbig@web.de" }}
                   target="_blank"
-                >  
+                >
                   chr_gerbig web.de
                 </Link>
               </span>
@@ -51,7 +140,7 @@ const CV = () => {
                   pathname: "https://www.linkedin.com/in/christian-gerbig/",
                 }}
                 target="_blank"
-              > 
+              >
                 linkedin.com/in/christian-gerbig/
               </Link>
             </div>
@@ -59,7 +148,7 @@ const CV = () => {
               <Link
                 to={{ pathname: "https://github.com/christiangerbig/" }}
                 target="_blank"
-              >           
+              >
                 github.com/christiangerbig
               </Link>
             </div>
@@ -75,18 +164,9 @@ const CV = () => {
               <h3> SKILLS </h3>
               <hr />
               <ul>
-                <li> JavaScript (ES6) </li>
-                <li> HTML5 / CSS3 / SASS </li>
-                <li> jQuery </li>
-                <li> React </li>
-                <li> Redux </li>
-                <li> MongoDB </li>
-                <li> ExpressJs </li>
-                <li> Handlebars </li>
-                <li> NodeJs </li>
-                <li> Axios </li>
-                <li> Bootstrap </li>
-                <li> Git / GitHub </li>
+                {skills.map((skill, index) => {
+                  return <SkillItem skill={skill} key={index} />;
+                })}
               </ul>
             </div>
             <div>
@@ -110,50 +190,49 @@ const CV = () => {
         </div>
         <div className="cvCareerContainer">
           <div>
-            <h3> TRAINING </h3>
+            <h3> FURTHER TRAINING </h3>
             <hr />
           </div>
-          <div className="cvTrainingDetailsContainer">
-            <h4>   
-              The essential React course incl. Hooks, Redux, React-Router -
-              Udemy
-            </h4>
-            <h5> 08/2021 </h5>
-            <ul>
-              <li>            
-                React | Hooks | Redux Toolkit | asynchronous Axios API calls
-              </li>
-            </ul>
+          {trainings.map(
+            ({ trainingTitle, trainingPeriod, trainingContent }, index) => {
+              return (
+                <TrainingDetails
+                  trainingTitle={trainingTitle}
+                  trainingPeriod={trainingPeriod}
+                  trainingContent={trainingContent}
+                  key={index}
+                />
+              );
+            }
+          )}
+          <div>
+            <h3> PROJECTS </h3>
+            <hr />
           </div>
-          <div className="cvTrainingDetailsContainer">
-            <h4> Full-Stack Web Developer - Ironhack boot camp</h4>
-            <h5> 01/2021 - 03/2021 </h5>
-            <ul>
-              <li>    
-                Front end technologies learned: HTML5 | CSS3 | JavaScript (ES6)
-                | React
-              </li>
-              <li>
-                Back end technologies learned: ExpressJS | NodeJS | MongoDB |
-                Axios
-              </li>
-            </ul>
-          </div>
-          <div className="cvTrainingDetailsContainer">
-            <h4> The complete Web Developer Masterclass - Udemy </h4>
-            <h5> 10/2020 - 11/2020 </h5>
-            <ul>
-              <li>               
-                HTML | CSS | SCSS | Javascript | jQuery | Bootstrap | PHP
-              </li>
-            </ul>
-          </div>
-          <div className="cvTrainingDetailsContainer">
-            <h4> Multimedia and visual presentations </h4>
-            <h5> 2015 - 2019 </h5>
-            <ul>
-              <li> 68k assembler - realtime 3D matrix objects </li>
-            </ul>
+          <div>
+            {projects.map(
+              (
+                {
+                  projectTitle,
+                  gitHubClientPathname,
+                  gitHubServerPathname,
+                  deployedPathname,
+                  projectDescription,
+                },
+                index
+              ) => {
+                return (
+                  <ProjectDetails
+                    projectTitle={projectTitle}
+                    gitHubClientPathname={gitHubClientPathname}
+                    gitHubServerPathname={gitHubServerPathname}
+                    deployedPathname={deployedPathname}
+                    projectDescription={projectDescription}
+                    key={index}
+                  />
+                );
+              }
+            )}
           </div>
           <div>
             <h3> WORK EXPERIENCE </h3>
@@ -177,179 +256,10 @@ const CV = () => {
             <hr />
           </div>
           <div className="cvEducationDetailsContainer">
-            <h4>         
+            <h4>
               Qualified Social Education Worker - Fachhochschule Darmstadt
             </h4>
             <h5> 10/1993 - 02/1999 </h5>
-          </div>
-          <div>
-            <h3> PROJECTS </h3>
-            <hr />
-          </div>
-          <div>
-            <div className="cvProjectDetailContainer">
-              <div className="cvProjectContainer">
-                <h4> CreativeGallery </h4>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/creative-gallery-client",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >            
-                    GitHubClient
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/creative-gallery-server",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >               
-                    GitHubServer
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{ pathname: "https://creativegallery.herokuapp.com/" }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >            
-                    Deployment
-                  </Link>
-                </div>
-              </div>
-              <p>             
-                Single page vanilla CSS application using React | JavaScript |
-                SASS | NodeJs | MongoDB | Axios
-              </p>
-              <p>             
-                This is my portfolio to present my projects and another exercise
-                to apply my React/JavaScript knowledge.
-              </p>
-            </div>
-            <div className="cvProjectDetailContainer">
-              <div className="cvProjectContainer">
-                <h4> JungleSwap </h4>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/jungle-swap-client",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >                 
-                    GitHubClient
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/jungle-swap-server",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >               
-                    GitHubServer
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{ pathname: "https://jungleswap.herokuapp.com/" }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >             
-                    Deployment
-                  </Link>
-                </div>
-              </div>
-              <p>           
-                Single page application using React | JavaScript | SASS |
-                Bootstrap | NodeJs MongoDB | Axios and APIs (Cloudinary | Stripe
-                | Kommunicate Chatbot)
-              </p>
-              <p>           
-                With this app you can share your plant offshoots, sell, buy or
-                swap them for another plant. Shop and give a plant a new home.
-              </p>
-            </div>
-            <div className="cvProjectDetailContainer">
-              <div className="cvProjectContainer">
-                <h4> Trackertools </h4>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/Trackertools",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >                  
-                    GitHub
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{ pathname: "https://trackertools.herokuapp.com/" }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >         
-                    Deployment
-                  </Link>
-                </div>
-              </div>
-              <p>           
-                Full stack project using Express | Handlebars | JavaScript |
-                SASS | Bootstrap | MongoDB
-              </p>
-              <p>           
-                This app includes four powerful tools to make working with the
-                music editor Protracker and its modules more comfortable.
-              </p>
-            </div>
-            <div className="cvProjectDetailContainer">
-              <div className="cvProjectContainer">
-                <h4> LetterShooter </h4>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://github.com/christiangerbig/letter-shooter",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >               
-                    GitHub
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to={{
-                      pathname:
-                        "https://christiangerbig.github.io/letter-shooter/",
-                    }}
-                    target="_blank"
-                    className="cvProjectLink"
-                  >                   
-                    Deployment
-                  </Link>
-                </div>
-              </div>
-              <p>    
-                Front-end project build with HTML5 | Canvas | JavaScript | CSS3
-              </p>
-              <p>        
-                A coordination and strategy game with the goal to hit the
-                missing letters with precise shots.
-              </p>
-            </div>
           </div>
         </div>
       </div>
