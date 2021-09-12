@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <div className="notFoundPageContainer logoImage">
       <div className="pageNameContainer">
@@ -17,7 +17,7 @@ const NotFound = () => {
         <h2> wrong </h2>
       </div>
       <div className="notFoundGetBackContainer">
-        <Link to={"/"} className="notFoundGetBackLink textEnlighted">   
+        <Link to={"/"} className="notFoundGetBackLink textEnlighted">
           Get back
         </Link>
       </div>

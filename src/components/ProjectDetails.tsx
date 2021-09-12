@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { ProjectItem } from "../screens/Projects";
 
-const ProjectDetails = ({ projectItem }) => {
+interface Props {
+  projectItem: ProjectItem;
+}
+
+const ProjectDetails: React.FC<Props> = ({ projectItem }) => {
   const {
     projectName,
     projectPicturePath,
@@ -15,8 +20,8 @@ const ProjectDetails = ({ projectItem }) => {
   const elementRef = useRef([]);
 
   useEffect(() => {
-    elementRef.current[0].innerHTML = projectStack;
-    elementRef.current[1].innerHTML = projectDescription;
+    (elementRef.current[0] as any).innerHTML = projectStack;
+    (elementRef.current[1] as any).innerHTML = projectDescription;
   }, []);
 
   return (
@@ -25,7 +30,6 @@ const ProjectDetails = ({ projectItem }) => {
         <video
           width="360"
           height="200"
-          autoplay
           muted
           controls
           poster={projectPicturePath}
@@ -34,8 +38,8 @@ const ProjectDetails = ({ projectItem }) => {
       </div>
       <div>
         <h3> {projectName} </h3>
-        <h4 ref={(element) => (elementRef.current[0] = element)}> </h4>
-        <p ref={(element) => (elementRef.current[1] = element)}> </p>
+        <h4 ref={(element) => ((elementRef.current[0] as any) = element)}> </h4>
+        <p ref={(element) => ((elementRef.current[1] as any) = element)}> </p>
       </div>
       <div className="projectLinksContainer">
         <div>

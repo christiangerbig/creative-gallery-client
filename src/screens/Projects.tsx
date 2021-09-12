@@ -4,8 +4,20 @@ import jungleSwap from "../images/jungle-swap.png";
 import trackertools from "../images/trackertools.png";
 import letterShooter from "../images/letter-shooter.png";
 
-const Projects = () => {
-  const projects = [
+export interface ProjectItem {
+  projectName: string;
+  projectPicturePath: string;
+  projectVideoPath: string;
+  projectStack: string;
+  projectDescription: string;
+  deployedPath: string;
+  gitHubClientPath: string;
+  gitHubServerPath: string;
+}
+
+const Projects: React.FC = () => {
+  // Projects
+  const projects: ProjectItem[] = [
     {
       projectName: "JungleSwap",
       projectPicturePath: jungleSwap,
@@ -52,7 +64,7 @@ const Projects = () => {
         </h3>
       </div>
       <div className="projectsContainer">
-        {projects.map((projectItem, index) => {
+        {projects.map((projectItem: ProjectItem, index: number) => {
           return <ProjectDetails projectItem={projectItem} key={index} />;
         })}
       </div>

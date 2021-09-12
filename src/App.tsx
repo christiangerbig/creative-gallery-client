@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-
 import "./App.min.css";
-
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./screens/Home";
@@ -12,7 +10,7 @@ import Contact from "./screens/Contact";
 import CV from "./screens/CV";
 import NotFound from "./screens/NotFound";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <NavBar />

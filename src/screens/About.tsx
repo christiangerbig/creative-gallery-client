@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 import portrait from "../images/portrait-mono.png";
 
-const About = () => {
+const About: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
@@ -46,14 +46,14 @@ const About = () => {
             <span
               className="aboutContactLink"
               onClick={() => dispatch(setMenuNumber(3))}
-            >   
+            >
               <Link to={{ pathname: "/contact" }}> hearing from you </Link>
             </span>
             .
           </p>
           <div className="aboutLinksContainer">
             <div>
-              <Link to={"/cv"} className="aboutCVLink">              
+              <Link to={"/cv"} className="aboutCVLink">
                 CV
               </Link>
             </div>
@@ -64,7 +64,7 @@ const About = () => {
                 }}
                 target="_blank"
                 className="aboutLinkedInLink"
-              >              
+              >
                 LinkedIn
               </Link>
             </div>
@@ -73,7 +73,7 @@ const About = () => {
                 to={{ pathname: "https://github.com/christiangerbig/" }}
                 target="_blank"
                 className="aboutGitHubLink"
-              >               
+              >
                 GitHub
               </Link>
             </div>

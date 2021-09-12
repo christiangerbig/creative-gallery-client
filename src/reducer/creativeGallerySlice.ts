@@ -1,22 +1,44 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import config from "../config";
 import axios from "axios";
 
 const apiPath = `${config.API_URL}/api`;
 
-const initialState = {
+export type MenuNumber = number | null;
+export type Error = string | null;
+
+interface SliceState {
+  menuNumber: MenuNumber;
+  error: Error;
+}
+
+const initialState: SliceState = {
   menuNumber: null,
   error: null,
 };
 
 // Create request
+export interface Request {
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface CreateRequestParameters {
+  request: Request;
+  history: any;
+}
+
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
-  async ({ request, history }, { dispatch }) => {
+  async (
+    { request, history }: CreateRequestParameters,
+    { dispatch }
+  ): Promise<void> => {
     try {
       await axios.post(`${apiPath}/request`, request);
       history.push("/");
-    } catch (err) {
+    } catch (err: any) {
       dispatch(setError(err.response.data.errorMessage));
     }
   }
@@ -28,10 +50,10 @@ export const creativeGallerySlice = createSlice({
 
   // ---------- Reducers ----------
   reducers: {
-    setMenuNumber: (state, action) => {
+    setMenuNumber: (state, action: PayloadAction<number>) => {
       state.menuNumber = action.payload;
     },
-    setError: (state, action) => {
+    setError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload;
     },
   },

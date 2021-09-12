@@ -1,6 +1,16 @@
 import React from "react";
 
-const TrainingDetails = ({ trainingItem }) => {
+interface TrainingItem {
+  trainingTitle: string;
+  trainingPeriod: string;
+  trainingContent: string;
+}
+
+interface Props {
+  trainingItem: TrainingItem;
+}
+
+const TrainingDetails: React.FC<Props> = ({ trainingItem }) => {
   const { trainingTitle, trainingPeriod, trainingContent } = trainingItem;
 
   return (

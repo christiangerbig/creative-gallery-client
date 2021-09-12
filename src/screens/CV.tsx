@@ -1,12 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SkillItem from "../components/SkillItem";
+import SkillItem, { Skill } from "../components/SkillItem";
 import TrainingDetails from "../components/TrainingDetails";
 import CVProjectDetails from "../components/CVProjectDetails";
 import portrait from "../images/portrait-mono.png";
 
-const CV = () => {
-  const skills = [
+export interface CVProjectItem {
+  projectTitle: string;
+  gitHubClientPathname: string;
+  gitHubServerPathname: string;
+  deployedPathname: string;
+  projectDescription: string;
+}
+
+interface TrainingItem {
+  trainingTitle: string;
+  trainingPeriod: string;
+  trainingContent: string;
+}
+
+const CV: React.FC = () => {
+  // Skills
+  const skills: string[] = [
     "JavaScript (ES6) / TypeScript",
     "HTML5 / CSS3 / SASS",
     "jQuery",
@@ -21,7 +36,8 @@ const CV = () => {
     "Git / GitHub",
   ];
 
-  const trainings = [
+  // Trainings
+  const trainings: TrainingItem[] = [
     {
       trainingTitle: "Using TypeScript with React - Udemy",
       trainingPeriod: "08/2021 - 09/2021",
@@ -53,7 +69,8 @@ const CV = () => {
     },
   ];
 
-  const projects = [
+  // Projects
+  const projects: CVProjectItem[] = [
     {
       projectTitle: "CreativeGallery",
       gitHubClientPathname:
@@ -164,7 +181,7 @@ const CV = () => {
               <h3> SKILLS </h3>
               <hr />
               <ul>
-                {skills.map((skill, index) => {
+                {skills.map((skill: Skill, index: number) => {
                   return <SkillItem skill={skill} key={index} />;
                 })}
               </ul>
@@ -193,7 +210,7 @@ const CV = () => {
             <h3> FURTHER TRAINING </h3>
             <hr />
           </div>
-          {trainings.map((trainingItem, index) => {
+          {trainings.map((trainingItem: TrainingItem, index) => {
             return <TrainingDetails trainingItem={trainingItem} key={index} />;
           })}
           <div>
@@ -201,8 +218,10 @@ const CV = () => {
             <hr />
           </div>
           <div>
-            {projects.map((projectItem, index) => {
-              return <CVProjectDetails projectItem={projectItem} key={index} />;
+            {projects.map((cvProjectItem: CVProjectItem, index: number) => {
+              return (
+                <CVProjectDetails cvProjectItem={cvProjectItem} key={index} />
+              );
             })}
           </div>
           <div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 
-const Home = () => {
+const Home: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
@@ -22,7 +22,7 @@ const Home = () => {
           to={"/about"}
           className="homeLink"
           onClick={() => dispatch(setMenuNumber(1))}
-        >      
+        >
           <h4> my </h4>
         </Link>
       </div>
@@ -31,7 +31,7 @@ const Home = () => {
           to={"/projects"}
           className="homeLink"
           onClick={() => dispatch(setMenuNumber(2))}
-        >   
+        >
           <h2> creative </h2>
         </Link>
       </div>
@@ -40,7 +40,7 @@ const Home = () => {
           to={"/projects"}
           className="homeLink"
           onClick={() => dispatch(setMenuNumber(2))}
-        >         
+        >
           <h2> gallery </h2>
         </Link>
       </div>

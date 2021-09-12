@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CVProjectItem } from "../screens/CV";
 
-const CVProjectDetails = ({ projectItem }) => {
+interface Props {
+  cvProjectItem: CVProjectItem;
+}
+
+const CVProjectDetails: React.FC<Props> = ({ cvProjectItem }) => {
   const {
     projectTitle,
     gitHubClientPathname,
     gitHubServerPathname,
     deployedPathname,
     projectDescription,
-  } = projectItem;
+  } = cvProjectItem;
 
   return (
     <div className="cvProjectDetailContainer">

@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { createRequest, setError } from "../reducer/creativeGallerySlice";
-
+import {
+  createRequest,
+  Request,
+  setError,
+} from "../reducer/creativeGallerySlice";
+import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
@@ -10,19 +14,21 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Contact = () => {
-  const error = useSelector((state) => state.creativeGallery.error);
+const Contact: React.FC = () => {
+  const error = useSelector((state: RootState) => state.creativeGallery.error);
   const dispatch = useDispatch();
   const history = useHistory();
 
   // Clear error text as soon as page loads
-  useEffect(() => dispatch(setError(null)), []);
+  useEffect(() => {
+    dispatch(setError(null));
+  }, []);
 
   // Create request
-  const handleSubmitRequest = (event, history) => {
+  const handleSubmitRequest = (event: any, history: any) => {
     event.preventDefault();
     const { email, subject, message } = event.target;
-    const request = {
+    const request: Request = {
       email: email.value,
       subject: subject.value,
       message: message.value,
@@ -61,15 +67,15 @@ const Contact = () => {
               <FontAwesomeIcon icon={faMobileAlt} /> phone
             </h3>
             <span className="contactLink">
-              <Link to={{ pathname: "tel:+4915154824288" }} target="_blank">  
+              <Link to={{ pathname: "tel:+4915154824288" }} target="_blank">
                 <h4> +49 151 548 242 88 </h4>
               </Link>
             </span>
           </div>
         </div>
-        <form onSubmit={(event) => handleSubmitRequest(event, history)}>
+        <form onSubmit={(event: any) => handleSubmitRequest(event, history)}>
           <div>
-            <h3>       
+            <h3>
               <FontAwesomeIcon icon={faPen} /> or write me
             </h3>
           </div>
@@ -93,8 +99,8 @@ const Contact = () => {
           <div>
             <textarea
               name="message"
-              cols="35"
-              rows="7"
+              cols={35}
+              rows={7}
               placeholder="message"
               className="formTextarea"
             />
@@ -103,7 +109,7 @@ const Contact = () => {
             type="submit"
             value="Submit"
             className="formSubmit"
-            formnovalidate="formnovalidate"
+            formNoValidate
           />
         </form>
       </div>
