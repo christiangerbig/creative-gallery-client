@@ -1,10 +1,10 @@
 export type Skill = string;
 
-interface Props {
+type SkillItemProps = {
   skill: Skill;
-}
+};
 
-const SkillItem = ({ skill }: Props) => {
+const SkillItem = ({ skill }: SkillItemProps) => {
   return <li> {skill} </li>;
 };
 

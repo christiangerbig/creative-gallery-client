@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { CVProjectItem } from "../screens/CV";
 
-interface Props {
+type CVProjectDetailsProps = {
   cvProjectItem: CVProjectItem;
-}
+};
 
-const CVProjectDetails = ({ cvProjectItem }: Props) => {
+const CVProjectDetails = ({ cvProjectItem }: CVProjectDetailsProps) => {
   const {
     projectTitle,
     gitHubClientPathname,

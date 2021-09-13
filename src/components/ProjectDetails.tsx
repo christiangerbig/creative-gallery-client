@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ProjectItem } from "../screens/Projects";
 
-interface Props {
+type ProjectDetailsProps = {
   projectItem: ProjectItem;
-}
+};
 
-const ProjectDetails = ({ projectItem }: Props) => {
+const ProjectDetails = ({ projectItem }: ProjectDetailsProps) => {
   const {
     projectName,
     projectPicturePath,

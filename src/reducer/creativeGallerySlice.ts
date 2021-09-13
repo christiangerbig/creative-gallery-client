@@ -4,8 +4,8 @@ import axios from "axios";
 
 const apiPath = `${config.API_URL}/api`;
 
-export type MenuNumber = number | null;
-export type Error = string | null;
+type MenuNumber = number | null;
+type Error = string | null;
 
 interface SliceState {
   menuNumber: MenuNumber;

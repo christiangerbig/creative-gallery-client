@@ -1,14 +1,14 @@
-interface TrainingItem {
+type TrainingItem = {
   trainingTitle: string;
   trainingPeriod: string;
   trainingContent: string;
-}
+};
 
-interface Props {
+type TrainingDetailsProps = {
   trainingItem: TrainingItem;
-}
+};
 
-const TrainingDetails = ({ trainingItem }: Props) => {
+const TrainingDetails = ({ trainingItem }: TrainingDetailsProps) => {
   const { trainingTitle, trainingPeriod, trainingContent } = trainingItem;
 
   return (
