@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TrainingItem {
   trainingTitle: string;
   trainingPeriod: string;
@@ -10,7 +8,7 @@ interface Props {
   trainingItem: TrainingItem;
 }
 
-const TrainingDetails: React.FC<Props> = ({ trainingItem }) => {
+const TrainingDetails = ({ trainingItem }: Props) => {
   const { trainingTitle, trainingPeriod, trainingContent } = trainingItem;
 
   return (

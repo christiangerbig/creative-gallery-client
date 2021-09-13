@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -14,7 +14,7 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const error = useSelector((state: RootState) => state.creativeGallery.error);
   const dispatch = useDispatch();
   const history = useHistory();

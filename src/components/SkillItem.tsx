@@ -1,12 +1,10 @@
-import React from "react";
-
 export type Skill = string;
 
 interface Props {
   skill: Skill;
 }
 
-const SkillItem: React.FC<Props> = ({ skill }) => {
+const SkillItem = ({ skill }: Props) => {
   return <li> {skill} </li>;
 };
 

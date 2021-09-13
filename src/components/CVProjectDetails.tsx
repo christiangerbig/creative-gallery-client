@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { CVProjectItem } from "../screens/CV";
 
@@ -6,7 +5,7 @@ interface Props {
   cvProjectItem: CVProjectItem;
 }
 
-const CVProjectDetails: React.FC<Props> = ({ cvProjectItem }) => {
+const CVProjectDetails = ({ cvProjectItem }: Props) => {
   const {
     projectTitle,
     gitHubClientPathname,

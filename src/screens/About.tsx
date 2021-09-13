@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 import portrait from "../images/portrait-mono.png";
 
-const About: React.FC = () => {
+const About = () => {
   const dispatch = useDispatch();
 
   return (

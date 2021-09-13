@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
-import logo from "../images/tribar-sm.png"
+import logo from "../images/tribar-sm.png";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const menuNumber = useSelector(
     (state: RootState) => state.creativeGallery.menuNumber
   );

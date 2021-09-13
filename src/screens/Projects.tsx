@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectDetails from "../components/ProjectDetails";
 import jungleSwap from "../images/jungle-swap.png";
 import trackertools from "../images/trackertools.png";
@@ -15,7 +14,7 @@ export interface ProjectItem {
   gitHubServerPath: string;
 }
 
-const Projects: React.FC = () => {
+const Projects = () => {
   // Projects
   const projects: ProjectItem[] = [
     {

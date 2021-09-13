@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ProjectItem } from "../screens/Projects";
 
@@ -6,7 +6,7 @@ interface Props {
   projectItem: ProjectItem;
 }
 
-const ProjectDetails: React.FC<Props> = ({ projectItem }) => {
+const ProjectDetails = ({ projectItem }: Props) => {
   const {
     projectName,
     projectPicturePath,

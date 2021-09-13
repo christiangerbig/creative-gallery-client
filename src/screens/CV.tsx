@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import SkillItem, { Skill } from "../components/SkillItem";
 import TrainingDetails from "../components/TrainingDetails";
@@ -19,7 +18,7 @@ interface TrainingItem {
   trainingContent: string;
 }
 
-const CV: React.FC = () => {
+const CV = () => {
   // Skills
   const skills: string[] = [
     "JavaScript (ES6) / TypeScript",
