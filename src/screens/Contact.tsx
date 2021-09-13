@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             </span>
           </div>
         </div>
-        <form onSubmit={(event: any) => handleSubmitRequest(event, history)}>
+        <form onSubmit={(event) => handleSubmitRequest(event, history)}>
           <div>
             <h3>
               <FontAwesomeIcon icon={faPen} /> or write me
