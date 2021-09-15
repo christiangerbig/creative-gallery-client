@@ -2,6 +2,7 @@ import ProjectDetails from "../components/ProjectDetails";
 import jungleSwap from "../images/jungle-swap.png";
 import trackertools from "../images/trackertools.png";
 import letterShooter from "../images/letter-shooter.png";
+import PageTitle from "../components/PageTitle";
 
 export interface ProjectItem {
   projectName: string;
@@ -54,9 +55,7 @@ const Projects = () => {
 
   return (
     <div className="projectsPageContainer">
-      <div className="pageNameContainer">
-        <h2> My projects </h2>
-      </div>
+      <PageTitle title={"My projects"} />
       <div className="projectsIntroTextContainer">
         <h3 className="projectsIntroText">
           Here below you can see some of my projects I was working recently on

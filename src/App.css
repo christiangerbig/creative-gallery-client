@@ -118,7 +118,7 @@ footer {
   }
 }
 
-.pageNameContainer {
+.pageTitleContainer {
   text-align: right;
   width: 12rem;
   background-color: #e6e6a6;
@@ -127,7 +127,7 @@ footer {
   animation: scrollPageNameIn 2s forwards;
 }
 
-.pageNameContainer h2 {
+.pageTitleContainer h2 {
   margin-top: 0;
   margin-bottom: 0;
 }

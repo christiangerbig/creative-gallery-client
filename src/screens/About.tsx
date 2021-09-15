@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 import portrait from "../images/portrait-mono.png";
+import PageTitle from "../components/PageTitle";
 
 const About = () => {
   const dispatch = useDispatch();
 
   return (
     <div className="aboutPageContainer">
-      <div className="pageNameContainer">
-        <h2> About me </h2>
-      </div>
+      <PageTitle title={"About"} />
       <div className="aboutDetailsContainer">
         <div className="aboutDetailsText">
           <h3> Hello, </h3>

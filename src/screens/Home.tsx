@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
+import PageTitle from "../components/PageTitle";
 
 const Home = () => {
   const dispatch = useDispatch();
 
   return (
     <div className="homePageContainer logoImage">
-      <div className="pageNameContainer">
-        <h2> Intro </h2>
-      </div>
+      <PageTitle title={"Intro"} />
       <div className="welcomeText">
         <h1> WELCOME </h1>
       </div>

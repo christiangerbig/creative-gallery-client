@@ -3,6 +3,7 @@ import SkillItem, { Skill } from "../components/SkillItem";
 import TrainingDetails from "../components/TrainingDetails";
 import CVProjectDetails from "../components/CVProjectDetails";
 import portrait from "../images/portrait-mono.png";
+import PageTitle from "../components/PageTitle";
 
 export interface CVProjectItem {
   projectTitle: string;
@@ -110,9 +111,7 @@ const CV = () => {
 
   return (
     <div className="cvPageContainer">
-      <div className="pageNameContainer">
-        <h2> My CV </h2>
-      </div>
+      <PageTitle title="My CV"/>
       <div className="cvContainer">
         <div className="cvDetailsContainer">
           <div className="cvPictureContainer">

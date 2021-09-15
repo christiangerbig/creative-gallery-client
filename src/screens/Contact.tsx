@@ -13,6 +13,7 @@ import {
   faMobileAlt,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
+import PageTitle from "../components/PageTitle";
 
 const Contact = () => {
   const error = useSelector((state: RootState) => state.creativeGallery.error);
@@ -38,9 +39,7 @@ const Contact = () => {
 
   return (
     <div className="contactPageContainer">
-      <div className="pageNameContainer">
-        <h2> Contact me </h2>
-      </div>
+      <PageTitle title={"Contact me"} />
       <div className="contactContainer">
         <div>
           <h1> Christian Gerbig </h1>
