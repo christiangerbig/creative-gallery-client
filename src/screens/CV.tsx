@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setIsCVtoPDF } from "../reducer/creativeGallerySlice";
 import SkillItem, { Skill } from "../components/SkillItem";
 import TrainingDetails from "../components/TrainingDetails";
 import CVProjectDetails from "../components/CVProjectDetails";
@@ -20,6 +23,8 @@ interface TrainingItem {
 }
 
 const CV = () => {
+  const dispatch = useDispatch();
+
   // Skills
   const skills: string[] = [
     "JavaScript (ES6) / TypeScript",
@@ -109,145 +114,156 @@ const CV = () => {
     },
   ];
 
+  useEffect(() => {
+    dispatch(setIsCVtoPDF(true));
+    return () => {
+      dispatch(setIsCVtoPDF(false));
+    };
+  }, []);
+
   return (
     <div className="cvPageContainer">
-      <PageTitle title="My CV"/>
-      <div className="cvContainer">
-        <div className="cvDetailsContainer">
-          <div className="cvPictureContainer">
-            <img src={portrait} alt="potrait" />
-          </div>
-          <div>
-            <h1> Christian Gerbig </h1>
-          </div>
-          <div>
-            <h2> Frontend Developer </h2>
-          </div>
-          <div>
-            <p>
-              Javascript (ES6) | HTML5 | CSS3 | Bootstrap | React | Redux |
-              MongoDB | NodeJS | Express | Axios
-            </p>
-            <p>
-              Flotowstraße 21 <br />
-              22083 Hamburg <br />
-              Germany
-            </p>
-            <p>
-              <span className="contactLink">
-                <Link to={{ pathname: "tel:+4915154824288" }} target="_blank">
-                  +49 151 548 242 88
-                </Link>
-              </span>
-              <br />
-              <span className="contactLink">
+      <PageTitle title="My CV" />
+      <div id="content">
+        <div className="cvContainer">
+          <div className="cvDetailsContainer">
+            <div className="cvPictureContainer">
+              <img src={portrait} alt="potrait" />
+            </div>
+            <div>
+              <h1> Christian Gerbig </h1>
+            </div>
+            <div>
+              <h2> Frontend Developer </h2>
+            </div>
+            <div>
+              <p>
+                Javascript(ES6) | TypeScript | HTML5 | CSS3 | Bootstrap | React
+                | Redux | MongoDB | NodeJS | Express | Axios
+              </p>
+              <p>
+                Flotowstraße 21 <br />
+                22083 Hamburg <br />
+                Germany
+              </p>
+              <p>
+                <span className="contactLink">
+                  <Link to={{ pathname: "tel:+4915154824288" }} target="_blank">
+                    +49 151 548 242 88
+                  </Link>
+                </span>
+                <br />
+                <span className="contactLink">
+                  <Link
+                    to={{ pathname: "mailto:chr_gerbig@web.de" }}
+                    target="_blank"
+                  >
+                    chr_gerbig web.de
+                  </Link>
+                </span>
+              </p>
+              <div>
                 <Link
-                  to={{ pathname: "mailto:chr_gerbig@web.de" }}
+                  to={{
+                    pathname: "https://www.linkedin.com/in/christian-gerbig/",
+                  }}
                   target="_blank"
                 >
-                  chr_gerbig web.de
+                  linkedin.com/in/christian-gerbig/
                 </Link>
-              </span>
-            </p>
-            <div>
-              <Link
-                to={{
-                  pathname: "https://www.linkedin.com/in/christian-gerbig/",
-                }}
-                target="_blank"
-              >
-                linkedin.com/in/christian-gerbig/
-              </Link>
-            </div>
-            <div>
-              <Link
-                to={{ pathname: "https://github.com/christiangerbig/" }}
-                target="_blank"
-              >
-                github.com/christiangerbig
-              </Link>
-            </div>
-            <div>
-              <h3> MY GOAL </h3>
-              <hr />
-              <p>
-                Learning things, improving (them) and become part of a team
-                where I can apply, develop and share my skills.
-              </p>
-            </div>
-            <div>
-              <h3> SKILLS </h3>
-              <hr />
-              <ul>
-                {skills.map((skill: Skill, index: number) => {
-                  return <SkillItem skill={skill} key={index} />;
-                })}
-              </ul>
-            </div>
-            <div>
-              <h3> LANGUAGES </h3>
-              <hr />
-              <ul>
-                <li> German: native </li>
-                <li> English: fluent </li>
-              </ul>
-            </div>
-            <div>
-              <h3> PERSONAL ACTIVITIES </h3>
-              <hr />
-              <ul>
-                <li> Music and composing </li>
-                <li> Contemporary History </li>
-                <li> Retro computer productions </li>
-              </ul>
+              </div>
+              <div>
+                <Link
+                  to={{ pathname: "https://github.com/christiangerbig/" }}
+                  target="_blank"
+                >
+                  github.com/christiangerbig
+                </Link>
+              </div>
+              <div>
+                <h3> MY GOAL </h3>
+                <hr />
+                <p>
+                  Learning things, improving (them) and become part of a team
+                  where I can apply, develop and share my skills.
+                </p>
+              </div>
+              <div>
+                <h3> SKILLS </h3>
+                <hr />
+                <ul>
+                  {skills.map((skill: Skill, index: number) => {
+                    return <SkillItem skill={skill} key={index} />;
+                  })}
+                </ul>
+              </div>
+              <div>
+                <h3> LANGUAGES </h3>
+                <hr />
+                <ul>
+                  <li> German: native </li>
+                  <li> English: fluent </li>
+                </ul>
+              </div>
+              <div>
+                <h3> PERSONAL ACTIVITIES </h3>
+                <hr />
+                <ul>
+                  <li> Music and composing </li>
+                  <li> Contemporary History </li>
+                  <li> Retro computer productions </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="cvCareerContainer">
-          <div>
-            <h3> FURTHER TRAINING </h3>
-            <hr />
-          </div>
-          {trainings.map((trainingItem: TrainingItem, index) => {
-            return <TrainingDetails trainingItem={trainingItem} key={index} />;
-          })}
-          <div>
-            <h3> PROJECTS </h3>
-            <hr />
-          </div>
-          <div>
-            {projects.map((cvProjectItem: CVProjectItem, index: number) => {
+          <div className="cvCareerContainer">
+            <div>
+              <h3> FURTHER TRAINING </h3>
+              <hr />
+            </div>
+            {trainings.map((trainingItem: TrainingItem, index) => {
               return (
-                <CVProjectDetails cvProjectItem={cvProjectItem} key={index} />
+                <TrainingDetails trainingItem={trainingItem} key={index} />
               );
             })}
-          </div>
-          <div>
-            <h3> WORK EXPERIENCE </h3>
-            <hr />
-          </div>
-          <div className="cvWorkDetailsContainer">
-            <h4> Accounting Clerk - Deutsche Extrakt Kaffee GmbH Hamburg </h4>
-            <h6> 05/2019 - 10/2019 </h6>
-            <ul>
-              <li> Account assignment </li>
-              <li> Master data maintenance </li>
-              <li> Reconciliation of subledger accounts </li>
-            </ul>
-          </div>
-          <div className="cvWorkDetailsContainer">
-            <h4> Accounting Clerk - Fieldfisher Hamburg </h4>
-            <h6> 02/2017 - 01/2019 </h6>
-          </div>
-          <div>
-            <h3> EDUCATION </h3>
-            <hr />
-          </div>
-          <div className="cvEducationDetailsContainer">
-            <h4>
-              Qualified Social Education Worker - Fachhochschule Darmstadt
-            </h4>
-            <h6> 10/1993 - 02/1999 </h6>
+            <div>
+              <h3> PROJECTS </h3>
+              <hr />
+            </div>
+            <div>
+              {projects.map((cvProjectItem: CVProjectItem, index: number) => {
+                return (
+                  <CVProjectDetails cvProjectItem={cvProjectItem} key={index} />
+                );
+              })}
+            </div>
+            <div>
+              <h3> WORK EXPERIENCE </h3>
+              <hr />
+            </div>
+            <div className="cvWorkDetailsContainer">
+              <h4> Accounting Clerk - Deutsche Extrakt Kaffee GmbH Hamburg </h4>
+              <h6> 05/2019 - 10/2019 </h6>
+              <ul>
+                <li> Account assignment </li>
+                <li> Master data maintenance </li>
+                <li> Reconciliation of subledger accounts </li>
+              </ul>
+            </div>
+            <div className="cvWorkDetailsContainer">
+              <h4> Accounting Clerk - Fieldfisher Hamburg </h4>
+              <h6> 02/2017 - 01/2019 </h6>
+            </div>
+            <div>
+              <h3> EDUCATION </h3>
+              <hr />
+            </div>
+            <div className="cvEducationDetailsContainer">
+              <h4>
+                Qualified Social Education Worker - Fachhochschule Darmstadt
+              </h4>
+              <h6> 10/1993 - 02/1999 </h6>
+            </div>
           </div>
         </div>
       </div>
