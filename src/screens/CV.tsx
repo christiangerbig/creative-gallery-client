@@ -111,7 +111,7 @@ const CV = () => {
       gitHubServerPathname: "",
       deployedPathname: "https://christiangerbig.github.io/letter-shooter/",
       projectDescription:
-        "Front-end project with HTML5 | Canvas | JavaScript | CSS3",
+        "Frontend project with HTML5 | Canvas | JavaScript | CSS3",
     },
   ];
 
