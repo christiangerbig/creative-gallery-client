@@ -36,6 +36,7 @@ const CV = () => {
     "ExpressJs",
     "Handlebars",
     "NodeJs",
+    "NPM",
     "Axios",
     "Bootstrap",
     "Git / GitHub",
@@ -84,7 +85,7 @@ const CV = () => {
         "https://github.com/christiangerbig/creative-gallery-server",
       deployedPathname: "https://creativegallery.herokuapp.com/",
       projectDescription:
-        "Single page vanilla CSS application using React | JavaScript | SASS | NodeJs | MongoDB | Axios",
+        "Fullstack project using React | JavaScript | SASS | NodeJs | MongoDB | Axios",
     },
     {
       projectTitle: "JungleSwap",
@@ -94,7 +95,7 @@ const CV = () => {
         "https://github.com/christiangerbig/jungle-swap-server",
       deployedPathname: "https://jungleswap.herokuapp.com/",
       projectDescription:
-        "Single page application using React | JavaScript | SASS | Bootstrap | NodeJs MongoDB | Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot)",
+        "Fullstack project using React | JavaScript | SASS | Bootstrap | NodeJs MongoDB | Axios and APIs (Cloudinary | Stripe | Kommunicate Chatbot)",
     },
     {
       projectTitle: "Trackertools",
@@ -102,7 +103,7 @@ const CV = () => {
       gitHubServerPathname: "",
       deployedPathname: "https://trackertools.herokuapp.com/",
       projectDescription:
-        "Full stack project using Express | Handlebars | JavaScript | SASS | Bootstrap | MongoDB",
+        "Fullstack project using Express | Handlebars | JavaScript | SASS | Bootstrap | MongoDB",
     },
     {
       projectTitle: "LetterShooter",
@@ -110,7 +111,7 @@ const CV = () => {
       gitHubServerPathname: "",
       deployedPathname: "https://christiangerbig.github.io/letter-shooter/",
       projectDescription:
-        "Front-end project build with HTML5 | Canvas | JavaScript | CSS3",
+        "Front-end project with HTML5 | Canvas | JavaScript | CSS3",
     },
   ];
 
