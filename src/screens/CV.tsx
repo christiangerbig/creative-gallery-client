@@ -263,7 +263,6 @@ const CV = () => {
               <h4>
                 Qualified Social Education Worker - Fachhochschule Darmstadt
               </h4>
-              <h6> 10/1993 - 02/1999 </h6>
             </div>
           </div>
         </div>

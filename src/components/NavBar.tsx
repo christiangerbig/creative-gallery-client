@@ -34,7 +34,7 @@ const NavBar = () => {
               <Link
                 to={{
                   pathname:
-                    "https://www.dropbox.com/s/aba1uzqr83k14k2/CV.pdf?dl=0",
+                    "https://www.dropbox.com/s/z111mh1n2oks2cv/CV.pdf?dl=0",
                 }}
                 target="_blank"
                 className="navLink"
