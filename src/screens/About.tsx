@@ -51,7 +51,14 @@ const About = () => {
           </p>
           <div className="aboutLinksContainer">
             <div>
-              <Link to={"/cv"} className="aboutCVLink">
+              <Link
+                to={{
+                  pathname:
+                    "https://www.dropbox.com/s/z111mh1n2oks2cv/CV.pdf?dl=0",
+                }}
+                target="_blank"
+                className="aboutLinkedInLink"
+              >
                 CV
               </Link>
             </div>

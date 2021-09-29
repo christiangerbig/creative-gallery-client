@@ -9,13 +9,11 @@ type Error = string | null;
 
 interface SliceState {
   menuNumber: MenuNumber;
-  isCVtoPDF: boolean;
   error: Error;
 }
 
 const initialState: SliceState = {
   menuNumber: null,
-  isCVtoPDF: false,
   error: null,
 };
 
@@ -55,16 +53,12 @@ export const creativeGallerySlice = createSlice({
     setMenuNumber: (state, action: PayloadAction<number>) => {
       state.menuNumber = action.payload;
     },
-    setIsCVtoPDF: (state, action: PayloadAction<boolean>) => {
-      state.isCVtoPDF = action.payload;
-    },
     setError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload;
     },
   },
 });
 
-export const { setMenuNumber, setIsCVtoPDF, setError } =
-  creativeGallerySlice.actions;
+export const { setMenuNumber, setError } = creativeGallerySlice.actions;
 
 export default creativeGallerySlice.reducer;

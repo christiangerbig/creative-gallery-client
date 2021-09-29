@@ -6,7 +6,6 @@ import Home from "./screens/Home";
 import About from "./screens/About";
 import Projects from "./screens/Projects";
 import Contact from "./screens/Contact";
-import CV from "./screens/CV";
 import NotFound from "./screens/NotFound";
 
 const App = () => {
@@ -25,9 +24,6 @@ const App = () => {
         </Route>
         <Route path="/contact">
           <Contact />
-        </Route>
-        <Route path="/cv">
-          <CV />
         </Route>
         <Route component={NotFound} />
       </Switch>

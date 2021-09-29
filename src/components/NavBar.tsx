@@ -8,9 +8,6 @@ const NavBar = () => {
   const menuNumber = useSelector(
     (state: RootState) => state.creativeGallery.menuNumber
   );
-  const isCVtoPDF = useSelector(
-    (state: RootState) => state.creativeGallery.isCVtoPDF
-  );
   const dispatch = useDispatch();
 
   return (
@@ -30,18 +27,6 @@ const NavBar = () => {
             >
               About
             </Link>
-            {isCVtoPDF && (
-              <Link
-                to={{
-                  pathname:
-                    "https://www.dropbox.com/s/z111mh1n2oks2cv/CV.pdf?dl=0",
-                }}
-                target="_blank"
-                className="navLink"
-              >
-                CV-pdf
-              </Link>
-            )}
           </div>
           <div className="navLinkContainer">
             <Link

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Source+Sans+Pro:wght@200;300&display=swap");
-/* Colors */
 html,
 body {
   background-color: white;
@@ -259,7 +258,6 @@ footer {
   color: #448ac7;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  transition: all 0.5s;
 }
 
 .myText h4:hover {
@@ -506,147 +504,6 @@ footer {
 
 .aboutContactLink a:hover {
   color: #81b0f1;
-}
-
-/* CV page */
-@media (min-device-width: 20em) {
-  @keyframes fadeCvContainerIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .cvContainer {
-    display: flex;
-    justify-content: flex-center;
-    align-items: flex-center;
-    background-color: #f0f0f0;
-    margin: 2rem 0;
-    animation: fadeCvContainerIn 2s forwards;
-  }
-}
-
-@media only screen and (min-device-width: 60em) {
-  @keyframes scrollCvContainerIn {
-    from {
-      margin-left: -150%;
-    }
-    to {
-      margin-left: 5%;
-    }
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .cvContainer {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #f0f0f0;
-    margin-top: 2rem;
-    margin-right: 5%;
-    margin-bottom: 2rem;
-    animation: scrollCvContainerIn 2s forwards;
-  }
-}
-
-.cvContainer a {
-  text-decoration: none;
-  color: #3c8af0;
-  transition: all 0.5s;
-}
-
-.cvContainer a:hover {
-  color: #81b0f1;
-}
-
-.cvDetailsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 25rem;
-  background-color: #f0f0f0;
-  padding-top: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.cvDetailsContainer h1 {
-  margin-bottom: 0;
-}
-
-.cvDetailsContainer h2 {
-  margin-top: 0.4rem;
-  margin-bottom: 0;
-}
-
-.cvDetailsContainer h3 {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.cvPictureContainer img {
-  width: 15rem;
-}
-
-.cvCareerContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 50rem;
-  background-color: #f0f0f0;
-  padding-top: 4rem;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-
-.cvCareerContainer h3 {
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.cvTrainingDetailsContainer,
-.cvEducationDetailsContainer {
-  margin-top: 0.3rem;
-}
-
-.cvTrainingDetailsContainer h4,
-.cvWorkDetailsContainer h4,
-.cvEducationDetailsContainer h4,
-.cvProjectContainer h4,
-.cvTrainingDetailsContainer h6,
-.cvWorkDetailsContainer h6,
-.cvEducationDetailsContainer h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cvWorkDetailsContainer {
-  margin-top: 0.3rem;
-}
-
-.cvProjectContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-
-.cvProjectLink {
-  display: inline-block;
-  font-size: 1rem;
-  padding-left: 0.7rem;
 }
 
 /* Projects page */

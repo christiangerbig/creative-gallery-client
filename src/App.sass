@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Source+Sans+Pro:wght@200;300&display=swap")
 
-/* Colors */
 $lightGrey1: rgb(230,230,230)
 $orange: rgb(255, 163, 43)
 $beige: rgb(230, 230, 166)
@@ -84,9 +83,8 @@ nav
   color: black
   padding: 0.3rem 0.8rem
   transition: all 0.5s
-
-.navLink:hover 
-  background-color: $lightGrey1
+  &:hover 
+    background-color: $lightGrey1
 
 .textEnlighted 
   color: $orange
@@ -248,10 +246,8 @@ footer
   margin:
     top: 0
     bottom: 1.5rem
-  transition: all 0.5s
-
-.myText h4:hover 
-  color: $deepSkyBlue
+  &:hover 
+    color: $deepSkyBlue
 
 
 /* "creative" */
@@ -295,9 +291,8 @@ footer
     top: 0rem
     bottom: 0rem
   transition: all 0.5s
-
-.creativeText h2:hover 
-  color: $olive
+  &:hover 
+    color: $olive
 
 
 /* "gallery" */
@@ -340,9 +335,8 @@ footer
     top: 0.7rem
     bottom: 4rem
   transition: all 0.5s
-
-.galleryText h2:hover 
-  color: $lightSkyBlue1
+  &:hover 
+    color: $lightSkyBlue1
 
 .homeLink 
   display: inline-block
@@ -429,9 +423,8 @@ footer
   color: black
   padding: 0.3rem 0.8rem
   transition: all 0.5s
-
-.aboutCVLink:hover 
-  background-color: $paleGreen
+  &:hover 
+    background-color: $paleGreen
 
 .aboutLinkedInLink 
   display: inline-block
@@ -441,9 +434,8 @@ footer
   color: black
   padding: 0.3rem 0.7rem
   transition: all 0.5s
-
-.aboutLinkedInLink:hover 
-  background-color: $wheat
+  &:hover 
+    background-color: $wheat
 
 .aboutGitHubLink 
   display: inline-block
@@ -453,146 +445,15 @@ footer
   color: black
   padding: 0.3rem 0.8rem
   transition: all 0.5s
-
-.aboutGitHubLink:hover 
-  background-color: $lightBlue
+  &:hover 
+    background-color: $lightBlue
 
 .aboutContactLink a 
   text-decoration: none
   color: $dodgerBlue
   transition: all 0.5s
-
-.aboutContactLink a:hover 
-  color: $lightSkyBlue2
-
-
-
-/* CV page */
-@media (min-device-width: 20em) 
-  @keyframes fadeCvContainerIn 
-    from
-      opacity: 0
-    to
-      opacity: 1
-  
-  .cvContainer 
-    display: flex
-    justify-content: flex-center
-    align-items: flex-center
-    background-color: $lightGrey2
-    margin: 2rem 0
-    animation: fadeCvContainerIn 2s forwards
-  
-
-@media only screen and (min-device-width: 60em) 
-  @keyframes scrollCvContainerIn 
-    from
-      margin-left: -150%
-    to 
-      margin-left: 5%
-    from 
-      opacity: 0
-    to 
-      opacity: 1
-  
-  .cvContainer 
-    display: flex
-    flex-flow: wrap
-    justify-content: flex-start
-    align-items: flex-start
-    background-color: $lightGrey2
-    margin:
-      top: 2rem
-      right: 5%
-      bottom: 2rem
-    animation: scrollCvContainerIn 2s forwards
-  
-
-.cvContainer a 
-  text-decoration: none
-  color: $dodgerBlue
-  transition: all 0.5s
-
-.cvContainer a:hover 
-  color: $lightSkyBlue2
-
-.cvDetailsContainer 
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: flex-start
-  width: 25rem
-  background-color: $lightGrey2
-  padding:
-    top: 3%
-    left: 3%
-    right: 3%
-  margin:
-    top: 2rem
-    bottom: 2rem
-
-.cvDetailsContainer h1 
-  margin-bottom: 0
-
-.cvDetailsContainer h2 
-  margin:
-    top: 0.4rem
-    bottom: 0
-
-.cvDetailsContainer h3 
-  text-align: center
-  margin-bottom: 0
-
-.cvPictureContainer img 
-  width: 15rem
-
-.cvCareerContainer 
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  width: 50rem
-  background-color: $lightGrey2
-  padding:
-    top: 4rem
-    left: 3%
-    right: 3%
-  margin:
-    top: 0
-    bottom: 2rem
-
-.cvCareerContainer h3 
-  margin-bottom: 0
-  text-align: center
-
-.cvTrainingDetailsContainer,
-.cvEducationDetailsContainer 
-  margin-top: 0.3rem
- 
-.cvTrainingDetailsContainer h4,
-.cvWorkDetailsContainer h4,
-.cvEducationDetailsContainer h4,
-.cvProjectContainer h4,
-.cvTrainingDetailsContainer h6,
-.cvWorkDetailsContainer h6,
-.cvEducationDetailsContainer h6 
-  margin:
-    top: 0
-    bottom: 0
-
-.cvWorkDetailsContainer 
-  margin-top: 0.3rem
-
-.cvProjectContainer 
-  display: flex
-  justify-content: flex-start
-  align-items: center
-  margin-top: 1.5rem
-
-.cvProjectLink 
-  display: inline-block
-  font-size: 1rem
-  padding-left: 0.7rem
-
+  &:hover 
+    color: $lightSkyBlue2
 
 
 /* Projects page */
@@ -721,9 +582,8 @@ footer
     right: 0.5rem
     left: 0.5rem
   transition: all 1s
-
-.projectTryItLink:hover 
-  background-color: $paleGreen
+  &:hover 
+    background-color: $paleGreen
 
 .projectGitHubLink 
   display: inline-block
@@ -735,9 +595,8 @@ footer
     right: 0.5rem
     left: 0.5rem
   transition: all 1s
-
-.projectGitHubLink:hover 
-  background-color: $lightBlue
+  &:hover 
+    background-color: $lightBlue
 
 
 
@@ -813,9 +672,8 @@ footer
   text-decoration: none
   color: $dodgerBlue
   transition: all 0.5s
-
-.contactLink a:hover 
-  color: $lightSkyBlue2
+  &:hover 
+    color: $lightSkyBlue2
 
 form h3 
   padding-bottom: 0
@@ -841,9 +699,8 @@ form h3
   border: none
   margin-bottom: 1.5rem
   transition: all 0.5s
-
-.formSubmit:hover 
-  background-color: $paleGreen
+  &:hover 
+    background-color: $paleGreen
 
 
 
@@ -977,6 +834,5 @@ form h3
     top: 1rem
     bottom: 2rem
   transition: all 0.5s
-
-.notFoundGetBackLink:hover 
-  background-color: $paleGreen
+  &:hover 
+    background-color: $paleGreen
