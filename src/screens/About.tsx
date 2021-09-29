@@ -57,7 +57,7 @@ const About = () => {
                     "https://www.dropbox.com/s/z111mh1n2oks2cv/CV.pdf?dl=0",
                 }}
                 target="_blank"
-                className="aboutLinkedInLink"
+                className="aboutCVLink"
               >
                 CV
               </Link>
