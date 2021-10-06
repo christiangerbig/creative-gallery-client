@@ -2,13 +2,11 @@ import ProjectDetails from "../components/ProjectDetails";
 import jungleSwap from "../images/jungle-swap.png";
 import trackertools from "../images/trackertools.png";
 import letterShooter from "../images/letter-shooter.png";
-import PageTitle from "../components/PageTitle";
 
 export interface ProjectItem {
   projectName: string;
   projectPicturePath: string;
   projectVideoPath: string;
-  projectStack: string;
   projectDescription: string;
   deployedPath: string;
   gitHubClientPath: string;
@@ -19,34 +17,31 @@ const Projects = () => {
   // Projects
   const projects: ProjectItem[] = [
     {
-      projectName: "JungleSwap",
+      projectName: "JUNGLE SWAP",
       projectPicturePath: jungleSwap,
       projectVideoPath:
         "https://bliskcloudstorage.blob.core.windows.net/videos/2c9bdc9d-6b6f-4823-844c-2a2cd5c36a86/15-May-2021-13-45-637566759460450173.mp4",
-      projectStack: `React | JavaScript | SASS | Bootstrap <br /> NodeJs | MongoDB | Axios | Responsive`,
-      projectDescription: ` Share your plant offshoots. <br /> Make money or swap them for another plant. <br /> Shop and give a plant a new home. <br /> <br />`,
+      projectDescription: ` Share your plant offshoots and make money or swap them for another plant. Shop and give a plant a new home. <br /> <br /> <br />`,
       deployedPath: "https://jungleswap.herokuapp.com/",
       gitHubClientPath: "https://github.com/christiangerbig/jungle-swap-client",
       gitHubServerPath: "https://github.com/christiangerbig/jungle-swap-server",
     },
     {
-      projectName: "Trackertools",
+      projectName: "TRACKERTOOLS",
       projectPicturePath: trackertools,
       projectVideoPath:
         "https://bliskcloudstorage.blob.core.windows.net/videos/2c9bdc9d-6b6f-4823-844c-2a2cd5c36a86/15-May-2021-13-35-637566753722531829.mp4",
-      projectStack: `Express | Handlebars | JavaScript | SASS <br /> Bootstrap | MongoDB | Responsive`,
-      projectDescription: `Four powerful tools to make working <br /> with the music editor Protracker and <br /> its modules more comfortable. <br /> <br />`,
+      projectDescription: `Four powerful tools to make working with the music editor Protracker and its modules more comfortable. <br /> <br /> <br />`,
       deployedPath: "https://trackertools.herokuapp.com/",
       gitHubClientPath: "https://github.com/christiangerbig/Trackertools",
       gitHubServerPath: "",
     },
     {
-      projectName: "Letter Shooter",
+      projectName: "LETTER SHOOTER",
       projectPicturePath: letterShooter,
       projectVideoPath:
         "https://bliskcloudstorage.blob.core.windows.net/videos/2c9bdc9d-6b6f-4823-844c-2a2cd5c36a86/15-May-2021-14-10-637566774755686276.mp4",
-      projectStack: `JavaScript | HTML5 | Canvas | CSS3`,
-      projectDescription: ` A coordination and strategy game <br /> with the goal to hit the missing <br /> letters with precise shots. <br /> <br /> <br />`,
+      projectDescription: ` A coordination and strategy game with the goal to hit the missing letters with precise shots. <br /> <br /> <br />`,
       deployedPath: "https://christiangerbig.github.io/letter-shooter/",
       gitHubClientPath: "https://github.com/christiangerbig/letter-shooter",
       gitHubServerPath: "",
@@ -55,12 +50,12 @@ const Projects = () => {
 
   return (
     <div className="projectsPageContainer">
-      <PageTitle title={"My projects"} />
-      <div className="projectsIntroTextContainer">
-        <h3 className="projectsIntroText">
-          Here below you can see some of my projects I was working recently on
-        </h3>
-      </div>
+      <header>
+        <div className="headerText orangeBorder">
+          <h1 className="textFat"> My Web Developer projects </h1>
+          <h2 className="textBig"> I was working on </h2>
+        </div>
+      </header>
       <div className="projectsContainer">
         {projects.map((projectItem: ProjectItem, index: number) => {
           return <ProjectDetails projectItem={projectItem} key={index} />;

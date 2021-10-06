@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Projects from "./screens/Projects";
+import TechStack from "./screens/TechStack";
 import Contact from "./screens/Contact";
 import NotFound from "./screens/NotFound";
 
@@ -21,6 +22,9 @@ const App = () => {
         </Route>
         <Route path="/projects">
           <Projects />
+        </Route>
+        <Route path="/techstack">
+          <TechStack />
         </Route>
         <Route path="/contact">
           <Contact />

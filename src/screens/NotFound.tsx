@@ -1,22 +1,17 @@
 import { Link } from "react-router-dom";
-import PageTitle from "../components/PageTitle";
 
 const NotFound = () => {
   return (
     <div className="notFoundPageContainer logoImage">
-      <PageTitle title={"Not found"} />
-      <div className="somethingText">
-        <h3> something </h3>
-      </div>
-      <div className="wentText">
-        <h4> went </h4>
-      </div>
-      <div className="wrongText">
-        <h2> wrong </h2>
-      </div>
+      <header>
+        <div className="headerText orangeBorder">
+          <h1 className="textFat"> Error 404 </h1>
+          <h2 className="textBig"> Page not found </h2>
+        </div>
+      </header>
       <div className="notFoundGetBackContainer">
         <Link to={"/"} className="notFoundGetBackLink textEnlighted">
-          Get back
+          GET BACK
         </Link>
       </div>
     </div>

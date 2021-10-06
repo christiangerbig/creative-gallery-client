@@ -1,91 +1,47 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
-import portrait from "../images/portrait-mono.png";
-import PageTitle from "../components/PageTitle";
 
 const About = () => {
   const dispatch = useDispatch();
 
   return (
     <div className="aboutPageContainer">
-      <PageTitle title={"About"} />
-      <div className="aboutDetailsContainer">
-        <div className="aboutDetailsText">
-          <h3> Hello, </h3>
+      <header>
+        <div className="headerText greenBorder">
+          <h1 className="textFat"> There is only one way </h1>
+          <h2 className="textBig"> Straight forward </h2>
+        </div>
+      </header>
+      <div className="textContainer">
+        <div className="textColumContainer">
           <p>
-            I'm <b> Christian. </b>
+            I am Christian. A passionate and dedicated Web Developer using every
+            aspect of the New Technology available to reach the goals. My
+            homebase is Hamburg in Germany. I believe in a positive power of
+            communication, trust in cooperative team working making an asset
+            from sharing different points of views. I love to code optimized
+            solutions suiting individual requirements with respect to time,
+            budget and target.
           </p>
+        </div>
+        <div className="textColumContainer">
           <p>
-            A <b> passionate and dedicated Web Developer </b>
-            using every aspect of the New Technology available to reach the
-            goals. My homebase is <b> Hamburg </b> in Germany.
-          </p>
-          <p>
-            I believe in a <b> positive power </b> of communication, trust in
-            <b> cooperative team working </b>
-            making an asset from <b> sharing different points of views </b>.
-          </p>
-          <p>
-            I love to code
-            <b> optimized solutions suiting individual requirements </b> with
-            respect to time, budget and target.
-          </p>
-          <p>
-            My motto:
-            <b> "Learning things, improving (them) and reach the goals" </b>.
-          </p>
-          <p>
-            My goal is to <b> become part of a team </b> where I can
-            <b> apply, develop and share my skills</b>.
-          </p>
-          <p>
-            Thank you for reading, your trust and hope
+            I have completed an intensive, full stack web development bootcamp
+            at Ironhack and became a Fullstack Developer. Meanwhile I improved
+            my skills to write Clean Code and learned in Udemy courses to apply
+            the Redux Toolkit and TypeScript with React in my projects. My
+            motto: "Learning things, improving (them) and reach the goals". My
+            goal is to become part of a team where I can apply, develop and
+            share my skills. Thank you for reading, your trust and hope
             <span
               className="aboutContactLink"
-              onClick={() => dispatch(setMenuNumber(3))}
+              onClick={() => dispatch(setMenuNumber(4))}
             >
-              <Link to={{ pathname: "/contact" }}> hearing from you </Link>
+              <Link to={{ pathname: "/contact" }}> hearing from you</Link>
             </span>
             .
           </p>
-          <div className="aboutLinksContainer">
-            <div>
-              <Link
-                to={{
-                  pathname:
-                    "https://www.dropbox.com/s/z111mh1n2oks2cv/CV.pdf?dl=0",
-                }}
-                target="_blank"
-                className="aboutCVLink"
-              >
-                CV
-              </Link>
-            </div>
-            <div>
-              <Link
-                to={{
-                  pathname: "https://www.linkedin.com/in/christian-gerbig/",
-                }}
-                target="_blank"
-                className="aboutLinkedInLink"
-              >
-                LinkedIn
-              </Link>
-            </div>
-            <div>
-              <Link
-                to={{ pathname: "https://github.com/christiangerbig/" }}
-                target="_blank"
-                className="aboutGitHubLink"
-              >
-                GitHub
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="aboutPictureContainer">
-          <img src={portrait} alt="potrait" />
         </div>
       </div>
     </div>

@@ -1,47 +1,19 @@
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setMenuNumber } from "../reducer/creativeGallerySlice";
-import PageTitle from "../components/PageTitle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
-  const dispatch = useDispatch();
-
   return (
-    <div className="homePageContainer logoImage">
-      <PageTitle title={"Intro"} />
-      <div className="welcomeText">
-        <h1> WELCOME </h1>
-      </div>
-      <div className="toText">
-        <h4> to </h4>
-      </div>
-      <div className="myText">
-        <Link
-          to={"/about"}
-          className="homeLink"
-          onClick={() => dispatch(setMenuNumber(1))}
-        >
-          <h4> my </h4>
-        </Link>
-      </div>
-      <div className="creativeText">
-        <Link
-          to={"/projects"}
-          className="homeLink"
-          onClick={() => dispatch(setMenuNumber(2))}
-        >
-          <h2> creative </h2>
-        </Link>
-      </div>
-      <div className="galleryText">
-        <Link
-          to={"/projects"}
-          className="homeLink"
-          onClick={() => dispatch(setMenuNumber(2))}
-        >
-          <h2> gallery </h2>
-        </Link>
-      </div>
+    <div className="homePageContainer">
+      <header>
+        <div className="headerText blueBorder">
+          <h1 className="textFat">
+            From Letter Shooter{" "}
+            <FontAwesomeIcon icon={faAngleDoubleRight} className="doubleArrowRight" />
+            Jungle Swap
+          </h1>
+          <h2 className="textBig"> My metamorphosis as a Web Developer </h2>
+        </div>
+      </header>
     </div>
   );
 };

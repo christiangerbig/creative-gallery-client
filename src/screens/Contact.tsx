@@ -13,7 +13,6 @@ import {
   faMobileAlt,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
-import PageTitle from "../components/PageTitle";
 
 const Contact = () => {
   const error = useSelector((state: RootState) => state.creativeGallery.error);
@@ -39,14 +38,15 @@ const Contact = () => {
 
   return (
     <div className="contactPageContainer">
-      <PageTitle title={"Contact me"} />
+      <header>
+        <div className="headerText blueBorder">
+          <h1 className="textFat"> Don't hesitate to get in touch </h1>
+          <h2 className="textBig"> with me now </h2>
+        </div>
+      </header>
       <div className="contactContainer">
-        <div>
-          <h1> Christian Gerbig </h1>
-        </div>
-        <div>
-          <h2> Web Developer </h2>
-        </div>
+        <h1> Christian Gerbig </h1>
+        <h2> Web Developer </h2>
         <div className="contactWaysContainer">
           <div className="contactEmailContainer">
             <h3>
@@ -57,7 +57,7 @@ const Contact = () => {
                 to={{ pathname: "mailto:chr_gerbig@web.de" }}
                 target="_blank"
               >
-                <h4> chr_gerbig web.de </h4>
+                <h4> chr_gerbig(at)web.de </h4>
               </Link>
             </span>
           </div>
@@ -78,7 +78,7 @@ const Contact = () => {
               <FontAwesomeIcon icon={faPen} /> or write me
             </h3>
           </div>
-          {error && <p className="warningColor"> {error} </p>}
+          {error && <p className="errorOutput warningColor"> {error} </p>}
           <div>
             <input
               type="email"
@@ -106,7 +106,7 @@ const Contact = () => {
           </div>
           <input
             type="submit"
-            value="Submit"
+            value="SUBMIT"
             className="formSubmit"
             formNoValidate
           />
