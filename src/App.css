@@ -624,7 +624,7 @@ footer {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 25%;
+  width: 30rem;
   background-color: #0f0f0f;
   color: #eeecec;
   padding: 0;
@@ -632,7 +632,7 @@ footer {
   margin: 4rem auto;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .contactContainer {
     display: flex;
     justify-content: center;
@@ -712,7 +712,7 @@ form h3 {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .formInput {
     width: 80%;
     padding: 0.3rem;
@@ -730,7 +730,7 @@ form h3 {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .formTextarea {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     width: 80%;
@@ -757,8 +757,8 @@ form h3 {
 }
 
 .errorOutput {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  text-align: center;
+  width: 80%;
 }
 
 /* Not found page */
