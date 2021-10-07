@@ -1,6 +1,7 @@
 import { Route, Switch, withRouter } from "react-router-dom";
 import "./App.min.css";
 import NavBar from "./components/NavBar";
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Home from "./screens/Home";
 import About from "./screens/About";
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <div>
       <NavBar />
+      <Menu />
       <Switch>
         <Route exact path="/">
           <Home />

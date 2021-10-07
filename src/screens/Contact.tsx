@@ -42,8 +42,8 @@ const Contact = () => {
     <div className="contactPageContainer">
       <header>
         <div className="headerText blueBorder">
-          <h1 className="textFat"> Don't hesitate to get in touch </h1>
-          <h2 className="textBig"> with me now </h2>
+          <h1 className="textFat"> Don't hesitate </h1>
+          <h2 className="textBig"> to contact me </h2>
         </div>
       </header>
       <div className="contactContainer">
