@@ -150,7 +150,6 @@ const NavBar = () => {
               </ul>
             </div>
           )}
-
           {!isDesktop && !isMenuVisible && (
             <div>
               <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
