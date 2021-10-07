@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import ProjectDetails from "../components/ProjectDetails";
 import jungleSwap from "../images/jungle-swap.png";
 import trackertools from "../images/trackertools.png";
@@ -47,6 +49,9 @@ const Projects = () => {
       gitHubServerPath: "",
     },
   ];
+
+  // Scroll to top as soon as page loads
+  useEffect(() => scroll.scrollToTop(), []);
 
   return (
     <div className="projectsPageContainer">

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import { useSelector, useDispatch } from "react-redux";
 import {
   createRequest,
@@ -22,6 +23,7 @@ const Contact = () => {
   // Clear error text as soon as page loads
   useEffect(() => {
     dispatch(setError(null));
+    scroll.scrollToTop();
   }, []);
 
   // Create request

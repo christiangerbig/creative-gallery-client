@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import reactLogo from "../images/React-Logo.svg";
 import reduxLogo from "../images/Redux-Logo.svg";
 import javaScriptES6Logo from "../images/JavaScript(ES6)-Logo.svg";
@@ -26,6 +28,9 @@ const TechStack = () => {
     gitHubLogo,
     visualStudioCodeLogo,
   ];
+
+  // Scroll to top as soon as page loads
+  useEffect(() => scroll.scrollToTop(), []);
 
   return (
     <div className="techStackPageContainer">

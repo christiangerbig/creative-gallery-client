@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import { useDispatch } from "react-redux";
 import { setMenuNumber } from "../reducer/creativeGallerySlice";
 
 const About = () => {
   const dispatch = useDispatch();
+
+  // Scroll to top as soon as page loads
+  useEffect(() => scroll.scrollToTop(), []);
 
   return (
     <div className="aboutPageContainer">
