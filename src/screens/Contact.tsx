@@ -73,11 +73,11 @@ const Contact = () => {
           </div>
         </div>
         <div>
-            <h3>
-              <FontAwesomeIcon icon={faPen} /> or write me
-            </h3>
-          </div>
-          {error && <p className="errorOutput warningColor"> {error} </p>}
+          <h3>
+            <FontAwesomeIcon icon={faPen} /> or write me
+          </h3>
+        </div>
+        {error && <p className="errorOutput warningColor"> {error} </p>}
         <form onSubmit={(event) => handleSubmitRequest(event, history)}>
           <div>
             <input
