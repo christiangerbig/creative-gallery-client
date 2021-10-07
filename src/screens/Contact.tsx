@@ -67,7 +67,7 @@ const Contact = () => {
             </h3>
             <span className="contactLink">
               <Link to={{ pathname: "tel:+4915154824288" }} target="_blank">
-                <h4> +49 151 548 242 88 </h4>
+                <h4> +49&nbsp;151&nbsp;548&nbsp;242&nbsp;88 </h4>
               </Link>
             </span>
           </div>
@@ -79,31 +79,25 @@ const Contact = () => {
         </div>
         {error && <p className="errorOutput warningColor"> {error} </p>}
         <form onSubmit={(event) => handleSubmitRequest(event, history)}>
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="email"
-              className="formInput"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="subject"
-              className="formInput"
-            />
-          </div>
-          <div>
-            <textarea
-              name="message"
-              cols={35}
-              rows={7}
-              placeholder="message"
-              className="formTextarea"
-            />
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="email"
+            className="formInput"
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="subject"
+            className="formInput"
+          />
+          <textarea
+            name="message"
+            cols={35}
+            rows={7}
+            placeholder="message"
+            className="formTextarea"
+          />
           <input
             type="submit"
             value="SUBMIT"
