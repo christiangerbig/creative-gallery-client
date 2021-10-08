@@ -445,6 +445,7 @@ footer {
   animation: fadePageIn 1s forwards;
   color: #eeecec;
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .doubleArrowRight {

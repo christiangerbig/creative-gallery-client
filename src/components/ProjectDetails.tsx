@@ -65,7 +65,7 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps) => {
                 target="_blank"
                 className="projectGitHubLink"
               >
-                GIT HUB
+                GIT HUB 2
               </Link>
             </div>
           )}

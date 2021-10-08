@@ -11,15 +11,8 @@ const Home = () => {
     <div className="homePageContainer">
       <header>
         <div className="headerText blueBorder">
-          <h1 className="textFat">
-            From Letter Shooter{" "}
-            <FontAwesomeIcon
-              icon={faAngleDoubleRight}
-              className="doubleArrowRight"
-            />
-            Jungle Swap
-          </h1>
-          <h2 className="textBig"> My metamorphosis as a Web Developer </h2>
+          <h1 className="textFat"> Hi, I'm Christian </h1>
+          <h2 className="textBig"> A passionate Web Developer </h2>
         </div>
       </header>
     </div>
