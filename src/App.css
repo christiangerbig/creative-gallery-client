@@ -92,7 +92,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1030;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #eeecec;
   backdrop-filter: blur(15px);
 }
@@ -232,7 +232,7 @@ ul {
   z-index: 1050;
   background-color: black;
   color: #eeecec;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(15px);
 }
 
