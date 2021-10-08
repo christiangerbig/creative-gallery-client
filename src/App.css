@@ -94,7 +94,7 @@ nav {
   z-index: 1030;
   background-color: rgba(0, 0, 0, 0.5);
   color: #eeecec;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
 }
 
 .navbarContainer {
@@ -232,7 +232,8 @@ ul {
   z-index: 1050;
   background-color: black;
   color: #eeecec;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
 }
 
 .fadeMenuIn {
