@@ -434,12 +434,8 @@ footer {
   background-color: black;
   color: #eeecec;
   padding: 0.1rem 0.3rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.linkBorder {
-  border: solid #eeecec 1px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 /* Home page */
@@ -451,11 +447,6 @@ footer {
   color: #eeecec;
   margin-top: 8rem;
   margin-bottom: 8rem;
-}
-
-.doubleArrowRight {
-  color: orange;
-  padding-right: 0.5rem;
 }
 
 .textContainer {

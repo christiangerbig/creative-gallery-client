@@ -14,7 +14,7 @@ const Footer = () => {
                 }}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="footerLink linkBorder"
+                className="footerLink"
               >
                 <i className="fab fa-linkedin colorWhite"></i>
               </Link>
@@ -24,9 +24,9 @@ const Footer = () => {
                 to={{ pathname: "https://github.com/christiangerbig/" }}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="footerLink linkBorder"
+                className="footerLink"
               >
-                <i className="fab fa-github  textColorWhite"></i>
+                <i className="fab fa-github textColorWhite"></i>
               </Link>
             </li>
           </ul>
