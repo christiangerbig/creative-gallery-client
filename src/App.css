@@ -85,6 +85,15 @@ body {
   }
 }
 
+@keyframes blurrElementIn {
+  from {
+    filter: blur(100px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
 /* Navigation Bar */
 nav {
   position: fixed;
@@ -123,7 +132,7 @@ nav {
   align-items: start;
   background-color: #eeecec;
   padding: 0.3rem;
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .logoLetterOutlineC {
@@ -131,7 +140,7 @@ nav {
   height: 2rem;
   background-color: black;
   border-radius: 50% 0 0 50%;
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
 }
 
 .logoLetterInlineC {
@@ -321,6 +330,10 @@ ul {
   animation: fadeTextOut 1s forwards;
 }
 
+.blurrIn {
+  animation: blurrElementIn 1.5s forwards;
+}
+
 /* Header */
 header {
   display: flex;
@@ -356,21 +369,18 @@ header {
     padding-top: 1rem;
     padding-bottom: 1.7rem;
     padding-left: 1rem;
-    margin-left: 0;
+    margin-left: 2rem;
   }
 }
 
 .headerText h1 {
-  padding-top: 0;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .headerText h2 {
-  padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .blueBorder {
@@ -441,12 +451,97 @@ footer {
 /* Home page */
 .homePageContainer {
   display: flex;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   height: 25rem;
   animation: fadePageIn 1s forwards;
   color: #eeecec;
   margin-top: 8rem;
   margin-bottom: 8rem;
+}
+
+.homeIntroText {
+  margin-left: 4rem;
+}
+
+.homeIntroText h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.homeIntroText h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.homeLogoSubContainer {
+  display: flex;
+  align-items: start;
+  background-color: #eeecec;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.homeLogoLetterOutlineC {
+  width: 6rem;
+  height: 8rem;
+  background-color: black;
+  border-radius: 50% 0 0 50%;
+  margin-right: 1.6rem;
+}
+
+.homeLogoLetterInlineC {
+  width: 4.8rem;
+  height: 5.6rem;
+  background: #eeecec;
+  padding: 0;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  border-radius: 50% 0 0 50%;
+}
+
+.homeLogoLetterOutlineG {
+  width: 6rem;
+  height: 8rem;
+  background-color: black;
+  border-radius: 0 50% 50% 0;
+}
+
+.homeLogoLetterInlineG {
+  width: 4.8rem;
+  height: 5.6rem;
+  background-color: #eeecec;
+  padding: 0;
+  margin-top: 1.2rem;
+  margin-right: 2rem;
+  margin-left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.homeLogoLetterBoxG {
+  width: 1.2rem;
+  height: 2.8rem;
+  background-color: #eeecec;
+  margin-bottom: 0;
+  padding-top: 2.8rem;
+}
+
+.homeLogoLetterBoxG2 {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: black;
+  padding-top: 2.8rem;
+}
+
+/* About page */
+.aboutPageContainer {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  color: #eeecec;
+  margin-top: 8rem;
+  animation: fadePageIn 1s forwards;
 }
 
 .textContainer {
@@ -478,16 +573,6 @@ footer {
     width: 100%;
     padding-right: 3rem;
   }
-}
-
-/* About page */
-.aboutPageContainer {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  color: #eeecec;
-  margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
 }
 
 .aboutContactLink a {
