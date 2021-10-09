@@ -31,10 +31,10 @@ const Menu = () => {
     <div>
       {!isDesktop && isMenuVisible && (
         <div className={!isMenuQuit ? "menu fadeMenuIn" : "menu fadeMenuOut"}>
-          <div className="menuToggleContainer">
+          <div className="menuCloseContainer">
             <FontAwesomeIcon
               icon={faTimes}
-              className="menuToggle colorWhite"
+              className="menuClose colorWhite"
               onClick={handleCloseMenu}
             />
           </div>
