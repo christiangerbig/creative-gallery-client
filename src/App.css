@@ -116,6 +116,18 @@ nav {
   padding-bottom: 0.5rem;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4.2rem;
+    margin-right: 2.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 .logoContainer {
   display: flex;
   justify-content: center;
@@ -129,7 +141,6 @@ nav {
 
 .logoSubContainer {
   display: flex;
-  align-items: start;
   background-color: #eeecec;
   padding: 0.3rem;
   border-radius: 4.5px;
@@ -269,6 +280,15 @@ ul {
   margin-right: 4.3rem;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .menuCloseContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2.3rem;
+  }
+}
+
 .menuClose {
   margin-top: 2.5rem;
 }
@@ -346,13 +366,13 @@ header {
     display: flex;
     align-items: center;
     margin-left: 2rem;
+    margin-right: 3rem;
   }
 }
 
 .headerText {
   display: flex;
   justify-content: center;
-  align-items: start;
   flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1.7rem;
@@ -364,7 +384,6 @@ header {
   .headerText {
     display: flex;
     justify-content: center;
-    align-items: start;
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1.7rem;
@@ -477,7 +496,6 @@ footer {
 
 .homeLogoSubContainer {
   display: flex;
-  align-items: start;
   background-color: #eeecec;
   padding: 1rem;
   border-radius: 20px;
@@ -537,7 +555,6 @@ footer {
 /* About page */
 .aboutPageContainer {
   display: flex;
-  align-items: start;
   flex-direction: column;
   color: #eeecec;
   margin-top: 8rem;
@@ -547,7 +564,6 @@ footer {
 .textContainer {
   display: flex;
   justify-content: center;
-  align-items: start;
   margin: 3rem 0 4rem 4rem;
 }
 
@@ -599,13 +615,13 @@ footer {
   flex-wrap: wrap;
   margin-top: 4rem;
   margin-bottom: 3rem;
-  margin-left: 0;
+  margin-left: 2.2rem;
+  margin-right: 2.2rem;
 }
 
 .projectDetailsContainer {
   display: flex;
-  justify-content: center;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
   background-color: #0f0f0f;
   border: solid 1px #282828;
@@ -625,7 +641,7 @@ footer {
 
 .projectDescription p {
   font-size: 1rem;
-  width: 20rem;
+  width: 280px;
 }
 
 .projectLinksContainer {

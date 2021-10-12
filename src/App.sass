@@ -111,6 +111,18 @@ nav
     top: 0.5rem
     bottom: 0.5rem
 
+@media (min-width: 320px) and (max-width: 480px)
+  .navbarContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin:
+      left: 4.2rem
+      right: 2.2rem
+    padding:
+      top: 0.5rem
+      bottom: 0.5rem
+
 .logoContainer
   display: flex
   justify-content: center
@@ -123,7 +135,6 @@ nav
 
 .logoSubContainer
   display: flex
-  align-items: start
   background-color: $white
   padding: 0.3rem
   border-radius: 4.5px
@@ -247,6 +258,13 @@ ul
   align-items: center
   margin-right: 4.3rem
 
+@media (min-width: 320px) and (max-width: 480px)
+  .menuCloseContainer
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-right: 2.3rem
+
 .menuClose
   margin-top: 2.5rem
 
@@ -310,11 +328,11 @@ header
     display: flex
     align-items: center
     margin-left: 2rem
+    margin-right: 3rem
 
 .headerText
   display: flex
   justify-content: center
-  align-items: start
   flex-direction: column
   padding-top: 1rem
   padding-bottom: 1.7rem
@@ -325,7 +343,6 @@ header
   .headerText
     display: flex
     justify-content: center
-    align-items: start
     flex-direction: column
     padding-top: 1rem
     padding-bottom: 1.7rem
@@ -429,7 +446,6 @@ footer
 
 .homeLogoSubContainer
   display: flex
-  align-items: start
   background-color: $white
   padding: 1rem
   border-radius: 20px
@@ -486,7 +502,6 @@ footer
 
 .aboutPageContainer 
   display: flex
-  align-items: start
   flex-direction: column
   color: $white
   margin-top: 8rem
@@ -495,7 +510,6 @@ footer
 .textContainer
   display: flex
   justify-content: center
-  align-items: start
   margin: 3rem 0 4rem 4rem
 
 @media (min-width: 320px) and (max-width: 767px)
@@ -541,12 +555,12 @@ footer
   margin:
     top: 4rem
     bottom: 3rem
-    left: 0
+    left: 2.2rem
+    right: 2.2rem
 
 .projectDetailsContainer 
   display: flex
-  justify-content: center
-  align-items: left
+  align-items: center
   flex-direction: column
   background-color: $dark2
   border: solid 1px $dark
@@ -564,7 +578,7 @@ footer
 
 .projectDescription p
   font-size: 1rem
-  width: 20rem
+  width: 280px
 
 .projectLinksContainer 
   display: flex
