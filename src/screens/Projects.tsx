@@ -15,7 +15,7 @@ export interface ProjectItem {
   gitHubServerPath: string;
 }
 
-const Projects = () => {
+const Projects = (): JSX.Element => {
   // Projects
   const projects: ProjectItem[] = [
     {

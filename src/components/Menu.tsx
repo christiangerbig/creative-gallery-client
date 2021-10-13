@@ -8,7 +8,7 @@ import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const Menu = () => {
+const Menu = (): JSX.Element => {
   const isDesktop = useSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
@@ -20,7 +20,7 @@ const Menu = () => {
   );
   const dispatch = useDispatch();
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = (): void => {
     dispatch(setIsMenuQuit(true));
     setTimeout(() => {
       dispatch(setIsMenuVisible(false));

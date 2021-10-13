@@ -13,7 +13,7 @@ import nodeJsLogo from "../images/NodeJS-Logo.svg";
 import gitHubLogo from "../images/GitHub-Logo.svg";
 import visualStudioCodeLogo from "../images/Visual-Studio-Code-Logo.svg";
 
-const TechStack = () => {
+const TechStack = (): JSX.Element => {
   const logos = [
     reactLogo,
     reduxLogo,

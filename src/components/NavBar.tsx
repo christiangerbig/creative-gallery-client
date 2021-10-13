@@ -11,7 +11,7 @@ import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = () => {
+const NavBar = (): JSX.Element => {
   const menuNumber = useSelector(
     (state: RootState) => state.creativeGallery.menuNumber
   );
@@ -24,7 +24,9 @@ const NavBar = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const checkWindowWidth = () => {
+    // Device = Laptops, Desktops
+    // Screen = B/w 1025px to 1280px
+    const checkWindowWidth = (): void => {
       if (window.innerWidth > 1024) {
         dispatch(setIsDesktop(true));
       } else {
@@ -38,7 +40,7 @@ const NavBar = () => {
     };
   }, []);
 
-  const handleOpenMenu = () => {
+  const handleOpenMenu = (): void => {
     dispatch(setIsMenuVisible(true));
     dispatch(setIsMenuQuit(false));
   };

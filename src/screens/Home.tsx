@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   // Scroll to top as soon as page loads
   useEffect(() => scroll.scrollToTop(), []);
 
@@ -21,13 +21,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-
-        <div className="homeIntroText">
-          <h1 className="textFat"> Hi, I'm Christian </h1>
-          <h2 className="textBig"> A passionate Web Developer </h2>
-        </div>
-
+      <div className="homeIntroText">
+        <h1 className="textFat"> Hi, I'm Christian </h1>
+        <h2 className="textBig"> A passionate Web Developer </h2>
+      </div>
     </div>
   );
 };

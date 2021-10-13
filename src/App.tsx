@@ -10,7 +10,7 @@ import TechStack from "./screens/TechStack";
 import Contact from "./screens/Contact";
 import NotFound from "./screens/NotFound";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div>
       <NavBar />

@@ -15,7 +15,7 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   const error = useSelector((state: RootState) => state.creativeGallery.error);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -27,7 +27,7 @@ const Contact = () => {
   }, []);
 
   // Create request
-  const handleSubmitRequest = (event: any, history: any) => {
+  const handleSubmitRequest = (event: any, history: any): void => {
     event.preventDefault();
     const { email, subject, message } = event.target;
     const request: Request = {

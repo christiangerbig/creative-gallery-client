@@ -6,7 +6,7 @@ type ProjectDetailsProps = {
   projectItem: ProjectItem;
 };
 
-const ProjectDetails = ({ projectItem }: ProjectDetailsProps) => {
+const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   const {
     projectName,
     projectPicturePath,
