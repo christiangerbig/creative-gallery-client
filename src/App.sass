@@ -113,15 +113,9 @@ nav
 
 @media (min-width: 320px) and (max-width: 480px)
   .navbarContainer
-    display: flex
-    justify-content: space-between
-    align-items: center
     margin:
       left: 4.2rem
       right: 2.2rem
-    padding:
-      top: 0.5rem
-      bottom: 0.5rem
 
 .logoContainer
   display: flex
@@ -260,9 +254,6 @@ ul
 
 @media (min-width: 320px) and (max-width: 480px)
   .menuCloseContainer
-    display: flex
-    justify-content: flex-end
-    align-items: center
     margin-right: 2.3rem
 
 .menuClose
@@ -325,8 +316,6 @@ header
 
 @media (min-width: 320px) and (max-width: 480px)
   header
-    display: flex
-    align-items: center
     margin-left: 2rem
     margin-right: 3rem
 
@@ -338,24 +327,16 @@ header
   padding-bottom: 1.7rem
   padding-left: 1rem
   margin-left: 3rem
+  h1
+    margin-top: 0
+    margin-bottom: 0.5rem
+  h2
+    margin-top: 0
+    margin-bottom: 0
 
 @media (min-width: 320px) and (max-width: 480px)
   .headerText
-    display: flex
-    justify-content: center
-    flex-direction: column
-    padding-top: 1rem
-    padding-bottom: 1.7rem
-    padding-left: 1rem
     margin-left: 2rem
-
-.headerText h1
-  margin-top: 0
-  margin-bottom: 0.5rem
-
-.headerText h2
-  margin-top: 0
-  margin-bottom: 0
 
 .blueBorder
   border-left: solid $blue2 10px
@@ -389,15 +370,6 @@ footer
 
 @media (min-width: 320px) and (max-width: 767px)
   .footerContainer 
-    display: flex
-    justify-content: center
-    align-items: center
-    margin:
-      left: 4.2rem
-      right: 4.2rem
-    padding:
-      top: 0.5rem
-      bottom: 0.5rem
     flex-wrap: wrap
 
 .copyrightText
@@ -435,14 +407,12 @@ footer
 
 .homeIntroText
   margin-left: 4rem
-
-.homeIntroText h1
-  margin-top: 0
-  margin-bottom: 0.5rem
-
-.homeIntroText h2
-  margin-top: 0
-  margin-bottom: 0.5rem
+  h1
+    margin-top: 0
+    margin-bottom: 0.5rem
+  h2
+    margin-top: 0
+    margin-bottom: 0.5rem
 
 .homeLogoSubContainer
   display: flex
@@ -514,8 +484,6 @@ footer
 
 @media (min-width: 320px) and (max-width: 767px)
   .textContainer
-    display: flex
-    justify-content: center
     align-items: center
     flex-wrap: wrap
     margin:
@@ -571,14 +539,12 @@ footer
   padding:
     left: 1rem
     right: 1rem
-
-.projectDescription h2
-  font-size: 1.7rem 
-  margin: 1.6rem 0 0.6rem 0
-
-.projectDescription p
-  font-size: 1rem
-  width: 280px
+  h2
+    font-size: 1.7rem 
+    margin: 1.6rem 0 0.6rem 0
+  p
+    font-size: 1rem
+    width: 280px
 
 .projectLinksContainer 
   display: flex
@@ -633,10 +599,9 @@ footer
   flex-wrap: wrap
   background-color: $white
   margin: 4rem 4rem 6rem
-
-.techStackLogosContainer img
-  width: 5rem
-  margin: 1rem
+  img
+    width: 5rem
+    margin: 1rem
 
 
 /* Contact page */
@@ -656,44 +621,31 @@ footer
   background-color: $dark2
   color: $white
   padding: 0
-  border: solid 2px $dark
+  border: solid 1px $dark
   margin: 4rem auto
 
 @media (min-width: 320px) and (max-width: 767px)
   .contactContainer 
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    text-align: center
     width: 66%
-    background-color: $dark2
-    color: $white
-    padding: 0
-    border: solid 1px $dark
-    margin: 4rem auto
-
-.contactContainer h1 
-  margin:
-    top: 2rem
-    bottom: 0
-
-.contactContainer h2 
-  margin:
-    top: 0.5rem
-    bottom: 0
+    h1 
+      margin:
+        top: 2rem
+        bottom: 0
+    h2 
+      margin:
+        top: 0.5rem
+        bottom: 0
 
 .contactWaysContainer 
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
-
-.contactWaysContainer div 
-  padding:
-    top: 0rem
-    right: 5%
-    left: 5%
+  div 
+    padding:
+      top: 0rem
+      right: 5%
+      left: 5%
 
 .contactEmailContainer
   display: flex
@@ -702,14 +654,12 @@ footer
   flex:
     direction: column
     wrap: wrap
-
-.contactEmailContainer h3 
-  margin-bottom: 0.6rem
-
-.contactEmailContainer h4 
-  margin:
-    top: 0rem
-    bottom: 0.7rem
+  h3 
+    margin-bottom: 0.6rem
+  h4 
+    margin:
+      top: 0rem
+      bottom: 0.7rem
 
 .contactPhoneContainer
   display: flex
@@ -718,14 +668,12 @@ footer
   flex:
     direction: column
     wrap: wrap
-
-.contactPhoneContainer h3 
-  margin-bottom: 0.6rem
-
-.contactPhoneContainer h4 
-  margin:
-    top: 0rem
-    bottom: 0.7rem
+  h3 
+    margin-bottom: 0.6rem
+  h4 
+    margin:
+      top: 0rem
+      bottom: 0.7rem
 
 .contactLink a 
   text-decoration: none
@@ -739,10 +687,9 @@ form
   justify-content: center
   align-items: center
   flex-direction: column
-
-form h3 
-  padding-bottom: 0
-  margin-bottom: 0.3rem
+  h3 
+    padding-bottom: 0
+    margin-bottom: 0.3rem
 
 .formInput
   width: 100%
@@ -753,9 +700,6 @@ form h3
 @media (min-width: 320px) and (max-width: 767px)
   .formInput 
       width: 80%
-      padding: 0.3rem
-      border: none
-      margin-bottom: 1rem
 
 .formTextarea 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
@@ -767,13 +711,8 @@ form h3
 
 @media (min-width: 320px) and (max-width: 767px)
   .formTextarea 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
     width: 80%
-    background-color: $white
-    padding: 0.3rem
-    border: none
-    margin-bottom: 1rem
-  
+
 .formSubmit
   width: auto
   font-size: 0.9rem
