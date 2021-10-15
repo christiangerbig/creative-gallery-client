@@ -847,10 +847,7 @@ form h3 {
   align-items: center;
   background-color: #0f0f0f;
   border: solid #282828 1px;
-  margin-top: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 4rem;
-  margin-left: 4rem;
+  margin: 4rem;
 }
 
 .notFoundGetBackLink {
