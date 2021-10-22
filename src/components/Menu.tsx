@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   setIsMenuQuit,
   setIsMenuVisible,
@@ -9,16 +9,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = (): JSX.Element => {
-  const isDesktop = useSelector(
+  const isDesktop = useAppSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
-  const isMenuVisible = useSelector(
+  const isMenuVisible = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuVisible
   );
-  const isMenuQuit = useSelector(
+  const isMenuQuit = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuQuit
   );
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleCloseMenu = (): void => {
     dispatch(setIsMenuQuit(true));

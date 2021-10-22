@@ -3,7 +3,9 @@ import { animateScroll as scroll } from "react-scroll";
 
 const Home = (): JSX.Element => {
   // Scroll to top as soon as page loads
-  useEffect(() => scroll.scrollToTop(), []);
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
 
   return (
     <div className="homePageContainer">

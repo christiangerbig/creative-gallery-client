@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   setIsMenuQuit,
   setIsMenuVisible,
@@ -12,16 +12,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = (): JSX.Element => {
-  const menuNumber = useSelector(
+  const menuNumber = useAppSelector(
     (state: RootState) => state.creativeGallery.menuNumber
   );
-  const isDesktop = useSelector(
+  const isDesktop = useAppSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
-  const isMenuVisible = useSelector(
+  const isMenuVisible = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuVisible
   );
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     // Device = Laptops, Desktops
@@ -53,7 +53,9 @@ const NavBar = (): JSX.Element => {
             <Link
               className="textstylePlain colorWhite"
               to={"/"}
-              onClick={() => dispatch(setMenuNumber(0))}
+              onClick={() => {
+                dispatch(setMenuNumber(0));
+              }}
             >
               <div className="logoSubContainer">
                 <div className="logoLetterOutlineC">
@@ -80,7 +82,9 @@ const NavBar = (): JSX.Element => {
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
-                    onClick={() => dispatch(setMenuNumber(1))}
+                    onClick={() => {
+                      dispatch(setMenuNumber(1));
+                    }}
                   >
                     ABOUT
                   </Link>
@@ -93,7 +97,9 @@ const NavBar = (): JSX.Element => {
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
-                    onClick={() => dispatch(setMenuNumber(2))}
+                    onClick={() => {
+                      dispatch(setMenuNumber(2));
+                    }}
                   >
                     PROJECTS
                   </Link>
@@ -106,7 +112,9 @@ const NavBar = (): JSX.Element => {
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
-                    onClick={() => dispatch(setMenuNumber(3))}
+                    onClick={() => {
+                      dispatch(setMenuNumber(3));
+                    }}
                   >
                     TECHSTACK
                   </Link>
@@ -134,7 +142,9 @@ const NavBar = (): JSX.Element => {
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
-                    onClick={() => dispatch(setMenuNumber(4))}
+                    onClick={() => {
+                      dispatch(setMenuNumber(4));
+                    }}
                   >
                     CONTACT
                   </Link>

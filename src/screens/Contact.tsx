@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
   Request,
@@ -16,8 +16,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = (): JSX.Element => {
-  const error = useSelector((state: RootState) => state.creativeGallery.error);
-  const dispatch = useDispatch();
+  const error = useAppSelector((state: RootState) => state.creativeGallery.error);
+  const dispatch = useAppDispatch();
   const history = useHistory();
 
   // Clear error text as soon as page loads
@@ -80,7 +80,11 @@ const Contact = (): JSX.Element => {
           </h3>
         </div>
         {error && <p className="errorOutput warningColor"> {error} </p>}
-        <form onSubmit={(event) => handleSubmitRequest(event, history)}>
+        <form
+          onSubmit={(event) => {
+            handleSubmitRequest(event, history);
+          }}
+        >
           <input
             type="email"
             name="email"

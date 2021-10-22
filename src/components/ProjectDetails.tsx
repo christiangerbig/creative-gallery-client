@@ -34,7 +34,12 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
       />
       <div className="projectDescription">
         <h2> {projectName} </h2>
-        <p ref={(element) => ((elementRef.current[0] as any) = element)}> </p>
+        <p
+          ref={(element) => {
+            (elementRef.current[0] as any) = element;
+          }}
+        >
+        </p>
       </div>
       <div className="projectLinksContainer">
         <div>

@@ -13,8 +13,10 @@ import nodeJsLogo from "../images/NodeJS-Logo.svg";
 import gitHubLogo from "../images/GitHub-Logo.svg";
 import visualStudioCodeLogo from "../images/Visual-Studio-Code-Logo.svg";
 
+type LogosList = string[];
+
 const TechStack = (): JSX.Element => {
-  const logos = [
+  const logosList: LogosList = [
     reactLogo,
     reduxLogo,
     nodeJsLogo,
@@ -30,7 +32,9 @@ const TechStack = (): JSX.Element => {
   ];
 
   // Scroll to top as soon as page loads
-  useEffect(() => scroll.scrollToTop(), []);
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
 
   return (
     <div className="techStackPageContainer">
@@ -41,8 +45,8 @@ const TechStack = (): JSX.Element => {
         </div>
       </header>
       <div className="techStackLogosContainer">
-        {logos.map((logo) => {
-          return <img src={logo} alt="firm logo" />;
+        {logosList.map((logo: string, index: number): JSX.Element => {
+          return <img src={logo} alt="firm logo" key={index} />;
         })}
       </div>
     </div>

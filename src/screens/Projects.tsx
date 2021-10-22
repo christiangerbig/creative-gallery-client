@@ -51,7 +51,9 @@ const Projects = (): JSX.Element => {
   ];
 
   // Scroll to top as soon as page loads
-  useEffect(() => scroll.scrollToTop(), []);
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
 
   return (
     <div className="projectsPageContainer">
@@ -62,9 +64,11 @@ const Projects = (): JSX.Element => {
         </div>
       </header>
       <div className="projectsContainer">
-        {projects.map((projectItem: ProjectItem, index: number) => {
-          return <ProjectDetails projectItem={projectItem} key={index} />;
-        })}
+        {projects.map(
+          (projectItem: ProjectItem, index: number): JSX.Element => {
+            return <ProjectDetails projectItem={projectItem} key={index} />;
+          }
+        )}
       </div>
     </div>
   );
