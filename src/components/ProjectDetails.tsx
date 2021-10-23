@@ -18,6 +18,7 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   } = projectItem;
   const elementRef = useRef([]);
 
+  // Set paragraph text
   useEffect(() => {
     (elementRef.current[0] as any).innerHTML = projectDescription;
   }, []);
@@ -35,11 +36,10 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
       <div className="projectDescription">
         <h2> {projectName} </h2>
         <p
-          ref={(element) => {
-            (elementRef.current[0] as any) = element;
+          ref={(descriptionTextElement) => {
+            (elementRef.current[0] as any) = descriptionTextElement;
           }}
-        >
-        </p>
+        ></p>
       </div>
       <div className="projectLinksContainer">
         <div>

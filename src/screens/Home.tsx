@@ -17,7 +17,7 @@ const Home = (): JSX.Element => {
           <div className="homeLogoLetterOutlineG">
             <div className="homeLogoLetterInlineG">
               <div className="homeLogoLetterBoxG">
-                <div className="homeLogoLetterBoxG2"> </div>
+                <div className="homeLogoLetterBoxG2"></div>
               </div>
             </div>
           </div>

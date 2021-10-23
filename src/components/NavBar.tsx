@@ -23,9 +23,9 @@ const NavBar = (): JSX.Element => {
   );
   const dispatch = useAppDispatch();
 
+  // Install window resize event listener
   useEffect(() => {
-    // Device = Laptops, Desktops
-    // Screen = B/w 1025px to 1280px
+    // Check current window width
     const checkWindowWidth = (): void => {
       if (window.innerWidth > 1024) {
         dispatch(setIsDesktop(true));
@@ -40,6 +40,7 @@ const NavBar = (): JSX.Element => {
     };
   }, []);
 
+  // Open menu on screens < 1025px
   const handleOpenMenu = (): void => {
     dispatch(setIsMenuVisible(true));
     dispatch(setIsMenuQuit(false));

@@ -20,7 +20,7 @@ const Contact = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const history = useHistory();
 
-  // Clear error text as soon as page loads
+  // Clear error text and scroll to top as soon as page loads
   useEffect(() => {
     dispatch(setError(null));
     scroll.scrollToTop();

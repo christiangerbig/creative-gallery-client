@@ -23,7 +23,6 @@ const initialState: SliceState = {
   error: null,
 };
 
-// Create request
 export interface Request {
   email: string;
   subject: string;
@@ -35,6 +34,7 @@ interface CreateRequestParameters {
   history: any;
 }
 
+// Create request
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
   async (
