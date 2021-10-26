@@ -5,7 +5,7 @@ import axios from "axios";
 const apiPath = `${config.API_URL}/api`;
 
 type MenuNumber = number | null;
-type Error = string | null;
+type Error = string | null | undefined;
 
 interface SliceState {
   menuNumber: MenuNumber;
@@ -31,21 +31,21 @@ export interface Request {
 
 interface CreateRequestParameters {
   request: Request;
-  history: any;
 }
+
+// Create error
+const rejectWithValue = (data: any): void | PromiseLike<void> => {
+  throw new Error(data);
+};
 
 // Create request
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
-  async (
-    { request, history }: CreateRequestParameters,
-    { dispatch }
-  ): Promise<void> => {
+  async ({ request }: CreateRequestParameters): Promise<void> => {
     try {
       await axios.post(`${apiPath}/request`, request);
-      history.push("/");
     } catch (err: any) {
-      dispatch(setError(err.response.data.errorMessage));
+      rejectWithValue(err.response.data.errorMessage);
     }
   }
 );

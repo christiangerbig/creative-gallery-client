@@ -16,7 +16,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = (): JSX.Element => {
-  const error = useAppSelector((state: RootState) => state.creativeGallery.error);
+  const error = useAppSelector(
+    (state: RootState) => state.creativeGallery.error
+  );
   const dispatch = useAppDispatch();
   const history = useHistory();
 
@@ -24,7 +26,7 @@ const Contact = (): JSX.Element => {
   useEffect(() => {
     dispatch(setError(null));
     scroll.scrollToTop();
-  }, []);
+  }, [dispatch]);
 
   // Create request
   const handleSubmitRequest = (event: any, history: any): void => {
@@ -35,7 +37,14 @@ const Contact = (): JSX.Element => {
       subject: subject.value,
       message: message.value,
     };
-    dispatch(createRequest({ request, history }));
+    dispatch(createRequest({ request }))
+      .unwrap()
+      .then(() => {
+        history.push("/");
+      })
+      .catch((err) => {
+        dispatch(setError(err.message));
+      });
   };
 
   return (
