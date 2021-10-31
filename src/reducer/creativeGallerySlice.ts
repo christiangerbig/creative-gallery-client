@@ -45,7 +45,7 @@ export const createRequest = createAsyncThunk(
     try {
       await axios.post(`${apiPath}/request`, request);
     } catch (err: any) {
-      rejectWithValue(err.response.data.errorMessage);
+      return rejectWithValue(err.response.data.errorMessage);
     }
   }
 );
