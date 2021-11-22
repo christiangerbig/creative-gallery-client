@@ -126,7 +126,7 @@ const NavBar = (): JSX.Element => {
                   <Link
                     to={{
                       pathname:
-                        "https://www.dropbox.com/s/0l5uqiak72pepcq/CV%20%285%29.pdf?dl=0",
+                        "https://www.dropbox.com/s/awzcnv5z45zi2qh/CV.pdf?dl=0",
                     }}
                     target="_blank"
                     rel="noreferrer noopener"

@@ -22,13 +22,14 @@ const About = (): JSX.Element => {
       </header>
       <div className="textContainer">
         <div className="textColumContainer">
-          <h3> Hi,</h3>
+          <h3> Hi, </h3>
           <p>
             I'm Christian Gerbig. I'm a Web Developer focused on Frontend and
             Backend technologies. My homebase is Hamburg in Germany. <br />
             <br /> I believe in the
             <span className="colorOrange">
-              positive power of communication
+              {" "}
+              positive power of communication{" "}
             </span>
             with a trust in
             <span className="colorOrange"> cooperative team working </span>
