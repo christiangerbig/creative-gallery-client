@@ -7,7 +7,7 @@ const apiPath = `${config.API_URL}/api`;
 type MenuNumber = number | null;
 type Error = string | null | undefined;
 
-interface SliceState {
+interface InitialState {
   menuNumber: MenuNumber;
   isDesktop: boolean;
   isMenuVisible: boolean;
@@ -15,7 +15,7 @@ interface SliceState {
   error: Error;
 }
 
-const initialState: SliceState = {
+const initialState: InitialState = {
   menuNumber: null,
   isDesktop: false,
   isMenuVisible: false,

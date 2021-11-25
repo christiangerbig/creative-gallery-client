@@ -387,7 +387,7 @@ header {
 }
 
 .blueBorder {
-  border-left: solid #508fd0 10px;
+  border-left: solid #1f6fe1 10px;
 }
 
 .greenBorder {
@@ -568,7 +568,7 @@ footer {
 
 .aboutContactLink a {
   text-decoration: none;
-  color: #508fd0;
+  color: #1f6fe1;
   transition: all 0.5s;
 }
 
@@ -766,7 +766,7 @@ footer {
 
 .contactLink a {
   text-decoration: none;
-  color: #508fd0;
+  color: #1f6fe1;
   transition: all 0.5s;
 }
 
