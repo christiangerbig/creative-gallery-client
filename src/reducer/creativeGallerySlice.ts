@@ -7,31 +7,34 @@ const apiPath = `${config.API_URL}/api`;
 type MenuNumber = number | null;
 type Error = string | null | undefined;
 
-interface InitialState {
-  menuNumber: MenuNumber;
-  isDesktop: boolean;
-  isMenuVisible: boolean;
-  isMenuQuit: boolean;
-  error: Error;
-}
-
-const initialState: InitialState = {
-  menuNumber: null,
-  isDesktop: false,
-  isMenuVisible: false,
-  isMenuQuit: false,
-  error: null,
-};
-
 export interface Request {
   email: string;
   subject: string;
   message: string;
 }
 
+interface InitialState {
+  menuNumber: MenuNumber;
+  isDesktop: boolean;
+  isMenuVisible: boolean;
+  isMenuQuit: boolean;
+  isCreatingRequest: boolean;
+  error: Error;
+}
+
 interface CreateRequestParameters {
   request: Request;
 }
+
+// Initialize states
+const initialState: InitialState = {
+  menuNumber: null,
+  isDesktop: false,
+  isMenuVisible: false,
+  isMenuQuit: false,
+  isCreatingRequest: false,
+  error: null,
+};
 
 // Create error
 const rejectWithValue = (data: any): void | PromiseLike<void> => {
@@ -68,17 +71,33 @@ export const creativeGallerySlice = createSlice({
     setIsMenuQuit: (state, action: PayloadAction<boolean>) => {
       state.isMenuQuit = action.payload;
     },
+    setIsCreatingRequest: (state, action: PayloadAction<boolean>) => {
+      state.isCreatingRequest = action.payload;
+    },
     setError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload;
     },
   },
+
+  // ---------- Extra Reducers ----------
+  extraReducers: (builder) => {
+    // --------- Plants ----------
+    builder.addCase(createRequest.fulfilled, (state) => {
+      state.isCreatingRequest = false;
+    });
+    builder.addCase(createRequest.rejected, (state) => {
+      state.isCreatingRequest = false;
+    });
+  },
 });
 
+// ---------- Slice actions ----------
 export const {
   setMenuNumber,
   setIsDesktop,
   setIsMenuVisible,
   setIsMenuQuit,
+  setIsCreatingRequest,
   setError,
 } = creativeGallerySlice.actions;
 

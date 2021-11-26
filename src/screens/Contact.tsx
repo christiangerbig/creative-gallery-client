@@ -16,6 +16,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = (): JSX.Element => {
+  const isCreatingRequest = useAppSelector(
+    (state: RootState) => state.creativeGallery.isCreatingRequest
+  );
   const error = useAppSelector(
     (state: RootState) => state.creativeGallery.error
   );
@@ -29,7 +32,7 @@ const Contact = (): JSX.Element => {
   }, [dispatch]);
 
   // Create request
-  const handleSubmitRequest = (event: any, history: any): void => {
+  const handleSubmitRequest = (event: any): void => {
     event.preventDefault();
     const { email, subject, message } = event.target;
     const request: Request = {
@@ -91,7 +94,7 @@ const Contact = (): JSX.Element => {
         {error && <p className="errorOutput warningColor"> {error} </p>}
         <form
           onSubmit={(event) => {
-            handleSubmitRequest(event, history);
+            handleSubmitRequest(event);
           }}
         >
           <input
@@ -117,6 +120,7 @@ const Contact = (): JSX.Element => {
             type="submit"
             value="SUBMIT"
             className="formSubmit"
+            disabled={isCreatingRequest ? true : false}
             formNoValidate
           />
         </form>

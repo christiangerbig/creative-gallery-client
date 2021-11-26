@@ -7,6 +7,7 @@ import {
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { resumePath } from "../lib/externalLinkPaths";
 
 const Menu = (): JSX.Element => {
   const isDesktop = useAppSelector(
@@ -20,6 +21,7 @@ const Menu = (): JSX.Element => {
   );
   const dispatch = useAppDispatch();
 
+  // Close menu after a delay of 300 milliseconds
   const handleCloseMenu = (): void => {
     dispatch(setIsMenuQuit(true));
     setTimeout(() => {
@@ -82,10 +84,7 @@ const Menu = (): JSX.Element => {
                 </li>
                 <li>
                   <Link
-                    to={{
-                      pathname:
-                        "https://www.dropbox.com/s/awzcnv5z45zi2qh/CV.pdf?dl=0",
-                    }}
+                    to={{ pathname: resumePath }}
                     target="_blank"
                     rel="noreferrer noopener"
                     className={

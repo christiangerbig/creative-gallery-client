@@ -10,20 +10,21 @@ import {
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { resumePath } from "../lib/externalLinkPaths";
 
 const NavBar = (): JSX.Element => {
-  const menuNumber = useAppSelector(
-    (state: RootState) => state.creativeGallery.menuNumber
-  );
   const isDesktop = useAppSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
   const isMenuVisible = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuVisible
   );
+  const menuNumber = useAppSelector(
+    (state: RootState) => state.creativeGallery.menuNumber
+  );
   const dispatch = useAppDispatch();
 
-  // Install window resize event listener
+  // Install window resize event listener and remove it at cleanup
   useEffect(() => {
     // Check current window width
     const checkWindowWidth = (): void => {
@@ -33,6 +34,7 @@ const NavBar = (): JSX.Element => {
         dispatch(setIsDesktop(false));
       }
     };
+
     checkWindowWidth();
     window.addEventListener("resize", checkWindowWidth);
     return () => {
@@ -124,10 +126,7 @@ const NavBar = (): JSX.Element => {
               <ul className="navigationSubContainerRight">
                 <li>
                   <Link
-                    to={{
-                      pathname:
-                        "https://www.dropbox.com/s/awzcnv5z45zi2qh/CV.pdf?dl=0",
-                    }}
+                    to={{ pathname: resumePath }}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="navigationLink"
