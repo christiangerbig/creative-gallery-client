@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ProjectItem } from "../screens/Projects";
+import { ProjectItem } from "../lib/projectsTable";
 
 type ProjectDetailsProps = {
   projectItem: ProjectItem;
