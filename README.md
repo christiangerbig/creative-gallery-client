@@ -17,19 +17,24 @@ This is my portfolio to present all my projects and another exercise to apply my
 ## React Router Routes (React App)
 | Path                      | Component                      | Permissions | Behavior                                                     |
 | ------------------------- | -------------------------------| ---------------- | --------------------------------|
-| `/`                       | SplashPage, NavBar, Footer     | public `<Route>` | Home page, show itle and logo   |            
-| `/about`                  | AboutPage, NavBar, Footer      | public `<Route>` | Show personal details           |
-| `/projects`               | ProjectsPage, NavBar, Footer   | public `<Route>` | Show my projects                |
-| `/contact`                | ContactPage, NavBar, Footer    | public `<Route>` | Show my contact data            |
+| `/`                       | SplashPage, NavBar, Footer     | public `<Route>` | Home page, show title and logo  |            
+| `/about`                  | AboutPage                      | public `<Route>` | Show personal details           |
+| `/projects`               | ProjectsPage                   | public `<Route>` | Show my projects                |
+| `/contact`                | ContactPage                    | public `<Route>` | Show my contact data            |
 
 ## Components
 
-- Home
 - NavBar
+- Menu
+- Footer
+- Home
 - Footer
 - About
 - Projects
+- ProjectDetails
+- TechStack
 - Contact
+- NotFound
 
 # Server / Backend
 
@@ -56,9 +61,9 @@ Request model
 
 ## API Endpoints (backend routes)
 
-| HTTP Method | URL                         | Request Body                 | Success status | Error Status | Description                |
-| ----------- | --------------------------- | ---------------------------- | -------------- | ------------ | -------------------------- |
-| POST        | `/request`                  | {email, subject, message}    | 200            | 500          | Checks if fields not empty |
+| HTTP Method | URL                     | Request Body                 | Success status | Error Status | Description                    |
+| ----------- | ----------------------- | ---------------------------- | -------------- | ------------ | ------------------------------ |
+| POST        | `/request/create`       | {email, subject, message}    | 200            | 500          | Create a request if form       ||             |                         |                              |                |              | fields are not empty           |
 
 
 ## Links

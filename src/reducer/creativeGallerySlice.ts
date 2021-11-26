@@ -46,7 +46,7 @@ export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
   async ({ request }: CreateRequestParameters): Promise<void> => {
     try {
-      await axios.post(`${apiPath}/request`, request);
+      await axios.post(`${apiPath}/request/create`, request);
     } catch (err: any) {
       return rejectWithValue(err.response.data.errorMessage);
     }
