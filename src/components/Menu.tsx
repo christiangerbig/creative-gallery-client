@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
-  setIsMenuQuit,
   setIsMenuVisible,
+  setIsMenuQuit,
 } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

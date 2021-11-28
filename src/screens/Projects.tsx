@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { projectsTable } from "../lib/projectsTable";
+import { ProjectItem } from "../typeDefinitions";
 import ProjectDetails from "../components/ProjectDetails";
-import { ProjectItem, projectsTable } from "../lib/projectsTable";
 
 const Projects = (): JSX.Element => {
   // Scroll to top as soon as page loads

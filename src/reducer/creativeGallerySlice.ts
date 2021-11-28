@@ -1,17 +1,12 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import config from "../config";
 import axios from "axios";
+import { Request } from "../typeDefinitions";
 
 const apiPath = `${config.API_URL}/api`;
 
 type MenuNumber = number | null;
 type Error = string | null | undefined;
-
-export interface Request {
-  email: string;
-  subject: string;
-  message: string;
-}
 
 interface InitialState {
   menuNumber: MenuNumber;
@@ -53,15 +48,14 @@ export const createRequest = createAsyncThunk(
   }
 );
 
+// ---------- Slice ----------
 export const creativeGallerySlice = createSlice({
   name: "creativeGallery",
   initialState,
 
   // ---------- Reducers ----------
   reducers: {
-    setMenuNumber: (state, action: PayloadAction<number>) => {
-      state.menuNumber = action.payload;
-    },
+    // ---------- Menu ----------
     setIsDesktop: (state, action: PayloadAction<boolean>) => {
       state.isDesktop = action.payload;
     },
@@ -71,9 +65,16 @@ export const creativeGallerySlice = createSlice({
     setIsMenuQuit: (state, action: PayloadAction<boolean>) => {
       state.isMenuQuit = action.payload;
     },
+    setMenuNumber: (state, action: PayloadAction<number>) => {
+      state.menuNumber = action.payload;
+    },
+
+    // ---------- Request ----------
     setIsCreatingRequest: (state, action: PayloadAction<boolean>) => {
       state.isCreatingRequest = action.payload;
     },
+
+    // ---------- Error handling ----------
     setError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload;
     },
@@ -81,7 +82,7 @@ export const creativeGallerySlice = createSlice({
 
   // ---------- Extra Reducers ----------
   extraReducers: (builder) => {
-    // --------- Plants ----------
+    // --------- Request ----------
     builder.addCase(createRequest.fulfilled, (state) => {
       state.isCreatingRequest = false;
     });
@@ -93,11 +94,16 @@ export const creativeGallerySlice = createSlice({
 
 // ---------- Slice actions ----------
 export const {
-  setMenuNumber,
+  // ---------- Menu ----------
   setIsDesktop,
   setIsMenuVisible,
   setIsMenuQuit,
+  setMenuNumber,
+
+  // ---------- Request ----------
   setIsCreatingRequest,
+
+  // ---------- Error handling ----------
   setError,
 } = creativeGallerySlice.actions;
 

@@ -13,17 +13,7 @@ import {
   trackerToolsGitHubClientPath,
   trackerToolsVideoPath,
 } from "../lib/externalLinkPaths";
-
-// Projects
-export interface ProjectItem {
-  projectName: string;
-  projectPicturePath: string;
-  projectVideoPath: string;
-  projectDescription: string;
-  deployedPath: string;
-  gitHubClientPath: string;
-  gitHubServerPath: string;
-}
+import { ProjectItem } from "../typeDefinitions";
 
 export const projectsTable: ProjectItem[] = [
   {

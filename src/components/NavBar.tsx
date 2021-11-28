@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
-  setIsMenuQuit,
-  setIsMenuVisible,
   setIsDesktop,
+  setIsMenuVisible,
+  setIsMenuQuit,
   setMenuNumber,
 } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
@@ -24,7 +24,7 @@ const NavBar = (): JSX.Element => {
   );
   const dispatch = useAppDispatch();
 
-  // Install window resize event listener and remove it at cleanup
+  // Install window resize event listener
   useEffect(() => {
     // Check current window width
     const checkWindowWidth = (): void => {
@@ -37,6 +37,7 @@ const NavBar = (): JSX.Element => {
 
     checkWindowWidth();
     window.addEventListener("resize", checkWindowWidth);
+    // Remove window resize event listener at cleanup
     return () => {
       window.removeEventListener("resize", checkWindowWidth);
     };

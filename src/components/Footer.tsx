@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { gitHubPath, linkedInPath } from "../lib/externalLinkPaths";
 
 const Footer = (): JSX.Element => {
   return (
@@ -10,7 +11,7 @@ const Footer = (): JSX.Element => {
             <li>
               <Link
                 to={{
-                  pathname: "https://www.linkedin.com/in/christian-gerbig/",
+                  pathname: linkedInPath,
                 }}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -21,7 +22,7 @@ const Footer = (): JSX.Element => {
             </li>
             <li>
               <Link
-                to={{ pathname: "https://github.com/christiangerbig/" }}
+                to={{ pathname: gitHubPath }}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="footerLink"

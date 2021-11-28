@@ -4,9 +4,9 @@ import { animateScroll as scroll } from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
-  Request,
   setError,
 } from "../reducer/creativeGallerySlice";
+import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
