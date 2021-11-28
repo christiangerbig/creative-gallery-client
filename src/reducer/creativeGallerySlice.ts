@@ -39,7 +39,7 @@ const rejectWithValue = (data: any): void | PromiseLike<void> => {
 // Create request
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
-  async ({ request }: CreateRequestParameters): Promise<void> => {
+  async ({ request }: CreateRequestParameters): Promise<void | any> => {
     try {
       await axios.post(`${apiPath}/request/create`, request);
     } catch (err: any) {
