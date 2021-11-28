@@ -4,6 +4,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
+  setMenuNumber,
   setError,
 } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
@@ -43,6 +44,7 @@ const Contact = (): JSX.Element => {
     dispatch(createRequest({ request }))
       .unwrap()
       .then(() => {
+        dispatch(setMenuNumber(0));
         history.push("/");
       })
       .catch((err) => {
