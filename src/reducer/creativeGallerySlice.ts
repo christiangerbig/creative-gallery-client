@@ -6,7 +6,7 @@ import { Request } from "../typeDefinitions";
 const apiPath = `${config.API_URL}/api`;
 
 type MenuNumber = number | null;
-type Error = string | null | undefined;
+type ErrorMessage = string | null;
 
 interface InitialState {
   menuNumber: MenuNumber;
@@ -14,7 +14,7 @@ interface InitialState {
   isMenuVisible: boolean;
   isMenuQuit: boolean;
   isCreatingRequest: boolean;
-  error: Error;
+  errorMessage: ErrorMessage;
 }
 
 interface CreateRequestParameters {
@@ -28,7 +28,7 @@ const initialState: InitialState = {
   isMenuVisible: false,
   isMenuQuit: false,
   isCreatingRequest: false,
-  error: null,
+  errorMessage: null,
 };
 
 // Create error
@@ -75,8 +75,8 @@ export const creativeGallerySlice = createSlice({
     },
 
     // ---------- Error handling ----------
-    setError: (state, action: PayloadAction<Error>) => {
-      state.error = action.payload;
+    setErrorMessage: (state, action: PayloadAction<ErrorMessage>) => {
+      state.errorMessage = action.payload;
     },
   },
 
@@ -104,7 +104,7 @@ export const {
   setIsCreatingRequest,
 
   // ---------- Error handling ----------
-  setError,
+  setErrorMessage,
 } = creativeGallerySlice.actions;
 
 export default creativeGallerySlice.reducer;

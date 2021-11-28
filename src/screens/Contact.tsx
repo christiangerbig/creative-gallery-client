@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
   setMenuNumber,
-  setError,
+  setErrorMessage,
 } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
@@ -20,15 +20,15 @@ const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
     (state: RootState) => state.creativeGallery.isCreatingRequest
   );
-  const error = useAppSelector(
-    (state: RootState) => state.creativeGallery.error
+  const errorMessage = useAppSelector(
+    (state: RootState) => state.creativeGallery.errorMessage
   );
   const dispatch = useAppDispatch();
   const history = useHistory();
 
   // Clear error text and scroll to top as soon as page loads
   useEffect(() => {
-    dispatch(setError(null));
+    dispatch(setErrorMessage(null));
     scroll.scrollToTop();
   }, [dispatch]);
 
@@ -48,7 +48,7 @@ const Contact = (): JSX.Element => {
         history.push("/");
       })
       .catch((err) => {
-        dispatch(setError(err.message));
+        dispatch(setErrorMessage(err.message));
       });
   };
 
@@ -93,7 +93,9 @@ const Contact = (): JSX.Element => {
             <FontAwesomeIcon icon={faPen} /> or write me
           </h3>
         </div>
-        {error && <p className="errorOutput warningColor"> {error} </p>}
+        {errorMessage && (
+          <p className="errorOutput warningColor"> {errorMessage} </p>
+        )}
         <form
           onSubmit={(event) => {
             handleSubmitRequest(event);
