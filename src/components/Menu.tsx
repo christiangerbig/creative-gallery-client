@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   setIsMenuVisible,
-  setIsMenuQuit,
+  setIsCloseMenu,
 } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,105 +16,123 @@ const Menu = (): JSX.Element => {
   const isMenuVisible = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuVisible
   );
-  const isMenuQuit = useAppSelector(
-    (state: RootState) => state.creativeGallery.isMenuQuit
+  const isOpenMenu = useAppSelector(
+    (state: RootState) => state.creativeGallery.isOpenMenu
+  );
+  const isCloseMenu = useAppSelector(
+    (state: RootState) => state.creativeGallery.isCloseMenu
   );
   const dispatch = useAppDispatch();
 
-  // Close menu after a delay of 300 milliseconds
   const handleCloseMenu = (): void => {
-    dispatch(setIsMenuQuit(true));
+    dispatch(setIsCloseMenu(true));
     setTimeout(() => {
+      dispatch(setIsCloseMenu(false));
       dispatch(setIsMenuVisible(false));
-    }, 300);
+    }, 300); // 300 milliseconds
   };
 
   return (
-    <div>
-      {!isDesktop && isMenuVisible && (
-        <div className={!isMenuQuit ? "menu fadeMenuIn" : "menu fadeMenuOut"}>
-          <div className="menuCloseContainer">
-            <FontAwesomeIcon
-              icon={faTimes}
-              className="menuClose colorWhite"
-              onClick={handleCloseMenu}
-            />
-          </div>
-          <div className="menuContainer">
-            <div className="menuSubContainer">
-              <ul>
-                <li>
-                  <Link
-                    to={"/about"}
-                    className={
-                      !isMenuQuit
-                        ? "menuLink colorOrange menuLinkFadeInSpeed1"
-                        : "menuLink colorOrange menuLinkFadeOutSpeed1"
-                    }
-                    onClick={handleCloseMenu}
-                  >
-                    ABOUT
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/projects"}
-                    className={
-                      !isMenuQuit
-                        ? "menuLink colorOrange menuLinkFadeInSpeed2"
-                        : "menuLink colorOrange menuLinkFadeOutSpeed2"
-                    }
-                    onClick={handleCloseMenu}
-                  >
-                    PROJECTS
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/techstack"}
-                    className={
-                      !isMenuQuit
-                        ? "menuLink colorOrange menuLinkFadeInSpeed3"
-                        : "menuLink colorOrange menuLinkFadeOutSpeed3"
-                    }
-                    onClick={handleCloseMenu}
-                  >
-                    TECHSTACK
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={{ pathname: resumePath }}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className={
-                      !isMenuQuit
-                        ? "menuLink colorOrange menuLinkFadeInSpeed4"
-                        : "menuLink colorOrange menuLinkFadeOutSpeed4"
-                    }
-                    onClick={handleCloseMenu}
-                  >
-                    RESUME
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/contact"}
-                    className={
-                      !isMenuQuit
-                        ? "menuLink colorOrange menuLinkFadeInSpeed5"
-                        : "menuLink colorOrange menuLinkFadeOutSpeed5"
-                    }
-                    onClick={handleCloseMenu}
-                  >
-                    CONTACT
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div
+      hidden={isDesktop || !isMenuVisible ? true : false}
+      className={
+        isOpenMenu
+          ? "menu fadeMenuIn"
+          : isCloseMenu
+          ? "menu fadeMenuOut"
+          : "menu"
+      }
+    >
+      <div className="menuCloseContainer">
+        <FontAwesomeIcon
+          icon={faTimes}
+          className="menuClose colorWhite"
+          onClick={handleCloseMenu}
+        />
+      </div>
+      <div className="menuContainer">
+        <div className="menuSubContainer">
+          <ul>
+            <li>
+              <Link
+                to={"/about"}
+                className={
+                  isOpenMenu
+                    ? "menuLink colorOrange menuLinkFadeInSpeed1"
+                    : isCloseMenu
+                    ? "menuLink colorOrange menuLinkFadeOutSpeed1"
+                    : "menuLink colorOrange"
+                }
+                onClick={handleCloseMenu}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/projects"}
+                className={
+                  isOpenMenu
+                    ? "menuLink colorOrange menuLinkFadeInSpeed2"
+                    : isCloseMenu
+                    ? "menuLink colorOrange menuLinkFadeOutSpeed2"
+                    : "menuLink colorOrange"
+                }
+                onClick={handleCloseMenu}
+              >
+                PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/techstack"}
+                className={
+                  isOpenMenu
+                    ? "menuLink colorOrange menuLinkFadeInSpeed3"
+                    : isCloseMenu
+                    ? "menuLink colorOrange menuLinkFadeOutSpeed3"
+                    : "menuLink colorOrange"
+                }
+                onClick={handleCloseMenu}
+              >
+                TECHSTACK
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={{ pathname: resumePath }}
+                target="_blank"
+                rel="noreferrer noopener"
+                className={
+                  isOpenMenu
+                    ? "menuLink colorOrange menuLinkFadeInSpeed4"
+                    : isCloseMenu
+                    ? "menuLink colorOrange menuLinkFadeOutSpeed4"
+                    : "menuLink colorOrange"
+                }
+                onClick={handleCloseMenu}
+              >
+                RESUME
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/contact"}
+                className={
+                  isOpenMenu
+                    ? "menuLink colorOrange menuLinkFadeInSpeed5"
+                    : isCloseMenu
+                    ? "menuLink colorOrange menuLinkFadeOutSpeed5"
+                    : "menuLink colorOrange"
+                }
+                onClick={handleCloseMenu}
+              >
+                CONTACT
+              </Link>
+            </li>
+          </ul>
         </div>
-      )}
+      </div>
     </div>
   );
 };

@@ -5,14 +5,13 @@ import { ProjectItem } from "../typeDefinitions";
 import ProjectDetails from "../components/ProjectDetails";
 
 const Projects = (): JSX.Element => {
-  // Scroll to top as soon as page loads
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
 
   return (
     <div className="projectsPageContainer">
-      <header>
+      <header className="headline">
         <div className="headerText orangeBorder">
           <h1 className="textFat"> My Web Developer projects </h1>
           <h2 className="textBig"> I was working on </h2>

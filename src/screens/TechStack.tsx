@@ -31,14 +31,13 @@ const TechStack = (): JSX.Element => {
     visualStudioCodeLogo,
   ];
 
-  // Scroll to top as soon as page loads
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
 
   return (
     <div className="techStackPageContainer">
-      <header>
+      <header className="headline">
         <div className="headerText violetBorder">
           <h1 className="textFat"> The tech stack </h1>
           <h2 className="textBig"> I use in my projects </h2>

@@ -3,16 +3,15 @@ import config from "../config";
 import axios from "axios";
 import { Request } from "../typeDefinitions";
 
-const apiPath = `${config.API_URL}/api`;
-
-type MenuNumber = number | null;
+type MenuItem = string | null;
 type ErrorMessage = string | null;
 
 interface InitialState {
-  menuNumber: MenuNumber;
+  menuItem: MenuItem;
   isDesktop: boolean;
   isMenuVisible: boolean;
-  isMenuQuit: boolean;
+  isOpenMenu: boolean;
+  isCloseMenu: boolean;
   isCreatingRequest: boolean;
   errorMessage: ErrorMessage;
 }
@@ -21,22 +20,22 @@ interface CreateRequestParameters {
   request: Request;
 }
 
-// Initialize states
 const initialState: InitialState = {
-  menuNumber: null,
+  menuItem: null,
   isDesktop: false,
   isMenuVisible: false,
-  isMenuQuit: false,
+  isOpenMenu: false,
+  isCloseMenu: false,
   isCreatingRequest: false,
   errorMessage: null,
 };
 
-// Create error
+const apiPath = `${config.API_URL}/api`;
+
 const rejectWithValue = (data: any): void | PromiseLike<void> => {
   throw new Error(data);
 };
 
-// Create request
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
   async ({ request }: CreateRequestParameters): Promise<void | any> => {
@@ -48,41 +47,41 @@ export const createRequest = createAsyncThunk(
   }
 );
 
-// ---------- Slice ----------
 export const creativeGallerySlice = createSlice({
   name: "creativeGallery",
   initialState,
 
-  // ---------- Reducers ----------
   reducers: {
-    // ---------- Menu ----------
+    // ----- Menu -----
     setIsDesktop: (state, action: PayloadAction<boolean>) => {
       state.isDesktop = action.payload;
     },
     setIsMenuVisible: (state, action: PayloadAction<boolean>) => {
       state.isMenuVisible = action.payload;
     },
-    setIsMenuQuit: (state, action: PayloadAction<boolean>) => {
-      state.isMenuQuit = action.payload;
+    setIsOpenMenu: (state, action: PayloadAction<boolean>) => {
+      state.isOpenMenu = action.payload;
     },
-    setMenuNumber: (state, action: PayloadAction<number>) => {
-      state.menuNumber = action.payload;
+    setIsCloseMenu: (state, action: PayloadAction<boolean>) => {
+      state.isCloseMenu = action.payload;
+    },
+    setMenuItem: (state, action: PayloadAction<string>) => {
+      state.menuItem = action.payload;
     },
 
-    // ---------- Request ----------
+    // ----- Request -----
     setIsCreatingRequest: (state, action: PayloadAction<boolean>) => {
       state.isCreatingRequest = action.payload;
     },
 
-    // ---------- Error handling ----------
+    // ----- Error handling -----
     setErrorMessage: (state, action: PayloadAction<ErrorMessage>) => {
       state.errorMessage = action.payload;
     },
   },
 
-  // ---------- Extra Reducers ----------
   extraReducers: (builder) => {
-    // --------- Request ----------
+    // ----- Request -----
     builder.addCase(createRequest.fulfilled, (state) => {
       state.isCreatingRequest = false;
     });
@@ -92,18 +91,19 @@ export const creativeGallerySlice = createSlice({
   },
 });
 
-// ---------- Slice actions ----------
+// ----- Slice actions -----
 export const {
-  // ---------- Menu ----------
+  // ----- Menu -----
   setIsDesktop,
   setIsMenuVisible,
-  setIsMenuQuit,
-  setMenuNumber,
+  setIsOpenMenu,
+  setIsCloseMenu,
+  setMenuItem,
 
-  // ---------- Request ----------
+  // ----- Request -----
   setIsCreatingRequest,
 
-  // ---------- Error handling ----------
+  // ----- Error handling -----
   setErrorMessage,
 } = creativeGallerySlice.actions;
 

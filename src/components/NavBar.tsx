@@ -4,13 +4,14 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   setIsDesktop,
   setIsMenuVisible,
-  setIsMenuQuit,
-  setMenuNumber,
+  setMenuItem,
+  setIsOpenMenu,
 } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { resumePath } from "../lib/externalLinkPaths";
+import NavbarLogo from "./NavbarLogo";
 
 const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(
@@ -19,34 +20,39 @@ const NavBar = (): JSX.Element => {
   const isMenuVisible = useAppSelector(
     (state: RootState) => state.creativeGallery.isMenuVisible
   );
-  const menuNumber = useAppSelector(
-    (state: RootState) => state.creativeGallery.menuNumber
+  const menuItem = useAppSelector(
+    (state: RootState) => state.creativeGallery.menuItem
   );
   const dispatch = useAppDispatch();
 
-  // Install window resize event listener
   useEffect(() => {
-    // Check current window width
-    const checkWindowWidth = (): void => {
-      if (window.innerWidth > 1024) {
-        dispatch(setIsDesktop(true));
-      } else {
-        dispatch(setIsDesktop(false));
-      }
+    const installWindowResizeEventListener = (): EventListener => {
+      const handleCheckWindowWidth = (): void => {
+        if (window.innerWidth > 1024) {
+          dispatch(setIsDesktop(true));
+        } else {
+          dispatch(setIsDesktop(false));
+        }
+      };
+
+      handleCheckWindowWidth();
+      window.addEventListener("resize", handleCheckWindowWidth);
+      return handleCheckWindowWidth;
     };
 
-    checkWindowWidth();
-    window.addEventListener("resize", checkWindowWidth);
-    // Remove window resize event listener at cleanup
+    const handleCheckWindowWidth = installWindowResizeEventListener();
+
     return () => {
-      window.removeEventListener("resize", checkWindowWidth);
+      window.removeEventListener("resize", handleCheckWindowWidth);
     };
   }, []);
 
-  // Open menu on screens < 1025px
   const handleOpenMenu = (): void => {
     dispatch(setIsMenuVisible(true));
-    dispatch(setIsMenuQuit(false));
+    dispatch(setIsOpenMenu(true));
+    setTimeout(() => {
+      dispatch(setIsOpenMenu(false));
+    }, 1000); // 1 second
   };
 
   return (
@@ -55,24 +61,13 @@ const NavBar = (): JSX.Element => {
         <div className="navbarContainer navbarBorder">
           <div className="logoContainer">
             <Link
-              className="textstylePlain colorWhite"
               to={"/"}
+              className="textstylePlain colorWhite"
               onClick={() => {
-                dispatch(setMenuNumber(0));
+                dispatch(setMenuItem("home"));
               }}
             >
-              <div className="logoSubContainer">
-                <div className="logoLetterOutlineC">
-                  <div className="logoLetterInlineC"></div>
-                </div>
-                <div className="logoLetterOutlineG">
-                  <div className="logoLetterInlineG">
-                    <div className="logoLetterBoxG">
-                      <div className="logoLetterBoxG2"> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <NavbarLogo />
             </Link>
           </div>
           {isDesktop && (
@@ -82,12 +77,12 @@ const NavBar = (): JSX.Element => {
                   <Link
                     to={"/about"}
                     className={
-                      menuNumber === 1
+                      menuItem === "about"
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
                     onClick={() => {
-                      dispatch(setMenuNumber(1));
+                      dispatch(setMenuItem("about"));
                     }}
                   >
                     ABOUT
@@ -97,12 +92,12 @@ const NavBar = (): JSX.Element => {
                   <Link
                     to={"/projects"}
                     className={
-                      menuNumber === 2
+                      menuItem === "projects"
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
                     onClick={() => {
-                      dispatch(setMenuNumber(2));
+                      dispatch(setMenuItem("projects"));
                     }}
                   >
                     PROJECTS
@@ -112,12 +107,12 @@ const NavBar = (): JSX.Element => {
                   <Link
                     to={"/techstack"}
                     className={
-                      menuNumber === 3
+                      menuItem === "techStack"
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
                     onClick={() => {
-                      dispatch(setMenuNumber(3));
+                      dispatch(setMenuItem("techStack"));
                     }}
                   >
                     TECHSTACK
@@ -139,12 +134,12 @@ const NavBar = (): JSX.Element => {
                   <Link
                     to={"/contact"}
                     className={
-                      menuNumber === 4
+                      menuItem === "contact"
                         ? "navigationLink navigationLinkActive"
                         : "navigationLink"
                     }
                     onClick={() => {
-                      dispatch(setMenuNumber(4));
+                      dispatch(setMenuItem("contact"));
                     }}
                   >
                     CONTACT
@@ -153,11 +148,9 @@ const NavBar = (): JSX.Element => {
               </ul>
             </div>
           )}
-          {!isDesktop && !isMenuVisible && (
-            <div>
-              <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
-            </div>
-          )}
+          <div hidden={isDesktop || isMenuVisible ? true : false}>
+            <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
+          </div>
         </div>
       </nav>
     </div>

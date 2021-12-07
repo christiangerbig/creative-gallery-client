@@ -309,13 +309,13 @@ ul
 
 /* Header */
 
-header
+.headline
   display: flex
   align-items: center
   margin-left: 1.5rem
 
 @media (min-width: 320px) and (max-width: 480px)
-  header
+  .headline
     margin-left: 2rem
     margin-right: 3rem
 
@@ -539,12 +539,14 @@ footer
   padding:
     left: 1rem
     right: 1rem
-  h2
-    font-size: 1.7rem 
-    margin: 1.6rem 0 0.6rem 0
-  p
-    font-size: 1rem
-    width: 280px
+  article
+    p
+      font-size: 1rem
+      width: 280px
+    header
+      h2
+        font-size: 1.7rem 
+        margin: 1.6rem 0 0.6rem 0
 
 .projectLinksContainer 
   display: flex

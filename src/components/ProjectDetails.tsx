@@ -7,6 +7,7 @@ type ProjectDetailsProps = {
 };
 
 const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
+  const paragraphElementRef = useRef(null);
   const {
     projectName,
     projectPicturePath,
@@ -16,11 +17,13 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
     gitHubClientPath,
     gitHubServerPath,
   } = projectItem;
-  const elementRef = useRef([]);
 
-  // Set paragraph text
   useEffect(() => {
-    (elementRef.current[0] as any).innerHTML = projectDescription;
+    const setParagraphText = (projectDescription: string): void => {
+      (paragraphElementRef as any).current.innerHTML = projectDescription;
+    };
+
+    setParagraphText(projectDescription);
   }, []);
 
   return (
@@ -34,12 +37,12 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
         src={projectVideoPath}
       />
       <div className="projectDescription">
-        <h2> {projectName} </h2>
-        <p
-          ref={(descriptionTextElement) => {
-            (elementRef.current[0] as any) = descriptionTextElement;
-          }}
-        ></p>
+        <article>
+          <header>
+            <h2> {projectName} </h2>
+          </header>
+          <p ref={paragraphElementRef}></p>
+        </article>
       </div>
       <div className="projectLinksContainer">
         <div>
@@ -60,17 +63,15 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
             GIT HUB
           </Link>
         </div>
-        {gitHubServerPath && (
-          <div>
-            <Link
-              to={{ pathname: gitHubServerPath }}
-              target="_blank"
-              className="projectGitHubLink"
-            >
-              GIT HUB 2
-            </Link>
-          </div>
-        )}
+        <div hidden={gitHubServerPath ? false : true}>
+          <Link
+            to={{ pathname: gitHubServerPath }}
+            target="_blank"
+            className="projectGitHubLink"
+          >
+            GIT HUB 2
+          </Link>
+        </div>
       </div>
     </div>
   );

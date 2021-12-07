@@ -4,7 +4,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
-  setMenuNumber,
+  setMenuItem,
   setErrorMessage,
 } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
@@ -26,14 +26,21 @@ const Contact = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const history = useHistory();
 
-  // Clear error text and scroll to top as soon as page loads
   useEffect(() => {
-    dispatch(setErrorMessage(null));
-    scroll.scrollToTop();
-  }, [dispatch]);
+    const setErrorMessageAndScrollToTop = (): void => {
+      dispatch(setErrorMessage(null));
+      scroll.scrollToTop();
+    };
 
-  // Create request
+    setErrorMessageAndScrollToTop();
+  }, []);
+
   const handleSubmitRequest = (event: any): void => {
+    const setMenuItemAndReturnToHomePage = (): void => {
+      dispatch(setMenuItem("home"));
+      history.push("/");
+    };
+
     event.preventDefault();
     const { email, subject, message } = event.target;
     const request: Request = {
@@ -44,8 +51,7 @@ const Contact = (): JSX.Element => {
     dispatch(createRequest({ request }))
       .unwrap()
       .then(() => {
-        dispatch(setMenuNumber(0));
-        history.push("/");
+        setMenuItemAndReturnToHomePage();
       })
       .catch((err) => {
         dispatch(setErrorMessage(err.message));
@@ -54,7 +60,7 @@ const Contact = (): JSX.Element => {
 
   return (
     <div className="contactPageContainer">
-      <header>
+      <header className="headline">
         <div className="headerText blueBorder">
           <h1 className="textFat"> Don't hesitate </h1>
           <h2 className="textBig"> to contact me </h2>
@@ -93,9 +99,7 @@ const Contact = (): JSX.Element => {
             <FontAwesomeIcon icon={faPen} /> or write me
           </h3>
         </div>
-        {errorMessage && (
-          <p className="errorOutput warningColor"> {errorMessage} </p>
-        )}
+          <p hidden={errorMessage ? false : true} className="errorOutput warningColor"> {errorMessage} </p>
         <form
           onSubmit={(event) => {
             handleSubmitRequest(event);
@@ -115,17 +119,17 @@ const Contact = (): JSX.Element => {
           />
           <textarea
             name="message"
+            placeholder="message"
             cols={35}
             rows={7}
-            placeholder="message"
             className="formTextarea"
           />
           <input
             type="submit"
             value="SUBMIT"
-            className="formSubmit"
             disabled={isCreatingRequest ? true : false}
             formNoValidate
+            className="formSubmit"
           />
         </form>
       </div>
