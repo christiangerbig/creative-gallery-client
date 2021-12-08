@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my portfolio to present all my projects and another exercise to apply my React knowledge.
+This is my portfolio to present all my projects and another exercise to apply my React Redux knowledge.
 
 ## User Stories
 
@@ -25,9 +25,12 @@ This is my portfolio to present all my projects and another exercise to apply my
 ## Components
 
 - NavBar
+- NavBarLogo
+- NavDesktopViewItems
 - Menu
 - Footer
 - Home
+- Logo
 - Footer
 - About
 - Projects
