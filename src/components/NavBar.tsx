@@ -23,7 +23,7 @@ const NavBar = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const addlWindowResizeEventListener = (): EventListener => {
+    const addlWindowWidthHandler = (): EventListener => {
       const handleCheckWindowWidth = (): void => {
         if (window.innerWidth > 1024) {
           dispatch(setIsDesktop(true));
@@ -37,7 +37,7 @@ const NavBar = (): JSX.Element => {
       return handleCheckWindowWidth;
     };
 
-    const handleCheckWindowWidth = addlWindowResizeEventListener();
+    const handleCheckWindowWidth = addlWindowWidthHandler();
 
     return () => {
       window.removeEventListener("resize", handleCheckWindowWidth);
