@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useAppDispatch } from "../hooks";
 import { setMenuItem } from "../reducer/creativeGallerySlice";
+import HeaderText from "../components/HeaderText";
 
 const About = (): JSX.Element => {
   const dispatch = useAppDispatch();
@@ -14,10 +15,10 @@ const About = (): JSX.Element => {
   return (
     <div className="aboutPageContainer">
       <header className="headline">
-        <div className="headerText greenBorder">
-          <h1 className="textFat"> There is only one way </h1>
-          <h2 className="textBig"> Straight forward </h2>
-        </div>
+        <HeaderText
+          text={["There is only one way", "Straight forward"]}
+          borderColor={"green"}
+        />
       </header>
       <div className="textContainer">
         <div className="textColumContainer">

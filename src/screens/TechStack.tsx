@@ -12,6 +12,7 @@ import mongoDBLogo from "../images/MongoDB-Logo.svg";
 import nodeJsLogo from "../images/NodeJS-Logo.svg";
 import gitHubLogo from "../images/GitHub-Logo.svg";
 import visualStudioCodeLogo from "../images/Visual-Studio-Code-Logo.svg";
+import HeaderText from "../components/HeaderText";
 
 type LogosList = string[];
 
@@ -38,10 +39,10 @@ const TechStack = (): JSX.Element => {
   return (
     <div className="techStackPageContainer">
       <header className="headline">
-        <div className="headerText violetBorder">
-          <h1 className="textFat"> The tech stack </h1>
-          <h2 className="textBig"> I use in my projects </h2>
-        </div>
+        <HeaderText
+          text={["The tech stack", "I use in my projects"]}
+          borderColor={"violet"}
+        />
       </header>
       <div className="techStackLogosContainer">
         {logosList.map((logo: string, index: number): JSX.Element => {

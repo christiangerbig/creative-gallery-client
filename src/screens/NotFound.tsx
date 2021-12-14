@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import HeaderText from "../components/HeaderText";
 
 const NotFound = (): JSX.Element => {
   return (
     <div className="notFoundPageContainer logoImage">
       <header className="headline">
-        <div className="headerText orangeBorder">
-          <h1 className="textFat"> Error 404 </h1>
-          <h2 className="textBig"> Page not found </h2>
-        </div>
+        <HeaderText
+          text={["Error 404", "Page not found"]}
+          borderColor={"orange"}
+        />
       </header>
       <div className="notFoundGetBackContainer">
         <Link to={"/"} className="notFoundGetBackLink textEnlighted">

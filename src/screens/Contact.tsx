@@ -15,6 +15,7 @@ import {
   faMobileAlt,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
+import HeaderText from "../components/HeaderText";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
@@ -61,10 +62,10 @@ const Contact = (): JSX.Element => {
   return (
     <div className="contactPageContainer">
       <header className="headline">
-        <div className="headerText blueBorder">
-          <h1 className="textFat"> Don't hesitate </h1>
-          <h2 className="textBig"> to contact me </h2>
-        </div>
+        <HeaderText
+          text={["Don't hesitate", "to contact me"]}
+          borderColor={"blue"}
+        />
       </header>
       <div className="contactContainer">
         <h1> Christian Gerbig </h1>
@@ -99,7 +100,13 @@ const Contact = (): JSX.Element => {
             <FontAwesomeIcon icon={faPen} /> or write me
           </h3>
         </div>
-          <p hidden={errorMessage ? false : true} className="errorOutput warningColor"> {errorMessage} </p>
+        <p
+          hidden={errorMessage ? false : true}
+          className="errorOutput warningColor"
+        >
+          {" "}
+          {errorMessage}{" "}
+        </p>
         <form
           onSubmit={(event) => {
             handleSubmitRequest(event);

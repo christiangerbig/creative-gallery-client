@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { projectsTable } from "../lib/projectsTable";
 import { ProjectItem } from "../typeDefinitions";
+import HeaderText from "../components/HeaderText";
 import ProjectDetails from "../components/ProjectDetails";
 
 const Projects = (): JSX.Element => {
@@ -12,10 +13,10 @@ const Projects = (): JSX.Element => {
   return (
     <div className="projectsPageContainer">
       <header className="headline">
-        <div className="headerText orangeBorder">
-          <h1 className="textFat"> My Web Developer projects </h1>
-          <h2 className="textBig"> I was working on </h2>
-        </div>
+        <HeaderText
+          text={["My Web Developer projects", "I was working on"]}
+          borderColor={"orange"}
+        />
       </header>
       <div className="projectsContainer">
         {projectsTable.map(

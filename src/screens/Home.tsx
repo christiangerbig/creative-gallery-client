@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import Logo from "../components/Logo";
+import HeaderText from "../components/HeaderText";
 
 const Home = (): JSX.Element => {
   useEffect(() => {
@@ -10,10 +11,10 @@ const Home = (): JSX.Element => {
   return (
     <div className="homePageContainer">
       <Logo />
-      <div className="homeIntroText">
-        <h1 className="textFat"> Hi, I'm Christian </h1>
-        <h2 className="textBig"> A passionate Web Developer </h2>
-      </div>
+      <HeaderText
+        text={["Hi, I'm Christian", "A passionate Web Developer"]}
+        borderColor={""}
+      />
     </div>
   );
 };
