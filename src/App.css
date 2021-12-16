@@ -457,20 +457,6 @@ footer {
   margin-bottom: 8rem;
 }
 
-.homeIntroText {
-  margin-left: 4rem;
-}
-
-.homeIntroText h1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.homeIntroText h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
 .homeLogoSubContainer {
   display: flex;
   background-color: #eeecec;
@@ -617,6 +603,10 @@ footer {
 .projectDescription article header h2 {
   font-size: 1.7rem;
   margin: 1.6rem 0 0.6rem 0;
+}
+
+.descriptionContainer p {
+  margin-bottom: 2.5rem;
 }
 
 .projectLinksContainer {

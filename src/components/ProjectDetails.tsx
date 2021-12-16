@@ -7,7 +7,7 @@ type ProjectDetailsProps = {
 };
 
 const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
-  const paragraphElementRef = useRef(null);
+  const descriptionContainerElementRef = useRef(null);
   const {
     projectName,
     projectPicturePath,
@@ -19,11 +19,12 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   } = projectItem;
 
   useEffect(() => {
-    const setParagraphText = (projectDescription: string): void => {
-      (paragraphElementRef as any).current.innerHTML = projectDescription;
+    const setDescriptionText = (projectDescription: string): void => {
+      (descriptionContainerElementRef as any).current.innerHTML =
+        projectDescription;
     };
 
-    setParagraphText(projectDescription);
+    setDescriptionText(projectDescription);
   }, []);
 
   return (
@@ -41,7 +42,10 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
           <header>
             <h2> {projectName} </h2>
           </header>
-          <p ref={paragraphElementRef}></p>
+          <div
+            ref={descriptionContainerElementRef}
+            className="descriptionContainer"
+          ></div>
         </article>
       </div>
       <div className="projectLinksContainer">
