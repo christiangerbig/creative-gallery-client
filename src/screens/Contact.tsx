@@ -36,14 +36,16 @@ const Contact = (): JSX.Element => {
     setErrorMessageAndScrollToTop();
   }, []);
 
-  const handleSubmitRequest = (event: any): void => {
+  const handleSubmitRequest = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
     const setMenuItemAndReturnToHomePage = (): void => {
       dispatch(setMenuItem("home"));
       history.push("/");
     };
 
     event.preventDefault();
-    const { email, subject, message } = event.target;
+    const { email, subject, message } = event.target as any;
     const request: Request = {
       email: email.value,
       subject: subject.value,

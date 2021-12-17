@@ -32,7 +32,7 @@ const initialState: InitialState = {
 
 const apiPath = `${config.API_URL}/api`;
 
-const rejectWithValue = (data: any): void | PromiseLike<void> => {
+const rejectWithValue = (data: string): void | PromiseLike<void> => {
   throw new Error(data);
 };
 

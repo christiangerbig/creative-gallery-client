@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ProjectItem } from "../typeDefinitions";
 
@@ -7,7 +7,7 @@ type ProjectDetailsProps = {
 };
 
 const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
-  const descriptionContainerElementRef = useRef(null);
+  const descriptionContainerRef = useRef<HTMLDivElement>(null);
   const {
     projectName,
     projectPicturePath,
@@ -19,12 +19,11 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   } = projectItem;
 
   useEffect(() => {
-    const setDescriptionText = (projectDescription: string): void => {
-      (descriptionContainerElementRef as any).current.innerHTML =
-        projectDescription;
+    const setDescriptionText = (elementRef: RefObject<HTMLDivElement>, text: string): void => {
+      (elementRef as any).current.innerHTML = text;
     };
 
-    setDescriptionText(projectDescription);
+    setDescriptionText(descriptionContainerRef, projectDescription);
   }, []);
 
   return (
@@ -43,7 +42,7 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
             <h2> {projectName} </h2>
           </header>
           <div
-            ref={descriptionContainerElementRef}
+            ref={descriptionContainerRef}
             className="descriptionContainer"
           ></div>
         </article>

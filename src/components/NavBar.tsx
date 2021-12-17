@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { EventHandler, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
@@ -23,24 +23,34 @@ const NavBar = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const addlWindowWidthHandler = (): EventListener => {
-      const handleCheckWindowWidth = (): void => {
-        if (window.innerWidth > 1024) {
-          dispatch(setIsDesktop(true));
-        } else {
-          dispatch(setIsDesktop(false));
-        }
-      };
-
-      handleCheckWindowWidth();
-      window.addEventListener("resize", handleCheckWindowWidth);
-      return handleCheckWindowWidth;
+    const handleCheckWindowWidth = (window: Window): void => {
+      if (window.innerWidth > 1024) {
+        dispatch(setIsDesktop(true));
+      } else {
+        dispatch(setIsDesktop(false));
+      }
     };
 
-    const handleCheckWindowWidth = addlWindowWidthHandler();
+    const addWindowWidthHandler = (
+      window: Window,
+      eventHandler: Function
+    ): EventListener => {
+      eventHandler(window);
+      const eventHandlerCallback = (): void => {
+        eventHandler(window);
+      };
+
+      window.addEventListener("resize", eventHandlerCallback);
+      return eventHandlerCallback;
+    };
+
+    const handleCheckWindowWidthCallback = addWindowWidthHandler(
+      window,
+      handleCheckWindowWidth
+    );
 
     return () => {
-      window.removeEventListener("resize", handleCheckWindowWidth);
+      window.removeEventListener("resize", handleCheckWindowWidthCallback);
     };
   }, []);
 
