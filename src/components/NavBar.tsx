@@ -77,7 +77,7 @@ const NavBar = (): JSX.Element => {
               <NavbarLogo />
             </Link>
           </div>
-          {isDesktop && !isMenuVisible ? (
+          {isDesktop ? (
             <NavDesktopViewItems />
           ) : (
             <div>
