@@ -110,7 +110,7 @@ const Contact = (): JSX.Element => {
           {errorMessage}{" "}
         </p>
         <form
-          onSubmit={(event) => {
+          onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
             handleSubmitRequest(event);
           }}
         >

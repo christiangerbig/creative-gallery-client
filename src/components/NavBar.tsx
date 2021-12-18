@@ -77,10 +77,13 @@ const NavBar = (): JSX.Element => {
               <NavbarLogo />
             </Link>
           </div>
-          {isDesktop && <NavDesktopViewItems />}
-          <div hidden={isDesktop || isMenuVisible ? true : false}>
-            <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
-          </div>
+          {isDesktop && !isMenuVisible ? (
+            <NavDesktopViewItems />
+          ) : (
+            <div>
+              <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
+            </div>
+          )}
         </div>
       </nav>
     </div>
