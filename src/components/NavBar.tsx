@@ -17,14 +17,11 @@ const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
-  const isMenuVisible = useAppSelector(
-    (state: RootState) => state.creativeGallery.isMenuVisible
-  );
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const handleCheckWindowWidth = (window: Window): void => {
-      if (window.innerWidth > 1024) {
+    const handleCheckWindowWidth = (windowObject: Window): void => {
+      if (windowObject.innerWidth > 1024) {
         dispatch(setIsDesktop(true));
       } else {
         dispatch(setIsDesktop(false));
@@ -32,15 +29,15 @@ const NavBar = (): JSX.Element => {
     };
 
     const addWindowWidthHandler = (
-      window: Window,
+      windowObject: Window,
       eventHandler: Function
     ): EventListener => {
-      eventHandler(window);
+      eventHandler(windowObject);
       const eventHandlerCallback = (): void => {
-        eventHandler(window);
+        eventHandler(windowObject);
       };
 
-      window.addEventListener("resize", eventHandlerCallback);
+      windowObject.addEventListener("resize", eventHandlerCallback);
       return eventHandlerCallback;
     };
 
@@ -50,7 +47,14 @@ const NavBar = (): JSX.Element => {
     );
 
     return () => {
-      window.removeEventListener("resize", handleCheckWindowWidthCallback);
+      const removeWindowWidthHandler = (
+        windowObject: Window,
+        eventHandlerCallback: EventListener
+      ) => {
+        windowObject.removeEventListener("resize", eventHandlerCallback);
+      };
+
+      removeWindowWidthHandler(window, handleCheckWindowWidthCallback);
     };
   }, []);
 
