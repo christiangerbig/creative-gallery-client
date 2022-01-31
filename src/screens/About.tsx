@@ -59,7 +59,7 @@ const About = (): JSX.Element => {
             <p>
               I started to learn the fundamentals of
               <span className="colorOrange"> Web Development </span> by myself
-              and in the Full Stack Web Development Bootcamp at Ironhack.
+              and as a Full Stack Web Developper at Ironhack.
             </p>
             <p>
               Meanwhile I improved my skills to write
