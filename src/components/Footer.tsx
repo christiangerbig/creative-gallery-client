@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import { gitHubPath, linkedInPath } from "../lib/externalLinkPaths";
 
 const Footer = (): JSX.Element => {
+  const currentTime = new Date();
+  let year = currentTime.getFullYear();
+
   return (
     <div>
       <footer>
         <div className="footerContainer">
-          <span className="copyrightText"> © 2021 Christian Gerbig </span>
+          <span className="copyrightText"> © {year} Christian Gerbig </span>
           <ul className="footerSubContainer">
             <li>
               <Link
