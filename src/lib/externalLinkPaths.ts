@@ -26,7 +26,7 @@ export const letterShooterGitHubClientPath: string =
 
 // Resume
 export const resumePath: string =
-  "https://www.dropbox.com/s/oxji4fu1e2ok0id/CV%20%285%29.pdf?dl=0";
+  "https://www.dropbox.com/s/cdhs4pqq5uwwck2/CV%20%285%29.pdf?dl=0";
 
 // LinkedIn
 export const linkedInPath: string =
