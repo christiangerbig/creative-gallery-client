@@ -41,7 +41,7 @@ const TechStack = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           text={["The tech stack", "I use in my projects"]}
-          borderColor={"violet"}
+          borderColorName={"violet"}
         />
       </header>
       <div className="techStackLogosContainer">

@@ -7,7 +7,7 @@ const NotFound = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           text={["Error 404", "Page not found"]}
-          borderColor={"orange"}
+          borderColorName={"orange"}
         />
       </header>
       <div className="notFoundGetBackContainer">

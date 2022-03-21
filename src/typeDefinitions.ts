@@ -1,3 +1,5 @@
+export type MenuItem = string | null;
+
 // ----- Request -----
 export interface Request {
   email: string;

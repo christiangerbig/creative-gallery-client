@@ -34,18 +34,30 @@ const Menu = (): JSX.Element => {
     setTimeout(resetMenuVariables, 300); // 300 milliseconds
   };
 
+  const menuProperties = (isOpenMenu: boolean): string => {
+    return isOpenMenu
+      ? "menu fadeMenuIn"
+      : isCloseMenu
+      ? "menu fadeMenuOut"
+      : "menu";
+  };
+
+  const linkProperties = (
+    isOpenMenu: boolean,
+    fadeInSpeed: string,
+    fadeOutSpeed: string
+  ): string => {
+    return isOpenMenu
+      ? `menuLink colorOrange ${fadeInSpeed}`
+      : isCloseMenu
+      ? `menuLink colorOrange ${fadeOutSpeed}`
+      : "menuLink colorOrange";
+  };
+
   return (
     <>
       {!isDesktop && isMenuVisible && (
-        <div
-          className={
-            isOpenMenu
-              ? "menu fadeMenuIn"
-              : isCloseMenu
-              ? "menu fadeMenuOut"
-              : "menu"
-          }
-        >
+        <div className={menuProperties(isOpenMenu)}>
           <div className="menuCloseContainer">
             <FontAwesomeIcon
               icon={faTimes}
@@ -59,13 +71,11 @@ const Menu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/about"}
-                    className={
-                      isOpenMenu
-                        ? "menuLink colorOrange menuLinkFadeInSpeed1"
-                        : isCloseMenu
-                        ? "menuLink colorOrange menuLinkFadeOutSpeed1"
-                        : "menuLink colorOrange"
-                    }
+                    className={linkProperties(
+                      isOpenMenu,
+                      "menuLinkFadeInSpeed1",
+                      "menuLinkFadeOutSpeed1"
+                    )}
                     onClick={handleCloseMenu}
                   >
                     ABOUT
@@ -74,13 +84,11 @@ const Menu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/projects"}
-                    className={
-                      isOpenMenu
-                        ? "menuLink colorOrange menuLinkFadeInSpeed2"
-                        : isCloseMenu
-                        ? "menuLink colorOrange menuLinkFadeOutSpeed2"
-                        : "menuLink colorOrange"
-                    }
+                    className={linkProperties(
+                      isOpenMenu,
+                      "menuLinkFadeInSpeed2",
+                      "menuLinkFadeOutSpeed2"
+                    )}
                     onClick={handleCloseMenu}
                   >
                     PROJECTS
@@ -89,13 +97,11 @@ const Menu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/techstack"}
-                    className={
-                      isOpenMenu
-                        ? "menuLink colorOrange menuLinkFadeInSpeed3"
-                        : isCloseMenu
-                        ? "menuLink colorOrange menuLinkFadeOutSpeed3"
-                        : "menuLink colorOrange"
-                    }
+                    className={linkProperties(
+                      isOpenMenu,
+                      "menuLinkFadeInSpeed3",
+                      "menuLinkFadeOutSpeed3"
+                    )}
                     onClick={handleCloseMenu}
                   >
                     TECHSTACK
@@ -106,13 +112,11 @@ const Menu = (): JSX.Element => {
                     to={{ pathname: resumePath }}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className={
-                      isOpenMenu
-                        ? "menuLink colorOrange menuLinkFadeInSpeed4"
-                        : isCloseMenu
-                        ? "menuLink colorOrange menuLinkFadeOutSpeed4"
-                        : "menuLink colorOrange"
-                    }
+                    className={linkProperties(
+                      isOpenMenu,
+                      "menuLinkFadeInSpeed4",
+                      "menuLinkFadeOutSpeed4"
+                    )}
                     onClick={handleCloseMenu}
                   >
                     RESUME
@@ -121,13 +125,11 @@ const Menu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/contact"}
-                    className={
-                      isOpenMenu
-                        ? "menuLink colorOrange menuLinkFadeInSpeed5"
-                        : isCloseMenu
-                        ? "menuLink colorOrange menuLinkFadeOutSpeed5"
-                        : "menuLink colorOrange"
-                    }
+                    className={linkProperties(
+                      isOpenMenu,
+                      "menuLinkFadeInSpeed5",
+                      "menuLinkFadeOutSpeed5"
+                    )}
                     onClick={handleCloseMenu}
                   >
                     CONTACT

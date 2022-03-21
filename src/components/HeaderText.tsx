@@ -1,23 +1,26 @@
 type HeaderTextProps = {
   text: string[];
-  borderColor: string;
+  borderColorName: string;
 };
 
-const HeaderText = ({ text, borderColor }: HeaderTextProps): JSX.Element => {
+const HeaderText = ({ text, borderColorName }: HeaderTextProps): JSX.Element => {
+  const borderColor = (borderColorName: string): string => {
+    switch (borderColorName) {
+      case "green":
+        return "headerText greenBorder";
+      case "orange":
+        return "headerText orangeBorder";
+      case "violet":
+        return "headerText violetBorder";
+      case "blue":
+        return "headerText blueBorder";
+      default:
+        return "headerText";
+    }
+  };
+
   return (
-    <div
-      className={
-        borderColor === "green"
-          ? "headerText greenBorder"
-          : borderColor === "orange"
-          ? "headerText orangeBorder"
-          : borderColor === "violet"
-          ? "headerText violetBorder"
-          : borderColor === "blue"
-          ? "headerText blueBorder"
-          : "headerText"
-      }
-    >
+    <div className={borderColor(borderColorName)}>
       <h1 className="textFat"> {text[0]} </h1>
       <h2 className="textBig"> {text[1]} </h2>
     </div>

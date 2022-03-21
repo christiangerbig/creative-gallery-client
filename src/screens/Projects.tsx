@@ -15,7 +15,7 @@ const Projects = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           text={["My Web Developer projects", "I was working on"]}
-          borderColor={"orange"}
+          borderColorName={"orange"}
         />
       </header>
       <div className="projectsContainer">

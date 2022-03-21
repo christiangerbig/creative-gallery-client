@@ -1,9 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import config from "../config";
 import axios from "axios";
-import { Request } from "../typeDefinitions";
+import { MenuItem, Request } from "../typeDefinitions";
 
-type MenuItem = string | null;
 type ErrorMessage = string | null;
 
 interface InitialState {

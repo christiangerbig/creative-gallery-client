@@ -66,7 +66,7 @@ const Contact = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           text={["Don't hesitate", "to contact me"]}
-          borderColor={"blue"}
+          borderColorName={"blue"}
         />
       </header>
       <div className="contactContainer">

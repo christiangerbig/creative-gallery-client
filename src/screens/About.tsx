@@ -17,7 +17,7 @@ const About = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           text={["There is only one way", "Straight forward"]}
-          borderColor={"green"}
+          borderColorName={"green"}
         />
       </header>
       <div className="textContainer">

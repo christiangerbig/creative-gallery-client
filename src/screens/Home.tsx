@@ -13,7 +13,7 @@ const Home = (): JSX.Element => {
       <Logo />
       <HeaderText
         text={["Hi, I'm Christian", "A passionate Web Developer"]}
-        borderColor={""}
+        borderColorName={""}
       />
     </div>
   );
