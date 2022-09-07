@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { gitHubPath, linkedInPath } from "../lib/externalLinkPaths";
+import ExternalLink from "./ExternalLink";
 
 const Footer = (): JSX.Element => {
   const currentTime = new Date();
@@ -12,26 +12,18 @@ const Footer = (): JSX.Element => {
           <span className="copyrightText"> © {year} Christian Gerbig </span>
           <ul className="footerSubContainer">
             <li>
-              <Link
-                to={{
-                  pathname: linkedInPath,
-                }}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="footerLink"
-              >
-                <i className="fab fa-linkedin colorWhite"></i>
-              </Link>
+              <ExternalLink
+                linkPath={linkedInPath}
+                linkClass="footerLink"
+                faClass="fa-linkedin"
+              />
             </li>
             <li>
-              <Link
-                to={{ pathname: gitHubPath }}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="footerLink"
-              >
-                <i className="fab fa-github textColorWhite"></i>
-              </Link>
+              <ExternalLink
+                linkPath={gitHubPath}
+                linkClass="footerLink"
+                faClass="fa-github"
+              />
             </li>
           </ul>
         </div>

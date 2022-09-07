@@ -8,6 +8,7 @@ import { RootState } from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { resumePath } from "../lib/externalLinkPaths";
+import ExternalLink from "./ExternalLink";
 
 const Menu = (): JSX.Element => {
   const isDesktop = useAppSelector(
@@ -108,19 +109,16 @@ const Menu = (): JSX.Element => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to={{ pathname: resumePath }}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className={linkProperties(
+                  <ExternalLink
+                    linkPath={resumePath}
+                    linkClass={linkProperties(
                       isOpenMenu,
                       "menuLinkFadeInSpeed4",
                       "menuLinkFadeOutSpeed4"
                     )}
-                    onClick={handleCloseMenu}
-                  >
-                    RESUME
-                  </Link>
+                    linkText="RESUME"
+                    onClickHandler={handleCloseMenu}
+                  />
                 </li>
                 <li>
                   <Link

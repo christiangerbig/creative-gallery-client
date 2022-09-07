@@ -4,6 +4,7 @@ import { setMenuItem } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
 import { resumePath } from "../lib/externalLinkPaths";
 import { MenuItem } from "../typeDefinitions";
+import ExternalLink from "./ExternalLink";
 
 const NavDesktopViewItems = (): JSX.Element => {
   const menuItem = useAppSelector(
@@ -59,14 +60,11 @@ const NavDesktopViewItems = (): JSX.Element => {
       </ul>
       <ul className="navigationSubContainerRight">
         <li>
-          <Link
-            to={{ pathname: resumePath }}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="navigationLink"
-          >
-            RESUME
-          </Link>
+          <ExternalLink
+            linkPath={resumePath}
+            linkClass="navigationLink"
+            linkText="RESUME"
+          />
         </li>
         <li>
           <Link

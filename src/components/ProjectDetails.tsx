@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { ProjectItem } from "../typeDefinitions";
+import ExternalLink from "./ExternalLink";
 
 type ProjectDetailsProps = {
   projectItem: ProjectItem;
@@ -19,7 +19,10 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   } = projectItem;
 
   useEffect(() => {
-    const setDescriptionText = (elementRef: RefObject<HTMLDivElement>, text: string): void => {
+    const setDescriptionText = (
+      elementRef: RefObject<HTMLDivElement>,
+      text: string
+    ): void => {
       (elementRef as any).current.innerHTML = text;
     };
 
@@ -49,31 +52,25 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
       </div>
       <div className="projectLinksContainer">
         <div>
-          <Link
-            to={{ pathname: deployedPath }}
-            target="_blank"
-            className="projectTryItLink"
-          >
-            TRY IT
-          </Link>
+          <ExternalLink
+            linkPath={deployedPath}
+            linkClass="projectTryItLink"
+            linkText="TRY IT"
+          />
         </div>
         <div>
-          <Link
-            to={{ pathname: gitHubClientPath }}
-            target="_blank"
-            className="projectGitHubLink"
-          >
-            GIT HUB
-          </Link>
+          <ExternalLink
+            linkPath={gitHubClientPath}
+            linkClass="projectGitHubLink"
+            linkText="GIT HUB"
+          />
         </div>
         <div hidden={gitHubServerPath ? false : true}>
-          <Link
-            to={{ pathname: gitHubServerPath }}
-            target="_blank"
-            className="projectGitHubLink"
-          >
-            GIT HUB 2
-          </Link>
+          <ExternalLink
+            linkPath={gitHubServerPath}
+            linkClass="projectGitHubLink"
+            linkText="GIT HUB 2"
+          />
         </div>
       </div>
     </div>
