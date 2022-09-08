@@ -15,7 +15,7 @@ import {
 } from "../lib/externalLinkPaths";
 import { ProjectItem } from "../typeDefinitions";
 
-export const projectsTable: ProjectItem[] = [
+const projects: ProjectItem[] = [
   {
     projectName: "JUNGLE SWAP",
     projectPicturePath: jungleSwapImage,
@@ -44,3 +44,5 @@ export const projectsTable: ProjectItem[] = [
     gitHubServerPath: "",
   },
 ];
+
+export default projects;
