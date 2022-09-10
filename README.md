@@ -29,12 +29,18 @@ This is my portfolio to present all my projects and another exercise to apply my
 - NavDesktopViewItems
 - Menu
 - Footer
-- Home
 - Logo
-- Footer
+- HeaderText
+- ExternalLink
+- ProjectDetails
+- ContactForm
+- ContactLink
+
+## Views
+
+- Home
 - About
 - Projects
-- ProjectDetails
 - TechStack
 - Contact
 - NotFound
