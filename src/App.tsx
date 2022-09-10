@@ -3,12 +3,12 @@ import "./App.min.css";
 import NavBar from "./components/NavBar";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-import Home from "./screens/Home";
-import About from "./screens/About";
-import Projects from "./screens/Projects";
-import TechStack from "./screens/TechStack";
-import Contact from "./screens/Contact";
-import NotFound from "./screens/NotFound";
+import Home from "./views/Home";
+import About from "./views/About";
+import Projects from "./views/Projects";
+import TechStack from "./views/TechStack";
+import Contact from "./views/Contact";
+import NotFound from "./views/NotFound";
 
 const App = (): JSX.Element => {
   return (
