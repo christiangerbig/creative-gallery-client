@@ -12,7 +12,7 @@ const TechStack = (): JSX.Element => {
     <div className="techStackPageContainer">
       <header className="headline">
         <HeaderText
-          text={["The tech stack", "I use in my projects"]}
+          text={["The tech stack", "I use"]}
           borderColorName={"violet"}
         />
       </header>
