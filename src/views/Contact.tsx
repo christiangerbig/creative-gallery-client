@@ -16,6 +16,7 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import HeaderText from "../components/HeaderText";
+import ContactForm from "../components/ContactForm";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
@@ -109,38 +110,10 @@ const Contact = (): JSX.Element => {
           {" "}
           {errorMessage}{" "}
         </p>
-        <form
-          onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
-            handleSubmitRequest(event);
-          }}
-        >
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            className="formInput"
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="subject"
-            className="formInput"
-          />
-          <textarea
-            name="message"
-            placeholder="message"
-            cols={35}
-            rows={7}
-            className="formTextarea"
-          />
-          <input
-            type="submit"
-            value="SUBMIT"
-            disabled={isCreatingRequest ? true : false}
-            formNoValidate
-            className="formSubmit"
-          />
-        </form>
+        <ContactForm
+          isCreatingRequest={isCreatingRequest}
+          handleSubmitRequest={handleSubmitRequest}
+        />
       </div>
     </div>
   );
