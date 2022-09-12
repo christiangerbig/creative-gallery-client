@@ -8,7 +8,7 @@ import About from "./views/About";
 import Projects from "./views/Projects";
 import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
-import NotFound from "./views/NotFound";
+import PageNotFound from "./views/PageNotFound";
 
 const App = (): JSX.Element => {
   return (
@@ -31,7 +31,7 @@ const App = (): JSX.Element => {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route component={NotFound} />
+        <Route component={PageNotFound} />
       </Switch>
       <Footer />
     </div>

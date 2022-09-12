@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 type ContactFormProps = {
   isCreatingRequest: boolean;
   handleSubmitRequest: Function;
@@ -7,6 +9,8 @@ const ContactForm = ({
   isCreatingRequest,
   handleSubmitRequest,
 }: ContactFormProps): JSX.Element => {
+  const { t } = useTranslation();
+
   return (
     <>
       <form
@@ -16,26 +20,26 @@ const ContactForm = ({
       >
         <input
           type="email"
-          name="email"
+          name={t("contact.contactForm.inputEmail")}
           placeholder="email"
           className="formInput"
         />
         <input
           type="text"
-          name="subject"
+          name={t("contact.contactForm.inputSubject")}
           placeholder="subject"
           className="formInput"
         />
         <textarea
           name="message"
-          placeholder="message"
+          placeholder={t("contact.contactForm.inputMessage")}
           cols={35}
           rows={7}
           className="formTextarea"
         />
         <input
           type="submit"
-          value="SUBMIT"
+          value={t("contact.contactForm.submit")}
           disabled={isCreatingRequest ? true : false}
           formNoValidate
           className="formSubmit"

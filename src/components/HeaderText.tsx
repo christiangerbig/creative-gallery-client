@@ -1,9 +1,19 @@
+type Headlines = {
+  headline: string;
+  subheadline: string;
+};
+
 type HeaderTextProps = {
-  text: string[];
+  headlines: Headlines;
   borderColorName: string;
 };
 
-const HeaderText = ({ text, borderColorName }: HeaderTextProps): JSX.Element => {
+const HeaderText = ({
+  headlines,
+  borderColorName,
+}: HeaderTextProps): JSX.Element => {
+  const { headline, subheadline } = headlines;
+
   const borderColor = (borderColorName: string): string => {
     switch (borderColorName) {
       case "green":
@@ -21,8 +31,8 @@ const HeaderText = ({ text, borderColorName }: HeaderTextProps): JSX.Element => 
 
   return (
     <div className={borderColor(borderColorName)}>
-      <h1 className="textFat"> {text[0]} </h1>
-      <h2 className="textBig"> {text[1]} </h2>
+      <h1 className="textFat"> {headline} </h1>
+      <h2 className="textBig"> {subheadline} </h2>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { setMenuItem } from "../reducer/creativeGallerySlice";
 import { RootState } from "../store";
@@ -11,13 +12,14 @@ const NavDesktopViewItems = (): JSX.Element => {
     (state: RootState) => state.creativeGallery.menuItem
   );
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const activateLink = (
     currentMenuItem: MenuItem,
     menuItem: MenuItem
   ): string => {
     return currentMenuItem === menuItem
-      ? "navigationLink navigationactivateLink"
+      ? "navigationLink navigationLinkActive"
       : "navigationLink";
   };
 
@@ -32,7 +34,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("about"));
             }}
           >
-            ABOUT
+            {t("navigation.about")}
           </Link>
         </li>
         <li>
@@ -43,7 +45,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("projects"));
             }}
           >
-            PROJECTS
+            {t("navigation.projects")}
           </Link>
         </li>
         <li>
@@ -54,7 +56,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("techStack"));
             }}
           >
-            TECHSTACK
+            {t("navigation.techstack")}
           </Link>
         </li>
       </ul>
@@ -63,7 +65,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <ExternalLink
             linkPath={resumePath}
             linkClass="navigationLink"
-            linkText="RESUME"
+            linkText={t("navigation.resume")}
           />
         </li>
         <li>
@@ -74,7 +76,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("contact"));
             }}
           >
-            CONTACT
+            {t("navigation.contact")}
           </Link>
         </li>
       </ul>

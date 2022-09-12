@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   createRequest,
@@ -28,6 +29,7 @@ const Contact = (): JSX.Element => {
   );
   const dispatch = useAppDispatch();
   const history = useHistory();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const setErrorMessageAndScrollToTop = (): void => {
@@ -67,17 +69,20 @@ const Contact = (): JSX.Element => {
     <div className="contactPageContainer">
       <header className="headline">
         <HeaderText
-          text={["Don't hesitate", "to contact me"]}
+          headlines={{
+            headline: t("contact.headline"),
+            subheadline: t("contact.subheadline"),
+          }}
           borderColorName={"blue"}
         />
       </header>
       <div className="contactContainer">
-        <h1> Christian Gerbig </h1>
-        <h2> Web Developer </h2>
+        <h1> {t("contact.name")} </h1>
+        <h2> {t("contact.jobname")} </h2>
         <div className="contactWaysContainer">
           <div className="contactEmailContainer">
             <h3>
-              <FontAwesomeIcon icon={faEnvelopeSquare} /> e-mail
+              <FontAwesomeIcon icon={faEnvelopeSquare} /> {t("contact.email")}
             </h3>
             <ContactLink
               linkPath="mailto:chr_gerbig@web.de"
@@ -87,7 +92,7 @@ const Contact = (): JSX.Element => {
           </div>
           <div className="contactPhoneContainer">
             <h3>
-              <FontAwesomeIcon icon={faMobileAlt} /> phone
+              <FontAwesomeIcon icon={faMobileAlt} /> {t("contact.phone")}
             </h3>
             <ContactLink
               linkPath="tel:+4915154824288"
@@ -98,16 +103,12 @@ const Contact = (): JSX.Element => {
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faPen} /> or write me
+            <FontAwesomeIcon icon={faPen} /> {t("contact.submit")}
           </h3>
         </div>
-        <p
-          hidden={errorMessage ? false : true}
-          className="errorOutput warningColor"
-        >
-          {" "}
-          {errorMessage}{" "}
-        </p>
+        {errorMessage && (
+          <p className="errorOutput warningColor"> {errorMessage} </p>
+        )}
         <ContactForm
           isCreatingRequest={isCreatingRequest}
           handleSubmitRequest={handleSubmitRequest}

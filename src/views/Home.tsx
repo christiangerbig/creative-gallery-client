@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import Logo from "../components/Logo";
 import HeaderText from "../components/HeaderText";
 
 const Home = (): JSX.Element => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
@@ -12,7 +15,10 @@ const Home = (): JSX.Element => {
     <div className="homePageContainer">
       <Logo />
       <HeaderText
-        text={["Hi, I'm Christian", "A passionate Web Developer"]}
+        headlines={{
+          headline: t("welcome.headline"),
+          subheadline: t("welcome.subheadline"),
+        }}
         borderColorName={""}
       />
     </div>

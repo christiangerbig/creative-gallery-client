@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { gitHubPath, linkedInPath } from "../lib/externalLinkPaths";
 import ExternalLink from "./ExternalLink";
 
 const Footer = (): JSX.Element => {
+  const { t } = useTranslation();
   const currentTime = new Date();
   let year = currentTime.getFullYear();
 
@@ -9,7 +11,10 @@ const Footer = (): JSX.Element => {
     <div>
       <footer>
         <div className="footerContainer">
-          <span className="copyrightText"> © {year} Christian Gerbig </span>
+          <span className="copyrightText">
+            {" "}
+            {t("footer.copyright")} {year} {t("footer.appAuthor")}{" "}
+          </span>
           <ul className="footerSubContainer">
             <li>
               <ExternalLink

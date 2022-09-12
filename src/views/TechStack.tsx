@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import HeaderText from "../components/HeaderText";
 import toolsLogos from "../lib/toolsLogos";
 
 const TechStack = (): JSX.Element => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
@@ -12,7 +15,10 @@ const TechStack = (): JSX.Element => {
     <div className="techStackPageContainer">
       <header className="headline">
         <HeaderText
-          text={["The tech stack", "I use"]}
+          headlines={{
+            headline: t("techStack.headline"),
+            subheadline: t("techStack.subheadline"),
+          }}
           borderColorName={"violet"}
         />
       </header>

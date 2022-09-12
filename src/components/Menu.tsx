@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
   setIsMenuVisible,
@@ -24,6 +25,7 @@ const Menu = (): JSX.Element => {
     (state: RootState) => state.creativeGallery.isCloseMenu
   );
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const handleCloseMenu = (): void => {
     const resetMenuVariables = (): void => {
@@ -79,7 +81,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    ABOUT
+                    {t("navigation.about")}
                   </Link>
                 </li>
                 <li>
@@ -92,7 +94,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    PROJECTS
+                    {t("navigation.projects")}
                   </Link>
                 </li>
                 <li>
@@ -105,7 +107,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    TECHSTACK
+                    {t("navigation.techstack")}
                   </Link>
                 </li>
                 <li>
@@ -116,7 +118,7 @@ const Menu = (): JSX.Element => {
                       "menuLinkFadeInSpeed4",
                       "menuLinkFadeOutSpeed4"
                     )}
-                    linkText="RESUME"
+                    linkText={t("navigation.resume")}
                     onClickHandler={handleCloseMenu}
                   />
                 </li>
@@ -130,7 +132,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    CONTACT
+                    {t("navigation.contact")}
                   </Link>
                 </li>
               </ul>

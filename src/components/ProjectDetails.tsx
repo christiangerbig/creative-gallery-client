@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { ProjectItem } from "../typeDefinitions";
 import ExternalLink from "./ExternalLink";
 
@@ -7,7 +7,7 @@ type ProjectDetailsProps = {
 };
 
 const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
-  const descriptionContainerRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
   const {
     projectName,
     projectPicturePath,
@@ -17,17 +17,6 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
     gitHubClientPath,
     gitHubServerPath,
   } = projectItem;
-
-  useEffect(() => {
-    const setDescriptionText = (
-      elementRef: RefObject<HTMLDivElement>,
-      text: string
-    ): void => {
-      (elementRef as any).current.innerHTML = text;
-    };
-
-    setDescriptionText(descriptionContainerRef, projectDescription);
-  }, []);
 
   return (
     <div className="projectDetailsContainer">
@@ -44,10 +33,9 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
           <header>
             <h2> {projectName} </h2>
           </header>
-          <div
-            ref={descriptionContainerRef}
-            className="descriptionContainer"
-          ></div>
+          <div className="descriptionContainer">
+            <p> {projectDescription} </p>
+          </div>
         </article>
       </div>
       <div className="projectLinksContainer">
@@ -55,23 +43,25 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
           <ExternalLink
             linkPath={deployedPath}
             linkClass="projectTryItLink"
-            linkText="TRY IT"
+            linkText={t("projects.projectDetails.startApp")}
           />
         </div>
         <div>
           <ExternalLink
             linkPath={gitHubClientPath}
             linkClass="projectGitHubLink"
-            linkText="GIT HUB"
+            linkText={t("projects.projectDetails.gitHubClient")}
           />
         </div>
-        <div hidden={gitHubServerPath ? false : true}>
-          <ExternalLink
-            linkPath={gitHubServerPath}
-            linkClass="projectGitHubLink"
-            linkText="GIT HUB 2"
-          />
-        </div>
+        {gitHubServerPath && (
+          <div>
+            <ExternalLink
+              linkPath={gitHubServerPath}
+              linkClass="projectGitHubLink"
+              linkText={t("projects.projectDetails.gitHubServer")}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
