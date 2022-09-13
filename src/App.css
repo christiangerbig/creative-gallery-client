@@ -826,7 +826,7 @@ form h3 {
 
 .error-output {
   text-align: center;
-  width: 80%;
+  margin: 0.5rem;
 }
 
 /* Page not found */

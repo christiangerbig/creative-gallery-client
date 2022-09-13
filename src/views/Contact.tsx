@@ -107,7 +107,7 @@ const Contact = (): JSX.Element => {
           </h3>
         </div>
         {errorMessage && (
-          <p className="error-output is-danger"> {errorMessage} </p>
+          <span className="error-output is-danger"> {errorMessage} </span>
         )}
         <ContactForm
           isCreatingRequest={isCreatingRequest}
