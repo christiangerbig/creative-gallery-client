@@ -19,7 +19,7 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
   } = projectItem;
 
   return (
-    <div className="projectDetailsContainer">
+    <div className="project-details-container">
       <video
         width="320"
         height="200"
@@ -28,28 +28,28 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
         poster={projectPicturePath}
         src={projectVideoPath}
       />
-      <div className="projectDescription">
+      <div className="project-description">
         <article>
           <header>
             <h2> {projectName} </h2>
           </header>
-          <div className="descriptionContainer">
+          <div className="project-description-container">
             <p> {projectDescription} </p>
           </div>
         </article>
       </div>
-      <div className="projectLinksContainer">
+      <div className="project-links-container">
         <div>
           <ExternalLink
             linkPath={deployedPath}
-            linkClass="projectTryItLink"
+            linkClass="project-try-it-link"
             linkText={t("projects.projectDetails.startApp")}
           />
         </div>
         <div>
           <ExternalLink
             linkPath={gitHubClientPath}
-            linkClass="projectGitHubLink"
+            linkClass="project-github-link"
             linkText={t("projects.projectDetails.gitHubClient")}
           />
         </div>
@@ -57,7 +57,7 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
           <div>
             <ExternalLink
               linkPath={gitHubServerPath}
-              linkClass="projectGitHubLink"
+              linkClass="project-github-link"
               linkText={t("projects.projectDetails.gitHubServer")}
             />
           </div>

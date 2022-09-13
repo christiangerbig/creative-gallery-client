@@ -19,13 +19,13 @@ const NavDesktopViewItems = (): JSX.Element => {
     menuItem: MenuItem
   ): string => {
     return currentMenuItem === menuItem
-      ? "navigationLink navigationLinkActive"
-      : "navigationLink";
+      ? "navigation-link is-navigation-link-active"
+      : "navigation-link";
   };
 
   return (
-    <div className="navigationContainer">
-      <ul className="navigationSubContainerLeft">
+    <div className="navigation-container">
+      <ul className="navigation-subcontainer-left navigation-list">
         <li>
           <Link
             to={"/about"}
@@ -56,15 +56,15 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("techStack"));
             }}
           >
-            {t("navigation.techstack")}
+            {t("navigation.techStack")}
           </Link>
         </li>
       </ul>
-      <ul className="navigationSubContainerRight">
+      <ul className="navigation-subcontainer-right navigation-list">
         <li>
           <ExternalLink
             linkPath={resumePath}
-            linkClass="navigationLink"
+            linkClass="navigation-link"
             linkText={t("navigation.resume")}
           />
         </li>

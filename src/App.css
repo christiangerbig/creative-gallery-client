@@ -12,44 +12,44 @@ body {
 }
 
 /* Main classes */
-.textBig {
+.is-text-large-size {
   font-size: 2rem;
 }
 
-.textMed {
+.is-text-medium-size {
   font-size: 2.5rem;
 }
 
-.textFat {
+.is-text-xlarge-size {
   font-size: 3.1rem;
 }
 
-.textBold {
+.is-text-bold {
   font-weight: bold;
 }
 
-.textstylePlain {
+.is-text-style-plain {
   text-decoration: none;
 }
 
-.colorBlack {
+.is-black {
   color: black;
 }
 
-.colorWhite {
+.is-white {
   color: #eeecec;
 }
 
-.colorOrange {
+.is-warning {
   color: orange;
 }
 
-.warningColor {
+.is-danger {
   color: red;
 }
 
 /* Fader routines */
-@keyframes fadePageIn {
+@keyframes fade-page-in {
   from {
     opacity: 0;
   }
@@ -58,7 +58,7 @@ body {
   }
 }
 
-@keyframes fadePageOut {
+@keyframes fade-page-out {
   from {
     opacity: 1;
   }
@@ -67,7 +67,7 @@ body {
   }
 }
 
-@keyframes fadeTextIn {
+@keyframes zoom-text-in {
   from {
     font-size: 0;
   }
@@ -76,7 +76,7 @@ body {
   }
 }
 
-@keyframes fadeTextOut {
+@keyframes zoom-text-out {
   from {
     font-size: 100%;
   }
@@ -85,7 +85,7 @@ body {
   }
 }
 
-@keyframes blurrElementIn {
+@keyframes blur-element-in {
   from {
     filter: blur(100px);
   }
@@ -106,7 +106,7 @@ nav {
   backdrop-filter: blur(15px);
 }
 
-.navbarContainer {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,13 +117,13 @@ nav {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .navbarContainer {
+  .navbar-container {
     margin-left: 4.2rem;
     margin-right: 2.2rem;
   }
 }
 
-.logoContainer {
+.logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,14 +134,14 @@ nav {
   padding: 0;
 }
 
-.logoSubContainer {
+.logo-subcontainer {
   display: flex;
   background-color: #eeecec;
   padding: 0.3rem;
   border-radius: 4.5px;
 }
 
-.logoLetterOutlineC {
+.logo-letter-c-outline {
   width: 1.32rem;
   height: 1.8rem;
   background-color: black;
@@ -149,7 +149,7 @@ nav {
   margin-right: 0.3rem;
 }
 
-.logoLetterInlineC {
+.logo-letter-c-inline {
   width: 1.08rem;
   height: 1.26rem;
   background: #eeecec;
@@ -159,14 +159,14 @@ nav {
   border-radius: 50% 0 0 50%;
 }
 
-.logoLetterOutlineG {
+.logo-letter-g-outline {
   width: 1.44rem;
   height: 1.8rem;
   background-color: black;
   border-radius: 0 50% 50% 0;
 }
 
-.logoLetterInlineG {
+.logo-letter-g-inline {
   width: 1.18rem;
   height: 1.26rem;
   background-color: #eeecec;
@@ -177,7 +177,7 @@ nav {
   border-radius: 0 50% 50% 0;
 }
 
-.logoLetterBoxG {
+.logo-letter-g-box {
   width: 0.27rem;
   height: 0.63rem;
   background-color: #eeecec;
@@ -185,35 +185,35 @@ nav {
   padding-top: 0.63rem;
 }
 
-.logoLetterBoxG2 {
+.logo-letter-g-box2 {
   width: 0.25rem;
   height: 0.27rem;
   background-color: black;
   padding-top: 0.63rem;
 }
 
-.navigationContainer {
+.navigation-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.navigationSubContainerLeft {
+.navigation-subcontainer-left {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-inline-start: 0;
 }
 
-.navigationSubContainerRight {
+.navigation-subcontainer-right {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-inline-start: 0;
 }
 
-.navigationLink {
+.navigation-link {
   font-size: 1rem;
   display: inline-block;
   text-decoration: none;
@@ -224,17 +224,17 @@ nav {
   transition: all 0.5s;
 }
 
-.navigationLink:hover {
+.navigation-link:hover {
   background-color: #eeecec;
   color: black;
 }
 
-.navigationLinkActive {
+.is-navigation-link-active {
   background-color: #eeecec;
   color: black;
 }
 
-ul {
+.navigation-list {
   list-style: none;
   padding-left: 0;
 }
@@ -254,21 +254,21 @@ ul {
   backdrop-filter: blur(15px);
 }
 
-.fadeMenuIn {
-  animation: fadePageIn 1s forwards;
+.fade-menu-in {
+  animation: fade-page-in 1s forwards;
 }
 
-.fadeMenuOut {
-  animation: fadePageOut 0.5s forwards;
+.fade-menu-out {
+  animation: fade-page-out 0.5s forwards;
 }
 
-.menuContainer {
+.menu-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menuCloseContainer {
+.close-menu-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -276,16 +276,16 @@ ul {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .menuCloseContainer {
+  .close-menu-container {
     margin-right: 2.3rem;
   }
 }
 
-.menuClose {
+.close-menu {
   margin-top: 2.5rem;
 }
 
-.menuSubContainer {
+.menu-subcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,56 +294,56 @@ ul {
   margin-top: 0;
 }
 
-.menuSubContainer li {
+.menu-subcontainer li {
   margin-bottom: 2rem;
 }
 
-.menuLink {
+.menu-link {
   text-decoration: none;
 }
 
-.menuLinkFadeInSpeed1 {
-  animation: fadeTextIn 0.1s forwards;
+.menu-link-fade-in-speed1 {
+  animation: zoom-text-in 0.1s forwards;
 }
 
-.menuLinkFadeInSpeed2 {
-  animation: fadeTextIn 0.25s forwards;
+.menu-link-fade-in-speed2 {
+  animation: zoom-text-in 0.25s forwards;
 }
 
-.menuLinkFadeInSpeed3 {
-  animation: fadeTextIn 0.5s forwards;
+.menu-link-fade-in-speed3 {
+  animation: zoom-text-in 0.5s forwards;
 }
 
-.menuLinkFadeInSpeed4 {
-  animation: fadeTextIn 1s forwards;
+.menu-link-fade-in-speed4 {
+  animation: zoom-text-in 1s forwards;
 }
 
-.menuLinkFadeInSpeed5 {
-  animation: fadeTextIn 1.2s forwards;
+.menu-link-fade-in-speed5 {
+  animation: zoom-text-in 1.2s forwards;
 }
 
-.menuLinkFadeOutSpeed1 {
-  animation: fadeTextOut 0.05s forwards;
+.menu-link-fade-out-speed1 {
+  animation: zoom-text-out 0.05s forwards;
 }
 
-.menuLinkFadeOutSpeed2 {
-  animation: fadeTextOut 0.1s forwards;
+.menu-link-fade-out-speed2 {
+  animation: zoom-text-out 0.1s forwards;
 }
 
-.menuLinkFadeOutSpeed3 {
-  animation: fadeTextOut 0.25s forwards;
+.menu-link-fade-out-speed3 {
+  animation: zoom-text-out 0.25s forwards;
 }
 
-.menuLinkFadeOutSpeed4 {
-  animation: fadeTextOut 0.5s forwards;
+.menu-link-fade-out-speed4 {
+  animation: zoom-text-out 0.5s forwards;
 }
 
-.menuLinkFadeOutSpeed5 {
-  animation: fadeTextOut 1s forwards;
+.menu-link-fade-out-speed5 {
+  animation: zoom-text-out 1s forwards;
 }
 
-.blurrIn {
-  animation: blurrElementIn 1.5s forwards;
+.blur-in {
+  animation: blur-element-in 1.5s forwards;
 }
 
 /* Header */
@@ -360,7 +360,7 @@ ul {
   }
 }
 
-.headerText {
+.header-text {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -370,35 +370,35 @@ ul {
   margin-left: 3rem;
 }
 
-.headerText h1 {
+.header-text h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-.headerText h2 {
+.header-text h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .headerText {
+  .header-text {
     margin-left: 2rem;
   }
 }
 
-.blueBorder {
+.is-border-blue {
   border-left: solid #1f6fe1 10px;
 }
 
-.greenBorder {
+.is-border-green {
   border-left: solid #32a852 10px;
 }
 
-.orangeBorder {
+.is-border-orange {
   border-left: solid orange 10px;
 }
 
-.violetBorder {
+.is-border-violet {
   border-left: solid #933dba 10px;
 }
 
@@ -408,7 +408,7 @@ footer {
   color: #eeecec;
 }
 
-.footerContainer {
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,24 +419,24 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .footerContainer {
+  .footer-container {
     flex-wrap: wrap;
   }
 }
 
-.copyrightText {
+.copyright-text {
   font-size: 1rem;
   margin-right: 1rem;
 }
 
-.footerSubContainer {
+.footer-subcontainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0;
 }
 
-.footerLink {
+.footer-link {
   background-color: black;
   color: #eeecec;
   padding: 0.1rem 0.3rem;
@@ -444,27 +444,27 @@ footer {
   margin-right: 0.2rem;
 }
 
-/* Home page */
-.homePageContainer {
+/* Home */
+.home-page-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   height: 25rem;
-  animation: fadePageIn 1s forwards;
+  animation: fade-page-in 1s forwards;
   color: #eeecec;
   margin-top: 8rem;
   margin-bottom: 8rem;
 }
 
-.homeLogoSubContainer {
+.home-logo-subcontainer {
   display: flex;
   background-color: #eeecec;
   padding: 1rem;
   border-radius: 20px;
 }
 
-.homeLogoLetterOutlineC {
+.home-logo-letter-c-outline {
   width: 6rem;
   height: 8rem;
   background-color: black;
@@ -472,7 +472,7 @@ footer {
   margin-right: 1.1rem;
 }
 
-.homeLogoLetterInlineC {
+.home-logo-letter-c-inline {
   width: 4.8rem;
   height: 5.6rem;
   background: #eeecec;
@@ -482,14 +482,14 @@ footer {
   border-radius: 50% 0 0 50%;
 }
 
-.homeLogoLetterOutlineG {
+.home-logo-letter-g-outline {
   width: 6rem;
   height: 8rem;
   background-color: black;
   border-radius: 0 50% 50% 0;
 }
 
-.homeLogoLetterInlineG {
+.home-logo-letter-g-inline {
   width: 4.8rem;
   height: 5.6rem;
   background-color: #eeecec;
@@ -500,7 +500,7 @@ footer {
   border-radius: 0 50% 50% 0;
 }
 
-.homeLogoLetterBoxG {
+.home-logo-letter-g-box {
   width: 1.2rem;
   height: 2.8rem;
   background-color: #eeecec;
@@ -508,30 +508,30 @@ footer {
   padding-top: 2.8rem;
 }
 
-.homeLogoLetterBoxG2 {
+.home-logo-letter-g-box2 {
   width: 1.2rem;
   height: 1.2rem;
   background-color: black;
   padding-top: 2.8rem;
 }
 
-/* About page */
-.aboutPageContainer {
+/* About */
+.about-page-container {
   display: flex;
   flex-direction: column;
   color: #eeecec;
   margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
+  animation: fade-page-in 1s forwards;
 }
 
-.textContainer {
+.about-text-container {
   display: flex;
   justify-content: center;
   margin: 3rem 0 4rem 4rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .textContainer {
+  .about-text-container {
     align-items: center;
     flex-wrap: wrap;
     margin-right: 0;
@@ -540,36 +540,36 @@ footer {
   }
 }
 
-.textColumContainer {
+.about-text-colum-container {
   width: 50%;
   padding-right: 5rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .textColumContainer {
+  .about-text-colum-container {
     width: 100%;
     padding-right: 3rem;
   }
 }
 
-.aboutContactLink a {
+.about-contact-link a {
   text-decoration: none;
   color: #1f6fe1;
   transition: all 0.5s;
 }
 
-.aboutContactLink a:hover {
+.about-contact-link a:hover {
   color: #7eacfc;
 }
 
-/* Projects page */
-.projectsPageContainer {
+/* Projects */
+.projects-page-container {
   color: #eeecec;
   margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
+  animation: fade-page-in 1s forwards;
 }
 
-.projectsContainer {
+.projects-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -580,7 +580,7 @@ footer {
   margin-right: 2.2rem;
 }
 
-.projectDetailsContainer {
+.project-details-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -589,27 +589,27 @@ footer {
   margin: 0 1.5rem 1rem 1.5rem;
 }
 
-.projectDescription {
+.project-description {
   color: #eeecec;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.projectDescription article p {
+.project-description article p {
   font-size: 1rem;
   width: 280px;
 }
 
-.projectDescription article header h2 {
+.project-description article header h2 {
   font-size: 1.7rem;
   margin: 1.6rem 0 0.6rem 0;
 }
 
-.descriptionContainer p {
+.project-description-container p {
   margin-bottom: 2.5rem;
 }
 
-.projectLinksContainer {
+.project-links-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -619,7 +619,7 @@ footer {
   padding-bottom: 1.5rem;
 }
 
-.projectTryItLink {
+.project-try-it-link {
   display: inline-block;
   text-decoration: none;
   font-size: 0.9rem;
@@ -631,11 +631,11 @@ footer {
   transition: all 1s;
 }
 
-.projectTryItLink:hover {
+.project-try-it-link:hover {
   background-color: #32a852;
 }
 
-.projectGitHubLink {
+.project-github-link {
   display: inline-block;
   text-decoration: none;
   font-size: 0.9rem;
@@ -647,18 +647,18 @@ footer {
   transition: all 1s;
 }
 
-.projectGitHubLink:hover {
+.project-github-link:hover {
   background-color: #3271a8;
 }
 
-/* TechStack page */
-.techStackPageContainer {
+/* Tech stack */
+.tech-stack-page-container {
   color: #eeecec;
   margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
+  animation: fade-page-in 1s forwards;
 }
 
-.techStackLogosContainer {
+.tech-stack-logos-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -667,19 +667,24 @@ footer {
   margin: 4rem 4rem 6rem;
 }
 
-.techStackLogosContainer img {
-  width: 5rem;
+.tech-stack-logo {
+  width: 4.5rem;
   margin: 1rem;
 }
 
-/* Contact page */
-.contactPageContainer {
-  color: #eeecec;
-  margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
+.tech-stack-logo img {
+  width: 100%;
+  height: auto;
 }
 
-.contactContainer {
+/* Contact */
+.contact-page-container {
+  color: #eeecec;
+  margin-top: 8rem;
+  animation: fade-page-in 1s forwards;
+}
+
+.contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -694,33 +699,33 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .contactContainer {
+  .contact-container {
     width: 66%;
   }
-  .contactContainer h1 {
+  .contact-container h1 {
     margin-top: 2rem;
     margin-bottom: 0;
   }
-  .contactContainer h2 {
+  .contact-container h2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
   }
 }
 
-.contactWaysContainer {
+.contact-ways-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.contactWaysContainer div {
+.contact-ways-container div {
   padding-top: 0rem;
   padding-right: 5%;
   padding-left: 5%;
 }
 
-.contactEmailContainer {
+.contact-email-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -728,16 +733,16 @@ footer {
   flex-wrap: wrap;
 }
 
-.contactEmailContainer h3 {
+.contact-email-container h3 {
   margin-bottom: 0.6rem;
 }
 
-.contactEmailContainer h4 {
+.contact-email-container h4 {
   margin-top: 0rem;
   margin-bottom: 0.7rem;
 }
 
-.contactPhoneContainer {
+.contact-phone-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -745,22 +750,22 @@ footer {
   flex-wrap: wrap;
 }
 
-.contactPhoneContainer h3 {
+.contact-phone-container h3 {
   margin-bottom: 0.6rem;
 }
 
-.contactPhoneContainer h4 {
+.contact-phone-container h4 {
   margin-top: 0rem;
   margin-bottom: 0.7rem;
 }
 
-.contactLink a {
+.contact-link a {
   text-decoration: none;
   color: #1f6fe1;
   transition: all 0.5s;
 }
 
-.contactLink a:hover {
+.contact-link a:hover {
   color: #7eacfc;
 }
 
@@ -776,7 +781,7 @@ form h3 {
   margin-bottom: 0.3rem;
 }
 
-.formInput {
+.form-input {
   width: 100%;
   padding: 0.3rem;
   border: none;
@@ -784,12 +789,12 @@ form h3 {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .formInput {
+  .form-input {
     width: 80%;
   }
 }
 
-.formTextarea {
+.form-textarea {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   width: 100%;
   background-color: #eeecec;
@@ -799,12 +804,12 @@ form h3 {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .formTextarea {
+  .form-textarea {
     width: 80%;
   }
 }
 
-.formSubmit {
+.form-submit {
   width: auto;
   font-size: 0.9rem;
   background-color: black;
@@ -815,23 +820,23 @@ form h3 {
   transition: all 0.5s;
 }
 
-.formSubmit:hover {
+.form-submit:hover {
   background-color: #32a852;
 }
 
-.errorOutput {
+.error-output {
   text-align: center;
   width: 80%;
 }
 
-/* Not found page */
-.notFoundPageContainer {
+/* Page not found */
+.page-not-found-container {
   color: #eeecec;
   margin-top: 8rem;
-  animation: fadePageIn 1s forwards;
+  animation: fade-page-in 1s forwards;
 }
 
-.notFoundGetBackContainer {
+.page-not-found-get-back-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -840,7 +845,7 @@ form h3 {
   margin: 4rem;
 }
 
-.notFoundGetBackLink {
+.page-not-found-get-back-link {
   display: inline-block;
   text-decoration: none;
   font-size: 0.9rem;
@@ -852,7 +857,7 @@ form h3 {
   transition: all 0.5s;
 }
 
-.notFoundGetBackLink:hover {
+.page-not-found-get-back-link:hover {
   background-color: #32a852;
 }
 /*# sourceMappingURL=App.css.map */

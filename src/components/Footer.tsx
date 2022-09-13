@@ -10,23 +10,23 @@ const Footer = (): JSX.Element => {
   return (
     <div>
       <footer>
-        <div className="footerContainer">
-          <span className="copyrightText">
+        <div className="footer-container">
+          <span className="copyright-text">
             {" "}
             {t("footer.copyright")} {year} {t("footer.appAuthor")}{" "}
           </span>
-          <ul className="footerSubContainer">
+          <ul className="footer-subcontainer navigation-list">
             <li>
               <ExternalLink
                 linkPath={linkedInPath}
-                linkClass="footerLink"
+                linkClass="footer-link"
                 faClass="fa-linkedin"
               />
             </li>
             <li>
               <ExternalLink
                 linkPath={gitHubPath}
-                linkClass="footerLink"
+                linkClass="footer-link"
                 faClass="fa-github"
               />
             </li>

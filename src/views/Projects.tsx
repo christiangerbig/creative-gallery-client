@@ -14,7 +14,7 @@ const Projects = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="projectsPageContainer">
+    <div className="projects-page-container">
       <header className="headline">
         <HeaderText
           headlines={{
@@ -24,7 +24,7 @@ const Projects = (): JSX.Element => {
           borderColorName={"orange"}
         />
       </header>
-      <div className="projectsContainer">
+      <div className="projects-container">
         {projects.map(
           (projectItem: ProjectItem, index: number): JSX.Element => {
             return <ProjectDetails projectItem={projectItem} key={index} />;

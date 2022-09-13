@@ -3,7 +3,7 @@ const en = {
     navigation: {
       about: "ABOUT",
       projects: "PROJECTS",
-      techstack: "TECHSTACK",
+      techStack: "TECHSTACK",
       resume: "RESUME",
       contact: "CONTACT",
     },

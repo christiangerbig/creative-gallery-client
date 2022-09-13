@@ -2,86 +2,87 @@
 
 $white: rgb(238, 236, 236)
 $dark: rgb(40,40,40)
+$dark2: rgb(15,15,15)
+$black: rgb(0,0,0)
 $lightGreen: rgb(50, 168, 82)
 $blue: rgb(50, 113, 168)
 $blue2: rgb(31,	111,225)
-$lightBlue: rgb(126, 172, 252)
-$lightGrey: rgb(84,84, 84)
-$dark2: rgb(15,15,15)
+$light-blue: rgb(126, 172, 252)
+$light-grey: rgb(84,84, 84)
 $violet: rgb(147, 61, 186)
+$orange: rgb(255,165,0)
+$red: rgb(255,0,0)
 
 
 html, 
 body 
-  background-color: black
-
+  background-color: $black
   /* Height and width fallback for older browsers. */
   height: 100%
   width: 100%
   /* Set the height to match that of the viewport. */
   height: 100vh
-
   /* Remove any browser-default margins. */
   margin: 0
 
 
 /* Main classes */
 
-.textBig
+.is-text-large-size
   font-size: 2rem
 
-.textMed
+.is-text-medium-size
   font-size: 2.5rem
 
-.textFat
+.is-text-xlarge-size
   font-size: 3.1rem
 
-.textBold
+.is-text-bold
   font-weight: bold
 
-.textstylePlain
+.is-text-style-plain
   text-decoration: none
 
-.colorBlack
-  color: black
+.is-black
+  color: $black
 
-.colorWhite
+.is-white
   color: $white
 
-.colorOrange
-  color: orange
+.is-warning
+  color: $orange
 
-.warningColor 
-  color: red
+.is-danger
+  color: $red
 
 
 /* Fader routines */
 
-@keyframes fadePageIn 
+@keyframes fade-page-in 
   from
     opacity: 0
   to
     opacity: 1
 
-@keyframes fadePageOut 
+@keyframes fade-page-out 
   from
     opacity: 1
   to
     opacity: 0
 
-@keyframes fadeTextIn
+@keyframes zoom-text-in
   from
     font-size: 0
   to
     font-size: 100%
 
-@keyframes fadeTextOut
+@keyframes zoom-text-out
   from
     font-size: 100%
   to
     font-size: 0
 
-@keyframes blurrElementIn
+@keyframes blur-element-in
   from
     filter: blur(100px)
   to
@@ -90,7 +91,7 @@ body
 
 /* Navigation Bar */
 
-nav 
+nav
   position: fixed
   top: 0
   left: 0
@@ -100,7 +101,7 @@ nav
   color: $white
   backdrop-filter: blur(15px)
     
-.navbarContainer
+.navbar-container
   display: flex
   justify-content: space-between
   align-items: center
@@ -112,12 +113,12 @@ nav
     bottom: 0.5rem
 
 @media (min-width: 320px) and (max-width: 480px)
-  .navbarContainer
+  .navbar-container
     margin:
       left: 4.2rem
       right: 2.2rem
 
-.logoContainer
+.logo-container
   display: flex
   justify-content: center
   align-items: center
@@ -127,20 +128,20 @@ nav
   white-space: nowrap;
   padding: 0
 
-.logoSubContainer
+.logo-subcontainer
   display: flex
   background-color: $white
   padding: 0.3rem
   border-radius: 4.5px
 
-.logoLetterOutlineC
+.logo-letter-c-outline
   width: 1.32rem
   height: 1.8rem
   background-color: black
   border-radius: 50% 0 0 50%
   margin-right: 0.3rem
 
-.logoLetterInlineC
+.logo-letter-c-inline
   width: 1.08rem
   height: 1.26rem
   background: $white
@@ -150,13 +151,13 @@ nav
     left: 0.27rem
   border-radius: 50% 0 0 50%
 
-.logoLetterOutlineG
+.logo-letter-g-outline
   width: 1.44rem
   height: 1.8rem
-  background-color: black
+  background-color: $black
   border-radius: 0 50% 50% 0
 
-.logoLetterInlineG
+.logo-letter-g-inline
   width: 1.18rem
   height: 1.26rem
   background-color: $white
@@ -167,38 +168,38 @@ nav
     left: 0
   border-radius: 0 50% 50% 0
 
-.logoLetterBoxG
+.logo-letter-g-box
   width: 0.27rem
   height: 0.63rem
   background-color: $white
   margin-bottom: 0
   padding-top: 0.63rem
 
-.logoLetterBoxG2
+.logo-letter-g-box2
   width: 0.25rem
   height: 0.27rem
-  background-color: black
+  background-color: $black
   padding-top: 0.63rem
 
-.navigationContainer
+.navigation-container
   display: flex
   justify-content: space-between
   align-items: center
   width: 100%
 
-.navigationSubContainerLeft
+.navigation-subcontainer-left
   display: flex
   justify-content: center
   align-items: center
   padding-inline-start: 0
 
-.navigationSubContainerRight
+.navigation-subcontainer-right
   display: flex
   justify-content: center
   align-items: center
   padding-inline-start: 0
 
-.navigationLink
+.navigation-link
   font-size: 1rem
   display: inline-block
   text-decoration: none
@@ -209,13 +210,13 @@ nav
   transition: all 0.5s
   &:hover 
     background-color: $white
-    color: black
+    color: $black
 
-.navigationLinkActive
+.is-navigation-link-active
   background-color: $white
-  color: black
+  color: $black
 
-ul
+.navigation-list
   list-style: none
   padding-left: 0
 
@@ -235,31 +236,31 @@ ul
   background-color: rgba(0, 0, 0, 0.7)
   backdrop-filter: blur(15px)
   
-.fadeMenuIn
-  animation: fadePageIn 1s forwards
+.fade-menu-in
+  animation: fade-page-in 1s forwards
 
-.fadeMenuOut
-  animation: fadePageOut 0.5s forwards
+.fade-menu-out
+  animation: fade-page-out 0.5s forwards
 
-.menuContainer
+.menu-container
   display: flex
   justify-content: center
   align-items: center
 
-.menuCloseContainer
+.close-menu-container
   display: flex
   justify-content: flex-end
   align-items: center
   margin-right: 4.3rem
 
 @media (min-width: 320px) and (max-width: 480px)
-  .menuCloseContainer
+  .close-menu-container
     margin-right: 2.3rem
 
-.menuClose
+.close-menu
   margin-top: 2.5rem
 
-.menuSubContainer
+.menu-subcontainer
   display: flex
   justify-content: center
   align-items: center
@@ -267,44 +268,44 @@ ul
   text-align: center
   margin-top: 0
   
-.menuSubContainer li
+.menu-subcontainer li
   margin-bottom: 2rem
 
-.menuLink
+.menu-link
   text-decoration: none
 
-.menuLinkFadeInSpeed1
-  animation: fadeTextIn 0.1s forwards
+.menu-link-fade-in-speed1
+  animation: zoom-text-in 0.1s forwards
 
-.menuLinkFadeInSpeed2
-  animation: fadeTextIn 0.25s forwards
+.menu-link-fade-in-speed2
+  animation: zoom-text-in 0.25s forwards
 
-.menuLinkFadeInSpeed3
-  animation: fadeTextIn 0.5s forwards
+.menu-link-fade-in-speed3
+  animation: zoom-text-in 0.5s forwards
 
-.menuLinkFadeInSpeed4
-  animation: fadeTextIn 1s forwards
+.menu-link-fade-in-speed4
+  animation: zoom-text-in 1s forwards
 
-.menuLinkFadeInSpeed5
-  animation: fadeTextIn 1.2s forwards
+.menu-link-fade-in-speed5
+  animation: zoom-text-in 1.2s forwards
 
-.menuLinkFadeOutSpeed1
-  animation: fadeTextOut 0.05s forwards
+.menu-link-fade-out-speed1
+  animation: zoom-text-out 0.05s forwards
 
-.menuLinkFadeOutSpeed2
-  animation: fadeTextOut 0.1s forwards
+.menu-link-fade-out-speed2
+  animation: zoom-text-out 0.1s forwards
 
-.menuLinkFadeOutSpeed3
-  animation: fadeTextOut 0.25s forwards
+.menu-link-fade-out-speed3
+  animation: zoom-text-out 0.25s forwards
 
-.menuLinkFadeOutSpeed4
-  animation: fadeTextOut 0.5s forwards
+.menu-link-fade-out-speed4
+  animation: zoom-text-out 0.5s forwards
 
-.menuLinkFadeOutSpeed5
-  animation: fadeTextOut 1s forwards
+.menu-link-fade-out-speed5
+  animation: zoom-text-out 1s forwards
 
-.blurrIn
-  animation: blurrElementIn 1.5s forwards
+.blur-in
+  animation: blur-element-in 1.5s forwards
 
 
 /* Header */
@@ -319,7 +320,7 @@ ul
     margin-left: 2rem
     margin-right: 3rem
 
-.headerText
+.header-text
   display: flex
   justify-content: center
   flex-direction: column
@@ -335,29 +336,29 @@ ul
     margin-bottom: 0
 
 @media (min-width: 320px) and (max-width: 480px)
-  .headerText
+  .header-text
     margin-left: 2rem
 
-.blueBorder
+.is-border-blue
   border-left: solid $blue2 10px
 
-.greenBorder
+.is-border-green
   border-left: solid $lightGreen 10px
 
-.orangeBorder
-  border-left: solid orange 10px
+.is-border-orange
+  border-left: solid $orange 10px
 
-.violetBorder
+.is-border-violet
   border-left: solid $violet 10px
 
 
 /* Footer */
 
 footer 
-  background-color: black
+  background-color: $black
   color: $white
 
-.footerContainer 
+.footer-container 
   display: flex
   justify-content: center
   align-items: center
@@ -369,20 +370,20 @@ footer
     bottom: 0.5rem
 
 @media (min-width: 320px) and (max-width: 767px)
-  .footerContainer 
+  .footer-container 
     flex-wrap: wrap
 
-.copyrightText
+.copyright-text
   font-size: 1rem
   margin-right: 1rem
 
-.footerSubContainer
+.footer-subcontainer
   display: flex
   justify-content: space-around
   align-items: center
   padding: 0
 
-.footerLink
+.footer-link
   background-color: black
   color: $white
   padding: 0.1rem 0.3rem
@@ -391,34 +392,34 @@ footer
     right: 0.2rem
 
 
-/* Home page */
+/* Home */
 
-.homePageContainer
+.home-page-container
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
   height: 25rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
   color: $white
   margin:
     top: 8rem
     bottom: 8rem
 
-.homeLogoSubContainer
+.home-logo-subcontainer
   display: flex
   background-color: $white
   padding: 1rem
   border-radius: 20px
 
-.homeLogoLetterOutlineC
+.home-logo-letter-c-outline
   width: 6rem
   height: 8rem
-  background-color: black
+  background-color: $black
   border-radius: 50% 0 0 50%
   margin-right: 1.1rem
 
-.homeLogoLetterInlineC
+.home-logo-letter-c-inline
   width: 4.8rem
   height: 5.6rem
   background: $white
@@ -428,13 +429,13 @@ footer
     left: 1.2rem
   border-radius: 50% 0 0 50%
 
-.homeLogoLetterOutlineG
+.home-logo-letter-g-outline
   width: 6rem
   height: 8rem
-  background-color: black
+  background-color: $black
   border-radius: 0 50% 50% 0
 
-.homeLogoLetterInlineG
+.home-logo-letter-g-inline
   width: 4.8rem
   height: 5.6rem
   background-color: $white
@@ -445,36 +446,36 @@ footer
     left: 0
   border-radius: 0 50% 50% 0
 
-.homeLogoLetterBoxG
+.home-logo-letter-g-box
   width: 1.2rem
   height: 2.8rem
   background-color: $white
   margin-bottom: 0
   padding-top: 2.8rem
 
-.homeLogoLetterBoxG2
+.home-logo-letter-g-box2
   width: 1.2rem
   height: 1.2rem
-  background-color: black
+  background-color: $black
   padding-top: 2.8rem
 
 
-/* About page */
+/* About */
 
-.aboutPageContainer 
+.about-page-container 
   display: flex
   flex-direction: column
   color: $white
   margin-top: 8rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
 
-.textContainer
+.about-text-container
   display: flex
   justify-content: center
   margin: 3rem 0 4rem 4rem
 
 @media (min-width: 320px) and (max-width: 767px)
-  .textContainer
+  .about-text-container
     align-items: center
     flex-wrap: wrap
     margin:
@@ -482,31 +483,31 @@ footer
       bottom: 4rem
       left: 4rem
     
-.textColumContainer
+.about-text-colum-container
   width: 50%
   padding-right: 5rem
 
 @media (min-width: 320px) and (max-width: 767px)
-  .textColumContainer
+  .about-text-colum-container
     width: 100%
     padding-right: 3rem
 
-.aboutContactLink a 
+.about-contact-link a 
   text-decoration: none
   color: $blue2
   transition: all 0.5s
   &:hover 
-    color: $lightBlue
+    color: $light-blue
 
 
-/* Projects page */
+/* Projects */
 
-.projectsPageContainer 
+.projects-page-container
   color: $white
   margin-top: 8rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
 
-.projectsContainer
+.projects-container
   display: flex
   justify-content: space-around
   align-items: center
@@ -517,7 +518,7 @@ footer
     left: 2.2rem
     right: 2.2rem
 
-.projectDetailsContainer 
+.project-details-container
   display: flex
   align-items: center
   flex-direction: column
@@ -525,7 +526,7 @@ footer
   border: solid 1px $dark
   margin: 0 1.5rem 1rem 1.5rem
 
-.projectDescription
+.project-description
   color: $white
   padding:
     left: 1rem
@@ -539,11 +540,11 @@ footer
         font-size: 1.7rem 
         margin: 1.6rem 0 0.6rem 0
 
-.descriptionContainer
+.project-description-container
   p
     margin-bottom: 2.5rem
 
-.projectLinksContainer 
+.project-links-container 
   display: flex
   justify-content: space-around
   align-items: center
@@ -553,7 +554,7 @@ footer
     bottom: 1.5rem
   padding-bottom: 1.5rem
   
-.projectTryItLink 
+.project-try-it-link  
   display: inline-block
   text-decoration: none
   font-size: 0.9rem
@@ -567,7 +568,7 @@ footer
   &:hover 
     background-color: $lightGreen
 
-.projectGitHubLink 
+.project-github-link  
   display: inline-block
   text-decoration: none
   font-size: 0.9rem
@@ -582,33 +583,36 @@ footer
     background-color: $blue
 
 
-/* TechStack page */
+/* Tech stack */
 
-.techStackPageContainer
+.tech-stack-page-container
   color: $white 
   margin-top: 8rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
 
-.techStackLogosContainer
+.tech-stack-logos-container
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
   background-color: $white
   margin: 4rem 4rem 6rem
+
+.tech-stack-logo
+  width: 4.5rem
+  margin: 1rem
   img
-    width: 5rem
-    margin: 1rem
+    width: 100%
+    height: auto
+  
+/* Contact */
 
-
-/* Contact page */
-
-.contactPageContainer
+.contact-page-container
   color: $white
   margin-top: 8rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
 
-.contactContainer 
+.contact-container 
   display: flex
   justify-content: center
   align-items: center
@@ -622,7 +626,7 @@ footer
   margin: 4rem auto
 
 @media (min-width: 320px) and (max-width: 767px)
-  .contactContainer 
+  .contact-container 
     width: 66%
     h1 
       margin:
@@ -633,7 +637,7 @@ footer
         top: 0.5rem
         bottom: 0
 
-.contactWaysContainer 
+.contact-ways-container  
   display: flex
   justify-content: center
   align-items: center
@@ -644,7 +648,7 @@ footer
       right: 5%
       left: 5%
 
-.contactEmailContainer
+.contact-email-container
   display: flex
   justify-content: center
   align-items: center
@@ -658,7 +662,7 @@ footer
       top: 0rem
       bottom: 0.7rem
 
-.contactPhoneContainer
+.contact-phone-container
   display: flex
   justify-content: center
   align-items: center
@@ -672,12 +676,12 @@ footer
       top: 0rem
       bottom: 0.7rem
 
-.contactLink a 
+.contact-link a 
   text-decoration: none
   color: $blue2
   transition: all 0.5s
   &:hover 
-    color: $lightBlue
+    color: $light-blue
 
 form
   display: flex
@@ -688,17 +692,17 @@ form
     padding-bottom: 0
     margin-bottom: 0.3rem
 
-.formInput
+.form-input
   width: 100%
   padding: 0.3rem
   border: none
   margin-bottom: 1rem
 
 @media (min-width: 320px) and (max-width: 767px)
-  .formInput 
+  .form-input 
       width: 80%
 
-.formTextarea 
+.form-textarea 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
   width: 100%
   background-color: $white
@@ -707,10 +711,10 @@ form
   margin-bottom: 1rem
 
 @media (min-width: 320px) and (max-width: 767px)
-  .formTextarea 
+  .form-textarea 
     width: 80%
 
-.formSubmit
+.form-submit
   width: auto
   font-size: 0.9rem
   background-color: black
@@ -722,19 +726,19 @@ form
   &:hover 
     background-color: $lightGreen
 
-.errorOutput
+.error-output
   text-align: center
   width: 80%
 
 
-/* Not found page */
+/* Page not found */
 
-.notFoundPageContainer
+.page-not-found-container
   color: $white
   margin-top: 8rem
-  animation: fadePageIn 1s forwards
+  animation: fade-page-in 1s forwards
 
-.notFoundGetBackContainer 
+.page-not-found-get-back-container 
   display: flex
   justify-content: center
   align-items: center
@@ -742,7 +746,7 @@ form
   border: solid $dark 1px
   margin: 4rem
 
-.notFoundGetBackLink 
+.page-not-found-get-back-link 
   display: inline-block
   text-decoration: none
   font-size: 0.9rem

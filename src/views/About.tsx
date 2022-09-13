@@ -15,7 +15,7 @@ const About = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="aboutPageContainer">
+    <div className="about-page-container">
       <header className="headline">
         <HeaderText
           headlines={{
@@ -25,8 +25,8 @@ const About = (): JSX.Element => {
           borderColorName={"green"}
         />
       </header>
-      <div className="textContainer">
-        <div className="textColumContainer">
+      <div className="about-text-container">
+        <div className="about-text-colum-container">
           <article>
             <header>
               <h3> {t("about.personalDetails.headline")} </h3>
@@ -37,7 +37,7 @@ const About = (): JSX.Element => {
             <p> {t("about.personalDetails.paragraph4")} </p>
           </article>
         </div>
-        <div className="textColumContainer">
+        <div className="about-text-colum-container">
           <article>
             <header>
               <h3> {t("about.experience.headline")} </h3>
@@ -48,7 +48,7 @@ const About = (): JSX.Element => {
             <p> {t("about.experience.paragraph4")} </p>
             <p>
               <span
-                className="aboutContactLink"
+                className="about-contact-link"
                 onClick={() => dispatch(setMenuItem("contact"))}
               >
                 <Link to={{ pathname: "/contact" }}>

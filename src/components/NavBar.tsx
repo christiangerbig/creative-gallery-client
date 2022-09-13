@@ -69,11 +69,11 @@ const NavBar = (): JSX.Element => {
   return (
     <div>
       <nav>
-        <div className="navbarContainer navbarBorder">
-          <div className="logoContainer">
+        <div className="navbar-container navbar-border">
+          <div className="logo-container">
             <Link
               to={"/"}
-              className="textstylePlain colorWhite"
+              className="is-text-style-plain is-white"
               onClick={() => {
                 dispatch(setMenuItem("home"));
               }}

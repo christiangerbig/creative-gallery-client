@@ -28,7 +28,7 @@ const ExternalLink = ({
         {linkText ? (
           linkText
         ) : faClass ? (
-          <i className={`fab ${faClass} textColorWhite`} />
+          <i className={`fab ${faClass} is-white`} />
         ) : null}
       </Link>
     </>

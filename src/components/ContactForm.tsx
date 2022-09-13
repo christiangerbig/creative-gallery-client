@@ -22,27 +22,27 @@ const ContactForm = ({
           type="email"
           name={t("contact.contactForm.inputEmail")}
           placeholder="email"
-          className="formInput"
+          className="form-input"
         />
         <input
           type="text"
           name={t("contact.contactForm.inputSubject")}
           placeholder="subject"
-          className="formInput"
+          className="form-input"
         />
         <textarea
           name="message"
           placeholder={t("contact.contactForm.inputMessage")}
           cols={35}
           rows={7}
-          className="formTextarea"
+          className="form-textarea"
         />
         <input
           type="submit"
           value={t("contact.contactForm.submit")}
           disabled={isCreatingRequest ? true : false}
           formNoValidate
-          className="formSubmit"
+          className="form-submit"
         />
       </form>
     </>

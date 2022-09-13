@@ -51,33 +51,33 @@ const Menu = (): JSX.Element => {
     fadeOutSpeed: string
   ): string => {
     return isOpenMenu
-      ? `menuLink colorOrange ${fadeInSpeed}`
+      ? `menu-link is-warning ${fadeInSpeed}`
       : isCloseMenu
-      ? `menuLink colorOrange ${fadeOutSpeed}`
-      : "menuLink colorOrange";
+      ? `menu-link is-warning ${fadeOutSpeed}`
+      : "menu-link is-warning";
   };
 
   return (
     <>
       {!isDesktop && isMenuVisible && (
         <div className={menuProperties(isOpenMenu)}>
-          <div className="menuCloseContainer">
+          <div className="close-menu-container">
             <FontAwesomeIcon
               icon={faTimes}
-              className="menuClose colorWhite"
+              className="close-menu is-white"
               onClick={handleCloseMenu}
             />
           </div>
-          <div className="menuContainer">
-            <div className="menuSubContainer">
-              <ul>
+          <div className="menu-container">
+            <div className="menu-subcontainer">
+              <ul className="navigation-list">
                 <li>
                   <Link
                     to={"/about"}
                     className={linkProperties(
                       isOpenMenu,
-                      "menuLinkFadeInSpeed1",
-                      "menuLinkFadeOutSpeed1"
+                      "menu-link-fade-in-speed1",
+                      "menu-link-fade-out-speed1"
                     )}
                     onClick={handleCloseMenu}
                   >
@@ -89,8 +89,8 @@ const Menu = (): JSX.Element => {
                     to={"/projects"}
                     className={linkProperties(
                       isOpenMenu,
-                      "menuLinkFadeInSpeed2",
-                      "menuLinkFadeOutSpeed2"
+                      "menu-link-fade-in-speed2",
+                      "menu-link-fade-out-speed2"
                     )}
                     onClick={handleCloseMenu}
                   >
@@ -102,12 +102,12 @@ const Menu = (): JSX.Element => {
                     to={"/techstack"}
                     className={linkProperties(
                       isOpenMenu,
-                      "menuLinkFadeInSpeed3",
-                      "menuLinkFadeOutSpeed3"
+                      "menu-link-fade-in-speed3",
+                      "menu-link-fade-out-speed3"
                     )}
                     onClick={handleCloseMenu}
                   >
-                    {t("navigation.techstack")}
+                    {t("navigation.techStack")}
                   </Link>
                 </li>
                 <li>
@@ -115,8 +115,8 @@ const Menu = (): JSX.Element => {
                     linkPath={resumePath}
                     linkClass={linkProperties(
                       isOpenMenu,
-                      "menuLinkFadeInSpeed4",
-                      "menuLinkFadeOutSpeed4"
+                      "menu-link-fade-in-speed4",
+                      "menu-link-fade-out-speed4"
                     )}
                     linkText={t("navigation.resume")}
                     onClickHandler={handleCloseMenu}
@@ -127,8 +127,8 @@ const Menu = (): JSX.Element => {
                     to={"/contact"}
                     className={linkProperties(
                       isOpenMenu,
-                      "menuLinkFadeInSpeed5",
-                      "menuLinkFadeOutSpeed5"
+                      "menu-link-fade-in-speed5",
+                      "menu-link-fade-out-speed5"
                     )}
                     onClick={handleCloseMenu}
                   >

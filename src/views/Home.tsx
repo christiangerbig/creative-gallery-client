@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="homePageContainer">
+    <div className="home-page-container">
       <Logo />
       <HeaderText
         headlines={{

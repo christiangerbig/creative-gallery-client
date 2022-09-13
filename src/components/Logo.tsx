@@ -1,14 +1,14 @@
 const Logo = (): JSX.Element => {
   return (
-    <div className="homeLogoContainer blurrIn">
-      <div className="homeLogoSubContainer">
-        <div className="homeLogoLetterOutlineC">
-          <div className="homeLogoLetterInlineC"></div>
+    <div className="blur-in">
+      <div className="home-logo-subcontainer">
+        <div className="home-logo-letter-c-outline">
+          <div className="home-logo-letter-c-inline"></div>
         </div>
-        <div className="homeLogoLetterOutlineG">
-          <div className="homeLogoLetterInlineG">
-            <div className="homeLogoLetterBoxG">
-              <div className="homeLogoLetterBoxG2"></div>
+        <div className="home-logo-letter-g-outline">
+          <div className="home-logo-letter-g-inline">
+            <div className="home-logo-letter-g-box">
+              <div className="home-logo-letter-g-box2"></div>
             </div>
           </div>
         </div>
