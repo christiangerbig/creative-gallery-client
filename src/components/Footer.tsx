@@ -5,7 +5,7 @@ import ExternalLink from "./ExternalLink";
 const Footer = (): JSX.Element => {
   const { t } = useTranslation();
   const currentTime = new Date();
-  let year = currentTime.getFullYear();
+  const year = currentTime.getFullYear();
 
   return (
     <div>

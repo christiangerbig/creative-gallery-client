@@ -1,20 +1,26 @@
 const en = {
   translations: {
-    navigation: {
+    /* General */
+    link: {
       about: "ABOUT",
       projects: "PROJECTS",
       techStack: "TECHSTACK",
       resume: "RESUME",
       contact: "CONTACT",
+      startApp: "TRY IT",
+      gitHubClient: "GIT HUB",
+      gitHubServer: "GIT HUB 2",
+      getBack: "GET BACK",
     },
-    footer: {
-      copyright: "©",
-      appAuthor: "Christian Gerbig",
+    button: {
+      submit: "SUBMIT",
     },
+    /* Home */
     welcome: {
       headline: "Hi, I'm Christian",
       subheadline: "A passionate Web Developer",
     },
+    /* About */
     about: {
       headline: "There is only one way",
       subheadline: "Straight forward",
@@ -42,19 +48,17 @@ const en = {
         contact: "Let's get in touch.",
       },
     },
+    /* Projects */
     projects: {
       headline: "My Web Developer projects",
       subheadline: "I was working on",
-      projectDetails: {
-        startApp: "TRY IT",
-        gitHubClient: "GIT HUB",
-        gitHubServer: "GIT HUB 2",
-      },
     },
+    /* Tech Stack */
     techStack: {
       headline: "The tech stack",
       subheadline: "I use",
     },
+    /* Contact */
     contact: {
       headline: "Don't hesitate",
       subheadline: "to contact me",
@@ -63,17 +67,20 @@ const en = {
       email: "e-mail",
       phone: "phone",
       submit: "or write me",
-      contactForm: {
-        inputEmail: "email",
-        inputSubject: "subject",
-        inputMessage: "message",
-        submit: "SUBMIT",
-      },
+    },
+    contactForm: {
+      inputEmail: "email",
+      inputSubject: "subject",
+      inputMessage: "message",
+    },
+    /* Others */
+    footer: {
+      copyright: "©",
+      appAuthor: "Christian Gerbig",
     },
     pageNotFound: {
       headline: "Error 404",
       subheadline: "Page not found",
-      getBack: "GET BACK",
     },
   },
 };

@@ -18,8 +18,7 @@ const PageNotFound = (): JSX.Element => {
       </header>
       <div className="page-not-found-get-back-container">
         <Link to={"/"} className="page-not-found-get-back-link">
-          {" "}
-          {t("pageNotFound.getBack")}{" "}
+          {t("link.getBack")}
         </Link>
       </div>
     </div>

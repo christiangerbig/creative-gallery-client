@@ -20,30 +20,31 @@ const ContactForm = ({
       >
         <input
           type="email"
-          name={t("contact.contactForm.inputEmail")}
+          name={t("contactForm.inputEmail")}
           placeholder="email"
           className="form-input"
         />
         <input
           type="text"
-          name={t("contact.contactForm.inputSubject")}
+          name={t("contactForm.inputSubject")}
           placeholder="subject"
           className="form-input"
         />
         <textarea
           name="message"
-          placeholder={t("contact.contactForm.inputMessage")}
+          placeholder={t("contactForm.inputMessage")}
           cols={35}
           rows={7}
           className="form-textarea"
         />
-        <input
+        <button
           type="submit"
-          value={t("contact.contactForm.submit")}
           disabled={isCreatingRequest ? true : false}
           formNoValidate
           className="form-submit"
-        />
+        >
+          {t("button.submit")}
+        </button>
       </form>
     </>
   );

@@ -81,7 +81,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    {t("navigation.about")}
+                    {t("link.about")}
                   </Link>
                 </li>
                 <li>
@@ -94,7 +94,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    {t("navigation.projects")}
+                    {t("link.projects")}
                   </Link>
                 </li>
                 <li>
@@ -107,7 +107,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    {t("navigation.techStack")}
+                    {t("link.techStack")}
                   </Link>
                 </li>
                 <li>
@@ -118,7 +118,7 @@ const Menu = (): JSX.Element => {
                       "menu-link-fade-in-speed4",
                       "menu-link-fade-out-speed4"
                     )}
-                    linkText={t("navigation.resume")}
+                    linkText={t("link.resume")}
                     onClickHandler={handleCloseMenu}
                   />
                 </li>
@@ -132,7 +132,7 @@ const Menu = (): JSX.Element => {
                     )}
                     onClick={handleCloseMenu}
                   >
-                    {t("navigation.contact")}
+                    {t("link.contact")}
                   </Link>
                 </li>
               </ul>

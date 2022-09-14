@@ -34,7 +34,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("about"));
             }}
           >
-            {t("navigation.about")}
+            {t("link.about")}
           </Link>
         </li>
         <li>
@@ -45,7 +45,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("projects"));
             }}
           >
-            {t("navigation.projects")}
+            {t("link.projects")}
           </Link>
         </li>
         <li>
@@ -56,7 +56,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("techStack"));
             }}
           >
-            {t("navigation.techStack")}
+            {t("link.techStack")}
           </Link>
         </li>
       </ul>
@@ -65,7 +65,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <ExternalLink
             linkPath={resumePath}
             linkClass="navigation-link"
-            linkText={t("navigation.resume")}
+            linkText={t("link.resume")}
           />
         </li>
         <li>
@@ -76,7 +76,7 @@ const NavDesktopViewItems = (): JSX.Element => {
               dispatch(setMenuItem("contact"));
             }}
           >
-            {t("navigation.contact")}
+            {t("link.contact")}
           </Link>
         </li>
       </ul>
