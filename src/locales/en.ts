@@ -15,6 +15,13 @@ const en = {
     button: {
       submit: "SUBMIT",
     },
+    errors: {
+      emailMissing: "Please enter an email",
+      subjectMissing: "Please enter a subject",
+      messageMissing: "Please enter a message",
+      incorrectEmail: "Email format is not correct",
+      general: "An error occured",
+    },
     /* Home */
     welcome: {
       headline: "Hi, I'm Christian",

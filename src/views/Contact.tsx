@@ -65,6 +65,21 @@ const Contact = (): JSX.Element => {
       });
   };
 
+  const printErrorMessage = (errorMessage: string):string => {
+    switch (errorMessage) {
+      case "Email missing":
+        return t("errors.emailMissing");
+      case "Subject missing":
+        return t("errors.subjectMissing");
+      case "Message missing":
+        return t("errors.messageMissing");
+      case "Invalid email format":
+        return t("errors.incorrectEmail");
+      default:
+        return t("errors.general");
+    }
+  };
+
   return (
     <div className="contact-page-container">
       <header className="headline">
@@ -107,7 +122,10 @@ const Contact = (): JSX.Element => {
           </h3>
         </div>
         {errorMessage && (
-          <span className="error-output is-danger"> {errorMessage} </span>
+          <span className="error-output is-danger">
+            {" "}
+            {printErrorMessage(errorMessage)}{" "}
+          </span>
         )}
         <ContactForm
           isCreatingRequest={isCreatingRequest}
