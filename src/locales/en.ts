@@ -19,7 +19,7 @@ const en = {
       emailMissing: "Please enter an email",
       subjectMissing: "Please enter a subject",
       messageMissing: "Please enter a message",
-      incorrectEmail: "Email format is not correct",
+      incorrectEmail: "Email format is incorrect",
       general: "An error occured",
     },
     /* Home */
