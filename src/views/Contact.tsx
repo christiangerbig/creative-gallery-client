@@ -65,7 +65,7 @@ const Contact = (): JSX.Element => {
       });
   };
 
-  const printErrorMessage = (errorMessage: string):string => {
+  const printErrorMessage = (errorMessage: string): string => {
     switch (errorMessage) {
       case "Email missing":
         return t("errors.emailMissing");
@@ -123,8 +123,7 @@ const Contact = (): JSX.Element => {
         </div>
         {errorMessage && (
           <span className="error-output is-danger">
-            {" "}
-            {printErrorMessage(errorMessage)}{" "}
+            {printErrorMessage(errorMessage)}
           </span>
         )}
         <ContactForm
