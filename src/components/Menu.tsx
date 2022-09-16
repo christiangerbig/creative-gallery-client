@@ -39,9 +39,9 @@ const Menu = (): JSX.Element => {
 
   const menuProperties = (isOpenMenu: boolean): string => {
     return isOpenMenu
-      ? "menu fadeMenuIn"
+      ? "menu fade-menu-in"
       : isCloseMenu
-      ? "menu fadeMenuOut"
+      ? "menu fade-menu-out"
       : "menu";
   };
 
