@@ -19,6 +19,7 @@ import {
 import HeaderText from "../components/HeaderText";
 import ContactLink from "../components/ContactLink";
 import ContactForm from "../components/ContactForm";
+import ErrorMessageOutput from "../components/ErrorMessageOutput";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
@@ -122,9 +123,7 @@ const Contact = (): JSX.Element => {
           </h3>
         </div>
         {errorMessage && errorMessage.includes("Form") && (
-          <span className="error-output is-danger">
-            {printErrorMessage(errorMessage)}
-          </span>
+          <ErrorMessageOutput printErrorMessage={printErrorMessage} />
         )}
         <ContactForm
           isCreatingRequest={isCreatingRequest}
