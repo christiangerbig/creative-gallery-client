@@ -24,7 +24,7 @@ const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
   };
 
   return (
-    <div className="error-modal">
+    <div className="error-modal fade-error-modal-in">
       <div className="error-modal-box">
         <h1>{t("errorModal.headline")}</h1>
         <h2>{printErrorMessage(errorMessage)}</h2>

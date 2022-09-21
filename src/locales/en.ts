@@ -92,11 +92,11 @@ const en = {
       appAuthor: "Christian Gerbig",
     },
     pageNotFound: {
-      headline: "Error 404",
+      headline: "ERROR 404",
       subheadline: "Page not found",
     },
     errorModal: {
-      headline: "Error message"
+      headline: "SOMETHING WENT WRONG"
     },
   },
 };
