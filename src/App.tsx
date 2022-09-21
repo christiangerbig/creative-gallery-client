@@ -41,7 +41,7 @@ const App = (): JSX.Element => {
         <Route component={PageNotFound} />
       </Switch>
       <Footer />
-      {errorMessage && errorMessage.includes("Form") && (
+      {errorMessage && !errorMessage.includes("Form") && (
         <ErrorModal errorMessage={errorMessage} />
       )}
     </div>
