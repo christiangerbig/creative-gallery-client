@@ -67,14 +67,14 @@ const Contact = (): JSX.Element => {
 
   const printErrorMessage = (errorMessage: string): string => {
     switch (errorMessage) {
-      case "Email missing":
-        return t("errors.emailMissing");
-      case "Subject missing":
-        return t("errors.subjectMissing");
-      case "Message missing":
-        return t("errors.messageMissing");
-      case "Invalid email format":
-        return t("errors.incorrectEmail");
+      case "Form: Email missing":
+        return t("errors.request.form.emailMissing");
+      case "Form: Subject missing":
+        return t("errors.request.form.subjectMissing");
+      case "Form: Message missing":
+        return t("errors.request.form.messageMissing");
+      case "Form: Invalid email format":
+        return t("errors.request.form.incorrectEmail");
       default:
         return t("errors.general");
     }
@@ -121,7 +121,7 @@ const Contact = (): JSX.Element => {
             <FontAwesomeIcon icon={faPen} /> {t("contact.submit")}
           </h3>
         </div>
-        {errorMessage && (
+        {errorMessage && errorMessage.includes("Form") && (
           <span className="error-output is-danger">
             {printErrorMessage(errorMessage)}
           </span>

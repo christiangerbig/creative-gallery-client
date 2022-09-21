@@ -855,9 +855,55 @@ form h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   transition: all 0.5s;
+  /* Error modal */
 }
 
 .page-not-found-get-back-link:hover {
   background-color: #32a852;
+}
+
+.error-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  width: inherit;
+  height: 100%;
+  z-index: 1050;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+}
+
+.error-modal-box {
+  text-align: center;
+  width: 40%;
+  padding: 1.5rem 2rem 2rem 2rem;
+  background-color: #eeecec;
+  border: solid 1px #282828;
+}
+
+.error-modal-box h2 {
+  margin-bottom: 3rem;
+}
+
+.error-modal-button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
+  padding: 0.3rem 0.8rem;
+  border: solid 2px #32a852;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 1s;
+}
+
+.error-modal-button:hover {
+  background-color: #32a852;
+  color: #eeecec;
 }
 /*# sourceMappingURL=App.css.map */

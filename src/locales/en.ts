@@ -14,12 +14,18 @@ const en = {
     },
     button: {
       submit: "SUBMIT",
+      proceed: "PROCEED"
     },
     errors: {
-      emailMissing: "Please enter an email",
-      subjectMissing: "Please enter a subject",
-      messageMissing: "Please enter a message",
-      incorrectEmail: "Email format is incorrect",
+      request: {
+        form: {
+          emailMissing: "Please enter an email",
+          subjectMissing: "Please enter a subject",
+          messageMissing: "Please enter a message",
+          incorrectEmail: "The email format is incorrect",
+        },
+        createRequestFailed: "Creating the request failed",
+      },
       general: "An error occured",
     },
     /* Home */
@@ -88,6 +94,9 @@ const en = {
     pageNotFound: {
       headline: "Error 404",
       subheadline: "Page not found",
+    },
+    errorModal: {
+      headline: "Error message"
     },
   },
 };
