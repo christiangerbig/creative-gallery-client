@@ -2,7 +2,8 @@
 
 ## Description
 
-This is my portfolio to present all my projects and another exercise to apply my React Redux knowledge.
+This is my portfolio to present my projects and another exercise to apply my React Redux knowledge.
+
 
 ## User Stories
 
@@ -11,6 +12,7 @@ This is my portfolio to present all my projects and another exercise to apply my
 -  **Projects:** Presentation of my projects
 -  **Contact:** Different ways how to contact me, also includes a form to send me a message
 -  **404:** As an user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
+
 
 # Client / Frontend
 
@@ -24,26 +26,29 @@ This is my portfolio to present all my projects and another exercise to apply my
 
 ## Components
 
+- ContactForm
+- ContactLink
+- ErrorMessageOutput
+- ErrorModal
+- ExternalLink
+- Footer
+- HeaderText
+- Logo
+- Menu
 - NavBar
 - NavBarLogo
 - NavDesktopViewItems
-- Menu
-- Footer
-- Logo
-- HeaderText
-- ExternalLink
 - ProjectDetails
-- ContactForm
-- ContactLink
 
 ## Views
 
-- Home
 - About
+- Contact
+- Home
+- PageNotFound
 - Projects
 - TechStack
-- Contact
-- NotFound
+
 
 # Server / Backend
 
