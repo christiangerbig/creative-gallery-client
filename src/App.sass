@@ -774,7 +774,7 @@ form
   flex-direction: column
   width: inherit
   height: 100%
-  z-index: 1020
+  z-index: 1070
   background-color: rgba(0, 0, 0, 0.7)
   backdrop-filter: blur(15px)
 
@@ -786,6 +786,10 @@ form
   border: solid 1px $dark
   h2
     margin-bottom: 3rem
+
+@media (min-width: 320px) and (max-width: 480px)
+  .error-modal-box
+    width: 60%
 
 .error-modal-button 
   text-decoration: none
