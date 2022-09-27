@@ -31,8 +31,8 @@ const HeaderText = ({
 
   return (
     <div className={borderColor(borderColorName)}>
-      <h1 className="is-text-xlarge-size"> {headline} </h1>
-      <h2 className="is-text-large-size"> {subheadline} </h2>
+      <h1 className="is-text-large-size"> {headline} </h1>
+      <h2 className="is-text-small-size"> {subheadline} </h2>
     </div>
   );
 };

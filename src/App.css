@@ -12,7 +12,7 @@ body {
 }
 
 /* Main classes */
-.is-text-large-size {
+.is-text-small-size {
   font-size: 2rem;
 }
 
@@ -20,7 +20,7 @@ body {
   font-size: 2.5rem;
 }
 
-.is-text-xlarge-size {
+.is-text-large-size {
   font-size: 3.1rem;
 }
 
@@ -581,7 +581,7 @@ footer {
   align-items: center;
   flex-direction: column;
   background-color: #0f0f0f;
-  border: solid 1px #282828;
+  border: solid 1px #0f0f0f;
   margin: 0 1.5rem 1rem 1.5rem;
 }
 
@@ -690,7 +690,7 @@ footer {
   background-color: #0f0f0f;
   color: #eeecec;
   padding: 0;
-  border: solid 1px #282828;
+  border: solid 1px #0f0f0f;
   margin: 4rem auto;
 }
 
@@ -879,7 +879,7 @@ form h3 {
   width: 50%;
   background-color: #eeecec;
   padding: 1.5rem 2rem 2rem 2rem;
-  border: solid 1px #282828;
+  border: solid 1px #0f0f0f;
 }
 
 .error-modal-box h2 {
