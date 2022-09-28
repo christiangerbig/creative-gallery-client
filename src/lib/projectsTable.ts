@@ -20,7 +20,8 @@ const projects: ProjectItem[] = [
     projectName: "JUNGLE SWAP",
     projectPicturePath: jungleSwapImage,
     projectVideoPath: jungleSwapVideoPath,
-    projectDescription: "Share your plant offshoots and make money or swap them for another plant. Shop and give a plant a new home.",
+    projectDescription:
+      "Share your plant offshoots and make money or swap them for another plant. Shop and give a plant a new home.",
     deployedPath: jungleSwapDeployedPath,
     gitHubClientPath: jungleSwapGitHubClientPath,
     gitHubServerPath: jungleSwapGitHubServerPath,
@@ -29,7 +30,8 @@ const projects: ProjectItem[] = [
     projectName: "TRACKERTOOLS",
     projectPicturePath: trackerToolsImage,
     projectVideoPath: trackerToolsVideoPath,
-    projectDescription: "Four powerful tools to make working with the music editor Protracker and its modules more comfortable.",
+    projectDescription:
+      "Four powerful tools to make working with the music editor Protracker and its modules more comfortable.",
     deployedPath: trackerToolsDeployedPath,
     gitHubClientPath: trackerToolsGitHubClientPath,
     gitHubServerPath: "",
@@ -38,7 +40,8 @@ const projects: ProjectItem[] = [
     projectName: "LETTER SHOOTER",
     projectPicturePath: letterShooterImage,
     projectVideoPath: letterShooterVideoPath,
-    projectDescription: "A coordination and strategy game with the goal to hit the missing letters with precise shots.",
+    projectDescription:
+      "A coordination and strategy game with the goal to hit the missing letters with precise shots.",
     deployedPath: letterShooterDeployedPath,
     gitHubClientPath: letterShooterGitHubClientPath,
     gitHubServerPath: "",
