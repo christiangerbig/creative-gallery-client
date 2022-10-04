@@ -93,8 +93,8 @@ const Contact = (): JSX.Element => {
         />
       </header>
       <div className="contact-container">
-        <h1> {t("contact.name")} </h1>
-        <h2> {t("contact.jobname")} </h2>
+        <h1>{t("contact.name")}</h1>
+        <h2>{t("contact.jobname")}</h2>
         <div className="contact-ways-container">
           <div className="contact-email-container">
             <h3>

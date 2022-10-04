@@ -31,10 +31,10 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
       <div className="project-description">
         <article>
           <header>
-            <h2> {projectName} </h2>
+            <h2>{projectName}</h2>
           </header>
           <div className="project-description-container">
-            <p> {projectDescription} </p>
+            <p>{projectDescription}</p>
           </div>
         </article>
       </div>

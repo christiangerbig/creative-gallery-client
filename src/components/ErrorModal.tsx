@@ -44,9 +44,7 @@ const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
         <h2>{printErrorMessage(errorMessage)}</h2>
         <button
           className="error-modal-button mt-4 mb-3"
-          onClick={() => {
-            handleCloseModal();
-          }}
+          onClick={handleCloseModal}
         >
           {t("button.proceed")}
         </button>

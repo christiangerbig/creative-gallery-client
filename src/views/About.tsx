@@ -29,23 +29,23 @@ const About = (): JSX.Element => {
         <div className="about-text-colum-container">
           <article>
             <header>
-              <h3> {t("about.personalDetails.headline")} </h3>
+              <h3>{t("about.personalDetails.headline")}</h3>
             </header>
-            <p> {t("about.personalDetails.paragraph1")} </p>
-            <p> {t("about.personalDetails.paragraph2")} </p>
-            <p> {t("about.personalDetails.paragraph3")} </p>
-            <p> {t("about.personalDetails.paragraph4")} </p>
+            <p>{t("about.personalDetails.paragraph1")}</p>
+            <p>{t("about.personalDetails.paragraph2")}</p>
+            <p>{t("about.personalDetails.paragraph3")}</p>
+            <p>{t("about.personalDetails.paragraph4")}</p>
           </article>
         </div>
         <div className="about-text-colum-container">
           <article>
             <header>
-              <h3> {t("about.experience.headline")} </h3>
+              <h3>{t("about.experience.headline")}</h3>
             </header>
-            <p> {t("about.experience.paragraph1")} </p>
-            <p> {t("about.experience.paragraph2")} </p>
-            <p> {t("about.experience.paragraph3")} </p>
-            <p> {t("about.experience.paragraph4")} </p>
+            <p>{t("about.experience.paragraph1")}</p>
+            <p>{t("about.experience.paragraph2")}</p>
+            <p>{t("about.experience.paragraph3")}</p>
+            <p>{t("about.experience.paragraph4")}</p>
             <p>
               <span
                 className="about-contact-link"

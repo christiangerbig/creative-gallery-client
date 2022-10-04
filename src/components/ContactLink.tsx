@@ -15,7 +15,7 @@ const ContactLink = ({
     <>
       <span className={linkClass}>
         <Link to={{ pathname: linkPath }} target="_blank">
-          <h4> {linkText} </h4>
+          <h4>{linkText}</h4>
         </Link>
       </span>
     </>
