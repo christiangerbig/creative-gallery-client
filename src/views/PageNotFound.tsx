@@ -10,8 +10,8 @@ const PageNotFound = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           headlines={{
-            headline: t("pageNotFound.headline"),
-            subheadline: t("pageNotFound.subheadline"),
+            headline: t("texts.pageNotFound.headline"),
+            subheadline: t("texts.pageNotFound.subheadline"),
           }}
           borderColorName={"orange"}
         />

@@ -16,8 +16,8 @@ const TechStack = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           headlines={{
-            headline: t("techStack.headline"),
-            subheadline: t("techStack.subheadline"),
+            headline: t("texts.techStack.headline"),
+            subheadline: t("texts.techStack.subheadline"),
           }}
           borderColorName={"violet"}
         />

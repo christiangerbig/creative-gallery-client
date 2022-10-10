@@ -3,13 +3,10 @@ import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import {
-  createRequest,
-  setMenuItem,
-  setErrorMessage,
-} from "../reducer/creativeGallerySlice";
+import { setMenuItem, setErrorMessage } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
+import { RequestIO } from "../lib/requestIO";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
@@ -44,40 +41,32 @@ const Contact = (): JSX.Element => {
   const handleSubmitRequest = (
     event: React.FormEvent<HTMLFormElement>
   ): void => {
-    const setMenuItemAndReturnToHomePage = (): void => {
-      dispatch(setMenuItem("home"));
-      history.push("/");
-    };
-
-    event.preventDefault();
     const { email, subject, message } = event.target as any;
-    const request: Request = {
+    const newRequest: Request = {
       email: email.value,
       subject: subject.value,
       message: message.value,
     };
-    dispatch(createRequest({ request }))
-      .unwrap()
-      .then(() => {
-        setMenuItemAndReturnToHomePage();
-      })
-      .catch((err) => {
-        dispatch(setErrorMessage(err.message));
-      });
+    event.preventDefault();
+    const requestIO = new RequestIO(dispatch);
+    requestIO.create(newRequest, (): void => {
+      dispatch(setMenuItem("home"));
+      history.push("/");
+    });
   };
 
   const printErrorMessage = (errorMessage: string): string => {
     switch (errorMessage) {
       case "Form: Email missing":
-        return t("errors.request.form.emailMissing");
+        return t("errorTexts.createRequest.form.emailMissing");
       case "Form: Subject missing":
-        return t("errors.request.form.subjectMissing");
+        return t("errorTexts.createRequest.form.passwordMissing");
       case "Form: Message missing":
-        return t("errors.request.form.messageMissing");
-      case "Form: Invalid email format":
-        return t("errors.request.form.incorrectEmail");
+        return t("errorTexts.createRequest.form.messageMissing");
+      case "Form: Form: Email format invalid":
+        return t("errorTexts.createRequest.form.emailFormatInvalid");
       default:
-        return t("errors.general");
+        return t("errorTexts.general");
     }
   };
 
@@ -86,19 +75,20 @@ const Contact = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           headlines={{
-            headline: t("contact.headline"),
-            subheadline: t("contact.subheadline"),
+            headline: t("texts.contact.headline"),
+            subheadline: t("texts.contact.subheadline"),
           }}
           borderColorName={"blue"}
         />
       </header>
       <div className="contact-container">
-        <h1>{t("contact.name")}</h1>
-        <h2>{t("contact.jobname")}</h2>
+        <h1>{t("texts.contact.name")}</h1>
+        <h2>{t("texts.contact.jobname")}</h2>
         <div className="contact-ways-container">
           <div className="contact-email-container">
             <h3>
-              <FontAwesomeIcon icon={faEnvelopeSquare} /> {t("contact.email")}
+              <FontAwesomeIcon icon={faEnvelopeSquare} />{" "}
+              {t("texts.contact.email")}
             </h3>
             <ContactLink
               linkPath="mailto:chr_gerbig@web.de"
@@ -108,7 +98,7 @@ const Contact = (): JSX.Element => {
           </div>
           <div className="contact-phone-container">
             <h3>
-              <FontAwesomeIcon icon={faMobileAlt} /> {t("contact.phone")}
+              <FontAwesomeIcon icon={faMobileAlt} /> {t("texts.contact.phone")}
             </h3>
             <ContactLink
               linkPath="tel:+4915154824288"
@@ -119,7 +109,7 @@ const Contact = (): JSX.Element => {
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faPen} /> {t("contact.submit")}
+            <FontAwesomeIcon icon={faPen} /> {t("texts.contact.submit")}
           </h3>
         </div>
         {errorMessage && errorMessage.includes("Form") && (

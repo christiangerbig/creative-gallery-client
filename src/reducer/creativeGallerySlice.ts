@@ -15,10 +15,6 @@ interface InitialState {
   errorMessage: ErrorMessage;
 }
 
-interface CreateRequestParameters {
-  request: Request;
-}
-
 const initialState: InitialState = {
   menuItem: null,
   isDesktop: false,
@@ -37,9 +33,9 @@ const rejectWithValue = (data: string): void | PromiseLike<void> => {
 
 export const createRequest = createAsyncThunk(
   "creativeGallery/createRequest",
-  async ({ request }: CreateRequestParameters): Promise<void | any> => {
+  async (newRequest: Request): Promise<void | any> => {
     try {
-      await axios.post(`${apiPath}/request/create`, request);
+      await axios.post(`${apiPath}/request/create`, newRequest);
     } catch (err: any) {
       return rejectWithValue(err.response.data.errorMessage);
     }

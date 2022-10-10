@@ -19,8 +19,8 @@ const About = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           headlines={{
-            headline: t("about.headline"),
-            subheadline: t("about.subheadline"),
+            headline: t("texts.about.headline"),
+            subheadline: t("texts.about.subheadline"),
           }}
           borderColorName={"green"}
         />
@@ -29,30 +29,30 @@ const About = (): JSX.Element => {
         <div className="about-text-colum-container">
           <article>
             <header>
-              <h3>{t("about.personalDetails.headline")}</h3>
+              <h3>{t("texts.about.personalDetails.headline")}</h3>
             </header>
-            <p>{t("about.personalDetails.paragraph1")}</p>
-            <p>{t("about.personalDetails.paragraph2")}</p>
-            <p>{t("about.personalDetails.paragraph3")}</p>
-            <p>{t("about.personalDetails.paragraph4")}</p>
+            <p>{t("texts.about.personalDetails.paragraph1")}</p>
+            <p>{t("texts.about.personalDetails.paragraph2")}</p>
+            <p>{t("texts.about.personalDetails.paragraph3")}</p>
+            <p>{t("texts.about.personalDetails.paragraph4")}</p>
           </article>
         </div>
         <div className="about-text-colum-container">
           <article>
             <header>
-              <h3>{t("about.experience.headline")}</h3>
+              <h3>{t("texts.about.experience.headline")}</h3>
             </header>
-            <p>{t("about.experience.paragraph1")}</p>
-            <p>{t("about.experience.paragraph2")}</p>
-            <p>{t("about.experience.paragraph3")}</p>
-            <p>{t("about.experience.paragraph4")}</p>
+            <p>{t("texts.about.experience.paragraph1")}</p>
+            <p>{t("texts.about.experience.paragraph2")}</p>
+            <p>{t("texts.about.experience.paragraph3")}</p>
+            <p>{t("texts.about.experience.paragraph4")}</p>
             <p>
               <span
                 className="about-contact-link"
                 onClick={() => dispatch(setMenuItem("contact"))}
               >
                 <Link to={{ pathname: "/contact" }}>
-                  {t("about.experience.contact")}
+                  {t("texts.about.experience.contact")}
                 </Link>
               </span>
             </p>

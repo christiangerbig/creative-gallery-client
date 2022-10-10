@@ -13,7 +13,7 @@ const Footer = (): JSX.Element => {
         <div className="footer-container">
           <span className="copyright-text">
             {" "}
-            {t("footer.copyright")} {year} {t("footer.appAuthor")}{" "}
+            {t("texts.footer.copyright")} {year} {t("texts.footer.appAuthor")}{" "}
           </span>
           <ul className="footer-subcontainer navigation-list">
             <li>

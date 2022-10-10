@@ -18,8 +18,8 @@ const Projects = (): JSX.Element => {
       <header className="headline">
         <HeaderText
           headlines={{
-            headline: t("projects.headline"),
-            subheadline: t("projects.subheadline"),
+            headline: t("texts.projects.headline"),
+            subheadline: t("texts.projects.subheadline"),
           }}
           borderColorName={"orange"}
         />

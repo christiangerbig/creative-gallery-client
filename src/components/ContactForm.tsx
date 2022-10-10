@@ -11,6 +11,10 @@ const ContactForm = ({
 }: ContactFormProps): JSX.Element => {
   const { t } = useTranslation();
 
+  const buttonState = (): boolean => {
+    return isCreatingRequest ? true : false;
+  };
+
   return (
     <>
       <form
@@ -20,26 +24,26 @@ const ContactForm = ({
       >
         <input
           type="email"
-          name={t("contactForm.inputEmail")}
+          name={t("texts.contact.createRequest.form.inputEmail")}
           placeholder="email"
           className="form-input"
         />
         <input
           type="text"
-          name={t("contactForm.inputSubject")}
+          name={t("texts.contact.createRequest.form.inputSubject")}
           placeholder="subject"
           className="form-input"
         />
         <textarea
           name="message"
-          placeholder={t("contactForm.inputMessage")}
+          placeholder={t("texts.contact.createRequest.form.inputMessage")}
           cols={35}
           rows={7}
           className="form-textarea"
         />
         <button
           type="submit"
-          disabled={isCreatingRequest ? true : false}
+          disabled={buttonState()}
           formNoValidate
           className="form-submit"
         >

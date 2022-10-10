@@ -25,7 +25,7 @@ const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
   const printErrorMessage = (errorMessage: string): string => {
     switch (errorMessage) {
       case "Create request failed":
-        return t("errors.request.createRequestFailed");
+        return t("errorTexts.createRequest.createRequestFailed");
       default:
         return t("errors.general");
     }

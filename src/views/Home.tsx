@@ -16,8 +16,8 @@ const Home = (): JSX.Element => {
       <Logo />
       <HeaderText
         headlines={{
-          headline: t("welcome.headline"),
-          subheadline: t("welcome.subheadline"),
+          headline: t("texts.home.welcome.headline"),
+          subheadline: t("texts.home.welcome.subheadline"),
         }}
         borderColorName={""}
       />
