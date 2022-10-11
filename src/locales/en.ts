@@ -94,7 +94,7 @@ const en = {
           emailMissing: "Please enter an email",
           subjectMissing: "Please enter a subject",
           messageMissing: "Please enter a message",
-          incorrectEmail: "The email format is incorrect",
+          emailFormatInvalid: "The email format is invalid",
         },
         createRequestFailed: "Creating the request failed",
       },
