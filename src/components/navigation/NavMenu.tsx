@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 import {
   setIsMenuVisible,
   setIsCloseMenu,
-} from "../reducer/creativeGallerySlice";
-import { RootState } from "../store";
+} from "../../reducer/creativeGallerySlice";
+import { RootState } from "../../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { resumePath } from "../lib/externalLinkPaths";
-import ExternalLink from "./ExternalLink";
+import { resumePath } from "../../lib/externalLinkPaths";
+import ExternalLink from "../helpers/ExternalLink";
 
-const Menu = (): JSX.Element => {
+const NavMenu = (): JSX.Element => {
   const isDesktop = useAppSelector(
     (state: RootState) => state.creativeGallery.isDesktop
   );
@@ -144,4 +144,4 @@ const Menu = (): JSX.Element => {
   );
 };
 
-export default Menu;
+export default NavMenu;

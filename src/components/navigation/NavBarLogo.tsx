@@ -1,4 +1,4 @@
-const NavbarLogo = (): JSX.Element => {
+const NavBarLogo = (): JSX.Element => {
   return (
     <div className="logo-subcontainer">
       <div className="logo-letter-c-outline">
@@ -15,4 +15,4 @@ const NavbarLogo = (): JSX.Element => {
   );
 };
 
-export default NavbarLogo;
+export default NavBarLogo;

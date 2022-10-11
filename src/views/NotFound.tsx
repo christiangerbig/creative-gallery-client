@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import HeaderText from "../components/HeaderText";
+import HeaderText from "../components/helpers/HeaderText";
 
-const PageNotFound = (): JSX.Element => {
+const NotFound = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
@@ -25,4 +25,4 @@ const PageNotFound = (): JSX.Element => {
   );
 };
 
-export default PageNotFound;
+export default NotFound;

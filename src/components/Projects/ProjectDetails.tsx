@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { ProjectItem } from "../typeDefinitions";
-import ExternalLink from "./ExternalLink";
+import { ProjectItem } from "../../typeDefinitions";
+import ExternalLink from "../helpers/ExternalLink";
 
 type ProjectDetailsProps = {
   projectItem: ProjectItem;

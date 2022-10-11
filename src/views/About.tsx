@@ -4,7 +4,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch } from "../hooks";
 import { setMenuItem } from "../reducer/creativeGallerySlice";
-import HeaderText from "../components/HeaderText";
+import HeaderText from "../components/helpers/HeaderText";
 
 const About = (): JSX.Element => {
   const dispatch = useAppDispatch();

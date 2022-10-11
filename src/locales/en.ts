@@ -86,6 +86,9 @@ const en = {
       errorModal: {
         headline: "SOMETHING WENT WRONG",
       },
+      offlineModal: {
+        headline: "CAUTION",
+      },
     },
 
     errorTexts: {
@@ -98,6 +101,7 @@ const en = {
         },
         createRequestFailed: "Creating the request failed",
       },
+      offline: "No internet connection",
       general: "An error occured",
     },
   },

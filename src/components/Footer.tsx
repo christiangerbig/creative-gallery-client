@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { gitHubPath, linkedInPath } from "../lib/externalLinkPaths";
-import ExternalLink from "./ExternalLink";
+import ExternalLink from "./helpers/ExternalLink";
 
 const Footer = (): JSX.Element => {
   const { t } = useTranslation();

@@ -3,8 +3,8 @@ import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import projects from "../lib/projectsTable";
 import { ProjectItem } from "../typeDefinitions";
-import HeaderText from "../components/HeaderText";
-import ProjectDetails from "../components/ProjectDetails";
+import HeaderText from "../components/helpers/HeaderText";
+import ProjectDetails from "../components/Projects/ProjectDetails";
 
 const Projects = (): JSX.Element => {
   const { t } = useTranslation();

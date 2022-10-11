@@ -13,10 +13,10 @@ import {
   faMobileAlt,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
-import HeaderText from "../components/HeaderText";
-import ContactLink from "../components/ContactLink";
-import ContactForm from "../components/ContactForm";
-import ErrorMessageOutput from "../components/ErrorMessageOutput";
+import HeaderText from "../components/helpers/HeaderText";
+import ContactLink from "../components/contact/ContactLink";
+import ContactForm from "../components/contact/ContactForm";
+import ErrorMessageOutput from "../components/errors/ErrorMessageOutput";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(

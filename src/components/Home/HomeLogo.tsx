@@ -1,4 +1,4 @@
-const Logo = (): JSX.Element => {
+const HomeLogo = (): JSX.Element => {
   return (
     <div className="blur-in">
       <div className="home-logo-subcontainer">
@@ -17,4 +17,4 @@ const Logo = (): JSX.Element => {
   );
 };
 
-export default Logo;
+export default HomeLogo;

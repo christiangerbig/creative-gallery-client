@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 import {
   setIsDesktop,
   setIsMenuVisible,
   setMenuItem,
   setIsOpenMenu,
-} from "../reducer/creativeGallerySlice";
-import { RootState } from "../store";
+} from "../../reducer/creativeGallerySlice";
+import { RootState } from "../../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import NavbarLogo from "./NavbarLogo";
+
 import NavDesktopViewItems from "./NavDesktopViewItems";
+import NavBarLogo from "./NavBarLogo";
 
 const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(
@@ -78,7 +79,7 @@ const NavBar = (): JSX.Element => {
                 dispatch(setMenuItem("home"));
               }}
             >
-              <NavbarLogo />
+              <NavBarLogo />
             </Link>
           </div>
           {isDesktop ? (

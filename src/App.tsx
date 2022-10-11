@@ -1,22 +1,25 @@
 import { Route, Switch, withRouter } from "react-router-dom";
 import { useAppSelector } from "./hooks";
 import { RootState } from "./store";
+import { useOnlineStatus } from "./components/helpers/useOnlineStatus";
 import "./App.min.css";
-import NavBar from "./components/NavBar";
-import Menu from "./components/Menu";
+import NavBar from "./components/navigation/NavBar";
+import Menu from "./components/navigation/NavMenu";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
 import About from "./views/About";
 import Projects from "./views/Projects";
 import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
-import PageNotFound from "./views/PageNotFound";
-import ErrorModal from "./components/ErrorModal";
+import PageNotFound from "./views/NotFound";
+import ErrorModal from "./components/modals/ErrorModal";
+import OfflineModal from "./components/modals/OfflineModal";
 
 const App = (): JSX.Element => {
   const errorMessage = useAppSelector(
     (state: RootState) => state.creativeGallery.errorMessage
   );
+  const isOnline = useOnlineStatus();
 
   return (
     <div>
@@ -44,6 +47,7 @@ const App = (): JSX.Element => {
       {errorMessage && !errorMessage.includes("Form") && (
         <ErrorModal errorMessage={errorMessage} />
       )}
+      {!isOnline && <OfflineModal />}
     </div>
   );
 };

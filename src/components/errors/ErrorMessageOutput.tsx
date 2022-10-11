@@ -1,5 +1,5 @@
-import { useAppSelector } from "../hooks";
-import { RootState } from "../store";
+import { useAppSelector } from "../../hooks";
+import { RootState } from "../../store";
 
 type ErrorMessageOutputProps = {
   printErrorMessage: Function;

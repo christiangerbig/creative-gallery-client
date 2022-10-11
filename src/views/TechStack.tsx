@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import HeaderText from "../components/HeaderText";
+import HeaderText from "../components/helpers/HeaderText";
 import toolsLogos from "../lib/toolsLogos";
 
 const TechStack = (): JSX.Element => {
