@@ -63,7 +63,7 @@ const Contact = (): JSX.Element => {
         return t("errorTexts.createRequest.form.subjectMissing");
       case "Form: Message missing":
         return t("errorTexts.createRequest.form.messageMissing");
-      case "Form: Form: Email format invalid":
+      case "Form: Email format invalid":
         return t("errorTexts.createRequest.form.emailFormatInvalid");
       default:
         return t("errorTexts.general");
