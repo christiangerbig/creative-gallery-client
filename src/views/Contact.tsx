@@ -60,7 +60,7 @@ const Contact = (): JSX.Element => {
       case "Form: Email missing":
         return t("errorTexts.createRequest.form.emailMissing");
       case "Form: Subject missing":
-        return t("errorTexts.createRequest.form.passwordMissing");
+        return t("errorTexts.createRequest.form.subjectMissing");
       case "Form: Message missing":
         return t("errorTexts.createRequest.form.messageMissing");
       case "Form: Form: Email format invalid":
