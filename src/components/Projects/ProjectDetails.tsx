@@ -41,24 +41,24 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
       <div className="project-links-container">
         <div>
           <ExternalLink
-            linkPath={deployedPath}
-            linkClass="project-try-it-link"
-            linkText={t("link.startApp")}
+            path={deployedPath}
+            styleClass="project-try-it-link"
+            text={t("link.startApp")}
           />
         </div>
         <div>
           <ExternalLink
-            linkPath={gitHubClientPath}
-            linkClass="project-github-link"
-            linkText={t("link.gitHubClient")}
+            path={gitHubClientPath}
+            styleClass="project-github-link"
+            text={t("link.gitHubClient")}
           />
         </div>
         {gitHubServerPath && (
           <div>
             <ExternalLink
-              linkPath={gitHubServerPath}
-              linkClass="project-github-link"
-              linkText={t("link.gitHubServer")}
+              path={gitHubServerPath}
+              styleClass="project-github-link"
+              text={t("link.gitHubServer")}
             />
           </div>
         )}

@@ -39,14 +39,14 @@ const ModalBody = ({
       <div className="error-modal-box">
         <h1>{headline}</h1>
         <h2>{errorText}</h2>
-        {isClose ? (
+        {isClose && (
           <button
             className="error-modal-button mt-4 mb-3"
             onClick={handleCloseModal}
           >
             {t("button.proceed")}
           </button>
-        ) : null}
+        )}
       </div>
     </div>
   );

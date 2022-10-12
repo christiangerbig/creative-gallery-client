@@ -112,13 +112,13 @@ const NavMenu = (): JSX.Element => {
                 </li>
                 <li>
                   <ExternalLink
-                    linkPath={resumePath}
-                    linkClass={linkProperties(
+                    path={resumePath}
+                    styleClass={linkProperties(
                       isOpenMenu,
                       "menu-link-fade-in-speed4",
                       "menu-link-fade-out-speed4"
                     )}
-                    linkText={t("link.resume")}
+                    text={t("link.resume")}
                     onClickHandler={handleCloseMenu}
                   />
                 </li>

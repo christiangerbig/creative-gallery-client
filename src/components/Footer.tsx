@@ -18,15 +18,15 @@ const Footer = (): JSX.Element => {
           <ul className="footer-subcontainer navigation-list">
             <li>
               <ExternalLink
-                linkPath={linkedInPath}
-                linkClass="footer-link"
+                path={linkedInPath}
+                styleClass="footer-link"
                 faClass="fa-linkedin"
               />
             </li>
             <li>
               <ExternalLink
-                linkPath={gitHubPath}
-                linkClass="footer-link"
+                path={gitHubPath}
+                styleClass="footer-link"
                 faClass="fa-github"
               />
             </li>
