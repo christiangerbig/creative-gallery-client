@@ -28,16 +28,18 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 
 - ContactForm
 - ContactLink
-- ErrorMessageOutput
+- ErrorMessage
 - ErrorModal
 - ExternalLink
 - Footer
 - HeaderText
-- Logo
+- HomeLogo
 - Menu
+- ModalBody
 - NavBar
 - NavBarLogo
 - NavDesktopViewItems
+- OfflineModal
 - ProjectDetails
 
 ## Views
