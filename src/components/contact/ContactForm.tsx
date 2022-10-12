@@ -18,7 +18,7 @@ const ContactForm = ({
   return (
     <>
       <form
-        onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
+        onSubmit={(event: React.FormEvent<HTMLFormElement>): void => {
           handleSubmitRequest(event);
         }}
       >

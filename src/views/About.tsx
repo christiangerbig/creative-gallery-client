@@ -49,7 +49,9 @@ const About = (): JSX.Element => {
             <p>
               <span
                 className="about-contact-link"
-                onClick={() => dispatch(setMenuItem("contact"))}
+                onClick={(): void => {
+                  dispatch(setMenuItem("contact"));
+                }}
               >
                 <Link to={{ pathname: "/contact" }}>
                   {t("texts.about.experience.contact")}

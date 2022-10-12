@@ -62,7 +62,7 @@ const NavBar = (): JSX.Element => {
   const handleOpenMenu = (): void => {
     dispatch(setIsMenuVisible(true));
     dispatch(setIsOpenMenu(true));
-    setTimeout(() => {
+    setTimeout((): void => {
       dispatch(setIsOpenMenu(false));
     }, 1000); // 1 second
   };
@@ -75,7 +75,7 @@ const NavBar = (): JSX.Element => {
             <Link
               to={"/"}
               className="is-text-style-plain is-white"
-              onClick={() => {
+              onClick={(): void => {
                 dispatch(setMenuItem("home"));
               }}
             >

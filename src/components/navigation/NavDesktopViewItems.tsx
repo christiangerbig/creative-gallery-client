@@ -30,7 +30,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/about"}
             className={activateLink(menuItem, "about")}
-            onClick={() => {
+            onClick={(): void => {
               dispatch(setMenuItem("about"));
             }}
           >
@@ -41,7 +41,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/projects"}
             className={activateLink(menuItem, "projects")}
-            onClick={() => {
+            onClick={(): void => {
               dispatch(setMenuItem("projects"));
             }}
           >
@@ -52,7 +52,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/techstack"}
             className={activateLink(menuItem, "techStack")}
-            onClick={() => {
+            onClick={(): void => {
               dispatch(setMenuItem("techStack"));
             }}
           >
@@ -72,7 +72,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/contact"}
             className={activateLink(menuItem, "contact")}
-            onClick={() => {
+            onClick={(): void => {
               dispatch(setMenuItem("contact"));
             }}
           >
