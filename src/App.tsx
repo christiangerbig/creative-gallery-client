@@ -1,7 +1,7 @@
 import { Route, Switch, withRouter } from "react-router-dom";
 import { useAppSelector } from "./hooks";
 import { RootState } from "./store";
-import { useOnlineStatus } from "./components/helpers/useOnlineStatus";
+import { useOnlineStatus } from "./lib/connectionCheck";
 import "./App.min.css";
 import NavBar from "./components/navigation/NavBar";
 import Menu from "./components/navigation/NavMenu";

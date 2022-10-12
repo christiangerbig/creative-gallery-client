@@ -22,7 +22,7 @@ const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
       <ModalBody
         headline={t("errorModal.headline")}
         errorText={convertErrorMessage(errorMessage)}
-        isAutoExit={false}
+        isClose={true}
       />
     </div>
   );

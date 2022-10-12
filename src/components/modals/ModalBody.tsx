@@ -6,13 +6,13 @@ import { setErrorMessage } from "../../reducer/creativeGallerySlice";
 type ModalBodyProps = {
   headline: string;
   errorText: string;
-  isAutoExit: boolean;
+  isClose: boolean;
 };
 
 const ModalBody = ({
   headline,
   errorText,
-  isAutoExit,
+  isClose,
 }: ModalBodyProps): JSX.Element => {
   const divElementRef = useRef<HTMLDivElement | null>(null);
   const dispatch = useAppDispatch();
@@ -32,20 +32,20 @@ const ModalBody = ({
     <div
       ref={divElementRef}
       className="error-modal fade-error-modal-in"
-      onClick={(event) => {
-        handleClickOutside(event);
+      onClick={(event: any): void => {
+        isClose && handleClickOutside(event);
       }}
     >
       <div className="error-modal-box">
         <h1>{headline}</h1>
         <h2>{errorText}</h2>
-        {!isAutoExit ? (
-         <button
-         className="error-modal-button mt-4 mb-3"
-         onClick={handleCloseModal}
-       >
-         {t("button.proceed")}
-       </button>
+        {isClose ? (
+          <button
+            className="error-modal-button mt-4 mb-3"
+            onClick={handleCloseModal}
+          >
+            {t("button.proceed")}
+          </button>
         ) : null}
       </div>
     </div>
