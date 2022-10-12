@@ -2,11 +2,11 @@ import { useAppSelector } from "../../hooks";
 import { RootState } from "../../store";
 
 type ErrorMessageOutputProps = {
-  printErrorMessage: Function;
+  outputFunction: Function;
 };
 
 const ErrorMessageOutput = ({
-  printErrorMessage,
+  outputFunction,
 }: ErrorMessageOutputProps): JSX.Element => {
   const errorMessage = useAppSelector(
     (state: RootState) => state.creativeGallery.errorMessage
@@ -15,7 +15,7 @@ const ErrorMessageOutput = ({
   return (
     <>
       <span className="error-output is-danger">
-        {printErrorMessage(errorMessage)}
+        {outputFunction(errorMessage)}
       </span>
     </>
   );

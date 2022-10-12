@@ -16,7 +16,7 @@ import {
 import HeaderText from "../components/helpers/HeaderText";
 import ContactLink from "../components/contact/ContactLink";
 import ContactForm from "../components/contact/ContactForm";
-import ErrorMessageOutput from "../components/errors/ErrorMessageOutput";
+import ErrorMessage from "../components/errors/ErrorMessage";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
@@ -55,7 +55,7 @@ const Contact = (): JSX.Element => {
     });
   };
 
-  const printErrorMessage = (errorMessage: string): string => {
+  const convertErrorMessage = (errorMessage: string): string => {
     switch (errorMessage) {
       case "Form: Email missing":
         return t("errorTexts.createRequest.form.emailMissing");
@@ -113,7 +113,7 @@ const Contact = (): JSX.Element => {
           </h3>
         </div>
         {errorMessage && errorMessage.includes("Form") && (
-          <ErrorMessageOutput printErrorMessage={printErrorMessage} />
+          <ErrorMessage outputFunction={convertErrorMessage} />
         )}
         <ContactForm
           isCreatingRequest={isCreatingRequest}

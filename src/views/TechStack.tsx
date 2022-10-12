@@ -28,6 +28,7 @@ const TechStack = (): JSX.Element => {
             <div className="tech-stack-logo">
               <img
                 src={logo}
+                loading="lazy"
                 alt="firm logo"
                 key={`${logo}${index.toString()}`}
               />
