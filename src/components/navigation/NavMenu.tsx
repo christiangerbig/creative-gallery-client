@@ -37,7 +37,7 @@ const NavMenu = (): JSX.Element => {
     setTimeout(resetMenuVariables, 300); // 300 milliseconds
   };
 
-  const menuProperties = (isOpenMenu: boolean): string => {
+  const fadeMenu = (isOpenMenu: boolean): string => {
     return isOpenMenu
       ? "menu fade-menu-in"
       : isCloseMenu
@@ -45,7 +45,7 @@ const NavMenu = (): JSX.Element => {
       : "menu";
   };
 
-  const fade = (
+  const fadeLink = (
     isOpenMenu: boolean,
     fadeInSpeed: string,
     fadeOutSpeed: string
@@ -60,7 +60,7 @@ const NavMenu = (): JSX.Element => {
   return (
     <>
       {!isDesktop && isMenuVisible && (
-        <div className={menuProperties(isOpenMenu)}>
+        <div className={fadeMenu(isOpenMenu)}>
           <div className="close-menu-container">
             <FontAwesomeIcon
               icon={faTimes}
@@ -74,7 +74,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/about"}
-                    className={fade(
+                    className={fadeLink(
                       isOpenMenu,
                       "menu-link-fade-in-speed1",
                       "menu-link-fade-out-speed1"
@@ -87,7 +87,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/projects"}
-                    className={fade(
+                    className={fadeLink(
                       isOpenMenu,
                       "menu-link-fade-in-speed2",
                       "menu-link-fade-out-speed2"
@@ -100,7 +100,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/techstack"}
-                    className={fade(
+                    className={fadeLink(
                       isOpenMenu,
                       "menu-link-fade-in-speed3",
                       "menu-link-fade-out-speed3"
@@ -113,7 +113,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <ExternalLink
                     path={resumePath}
-                    styleClass={fade(
+                    styleClass={fadeLink(
                       isOpenMenu,
                       "menu-link-fade-in-speed4",
                       "menu-link-fade-out-speed4"
@@ -125,7 +125,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/contact"}
-                    className={fade(
+                    className={fadeLink(
                       isOpenMenu,
                       "menu-link-fade-in-speed5",
                       "menu-link-fade-out-speed5"
