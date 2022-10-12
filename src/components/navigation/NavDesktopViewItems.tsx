@@ -14,10 +14,7 @@ const NavDesktopViewItems = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 
-  const highlite = (
-    currentMenuItem: MenuItem,
-    menuItem: MenuItem
-  ): string => {
+  const highliteItem = (currentMenuItem: MenuItem): string => {
     return currentMenuItem === menuItem
       ? "navigation-link is-navigation-link-active"
       : "navigation-link";
@@ -29,7 +26,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/about"}
-            className={highlite(menuItem, "about")}
+            className={highliteItem("about")}
             onClick={(): void => {
               dispatch(setMenuItem("about"));
             }}
@@ -40,7 +37,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/projects"}
-            className={highlite(menuItem, "projects")}
+            className={highliteItem("projects")}
             onClick={(): void => {
               dispatch(setMenuItem("projects"));
             }}
@@ -51,7 +48,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/techstack"}
-            className={highlite(menuItem, "techStack")}
+            className={highliteItem("techStack")}
             onClick={(): void => {
               dispatch(setMenuItem("techStack"));
             }}
@@ -71,7 +68,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/contact"}
-            className={highlite(menuItem, "contact")}
+            className={highliteItem("contact")}
             onClick={(): void => {
               dispatch(setMenuItem("contact"));
             }}
