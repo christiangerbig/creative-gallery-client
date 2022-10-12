@@ -45,7 +45,7 @@ const NavMenu = (): JSX.Element => {
       : "menu";
   };
 
-  const linkProperties = (
+  const fade = (
     isOpenMenu: boolean,
     fadeInSpeed: string,
     fadeOutSpeed: string
@@ -74,7 +74,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/about"}
-                    className={linkProperties(
+                    className={fade(
                       isOpenMenu,
                       "menu-link-fade-in-speed1",
                       "menu-link-fade-out-speed1"
@@ -87,7 +87,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/projects"}
-                    className={linkProperties(
+                    className={fade(
                       isOpenMenu,
                       "menu-link-fade-in-speed2",
                       "menu-link-fade-out-speed2"
@@ -100,7 +100,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/techstack"}
-                    className={linkProperties(
+                    className={fade(
                       isOpenMenu,
                       "menu-link-fade-in-speed3",
                       "menu-link-fade-out-speed3"
@@ -113,7 +113,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <ExternalLink
                     path={resumePath}
-                    styleClass={linkProperties(
+                    styleClass={fade(
                       isOpenMenu,
                       "menu-link-fade-in-speed4",
                       "menu-link-fade-out-speed4"
@@ -125,7 +125,7 @@ const NavMenu = (): JSX.Element => {
                 <li>
                   <Link
                     to={"/contact"}
-                    className={linkProperties(
+                    className={fade(
                       isOpenMenu,
                       "menu-link-fade-in-speed5",
                       "menu-link-fade-out-speed5"
