@@ -2,14 +2,14 @@ import { useTranslation } from "react-i18next";
 import ModalBody from "./ModalBody";
 
 type ErrorModalProps = {
-  errorMessage: string;
+  message: string | null;
 };
 
-const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
+const ErrorModal = ({ message }: ErrorModalProps): JSX.Element | null => {
   const { t } = useTranslation();
 
-  const convertErrorMessage = (errorMessage: string): string => {
-    switch (errorMessage) {
+  const convertErrorMessage = (message: string): string => {
+    switch (message) {
       case "Create request failed":
         return t("errorTexts.createRequest.createRequestFailed");
       default:
@@ -17,11 +17,15 @@ const ErrorModal = ({ errorMessage }: ErrorModalProps): JSX.Element => {
     }
   };
 
+  if (!message || message.includes("Form")) {
+    return null;
+  }
+
   return (
     <div>
       <ModalBody
         headline={t("errorModal.headline")}
-        errorText={convertErrorMessage(errorMessage)}
+        text={convertErrorMessage(message)}
         isClose={true}
       />
     </div>

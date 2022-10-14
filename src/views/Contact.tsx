@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { setMenuItem, setErrorMessage } from "../reducer/creativeGallerySlice";
+import { setNavItem, setErrorMessage } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
 import { RequestIO } from "../lib/requestIO";
@@ -14,9 +14,9 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import HeaderText from "../components/helpers/HeaderText";
+import ErrorMessage from "../components/helpers/ErrorMessage";
 import ContactLink from "../components/contact/ContactLink";
 import ContactForm from "../components/contact/ContactForm";
-import ErrorMessage from "../components/errors/ErrorMessage";
 
 const Contact = (): JSX.Element => {
   const isCreatingRequest = useAppSelector(
@@ -50,7 +50,7 @@ const Contact = (): JSX.Element => {
     event.preventDefault();
     const requestIO = new RequestIO(dispatch);
     requestIO.create(newRequest, (): void => {
-      dispatch(setMenuItem("home"));
+      dispatch(setNavItem("home"));
       history.push("/");
     });
   };
@@ -91,9 +91,9 @@ const Contact = (): JSX.Element => {
               {t("texts.contact.email")}
             </h3>
             <ContactLink
-              linkPath="mailto:chr_gerbig@web.de"
-              linkClass="contact-link"
-              linkText="chr_gerbig(at)web.de"
+              path="mailto:chr_gerbig@web.de"
+              styleClass="contact-link"
+              text="chr_gerbig(at)web.de"
             />
           </div>
           <div className="contact-phone-container">
@@ -101,9 +101,9 @@ const Contact = (): JSX.Element => {
               <FontAwesomeIcon icon={faMobileAlt} /> {t("texts.contact.phone")}
             </h3>
             <ContactLink
-              linkPath="tel:+4915154824288"
-              linkClass="contact-link"
-              linkText="+49&nbsp;151&nbsp;548&nbsp;242&nbsp;88"
+              path="tel:+4915154824288"
+              styleClass="contact-link"
+              text="+49&nbsp;151&nbsp;548&nbsp;242&nbsp;88"
             />
           </div>
         </div>
@@ -112,9 +112,10 @@ const Contact = (): JSX.Element => {
             <FontAwesomeIcon icon={faPen} /> {t("texts.contact.submit")}
           </h3>
         </div>
-        {errorMessage && errorMessage.includes("Form") && (
-          <ErrorMessage outputFunction={convertErrorMessage} />
-        )}
+        <ErrorMessage
+          message={errorMessage}
+          outputFunction={convertErrorMessage}
+        />
         <ContactForm
           isCreatingRequest={isCreatingRequest}
           handleSubmitRequest={handleSubmitRequest}

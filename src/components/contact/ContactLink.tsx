@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 
 type ContactLinkProps = {
-  linkPath: string;
-  linkClass: string;
-  linkText: string;
+  path: string;
+  styleClass: string;
+  text: string;
 };
 
 const ContactLink = ({
-  linkPath,
-  linkClass,
-  linkText,
+  path,
+  styleClass,
+  text,
 }: ContactLinkProps): JSX.Element => {
   return (
     <>
-      <span className={linkClass}>
-        <Link to={{ pathname: linkPath }} target="_blank">
-          <h4>{linkText}</h4>
+      <span className={styleClass}>
+        <Link to={{ pathname: path }} target="_blank">
+          <h4>{text}</h4>
         </Link>
       </span>
     </>

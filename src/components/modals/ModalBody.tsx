@@ -5,13 +5,13 @@ import { setErrorMessage } from "../../reducer/creativeGallerySlice";
 
 type ModalBodyProps = {
   headline: string;
-  errorText: string;
+  text: string;
   isClose: boolean;
 };
 
 const ModalBody = ({
   headline,
-  errorText,
+  text,
   isClose,
 }: ModalBodyProps): JSX.Element => {
   const divElementRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +38,7 @@ const ModalBody = ({
     >
       <div className="error-modal-box">
         <h1>{headline}</h1>
-        <h2>{errorText}</h2>
+        <h2>{text}</h2>
         {isClose && (
           <button
             className="error-modal-button mt-4 mb-3"

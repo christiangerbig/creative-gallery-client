@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch } from "../hooks";
-import { setMenuItem } from "../reducer/creativeGallerySlice";
+import { setNavItem } from "../reducer/creativeGallerySlice";
 import HeaderText from "../components/helpers/HeaderText";
 
 const About = (): JSX.Element => {
@@ -50,7 +50,7 @@ const About = (): JSX.Element => {
               <span
                 className="about-contact-link"
                 onClick={(): void => {
-                  dispatch(setMenuItem("contact"));
+                  dispatch(setNavItem("contact"));
                 }}
               >
                 <Link to={{ pathname: "/contact" }}>

@@ -60,7 +60,7 @@ export const creativeGallerySlice = createSlice({
     setIsCloseMenu: (state, action: PayloadAction<boolean>) => {
       state.isCloseMenu = action.payload;
     },
-    setMenuItem: (state, action: PayloadAction<string>) => {
+    setNavItem: (state, action: PayloadAction<string>) => {
       state.menuItem = action.payload;
     },
 
@@ -93,7 +93,7 @@ export const {
   setIsMenuVisible,
   setIsOpenMenu,
   setIsCloseMenu,
-  setMenuItem,
+  setNavItem,
 
   // ----- Request -----
   setIsCreatingRequest,

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../hooks";
-import { setMenuItem } from "../../reducer/creativeGallerySlice";
+import { setNavItem } from "../../reducer/creativeGallerySlice";
 import { RootState } from "../../store";
 import { resumePath } from "../../lib/externalLinkPaths";
 import { MenuItem } from "../../typeDefinitions";
@@ -14,7 +14,7 @@ const NavDesktopViewItems = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 
-  const highliteItem = (currentMenuItem: MenuItem): string => {
+  const highliteNavItem = (currentMenuItem: MenuItem): string => {
     return currentMenuItem === menuItem
       ? "navigation-link is-navigation-link-active"
       : "navigation-link";
@@ -26,9 +26,9 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/about"}
-            className={highliteItem("about")}
+            className={highliteNavItem("about")}
             onClick={(): void => {
-              dispatch(setMenuItem("about"));
+              dispatch(setNavItem("about"));
             }}
           >
             {t("link.about")}
@@ -37,9 +37,9 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/projects"}
-            className={highliteItem("projects")}
+            className={highliteNavItem("projects")}
             onClick={(): void => {
-              dispatch(setMenuItem("projects"));
+              dispatch(setNavItem("projects"));
             }}
           >
             {t("link.projects")}
@@ -48,9 +48,9 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/techstack"}
-            className={highliteItem("techStack")}
+            className={highliteNavItem("techStack")}
             onClick={(): void => {
-              dispatch(setMenuItem("techStack"));
+              dispatch(setNavItem("techStack"));
             }}
           >
             {t("link.techStack")}
@@ -68,9 +68,9 @@ const NavDesktopViewItems = (): JSX.Element => {
         <li>
           <Link
             to={"/contact"}
-            className={highliteItem("contact")}
+            className={highliteNavItem("contact")}
             onClick={(): void => {
-              dispatch(setMenuItem("contact"));
+              dispatch(setNavItem("contact"));
             }}
           >
             {t("link.contact")}

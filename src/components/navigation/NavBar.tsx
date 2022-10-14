@@ -1,18 +1,10 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks";
-import {
-  setIsDesktop,
-  setIsMenuVisible,
-  setMenuItem,
-  setIsOpenMenu,
-} from "../../reducer/creativeGallerySlice";
+import { setIsDesktop, setNavItem } from "../../reducer/creativeGallerySlice";
 import { RootState } from "../../store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-import NavDesktopViewItems from "./NavDesktopViewItems";
 import NavBarLogo from "./NavBarLogo";
+import NavView from "./NavView";
 
 const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(
@@ -51,21 +43,13 @@ const NavBar = (): JSX.Element => {
       const removeWindowWidthHandler = (
         windowObject: Window,
         eventHandlerCallback: EventListener
-      ) => {
+      ): void => {
         windowObject.removeEventListener("resize", eventHandlerCallback);
       };
 
       removeWindowWidthHandler(window, handleCheckWindowWidthCallback);
     };
   }, []);
-
-  const handleOpenMenu = (): void => {
-    dispatch(setIsMenuVisible(true));
-    dispatch(setIsOpenMenu(true));
-    setTimeout((): void => {
-      dispatch(setIsOpenMenu(false));
-    }, 1000); // 1 second
-  };
 
   return (
     <div>
@@ -76,19 +60,13 @@ const NavBar = (): JSX.Element => {
               to={"/"}
               className="is-text-style-plain is-white"
               onClick={(): void => {
-                dispatch(setMenuItem("home"));
+                dispatch(setNavItem("home"));
               }}
             >
               <NavBarLogo />
             </Link>
           </div>
-          {isDesktop ? (
-            <NavDesktopViewItems />
-          ) : (
-            <div>
-              <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
-            </div>
-          )}
+          <NavView isDesktop={isDesktop} />
         </div>
       </nav>
     </div>

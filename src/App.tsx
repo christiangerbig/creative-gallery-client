@@ -1,8 +1,4 @@
 import { Route, Switch, withRouter } from "react-router-dom";
-import { useAppSelector } from "./hooks";
-import { RootState } from "./store";
-import { useOnlineStatus } from "./lib/connectionCheck";
-
 import "./App.min.css";
 
 import NavBar from "./components/navigation/NavBar";
@@ -14,15 +10,9 @@ import Projects from "./views/Projects";
 import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
 import PageNotFound from "./views/NotFound";
-import ErrorModal from "./components/modals/ErrorModal";
-import OfflineModal from "./components/modals/OfflineModal";
+import Modals from "./components/modals/Modals";
 
 const App = (): JSX.Element => {
-  const errorMessage = useAppSelector(
-    (state: RootState) => state.creativeGallery.errorMessage
-  );
-  const isOnline = useOnlineStatus();
-
   return (
     <div>
       <NavBar />
@@ -46,10 +36,7 @@ const App = (): JSX.Element => {
         <Route component={PageNotFound} />
       </Switch>
       <Footer />
-      {errorMessage && !errorMessage.includes("Form") && (
-        <ErrorModal errorMessage={errorMessage} />
-      )}
-      {!isOnline && <OfflineModal />}
+      <Modals />
     </div>
   );
 };
