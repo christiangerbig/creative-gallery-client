@@ -74,6 +74,7 @@ const NavMenu = (): JSX.Element => {
                       "menu-link-fade-in-speed1",
                       "menu-link-fade-out-speed1"
                     )}
+                    data-cy="menu-about-link"
                     onClick={handleCloseMenu}
                   >
                     {t("link.about")}
@@ -86,6 +87,7 @@ const NavMenu = (): JSX.Element => {
                       "menu-link-fade-in-speed2",
                       "menu-link-fade-out-speed2"
                     )}
+                    data-cy="menu-projects-link"
                     onClick={handleCloseMenu}
                   >
                     {t("link.projects")}
@@ -98,6 +100,7 @@ const NavMenu = (): JSX.Element => {
                       "menu-link-fade-in-speed3",
                       "menu-link-fade-out-speed3"
                     )}
+                    data-cy="menu-tech-stack-link"
                     onClick={handleCloseMenu}
                   >
                     {t("link.techStack")}
@@ -111,6 +114,7 @@ const NavMenu = (): JSX.Element => {
                       "menu-link-fade-out-speed4"
                     )}
                     text={t("link.resume")}
+                    data-cy="menu-resume-link"
                     onClickHandler={handleCloseMenu}
                   />
                 </li>
@@ -121,6 +125,7 @@ const NavMenu = (): JSX.Element => {
                       "menu-link-fade-in-speed5",
                       "menu-link-fade-out-speed5"
                     )}
+                    data-cy="menu-contact-link"
                     onClick={handleCloseMenu}
                   >
                     {t("link.contact")}

@@ -71,7 +71,7 @@ const Contact = (): JSX.Element => {
   };
 
   return (
-    <div className="contact-page-container">
+    <div className="contact-page-container" data-cy="contact-page">
       <header className="headline">
         <HeaderText
           headlines={{

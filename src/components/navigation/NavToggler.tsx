@@ -19,7 +19,11 @@ const NavToggler = (): JSX.Element => {
 
   return (
     <div>
-      <FontAwesomeIcon icon={faBars} onClick={handleOpenMenu} />
+      <FontAwesomeIcon
+        icon={faBars}
+        data-cy="toggler"
+        onClick={handleOpenMenu}
+      />
     </div>
   );
 };

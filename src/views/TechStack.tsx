@@ -12,7 +12,7 @@ const TechStack = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="tech-stack-page-container">
+    <div className="tech-stack-page-container" data-cy="tech-stack-page">
       <header className="headline">
         <HeaderText
           headlines={{

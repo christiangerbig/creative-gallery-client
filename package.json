@@ -31,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "@types/react-router-dom": "^5.1.8",
-    "@types/react-scroll": "^1.8.3"
+    "@types/react-scroll": "^1.8.3",
+    "cypress": "^10.10.0"
   }
 }

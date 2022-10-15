@@ -14,7 +14,7 @@ const Projects = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="projects-page-container">
+    <div className="projects-page-container" data-cy="projects-page">
       <header className="headline">
         <HeaderText
           headlines={{
