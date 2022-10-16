@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
+import { useRequestIO } from "../custom-hooks/useRequestIO";
 import { setNavItem, setErrorMessage } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
-import { RequestIO } from "../lib/requestIO";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
@@ -27,6 +27,7 @@ const Contact = (): JSX.Element => {
   );
   const dispatch = useAppDispatch();
   const history = useHistory();
+  const requestIO = useRequestIO();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -48,7 +49,6 @@ const Contact = (): JSX.Element => {
       message: message.value,
     };
     event.preventDefault();
-    const requestIO = new RequestIO(dispatch);
     requestIO.create(newRequest, (): void => {
       dispatch(setNavItem("home"));
       history.push("/");
