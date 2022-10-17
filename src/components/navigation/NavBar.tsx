@@ -13,41 +13,18 @@ const NavBar = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const handleCheckWindowWidth = (windowObject: Window): void => {
-      if (windowObject.innerWidth > 1024) {
+    const handleResizeEventCallback = (): void => {
+      if (window.innerWidth > 1024) {
         dispatch(setIsDesktop(true));
       } else {
         dispatch(setIsDesktop(false));
       }
     };
 
-    const addWindowWidthHandler = (
-      windowObject: Window,
-      eventHandler: Function
-    ): EventListener => {
-      eventHandler(windowObject);
-      const eventHandlerCallback = (): void => {
-        eventHandler(windowObject);
-      };
-
-      windowObject.addEventListener("resize", eventHandlerCallback);
-      return eventHandlerCallback;
-    };
-
-    const handleCheckWindowWidthCallback = addWindowWidthHandler(
-      window,
-      handleCheckWindowWidth
-    );
+    window.addEventListener("resize", handleResizeEventCallback);
 
     return () => {
-      const removeWindowWidthHandler = (
-        windowObject: Window,
-        eventHandlerCallback: EventListener
-      ): void => {
-        windowObject.removeEventListener("resize", eventHandlerCallback);
-      };
-
-      removeWindowWidthHandler(window, handleCheckWindowWidthCallback);
+      window.removeEventListener("resize", handleResizeEventCallback);
     };
   }, []);
 
