@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useCheckMediaBreakpoint } from "../../custom-hooks/useCheckMediaBreakpoint";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { setIsDesktop, setNavItem } from "../../reducer/creativeGallerySlice";
 import { RootState } from "../../store";
@@ -11,22 +11,7 @@ const NavBar = (): JSX.Element => {
     (state: RootState) => state.creativeGallery.isDesktop
   );
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    const handleResizeEventCallback = (): void => {
-      if (window.innerWidth > 1024) {
-        dispatch(setIsDesktop(true));
-      } else {
-        dispatch(setIsDesktop(false));
-      }
-    };
-
-    window.addEventListener("resize", handleResizeEventCallback);
-
-    return () => {
-      window.removeEventListener("resize", handleResizeEventCallback);
-    };
-  }, []);
+  dispatch(setIsDesktop(useCheckMediaBreakpoint()));
 
   return (
     <div>
