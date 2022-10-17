@@ -8,9 +8,10 @@ import ProjectDetails from "../components/Projects/ProjectDetails";
 
 const Projects = (): JSX.Element => {
   const { t } = useTranslation();
+  const { scrollToTop } = scroll;
 
   useEffect(() => {
-    scroll.scrollToTop();
+    scrollToTop();
   }, []);
 
   return (

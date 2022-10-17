@@ -9,9 +9,10 @@ import HeaderText from "../components/helpers/HeaderText";
 const About = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
+  const { scrollToTop } = scroll;
 
   useEffect(() => {
-    scroll.scrollToTop();
+    scrollToTop();
   }, []);
 
   return (

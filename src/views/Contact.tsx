@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { useRequestIO } from "../custom-hooks/useRequestIO";
+import { useHandleRequest } from "../custom-hooks/useHandleRequest";
 import { setNavItem, setErrorMessage } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 import { RootState } from "../store";
@@ -26,14 +26,15 @@ const Contact = (): JSX.Element => {
     (state: RootState) => state.creativeGallery.errorMessage
   );
   const dispatch = useAppDispatch();
-  const history = useHistory();
-  const requestIO = useRequestIO();
+  const { push } = useHistory();
+  const { createRequest } = useHandleRequest();
   const { t } = useTranslation();
+  const { scrollToTop } = scroll;
 
   useEffect(() => {
     const setErrorMessageAndScrollToTop = (): void => {
       dispatch(setErrorMessage(null));
-      scroll.scrollToTop();
+      scrollToTop();
     };
 
     setErrorMessageAndScrollToTop();
@@ -49,9 +50,9 @@ const Contact = (): JSX.Element => {
       message: message.value,
     };
     event.preventDefault();
-    requestIO.create(newRequest, (): void => {
+    createRequest(newRequest, (): void => {
       dispatch(setNavItem("home"));
-      history.push("/");
+      push("/");
     });
   };
 

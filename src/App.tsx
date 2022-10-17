@@ -1,6 +1,4 @@
 import { Route, Switch, withRouter } from "react-router-dom";
-import "./App.min.css";
-
 import NavBar from "./components/navigation/NavBar";
 import Menu from "./components/navigation/NavMenu";
 import Footer from "./components/Footer";
@@ -11,6 +9,8 @@ import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
 import PageNotFound from "./views/NotFound";
 import Modals from "./components/modals/Modals";
+
+import "./App.min.css";
 
 const App = (): JSX.Element => {
   return (
@@ -35,8 +35,8 @@ const App = (): JSX.Element => {
         </Route>
         <Route component={PageNotFound} />
       </Switch>
-      <Footer />
       <Modals />
+      <Footer />
     </div>
   );
 };

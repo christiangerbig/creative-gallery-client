@@ -5,14 +5,14 @@ import {
 } from "../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 
-type RequestIO = {
-  create: Function;
+type HandleRequest = {
+  createRequest: Function;
 };
 
-export const useRequestIO = (): RequestIO => {
+export const useHandleRequest = (): HandleRequest => {
   const dispatch = useAppDispatch();
-  const requestIO = {
-    create(newRequest: Request, callbackFunction: Function): void {
+  const handleRequest = {
+    createRequest(newRequest: Request, callbackFunction: Function): void {
       dispatch(createRequest(newRequest))
         .unwrap()
         .then((): void => {
@@ -23,5 +23,5 @@ export const useRequestIO = (): RequestIO => {
         });
     },
   };
-  return requestIO;
+  return handleRequest;
 };

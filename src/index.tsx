@@ -4,7 +4,6 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { OnlineStatusProvider } from "./custom-hooks/useOnlineStatus";
 
 import "./index.css";
 import "./i18n";
@@ -12,11 +11,9 @@ import "./i18n";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <OnlineStatusProvider>
-        <Router>
-          <App />
-        </Router>
-      </OnlineStatusProvider>
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.querySelector("#root")
