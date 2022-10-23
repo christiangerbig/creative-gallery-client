@@ -13,7 +13,7 @@ import {
   trackerToolsGitHubClientPath,
   trackerToolsVideoPath,
 } from "../lib/externalLinkPaths";
-import { ProjectItem } from "../typeDefinitions";
+import { ProjectItem } from "../app/typeDefinitions";
 
 const projects: ProjectItem[] = [
   {

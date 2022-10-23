@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setNavItem } from "../../reducer/creativeGallerySlice";
-import { RootState } from "../../store";
+import { RootState } from "../../app/store";
 import { resumePath } from "../../lib/externalLinkPaths";
-import { MenuItem } from "../../typeDefinitions";
+import { MenuItem } from "../../app/typeDefinitions";
 import ExternalLink from "../helpers/ExternalLink";
 
 const NavDesktopViewItems = (): JSX.Element => {

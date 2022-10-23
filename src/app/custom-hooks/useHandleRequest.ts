@@ -2,7 +2,7 @@ import { useAppDispatch } from "../hooks";
 import {
   createRequest,
   setErrorMessage,
-} from "../reducer/creativeGallerySlice";
+} from "../../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 
 type HandleRequest = {

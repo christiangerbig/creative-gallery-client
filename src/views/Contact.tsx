@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { useHandleRequest } from "../custom-hooks/useHandleRequest";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useHandleRequest } from "../app/custom-hooks/useHandleRequest";
 import { setNavItem, setErrorMessage } from "../reducer/creativeGallerySlice";
-import { Request } from "../typeDefinitions";
-import { RootState } from "../store";
+import { Request } from "../app/typeDefinitions";
+import { RootState } from "../app/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,

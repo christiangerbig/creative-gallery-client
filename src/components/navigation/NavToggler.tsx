@@ -1,4 +1,4 @@
-import { useAppDispatch } from "../../hooks";
+import { useAppDispatch } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsOpenMenu,

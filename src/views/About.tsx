@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch } from "../hooks";
+import { useAppDispatch } from "../app/hooks";
 import { setNavItem } from "../reducer/creativeGallerySlice";
 import HeaderText from "../components/helpers/HeaderText";
 

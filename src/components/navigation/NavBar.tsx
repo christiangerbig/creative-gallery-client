@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { useCheckMediaBreakpoint } from "../../custom-hooks/useCheckMediaBreakpoint";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useCheckMediaBreakpoint } from "../../app/custom-hooks/useCheckMediaBreakpoint";
 import { setIsDesktop, setNavItem } from "../../reducer/creativeGallerySlice";
-import { RootState } from "../../store";
+import { RootState } from "../../app/store";
 import NavBarLogo from "./NavBarLogo";
 import NavView from "./NavView";
 

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import config from "../config";
+import config from "../app/config";
 import axios from "axios";
-import { MenuItem, Request } from "../typeDefinitions";
+import { MenuItem, Request } from "../app/typeDefinitions";
 
 type ErrorMessage = string | null;
 
@@ -48,30 +48,30 @@ export const creativeGallerySlice = createSlice({
 
   reducers: {
     // ----- Menu -----
-    setIsDesktop: (state, action: PayloadAction<boolean>) => {
-      state.isDesktop = action.payload;
+    setIsDesktop: (state, { payload }: PayloadAction<boolean>) => {
+      state.isDesktop = payload;
     },
-    setIsMenuVisible: (state, action: PayloadAction<boolean>) => {
-      state.isMenuVisible = action.payload;
+    setIsMenuVisible: (state, { payload }: PayloadAction<boolean>) => {
+      state.isMenuVisible = payload;
     },
-    setIsOpenMenu: (state, action: PayloadAction<boolean>) => {
-      state.isOpenMenu = action.payload;
+    setIsOpenMenu: (state, { payload }: PayloadAction<boolean>) => {
+      state.isOpenMenu = payload;
     },
-    setIsCloseMenu: (state, action: PayloadAction<boolean>) => {
-      state.isCloseMenu = action.payload;
+    setIsCloseMenu: (state, { payload }: PayloadAction<boolean>) => {
+      state.isCloseMenu = payload;
     },
-    setNavItem: (state, action: PayloadAction<string>) => {
-      state.menuItem = action.payload;
+    setNavItem: (state, { payload }: PayloadAction<string>) => {
+      state.menuItem = payload;
     },
 
     // ----- Request -----
-    setIsCreatingRequest: (state, action: PayloadAction<boolean>) => {
-      state.isCreatingRequest = action.payload;
+    setIsCreatingRequest: (state, { payload }: PayloadAction<boolean>) => {
+      state.isCreatingRequest = payload;
     },
 
     // ----- Error handling -----
-    setErrorMessage: (state, action: PayloadAction<ErrorMessage>) => {
-      state.errorMessage = action.payload;
+    setErrorMessage: (state, { payload }: PayloadAction<ErrorMessage>) => {
+      state.errorMessage = payload;
     },
   },
 
