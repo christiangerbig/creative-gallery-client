@@ -12,9 +12,8 @@ import NavView from "./NavView";
 const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(selectIsDesktop);
   const dispatch = useAppDispatch();
-  const checkMediaBreakpoint = useCheckMediaBreakpoint();
 
-  dispatch(setIsDesktop(checkMediaBreakpoint));
+  dispatch(setIsDesktop(useCheckMediaBreakpoint()));
 
   return (
     <div>
