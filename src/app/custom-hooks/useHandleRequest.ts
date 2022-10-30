@@ -12,7 +12,7 @@ type HandleRequest = {
 export const useHandleRequest = (): HandleRequest => {
   const dispatch = useAppDispatch();
   const handleRequest = {
-    createRequest(newRequest: Request, callbackFunction: Function): void {
+    createRequest: (newRequest: Request, callbackFunction: Function): void => {
       dispatch(createRequest(newRequest))
         .unwrap()
         .then((): void => {
