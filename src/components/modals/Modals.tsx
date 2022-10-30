@@ -1,13 +1,11 @@
 import { useAppSelector } from "../../app/hooks";
 import { useOnlineStatus } from "../../app/custom-hooks/useOnlineStatus";
-import { RootState } from "../../app/store";
+import { selectErrorMessage } from "../../reducer/creativeGallerySlice";
 import ErrorModal from "./ErrorModal";
 import OfflineModal from "./OfflineModal";
 
 const Modals = (): JSX.Element => {
-  const errorMessage = useAppSelector(
-    (state: RootState) => state.creativeGallery.errorMessage
-  );
+  const errorMessage = useAppSelector(selectErrorMessage);
   const isOnline = useOnlineStatus();
 
   if (isOnline) {

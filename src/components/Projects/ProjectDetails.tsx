@@ -6,9 +6,8 @@ type ProjectDetailsProps = {
   projectItem: ProjectItem;
 };
 
-const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
-  const { t } = useTranslation();
-  const {
+const ProjectDetails = ({
+  projectItem: {
     projectName,
     projectPicturePath,
     projectVideoPath,
@@ -16,7 +15,9 @@ const ProjectDetails = ({ projectItem }: ProjectDetailsProps): JSX.Element => {
     deployedPath,
     gitHubClientPath,
     gitHubServerPath,
-  } = projectItem;
+  },
+}: ProjectDetailsProps): JSX.Element => {
+  const { t } = useTranslation();
 
   return (
     <div className="project-details-container">

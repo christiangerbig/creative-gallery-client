@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setNavItem } from "../../reducer/creativeGallerySlice";
-import { RootState } from "../../app/store";
+import { selectMenuItem, setNavItem } from "../../reducer/creativeGallerySlice";
 import { resumePath } from "../../lib/externalLinkPaths";
 import { MenuItem } from "../../app/typeDefinitions";
 import ExternalLink from "../helpers/ExternalLink";
 
 const NavDesktopViewItems = (): JSX.Element => {
-  const menuItem = useAppSelector(
-    (state: RootState) => state.creativeGallery.menuItem
-  );
+  const menuItem = useAppSelector(selectMenuItem);
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 

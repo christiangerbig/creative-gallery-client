@@ -9,11 +9,9 @@ type HeaderTextProps = {
 };
 
 const HeaderText = ({
-  headlines,
+  headlines: { headline, subheadline },
   borderColorName,
 }: HeaderTextProps): JSX.Element => {
-  const { headline, subheadline } = headlines;
-
   const borderColor = (borderColorName: string): string => {
     switch (borderColorName) {
       case "green":

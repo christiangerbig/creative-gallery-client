@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { useCheckMediaBreakpoint } from "../../app/custom-hooks/useCheckMediaBreakpoint";
-import { setIsDesktop, setNavItem } from "../../reducer/creativeGallerySlice";
-import { RootState } from "../../app/store";
+import {
+  selectIsDesktop,
+  setIsDesktop,
+  setNavItem,
+} from "../../reducer/creativeGallerySlice";
 import NavBarLogo from "./NavBarLogo";
 import NavView from "./NavView";
 
 const NavBar = (): JSX.Element => {
-  const isDesktop = useAppSelector(
-    (state: RootState) => state.creativeGallery.isDesktop
-  );
+  const isDesktop = useAppSelector(selectIsDesktop);
   const dispatch = useAppDispatch();
-  dispatch(setIsDesktop(useCheckMediaBreakpoint()));
+  const checkMediaBreakpoint = useCheckMediaBreakpoint();
+
+  dispatch(setIsDesktop(checkMediaBreakpoint));
 
   return (
     <div>

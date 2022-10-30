@@ -4,9 +4,13 @@ import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useHandleRequest } from "../app/custom-hooks/useHandleRequest";
-import { setNavItem, setErrorMessage } from "../reducer/creativeGallerySlice";
+import {
+  setNavItem,
+  setErrorMessage,
+  selectIsCreatingRequest,
+  selectErrorMessage,
+} from "../reducer/creativeGallerySlice";
 import { Request } from "../app/typeDefinitions";
-import { RootState } from "../app/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
@@ -19,12 +23,8 @@ import ContactLink from "../components/contact/ContactLink";
 import ContactForm from "../components/contact/ContactForm";
 
 const Contact = (): JSX.Element => {
-  const isCreatingRequest = useAppSelector(
-    (state: RootState) => state.creativeGallery.isCreatingRequest
-  );
-  const errorMessage = useAppSelector(
-    (state: RootState) => state.creativeGallery.errorMessage
-  );
+  const isCreatingRequest = useAppSelector(selectIsCreatingRequest);
+  const errorMessage = useAppSelector(selectErrorMessage);
   const dispatch = useAppDispatch();
   const { push } = useHistory();
   const { createRequest } = useHandleRequest();

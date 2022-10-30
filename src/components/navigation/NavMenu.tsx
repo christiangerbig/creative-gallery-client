@@ -4,26 +4,21 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsCloseMenu,
+  selectIsDesktop,
+  selectIsMenuVisible,
+  selectIsOpenMenu,
+  selectIsCloseMenu,
 } from "../../reducer/creativeGallerySlice";
-import { RootState } from "../../app/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { resumePath } from "../../lib/externalLinkPaths";
 import ExternalLink from "../helpers/ExternalLink";
 
 const NavMenu = (): JSX.Element => {
-  const isDesktop = useAppSelector(
-    (state: RootState) => state.creativeGallery.isDesktop
-  );
-  const isMenuVisible = useAppSelector(
-    (state: RootState) => state.creativeGallery.isMenuVisible
-  );
-  const isOpenMenu = useAppSelector(
-    (state: RootState) => state.creativeGallery.isOpenMenu
-  );
-  const isCloseMenu = useAppSelector(
-    (state: RootState) => state.creativeGallery.isCloseMenu
-  );
+  const isDesktop = useAppSelector(selectIsDesktop);
+  const isMenuVisible = useAppSelector(selectIsMenuVisible);
+  const isOpenMenu = useAppSelector(selectIsOpenMenu);
+  const isCloseMenu = useAppSelector(selectIsCloseMenu);
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 

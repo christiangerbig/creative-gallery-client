@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import config from "../app/config";
 import axios from "axios";
 import { MenuItem, Request } from "../app/typeDefinitions";
+import { RootState } from "../app/store";
 
 type ErrorMessage = string | null;
 
@@ -86,6 +87,27 @@ export const creativeGallerySlice = createSlice({
   },
 });
 
+const selectors = {
+  // ----- Menu -----
+  selectMenuItem: ({ creativeGallery }: RootState) => creativeGallery.menuItem,
+  selectIsDesktop: ({ creativeGallery }: RootState) =>
+    creativeGallery.isDesktop,
+  selectIsMenuVisible: ({ creativeGallery }: RootState) =>
+    creativeGallery.isMenuVisible,
+  selectIsOpenMenu: ({ creativeGallery }: RootState) =>
+    creativeGallery.isOpenMenu,
+  selectIsCloseMenu: ({ creativeGallery }: RootState) =>
+    creativeGallery.isCloseMenu,
+
+  // ----- Request -----
+  selectIsCreatingRequest: ({ creativeGallery }: RootState) =>
+    creativeGallery.isCreatingRequest,
+
+  // ----- Error handling -----
+  selectErrorMessage: ({ creativeGallery }: RootState) =>
+    creativeGallery.errorMessage,
+};
+
 // ----- Slice actions -----
 export const {
   // ----- Menu -----
@@ -101,5 +123,21 @@ export const {
   // ----- Error handling -----
   setErrorMessage,
 } = creativeGallerySlice.actions;
+
+// ----- Slice selectors -----
+export const {
+  // ----- Menu -----
+  selectMenuItem,
+  selectIsDesktop,
+  selectIsMenuVisible,
+  selectIsOpenMenu,
+  selectIsCloseMenu,
+
+  // ----- Request -----
+  selectIsCreatingRequest,
+
+  // ----- Error handling -----
+  selectErrorMessage,
+} = selectors;
 
 export default creativeGallerySlice.reducer;
