@@ -23,6 +23,7 @@ const NavBar = (): JSX.Element => {
     };
 
     window.addEventListener("resize", handleResizeEventCallback);
+    handleResizeEventCallback();
 
     return () => {
       window.removeEventListener("resize", handleResizeEventCallback);
