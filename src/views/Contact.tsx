@@ -43,7 +43,9 @@ const Contact = (): JSX.Element => {
   const handleSubmitRequest = (
     event: React.FormEvent<HTMLFormElement>
   ): void => {
-    const { email, subject, message } = event.target as any;
+    const {
+      target: { email, subject, message },
+    } = event as any;
     const newRequest: Request = {
       email: email.value,
       subject: subject.value,
