@@ -16,9 +16,9 @@ const NavBar = (): JSX.Element => {
   useEffect(() => {
     const handleResizeEventCallback = (): void => {
       if (window.innerWidth > 1024) {
-        setIsDesktop(true);
+        dispatch(setIsDesktop(true));
       } else {
-        setIsDesktop(false);
+        dispatch(setIsDesktop(false));
       }
     };
 
