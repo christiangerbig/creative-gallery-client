@@ -4,25 +4,26 @@
 
 This is my portfolio to present my projects and another exercise to apply my React Redux knowledge.
 
-
 ## User Stories
 
--  **Home:** Logo + Title
--  **About:** Personal details about me 
--  **Projects:** Presentation of my projects
--  **Contact:** Different ways how to contact me, also includes a form to send me a message
--  **404:** As an user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
-
+- **Home:** Logo + Title
+- **About:** Personal details about me
+- **Projects:** Presentation of my projects
+- **Contact:** Different ways how to contact me, also includes a form to send me a message
+- **Language selection:** As a user/anon I can select the language of all texts in the app. German or English
+- **No internet connection:** As a user/anon I will be informed by a modal if there is no internet connection
+- **404:** As an user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
 
 # Client / Frontend
 
 ## React Router Routes (React App)
-| Path                      | Component                      | Permissions | Behavior                                                     |
-| --------------- | ----------------| ----------- | -----------------|
-| `/`                       | SplashPage, NavBar, Footer     | public `<Route>` | Home page, show title and logo  |            
-| `/about`                  | AboutPage                      | public `<Route>` | Show personal details           |
-| `/projects`               | ProjectsPage                   | public `<Route>` | Show my projects                |
-| `/contact`                | ContactPage                    | public `<Route>` | Show my contact data            |
+
+| Path        | Component                  | Permissions      | Behavior                       |
+| ----------- | -------------------------- | ---------------- | ------------------------------ |
+| `/`         | SplashPage, NavBar, Footer | public `<Route>` | Home page, show title and logo |
+| `/about`    | AboutPage                  | public `<Route>` | Show personal details          |
+| `/projects` | ProjectsPage               | public `<Route>` | Show my projects               |
+| `/contact`  | ContactPage                | public `<Route>` | Show my contact data           |
 
 ## Components
 
@@ -51,6 +52,14 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 - Projects
 - TechStack
 
+## Custom hooks
+
+- useHandleRequest()
+- useOnlineStatus()
+
+## External API
+
+- API I18n for language detection/selection
 
 # Server / Backend
 
@@ -77,10 +86,9 @@ Request model
 
 ## API Endpoints (backend routes)
 
-| HTTP Method | URL                     | Request Body                 | Success status | Error Status | Description                    |
-| ------ | ------------- | ------------------ | --------- | ------- | --------------- |
-| POST        | `/request/create`       | {email, subject, message}    | 200            | 500          | Create a request if form       ||             |                         |                              |                |              | fields are not empty           |
-
+| HTTP Method | URL               | Request Body              | Success status | Error Status | Description              |
+| ----------- | ----------------- | ------------------------- | -------------- | ------------ | ------------------------ | --- | --- | --- | --- | --- | --- | -------------------- |
+| POST        | `/request/create` | {email, subject, message} | 200            | 500          | Create a request if form |     |     |     |     |     |     | fields are not empty |
 
 ## Links
 
