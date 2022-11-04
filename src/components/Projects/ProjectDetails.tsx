@@ -23,7 +23,7 @@ const ProjectDetails = ({
     <div className="project-details-container">
       <video
         width="320"
-        height="200"
+        height="170"
         muted
         controls
         poster={projectPicturePath}
@@ -32,10 +32,10 @@ const ProjectDetails = ({
       <div className="project-description">
         <article>
           <header>
-            <h2>{projectName}</h2>
+            <h2>{t(projectName)}</h2>
           </header>
           <div className="project-description-container">
-            <p>{projectDescription}</p>
+            <p>{t(projectDescription)}</p>
           </div>
         </article>
       </div>

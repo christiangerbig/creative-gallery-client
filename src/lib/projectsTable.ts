@@ -17,31 +17,28 @@ import { ProjectItem } from "../app/typeDefinitions";
 
 const projects: ProjectItem[] = [
   {
-    projectName: "JUNGLE SWAP",
+    projectName: "texts.projects.jungleSwap.name",
     projectPicturePath: jungleSwapImage,
     projectVideoPath: jungleSwapVideoPath,
-    projectDescription:
-      "Share your plant offshoots and make money or swap them for another plant. Shop and give a plant a new home.",
+    projectDescription: "texts.projects.jungleSwap.description",
     deployedPath: jungleSwapDeployedPath,
     gitHubClientPath: jungleSwapGitHubClientPath,
     gitHubServerPath: jungleSwapGitHubServerPath,
   },
   {
-    projectName: "TRACKERTOOLS",
+    projectName: "texts.projects.trackerTools.name",
     projectPicturePath: trackerToolsImage,
     projectVideoPath: trackerToolsVideoPath,
-    projectDescription:
-      "Four powerful tools to make working with the music editor Protracker and its modules more comfortable.",
+    projectDescription: "texts.projects.trackerTools.description",
     deployedPath: trackerToolsDeployedPath,
     gitHubClientPath: trackerToolsGitHubClientPath,
     gitHubServerPath: "",
   },
   {
-    projectName: "LETTER SHOOTER",
+    projectName: "texts.projects.letterShooter.name",
     projectPicturePath: letterShooterImage,
     projectVideoPath: letterShooterVideoPath,
-    projectDescription:
-      "A coordination and strategy game with the goal to hit the missing letters with precise shots.",
+    projectDescription: "texts.projects.letterShooter.description",
     deployedPath: letterShooterDeployedPath,
     gitHubClientPath: letterShooterGitHubClientPath,
     gitHubServerPath: "",

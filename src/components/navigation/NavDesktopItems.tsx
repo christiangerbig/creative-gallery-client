@@ -5,6 +5,7 @@ import { selectMenuItem, setNavItem } from "../../reducer/creativeGallerySlice";
 import { resumePath } from "../../lib/externalLinkPaths";
 import { MenuItem } from "../../app/typeDefinitions";
 import ExternalLink from "../helpers/ExternalLink";
+import SelectLanguage from "../helpers/SelectLanguage";
 
 const NavDesktopViewItems = (): JSX.Element => {
   const menuItem = useAppSelector(selectMenuItem);
@@ -72,6 +73,9 @@ const NavDesktopViewItems = (): JSX.Element => {
           >
             {t("link.contact")}
           </Link>
+        </li>
+        <li>
+          <SelectLanguage styleClass={"select-language"} />
         </li>
       </ul>
     </div>

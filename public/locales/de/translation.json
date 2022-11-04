@@ -1,0 +1,117 @@
+{
+  "link": {
+    "about": "ÜBER MICH",
+    "projects": "PROJEKTE",
+    "techStack": "TECHSTACK",
+    "resume": "LEBENSLAUF",
+    "contact": "KONTAKT",
+    "startApp": "VERSUCH ES!",
+    "gitHubClient": "GIT HUB",
+    "gitHubServer": "GIT HUB 2",
+    "getBack": "ZURÜCK"
+  },
+
+  "button": {
+    "submit": "ABSENDEN",
+    "proceed": "WEITER"
+  },
+
+  "select": {
+    "language": {
+      "english": "ENGLISCH",
+      "german": "DEUTSCH"
+    }
+  },
+
+  "texts": {
+    "home": {
+      "welcome": {
+        "headline": "Hallo, ich bin Christian",
+        "subheadline": "Ein leidenschaftlicher Webentwickler"
+      }
+    },
+    "about": {
+      "headline": "Es gibt nur einen Weg",
+      "subheadline": "Immer geradeaus",
+      "personalDetails": {
+        "headline": "Hi,",
+        "paragraph1": "Ich bin Christian Gerbig. Ich bin ein Webentwickler, der sich auf Frontend- und Backend-Technologien konzentriert. Meine Homebase ist Hamburg",
+        "paragraph2": "Ich glaube an die positive Kraft der Kommunikation und vertraue auf kooperative Teamarbeit, die aus dem Austausch unterschiedlicher Sichtweisen einen Vorteil macht.",
+        "paragraph3": "Ich nutze gerne jeden Aspekt der neuen verfügbaren Technologie, um die Ziele zu erreichen, und liebe es, optimierte Lösungen zu programmieren, die den individuellen Anforderungen in Bezug auf Zeit, Budget und Ziel entsprechen.",
+        "paragraph4": "Mein Motto: Dinge lernen, (sie) verbessern und die Ziele erreichen."
+      },
+      "experience": {
+        "headline": "Wie alles begann",
+        "paragraph1": "Ich habe angefangen, die Grundlagen der Webentwicklung selbst und als Full-Stack-Webentwickler bei Ironhack zu lernen.",
+        "paragraph2": "Ich habe meine Fähigkeiten zum Schreiben von Clean Code verbessert und in mehreren Udemy-Kursen gelernt, das Redux Toolkit und TypeScript zusammen mit React in meinen Projekten anzuwenden.",
+        "paragraph3": "Mittlerweile bin ich als Azubi-Entwickler mehr in agiles Arbeiten eingetaucht und habe gelernt, Vue zusammen mit Vuex zu nutzen und End-2-End-Tests für Cypress geschrieben.",
+        "paragraph4": "Ich möchte Teil eines Teams werden, in dem ich meine Fähigkeiten anwenden, weiterentwickeln und teilen kann.",
+        "contact": "Lass uns Kontakt aufnehmen"
+      }
+    },
+    "projects": {
+      "headline": "Meine Projekte als Webentwickler",
+      "subheadline": "an denen ich arbeite",
+      "jungleSwap": {
+        "name": "JUNGLESWAP",
+        "description": "Teile deine Pflanzenableger und verdiene damit Geld oder tausche sie gegen eine andere Pflanze. Kaufe eine Pflanze und gib ihr ein neues Zuhause."
+      },
+      "trackerTools": {
+        "name": "TRACKERTOOLS",
+        "description": "Vier leistungsstarke Tools, die das Arbeiten mit dem Musikeditor Protracker und seinen Modulen komfortabler machen."
+      },
+      "letterShooter": {
+        "name": "LETTER SHOOTER",
+        "description": "Ein Koordinations- und Strategiespiel mit dem Ziel, die fehlenden Buchstaben mit präzisen Schüssen zu treffen."
+      }
+    },
+    "techStack": {
+      "headline": "Der Tech Stack",
+      "subheadline": "den ich nutze"
+    },
+    "contact": {
+      "headline": "Zögere nicht",
+      "subheadline": "mich zu kontaktieren",
+      "name": "Christian Gerbig",
+      "jobname": "Webentwickler",
+      "email": "Email",
+      "phone": "Phone",
+      "submit": "oder schreib mir",
+      "createRequest": {
+        "form": {
+          "inputEmail": "Email",
+          "inputSubject": "Worum geht es?",
+          "inputMessage": "Nachricht"
+        }
+      }
+    },
+    "pageNotFound": {
+      "headline": "FEHLER 404",
+      "subheadline": "Seite wurde nicht gefunden"
+    },
+    "footer": {
+      "copyright": "©",
+      "appAuthor": "Christian Gerbig"
+    },
+    "errorModal": {
+      "headline": "ETWAS LIEF SCHIEF"
+    },
+    "offlineModal": {
+      "headline": "ACHTUNG"
+    }
+  },
+
+  "errorTexts": {
+    "createRequest": {
+      "form": {
+        "emailMissing": "Bitte gib eine Email an",
+        "subjectMissing": "Bitte gib einen Betreff an",
+        "messageMissing": "Bitte gib eine Nachricht an",
+        "emailFormatInvalid": "Das E-Mail-Format ist ungültig"
+      },
+      "createRequestFailed": "Erstellen der Anfrage fehlgeschlagen"
+    },
+    "offline": "Keine Internetverbindung",
+    "general": "Ein Fehler ist aufgetreten"
+  }
+}
