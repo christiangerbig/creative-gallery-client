@@ -86,9 +86,12 @@ Request model
 
 ## API Endpoints (backend routes)
 
-| HTTP Method | URL               | Request Body              | Success status | Error Status | Description              |
-| ----------- | ----------------- | ------------------------- | -------------- | ------------ | ------------------------ | --- | --- | --- | --- | --- | --- | -------------------- |
-| POST        | `/request/create` | {email, subject, message} | 200            | 500          | Create a request if form |     |     |     |     |     |     | fields are not empty |
+| HTTP Method | URL               | Request Body            | Success status | Error Status | Description |
+| ----------- | ----------------- | ----------------------- | -------------- | ------------ | ----------- |
+| POST        | `/request/create` | {email,subject,message} | 200            | 500          | Create a    |
+|             |                   |                         |                |              | request if  |
+|             |                   |                         |                |              | form fields |
+|             |                   |                         |                |              | not empty   |
 
 ## Links
 
