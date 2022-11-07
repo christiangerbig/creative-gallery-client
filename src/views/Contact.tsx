@@ -96,7 +96,7 @@ const Contact = (): JSX.Element => {
             <ContactLink
               path="mailto:chr_gerbig@web.de"
               styleClass="contact-link"
-              text="chr_gerbig(at)web.de"
+              text={t("texts.contact.emailAddress")}
             />
           </div>
           <div className="contact-phone-container">
@@ -106,7 +106,7 @@ const Contact = (): JSX.Element => {
             <ContactLink
               path="tel:+4915154824288"
               styleClass="contact-link"
-              text="+49&nbsp;151&nbsp;548&nbsp;242&nbsp;88"
+              text={t("texts.contact.phoneNumber")}
             />
           </div>
         </div>

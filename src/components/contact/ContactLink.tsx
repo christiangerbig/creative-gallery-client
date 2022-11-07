@@ -15,7 +15,7 @@ const ContactLink = ({
     <>
       <span className={styleClass}>
         <Link to={{ pathname: path }} target="_blank">
-          <h4>{text}</h4>
+          <h4 className="is-text-nowrap">{text}</h4>
         </Link>
       </span>
     </>

@@ -75,7 +75,9 @@
       "name": "Christian Gerbig",
       "jobname": "Web Developer",
       "email": "e-mail",
+      "emailAddress": "chr_gerbig(at)web.de",
       "phone": "phone",
+      "phoneNumber": "+49 151 548 242 88",
       "submit": "or write me",
       "createRequest": {
         "form": {

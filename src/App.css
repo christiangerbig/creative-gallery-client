@@ -32,6 +32,10 @@ body {
   text-decoration: none;
 }
 
+.is-text-nowrap {
+  white-space: nowrap;
+}
+
 .is-black {
   color: black;
 }

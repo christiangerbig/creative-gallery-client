@@ -7,7 +7,7 @@ import About from "./views/About";
 import Projects from "./views/Projects";
 import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
-import PageNotFound from "./views/NotFound";
+import NotFound from "./views/NotFound";
 import Modals from "./components/modals/Modals";
 
 import "./App.min.css";
@@ -33,7 +33,7 @@ const App = (): JSX.Element => {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route component={PageNotFound} />
+        <Route component={NotFound} />
       </Switch>
       <Modals />
       <Footer />
