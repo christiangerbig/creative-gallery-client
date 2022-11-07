@@ -24,14 +24,14 @@ const ContactForm = ({
       >
         <input
           type="email"
-          name={t("texts.contact.createRequest.form.inputEmail")}
-          placeholder="email"
+          name="email"
+          placeholder={t("texts.contact.createRequest.form.inputEmail")}
           className="form-input"
         />
         <input
           type="text"
-          name={t("texts.contact.createRequest.form.inputSubject")}
-          placeholder="subject"
+          name="subject"
+          placeholder={t("texts.contact.createRequest.form.inputSubject")}
           className="form-input"
         />
         <textarea
