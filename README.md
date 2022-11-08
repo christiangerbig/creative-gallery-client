@@ -32,15 +32,19 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 - ErrorMessage
 - ErrorModal
 - ExternalLink
+- SelectLanguage
 - Footer
 - HeaderText
 - HomeLogo
-- Menu
+- NavMenu
 - ModalBody
 - NavBar
 - NavBarLogo
+- NavToggler
+- NavView
 - NavDesktopViewItems
 - OfflineModal
+- Modals
 - ProjectDetails
 
 ## Views
@@ -48,7 +52,7 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 - About
 - Contact
 - Home
-- PageNotFound
+- NotFound
 - Projects
 - TechStack
 
