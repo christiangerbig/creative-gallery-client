@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   selectIsDesktop,
@@ -7,11 +9,11 @@ import {
 } from "../../reducer/creativeGallerySlice";
 import NavBarLogo from "./NavBarLogo";
 import NavView from "./NavView";
-import { useEffect } from "react";
 
 const NavBar = (): JSX.Element => {
   const isDesktop = useAppSelector(selectIsDesktop);
   const dispatch = useAppDispatch();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const handleResizeEventCallback = (): void => {
@@ -24,6 +26,8 @@ const NavBar = (): JSX.Element => {
 
     window.addEventListener("resize", handleResizeEventCallback);
     handleResizeEventCallback();
+    const currentLanguage = i18n.resolvedLanguage as string;
+    i18n.changeLanguage(currentLanguage);
 
     return () => {
       window.removeEventListener("resize", handleResizeEventCallback);
