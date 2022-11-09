@@ -6,7 +6,7 @@ type ExternalLinkProps = {
   styleClass: string;
   text?: string;
   faClass?: string;
-  onClickHandler?: MouseEventHandler<HTMLAnchorElement>;
+  closeMenuHandler?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 const ExternalLink = ({
@@ -14,7 +14,7 @@ const ExternalLink = ({
   styleClass,
   text,
   faClass,
-  onClickHandler,
+  closeMenuHandler,
 }: ExternalLinkProps): JSX.Element => {
   const linkContent = (
     text: string | undefined,
@@ -36,7 +36,7 @@ const ExternalLink = ({
         target="_blank"
         rel="noreferrer noopener"
         className={styleClass}
-        onClick={onClickHandler}
+        onClick={closeMenuHandler}
       >
         {linkContent(text, faClass)}
       </Link>

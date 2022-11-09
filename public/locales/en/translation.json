@@ -18,6 +18,7 @@
 
   "select": {
     "language": {
+      "placeholder": "LANGUAGE",
       "english": "ENGLISH",
       "german": "GERMAN"
     }

@@ -99,13 +99,13 @@ const NavMenu = (): JSX.Element | null => {
                     "menu-item-fade-in-speed3",
                     "menu-item-fade-out-speed3"
                   )}
-                  data-cy="menu-tech-stack-link"
+                  data-cy="menu-techstack-link"
                   onClick={handleCloseMenu}
                 >
                   {t("link.techStack")}
                 </Link>
               </li>
-              <li>
+              <li data-cy="menu-resume-link">
                 <ExternalLink
                   path={resumePath}
                   styleClass={fadeMenuItem(
@@ -113,8 +113,7 @@ const NavMenu = (): JSX.Element | null => {
                     "menu-item-fade-out-speed4"
                   )}
                   text={t("link.resume")}
-                  data-cy="menu-resume-link"
-                  onClickHandler={handleCloseMenu}
+                  closeMenuHandler={handleCloseMenu}
                 />
               </li>
               <li>
@@ -136,6 +135,7 @@ const NavMenu = (): JSX.Element | null => {
                     "menu-item-fade-in-speed6",
                     "menu-item-fade-out-speed6"
                   )} menu-select-language`}
+                  closeMenuHandler={handleCloseMenu}
                 />
               </li>
             </ul>
