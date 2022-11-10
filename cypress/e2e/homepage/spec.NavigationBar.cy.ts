@@ -11,7 +11,7 @@ describe("Enter Navigation Bar Desktop view", () => {
     cy.get('[data-cy="projects-link"]').click();
     cy.get('[data-cy="projects-page"]').should("exist");
   });
-  it("Check menu techstack", () => {
+  it("Check item techstack", () => {
     cy.viewport("macbook-11");
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="techstack-link"]').click();
