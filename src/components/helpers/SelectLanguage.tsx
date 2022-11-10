@@ -22,7 +22,7 @@ const SelectLanguage = ({
     <div>
       <select
         className={styleClass}
-        data-cy="menu-select-language"
+        data-cy="select-language"
         onChange={(event) => {
           handleSelectLanguage(event);
         }}

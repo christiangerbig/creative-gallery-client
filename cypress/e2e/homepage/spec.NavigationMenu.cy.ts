@@ -1,4 +1,4 @@
-describe("Enter Homepage Mobile view", () => {
+describe("Enter Navigation Menu Mobile view", () => {
   it("Check menu item about", () => {
     cy.viewport("iphone-8");
     cy.visit("http://localhost:3000/");
@@ -43,18 +43,14 @@ describe("Enter Homepage Mobile view", () => {
     cy.viewport("iphone-8");
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="toggler"]').click();
-    cy.get('[data-cy="menu-select-language"]')
-      .select(1)
-      .should("have.value", "de");
-    cy.get('[data-cy="menu-select-language"]').contains("DEUTSCH");
+    cy.get('[data-cy="select-language"]').select(1).should("have.value", "de");
+    cy.get('[data-cy="select-language"]').should("contain", "DEUTSCH");
   });
   it("Select English language", () => {
     cy.viewport("iphone-8");
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="toggler"]').click();
-    cy.get('[data-cy="menu-select-language"]')
-      .select(2)
-      .should("have.value", "en");
-    cy.get('[data-cy="menu-select-language"]').contains("ENGLISH");
+    cy.get('[data-cy="select-language"]').select(2).should("have.value", "en");
+    cy.get('[data-cy="select-language"]').should("contain", "ENGLISH");
   });
 });

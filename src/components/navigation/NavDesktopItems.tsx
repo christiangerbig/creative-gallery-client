@@ -25,6 +25,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/about"}
             className={highliteNavItem("about")}
+            data-cy="about-link"
             onClick={(): void => {
               dispatch(setNavItem("about"));
             }}
@@ -36,6 +37,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/projects"}
             className={highliteNavItem("projects")}
+            data-cy="projects-link"
             onClick={(): void => {
               dispatch(setNavItem("projects"));
             }}
@@ -47,6 +49,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/techstack"}
             className={highliteNavItem("techStack")}
+            data-cy="techstack-link"
             onClick={(): void => {
               dispatch(setNavItem("techStack"));
             }}
@@ -56,7 +59,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         </li>
       </ul>
       <ul className="navigation-subcontainer-right navigation-list">
-        <li>
+        <li data-cy="resume-link">
           <ExternalLink
             path={resumePath}
             styleClass="navigation-link"
@@ -67,6 +70,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/contact"}
             className={highliteNavItem("contact")}
+            data-cy="contact-link"
             onClick={(): void => {
               dispatch(setNavItem("contact"));
             }}

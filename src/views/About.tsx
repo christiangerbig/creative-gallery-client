@@ -54,7 +54,7 @@ const About = (): JSX.Element => {
                   dispatch(setNavItem("contact"));
                 }}
               >
-                <Link to={{ pathname: "/contact" }}>
+                <Link to={{ pathname: "/contact" }} data-cy="alt-contact-link">
                   {t("texts.about.experience.contact")}
                 </Link>
               </span>
