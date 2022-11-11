@@ -59,7 +59,7 @@ const NavDesktopViewItems = (): JSX.Element => {
         </li>
       </ul>
       <ul className="navigation-subcontainer-right navigation-list">
-        <li data-cy="resume-link">
+        <li>
           <ExternalLink
             path={resumePath}
             styleClass="navigation-link"

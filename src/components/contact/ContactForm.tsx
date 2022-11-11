@@ -27,12 +27,14 @@ const ContactForm = ({
           name="email"
           placeholder={t("texts.contact.createRequest.form.inputEmail")}
           className="form-input"
+          data-cy="form-input-email"
         />
         <input
           type="text"
           name="subject"
           placeholder={t("texts.contact.createRequest.form.inputSubject")}
           className="form-input"
+          data-cy="form-input-subject"
         />
         <textarea
           name="message"
@@ -40,12 +42,14 @@ const ContactForm = ({
           cols={35}
           rows={7}
           className="form-textarea"
+          data-cy="form-input-message"
         />
         <button
           type="submit"
           disabled={buttonState()}
           formNoValidate
           className="form-submit"
+          data-cy="form-submit-request"
         >
           {t("button.submit")}
         </button>

@@ -13,7 +13,9 @@ const ErrorMessage = ({
 
   return (
     <>
-      <span className="error-output is-danger">{outputFunction(message)}</span>
+      <span className="error-output is-danger" data-cy="error-message">
+        {outputFunction(message)}
+      </span>
     </>
   );
 };

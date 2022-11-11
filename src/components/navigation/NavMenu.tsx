@@ -105,7 +105,7 @@ const NavMenu = (): JSX.Element | null => {
                   {t("link.techStack")}
                 </Link>
               </li>
-              <li data-cy="menu-resume-link">
+              <li>
                 <ExternalLink
                   path={resumePath}
                   styleClass={fadeMenuItem(

@@ -13,7 +13,7 @@ const Home = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="home-page-container">
+    <div className="home-page-container" data-cy="home-page">
       <Logo />
       <HeaderText
         headlines={{
