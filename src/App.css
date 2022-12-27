@@ -103,7 +103,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1030;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0.7);
   color: #eeecec;
   backdrop-filter: blur(15px);
@@ -264,7 +264,7 @@ nav {
   right: 0;
   width: inherit;
   height: 100%;
-  z-index: 1050;
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.7);
   color: #eeecec;
   backdrop-filter: blur(15px);
@@ -911,7 +911,7 @@ form h3 {
   flex-direction: column;
   width: inherit;
   height: 100%;
-  z-index: 1070;
+  z-index: 7;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(15px);
 }
