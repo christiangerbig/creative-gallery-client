@@ -23,9 +23,7 @@ const SelectLanguage = ({
       <select
         className={styleClass}
         data-cy="select-language"
-        onChange={(event) => {
-          handleSelectLanguage(event);
-        }}
+        onChange={handleSelectLanguage}
       >
         <option disabled selected value="">
           {t("select.language.placeholder")}

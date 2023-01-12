@@ -7,6 +7,7 @@ import gitLabLogo from "../images/GitLab-Logo.svg";
 import javaScriptES6Logo from "../images/JavaScript(ES6)-Logo.svg";
 import mongoDBLogo from "../images/MongoDB-Logo.svg";
 import nodeJsLogo from "../images/NodeJS-Logo.svg";
+import nextJsLogo from "../images/NextJS-Logo.svg";
 import npmLogo from "../images/NPM-Logo.svg";
 import reactLogo from "../images/React-Logo.svg";
 import reduxLogo from "../images/Redux-Logo.svg";
@@ -23,6 +24,7 @@ const toolsLogos: string[] = [
   reduxLogo,
   vueJsLogo,
   nodeJsLogo,
+  nextJsLogo,
   javaScriptES6Logo,
   typeScriptLogo,
   cypressLogo,

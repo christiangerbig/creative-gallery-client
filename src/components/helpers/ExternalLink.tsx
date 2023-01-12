@@ -19,14 +19,12 @@ const ExternalLink = ({
   const linkContent = (
     text: string | undefined,
     faClass: string | undefined
-  ): string | JSX.Element => {
+  ): JSX.Element | null => {
     return text ? (
-      text
+      <span>{text}</span>
     ) : faClass ? (
       <i className={`fab ${faClass} is-white`} />
-    ) : (
-      ""
-    );
+    ) : null;
   };
 
   return (

@@ -23,7 +23,7 @@ const ModalBody = ({
   };
 
   const handleClickOutside = ({ target }: any): void => {
-    if (divElementRef.current === target) {
+    if (divElementRef.current === target && isClose) {
       handleCloseModal();
     }
   };
@@ -32,9 +32,7 @@ const ModalBody = ({
     <div
       ref={divElementRef}
       className="error-modal fade-error-modal-in"
-      onClick={(event: any): void => {
-        isClose && handleClickOutside(event);
-      }}
+      onClick={handleClickOutside}
     >
       <div className="error-modal-box">
         <h1>{headline}</h1>
