@@ -24,7 +24,7 @@ const ErrorModal = ({ message }: ErrorModalProps): JSX.Element | null => {
   return (
     <div>
       <ModalBody
-        headline={t("errorModal.headline")}
+        headline={t("texts.errorModal.headline")}
         text={convertErrorMessage(message)}
         isClose={true}
       />
