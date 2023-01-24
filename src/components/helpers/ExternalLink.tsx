@@ -1,13 +1,13 @@
 import { MouseEventHandler } from "react";
 import { Link } from "react-router-dom";
 
-type ExternalLinkProps = {
+interface ExternalLinkProps {
   path: string;
   styleClass: string;
   text?: string;
   faClass?: string;
   closeMenuHandler?: MouseEventHandler<HTMLAnchorElement>;
-};
+}
 
 const ExternalLink = ({
   path,

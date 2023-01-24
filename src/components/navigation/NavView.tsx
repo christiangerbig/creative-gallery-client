@@ -1,9 +1,9 @@
 import NavDesktopItems from "./NavDesktopItems";
 import NavToggler from "./NavToggler";
 
-type NavViewProps = {
+interface NavViewProps {
   isDesktop: boolean;
-};
+}
 
 const NavView = ({ isDesktop }: NavViewProps): JSX.Element => {
   if (isDesktop) {

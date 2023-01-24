@@ -89,23 +89,23 @@ export const creativeGallerySlice = createSlice({
 
 const selectors = {
   // ----- Menu -----
-  selectMenuItem: ({ creativeGallery }: RootState) => creativeGallery.menuItem,
-  selectIsDesktop: ({ creativeGallery }: RootState) =>
-    creativeGallery.isDesktop,
-  selectIsMenuVisible: ({ creativeGallery }: RootState) =>
-    creativeGallery.isMenuVisible,
-  selectIsOpenMenu: ({ creativeGallery }: RootState) =>
-    creativeGallery.isOpenMenu,
-  selectIsCloseMenu: ({ creativeGallery }: RootState) =>
-    creativeGallery.isCloseMenu,
+  selectMenuItem: ({ creativeGallery: { menuItem } }: RootState) => menuItem,
+  selectIsDesktop: ({ creativeGallery: { isDesktop } }: RootState) => isDesktop,
+  selectIsMenuVisible: ({ creativeGallery: { isMenuVisible } }: RootState) =>
+    isMenuVisible,
+  selectIsOpenMenu: ({ creativeGallery: { isOpenMenu } }: RootState) =>
+    isOpenMenu,
+  selectIsCloseMenu: ({ creativeGallery: { isCloseMenu } }: RootState) =>
+    isCloseMenu,
 
   // ----- Request -----
-  selectIsCreatingRequest: ({ creativeGallery }: RootState) =>
-    creativeGallery.isCreatingRequest,
+  selectIsCreatingRequest: ({
+    creativeGallery: { isCreatingRequest },
+  }: RootState) => isCreatingRequest,
 
   // ----- Error handling -----
-  selectErrorMessage: ({ creativeGallery }: RootState) =>
-    creativeGallery.errorMessage,
+  selectErrorMessage: ({ creativeGallery: { errorMessage } }: RootState) =>
+    errorMessage,
 };
 
 // ----- Slice actions -----

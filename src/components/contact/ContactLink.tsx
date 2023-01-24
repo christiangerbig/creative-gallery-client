@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-type ContactLinkProps = {
+interface ContactLinkProps {
   path: string;
   styleClass: string;
   text: string;
-};
+}
 
 const ContactLink = ({
   path,

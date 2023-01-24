@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-type ContactFormProps = {
+interface ContactFormProps {
   isCreatingRequest: boolean;
   handleSubmitRequest: Function;
-};
+}
 
 const ContactForm = ({
   isCreatingRequest,

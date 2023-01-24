@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import { useAppDispatch } from "../../app/hooks";
 import { setErrorMessage } from "../../reducer/creativeGallerySlice";
 
-type ModalBodyProps = {
+interface ModalBodyProps {
   headline: string;
   text: string;
   isClose: boolean;
-};
+}
 
 const ModalBody = ({
   headline,

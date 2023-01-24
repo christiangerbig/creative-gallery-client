@@ -5,9 +5,9 @@ import {
 } from "../../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 
-type HandleRequest = {
+interface HandleRequest {
   createRequest: Function;
-};
+}
 
 export const useHandleRequest = (): HandleRequest => {
   const dispatch = useAppDispatch();

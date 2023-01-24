@@ -3,10 +3,10 @@ type Headlines = {
   subheadline: string;
 };
 
-type HeaderTextProps = {
+interface HeaderTextProps {
   headlines: Headlines;
   borderColorName: string;
-};
+}
 
 const HeaderText = ({
   headlines: { headline, subheadline },
