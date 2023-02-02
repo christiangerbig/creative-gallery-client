@@ -11,9 +11,7 @@ const ContactForm = ({
 }: ContactFormProps): JSX.Element => {
   const { t } = useTranslation();
 
-  const buttonState = (): boolean => {
-    return isCreatingRequest ? true : false;
-  };
+  const buttonState = (): boolean => (isCreatingRequest ? true : false);
 
   return (
     <>

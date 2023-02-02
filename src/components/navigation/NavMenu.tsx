@@ -33,21 +33,19 @@ const NavMenu = (): JSX.Element | null => {
     setTimeout(resetMenuVariables, 300); // 300 milliseconds
   };
 
-  const fadeMenu = (): string => {
-    return isOpenMenu
+  const fadeMenu = (): string =>
+    isOpenMenu
       ? "menu fade-menu-in"
       : isCloseMenu
       ? "menu fade-menu-out"
       : "menu";
-  };
 
-  const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string => {
-    return isOpenMenu
+  const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string =>
+    isOpenMenu
       ? `menu-item is-warning ${fadeInSpeed}`
       : isCloseMenu
       ? `menu-item is-warning ${fadeOutSpeed}`
       : "menu-item is-warning";
-  };
 
   if (isDesktop || !isMenuVisible) {
     return null;

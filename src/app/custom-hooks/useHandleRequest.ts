@@ -11,7 +11,7 @@ interface HandleRequest {
 
 export const useHandleRequest = (): HandleRequest => {
   const dispatch = useAppDispatch();
-  const handleRequest = {
+  return {
     createRequest: (newRequest: Request, callbackFunction: Function): void => {
       dispatch(createRequest(newRequest))
         .unwrap()
@@ -23,5 +23,4 @@ export const useHandleRequest = (): HandleRequest => {
         });
     },
   };
-  return handleRequest;
 };

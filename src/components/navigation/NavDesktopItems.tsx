@@ -12,11 +12,10 @@ const NavDesktopViewItems = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 
-  const highliteNavItem = (currentMenuItem: MenuItem): string => {
-    return currentMenuItem === menuItem
+  const highliteNavItem = (currentMenuItem: MenuItem): string =>
+    currentMenuItem === menuItem
       ? "navigation-link is-navigation-link-active"
       : "navigation-link";
-  };
 
   return (
     <div className="navigation-container">

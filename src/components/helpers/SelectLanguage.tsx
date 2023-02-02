@@ -25,9 +25,7 @@ const SelectLanguage = ({
         data-cy="select-language"
         onChange={handleSelectLanguage}
       >
-        <option disabled selected value="">
-          {t("select.language.placeholder")}
-        </option>
+        <option value="">{t("select.language.placeholder")}</option>
         <option value="de">{t("select.language.german")}</option>
         <option value="en">{t("select.language.english")}</option>
       </select>

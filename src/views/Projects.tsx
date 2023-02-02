@@ -27,14 +27,12 @@ const Projects = (): JSX.Element => {
       </header>
       <div className="projects-container">
         {projects.map(
-          (projectItem: ProjectItem, index: number): JSX.Element => {
-            return (
-              <ProjectDetails
-                projectItem={projectItem}
-                key={`${projectItem.projectName}${index.toString()}`}
-              />
-            );
-          }
+          (projectItem: ProjectItem, index: number): JSX.Element => (
+            <ProjectDetails
+              projectItem={projectItem}
+              key={`${projectItem.projectName}${index.toString()}`}
+            />
+          )
         )}
       </div>
     </div>
