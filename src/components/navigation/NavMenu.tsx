@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsCloseMenu,
-  selectIsDesktop,
+  selectIsLargeDevice,
   selectIsMenuVisible,
   selectIsOpenMenu,
   selectIsCloseMenu,
@@ -16,7 +16,7 @@ import ExternalLink from "../helpers/ExternalLink";
 import SelectLanguage from "../helpers/SelectLanguage";
 
 const NavMenu = (): JSX.Element | null => {
-  const isDesktop = useAppSelector(selectIsDesktop);
+  const isLargeDevice = useAppSelector(selectIsLargeDevice);
   const isMenuVisible = useAppSelector(selectIsMenuVisible);
   const isOpenMenu = useAppSelector(selectIsOpenMenu);
   const isCloseMenu = useAppSelector(selectIsCloseMenu);
@@ -47,7 +47,7 @@ const NavMenu = (): JSX.Element | null => {
       ? `menu-item is-warning ${fadeOutSpeed}`
       : "menu-item is-warning";
 
-  if (isDesktop || !isMenuVisible) {
+  if (isLargeDevice || !isMenuVisible) {
     return null;
   }
 

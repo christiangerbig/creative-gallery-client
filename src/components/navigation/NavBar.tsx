@@ -1,34 +1,19 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useCheckBreakpoint } from "../../app/custom-hooks/useCheckBreakpoint";
 import {
-  selectIsDesktop,
-  setIsDesktop,
+  selectIsLargeDevice,
+  setIsLargeDevice,
   setNavItem,
 } from "../../reducer/creativeGallerySlice";
 import NavBarLogo from "./NavBarLogo";
 import NavView from "./NavView";
 
 const NavBar = (): JSX.Element => {
-  const isDesktop = useAppSelector(selectIsDesktop);
+  const isLargeDevice = useAppSelector(selectIsLargeDevice);
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    const handleResizeEventCallback = (): void => {
-      if (window.innerWidth > 1024) {
-        dispatch(setIsDesktop(true));
-      } else {
-        dispatch(setIsDesktop(false));
-      }
-    };
-
-    window.addEventListener("resize", handleResizeEventCallback);
-    handleResizeEventCallback();
-
-    return () => {
-      window.removeEventListener("resize", handleResizeEventCallback);
-    };
-  }, []);
+  dispatch(setIsLargeDevice(useCheckBreakpoint(992)));
 
   return (
     <div>
@@ -45,7 +30,7 @@ const NavBar = (): JSX.Element => {
               <NavBarLogo />
             </Link>
           </div>
-          <NavView isDesktop={isDesktop} />
+          <NavView isLargeDevice={isLargeDevice} />
         </div>
       </nav>
     </div>
