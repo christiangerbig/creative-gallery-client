@@ -5,7 +5,7 @@ export const useCheckBreakpoint = (breakpoint: number): boolean => {
 
   useEffect(() => {
     const handleResizeEventCallback = (): void => {
-      if (window.innerWidth > breakpoint) {
+      if (window.innerWidth >= breakpoint) {
         setIsBreakpoint(true);
         return;
       }

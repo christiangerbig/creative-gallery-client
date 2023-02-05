@@ -58,6 +58,7 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 
 ## Custom hooks
 
+- useCheckBreakpoint()
 - useHandleRequest()
 - useOnlineStatus()
 
