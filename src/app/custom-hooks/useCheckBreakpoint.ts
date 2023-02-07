@@ -7,9 +7,9 @@ export const useCheckBreakpoint = (breakpoint: number): boolean => {
     const handleResizeEventCallback = (): void => {
       if (window.innerWidth >= breakpoint) {
         setIsBreakpoint(true);
-        return;
+      } else {
+        setIsBreakpoint(false);
       }
-      setIsBreakpoint(false);
     };
 
     window.addEventListener("resize", handleResizeEventCallback);

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { useHandleRequest } from "../app/custom-hooks/useHandleRequest";
+import { useRequest } from "../app/custom-hooks/useRequest";
 import {
   setNavItem,
   setErrorMessage,
@@ -27,7 +27,7 @@ const Contact = (): JSX.Element => {
   const errorMessage = useAppSelector(selectErrorMessage);
   const dispatch = useAppDispatch();
   const { push } = useHistory();
-  const { createRequest } = useHandleRequest();
+  const { createRequest } = useRequest();
   const { t } = useTranslation();
   const { scrollToTop } = scroll;
 

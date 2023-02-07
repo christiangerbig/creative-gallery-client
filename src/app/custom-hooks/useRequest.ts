@@ -9,7 +9,7 @@ interface HandleRequest {
   createRequest: Function;
 }
 
-export const useHandleRequest = (): HandleRequest => {
+export const useRequest = (): HandleRequest => {
   const dispatch = useAppDispatch();
   return {
     createRequest: (newRequest: Request, callbackFunction: Function): void => {

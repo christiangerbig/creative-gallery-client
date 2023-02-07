@@ -9,7 +9,6 @@ import TechStack from "./views/TechStack";
 import Contact from "./views/Contact";
 import NotFound from "./views/NotFound";
 import Modals from "./components/modals/Modals";
-
 import "./App.min.css";
 
 const App = (): JSX.Element => {

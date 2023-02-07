@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import Logo from "../components/Home/HomeLogo";
+import Logo from "../components/home/HomeLogo";
 import HeaderText from "../components/helpers/HeaderText";
 
 const Home = (): JSX.Element => {
