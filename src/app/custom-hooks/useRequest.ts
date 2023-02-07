@@ -5,11 +5,11 @@ import {
 } from "../../reducer/creativeGallerySlice";
 import { Request } from "../typeDefinitions";
 
-interface HandleRequest {
+interface RequestMethods {
   createRequest: Function;
 }
 
-export const useRequest = (): HandleRequest => {
+export const useRequest = (): RequestMethods => {
   const dispatch = useAppDispatch();
   return {
     createRequest: (newRequest: Request, callbackFunction: Function): void => {

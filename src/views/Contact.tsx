@@ -27,8 +27,8 @@ const Contact = (): JSX.Element => {
   const errorMessage = useAppSelector(selectErrorMessage);
   const dispatch = useAppDispatch();
   const { push } = useHistory();
-  const { createRequest } = useRequest();
   const { t } = useTranslation();
+  const { createRequest } = useRequest();
   const { scrollToTop } = scroll;
 
   useEffect(() => {
