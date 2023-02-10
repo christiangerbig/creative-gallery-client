@@ -28,7 +28,7 @@ const initialState: InitialState = {
 
 const apiPath = `${config.API_URL}/api`;
 
-const rejectWithValue = (data: string): void | PromiseLike<void> => {
+const rejectWithValue = (data: any): void | PromiseLike<void> => {
   throw new Error(data);
 };
 
@@ -37,8 +37,12 @@ export const createRequest = createAsyncThunk(
   async (newRequest: Request): Promise<void | any> => {
     try {
       await axios.post(`${apiPath}/request/create`, newRequest);
-    } catch (err: any) {
-      return rejectWithValue(err.response.data.errorMessage);
+    } catch ({
+      response: {
+        data: { errorMessage },
+      },
+    }: any) {
+      return rejectWithValue(errorMessage);
     }
   }
 );

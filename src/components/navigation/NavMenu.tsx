@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
@@ -33,12 +34,15 @@ const NavMenu = (): JSX.Element | null => {
     setTimeout(resetMenuVariables, 300); // 300 milliseconds
   };
 
-  const fadeMenu = (): string =>
-    isOpenMenu
-      ? "menu fade-menu-in"
-      : isCloseMenu
-      ? "menu fade-menu-out"
-      : "menu";
+  const fadeMenu = useMemo(
+    (): string =>
+      isOpenMenu
+        ? "menu fade-menu-in"
+        : isCloseMenu
+        ? "menu fade-menu-out"
+        : "menu",
+    [isOpenMenu]
+  );
 
   const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string =>
     isOpenMenu
@@ -53,7 +57,7 @@ const NavMenu = (): JSX.Element | null => {
 
   return (
     <>
-      <div className={fadeMenu()}>
+      <div className={fadeMenu}>
         <div className="close-menu-container">
           <FontAwesomeIcon
             icon={faTimes}

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 interface ContactFormProps {
@@ -11,7 +12,10 @@ const ContactForm = ({
 }: ContactFormProps): JSX.Element => {
   const { t } = useTranslation();
 
-  const buttonState = (): boolean => (isCreatingRequest ? true : false);
+  const buttonState = useMemo(
+    (): boolean => (isCreatingRequest ? true : false),
+    [isCreatingRequest]
+  );
 
   return (
     <>
@@ -44,7 +48,7 @@ const ContactForm = ({
         />
         <button
           type="submit"
-          disabled={buttonState()}
+          disabled={buttonState}
           formNoValidate
           className="form-submit"
           data-cy="form-submit-request"
