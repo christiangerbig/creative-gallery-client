@@ -26,13 +26,8 @@ const TechStack = (): JSX.Element => {
       <div className="tech-stack-logos-container">
         {toolsLogos.map(
           (logo: string, index: number): JSX.Element => (
-            <div className="tech-stack-logo">
-              <img
-                src={logo}
-                loading="lazy"
-                alt="firm logo"
-                key={`${logo}${index.toString()}`}
-              />
+            <div key={`${logo}${index.toString()}`} className="tech-stack-logo">
+              <img src={logo} loading="lazy" alt="firm logo" />
             </div>
           )
         )}
