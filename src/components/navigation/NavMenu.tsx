@@ -41,7 +41,7 @@ const NavMenu = (): JSX.Element | null => {
         : isCloseMenu
         ? "menu fade-menu-out"
         : "menu",
-    [isOpenMenu]
+    [isOpenMenu, isCloseMenu]
   );
 
   const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string =>

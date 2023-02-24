@@ -1,7 +1,7 @@
-type Headlines = {
+interface Headlines {
   headline: string;
   subheadline: string;
-};
+}
 
 interface HeaderTextProps {
   headlines: Headlines;

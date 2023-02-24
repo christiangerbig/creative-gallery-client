@@ -61,6 +61,7 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 - useCheckBreakpoint()
 - useHandleRequest()
 - useOnlineStatus()
+- useProjectsData()
 
 ## External API
 

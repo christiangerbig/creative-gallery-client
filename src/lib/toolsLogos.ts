@@ -19,7 +19,7 @@ import vueJsLogo from "../images/Vue.js-Logo.svg";
 import webstormLogo from "../images/Webstorm-Logo.svg";
 import yarnLogo from "../images/Yarn-Logo.svg";
 
-const toolsLogos: string[] = [
+export const toolsLogos: string[] = [
   reactLogo,
   reduxLogo,
   vueJsLogo,
@@ -41,5 +41,3 @@ const toolsLogos: string[] = [
   visualStudioCodeLogo,
   webstormLogo,
 ];
-
-export default toolsLogos;

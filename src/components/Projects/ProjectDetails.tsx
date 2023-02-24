@@ -32,10 +32,10 @@ const ProjectDetails = ({
       <div className="project-description">
         <article>
           <header>
-            <h2>{t(projectName)}</h2>
+            <h2>{projectName}</h2>
           </header>
           <div className="project-description-container">
-            <p>{t(projectDescription)}</p>
+            <p>{projectDescription}</p>
           </div>
         </article>
       </div>
