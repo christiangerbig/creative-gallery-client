@@ -63,15 +63,15 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 - useProjectsData()
 - useRequest()
 
-### useCheckBreakpoint hook
+### useCheckBreakpoint()
 
 The custom hook useCheckBreakpoint() has the parameter breakpoint which is a number and it returns a boolean value. True if the browser window width >= the breakpoint value otherwise false.
 
-### useOnlineStatus hook
+### useOnlineStatus()
 
 The custom hook useOnlineStatus() needs no parameters and returns a boolean value. True if there is an online connection otherwise false.
 
-### useProjectsData hook
+### useProjectsData()
 
 The custom hook useProjectsData() needs no parameters and returns an array of objects with this format:
 
@@ -91,11 +91,11 @@ The custom hook useProjectsData() needs no parameters and returns an array of ob
 
 ```
 
-### useRequest hook
+### useRequest()
 
 The custom hook useRequest needs no parameters and return the method createRequest(newRequest, callbackFunction) to send a request to the database.
 
-#### createRequest() method
+#### createRequest()
 
 The custom method createRequest() needs two parameters and returns nothing:
 
