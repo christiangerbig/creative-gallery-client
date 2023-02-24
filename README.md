@@ -58,10 +58,58 @@ This is my portfolio to present my projects and another exercise to apply my Rea
 
 ## Custom hooks
 
-- useCheckBreakpoint()
-- useHandleRequest()
+- useCheckBreakpoint(breakpoint)
 - useOnlineStatus()
 - useProjectsData()
+- useRequest()
+
+### useCheckBreakpoint hook
+
+The custom hook useCheckBreakpoint() has the parameter breakpoint which is a number and it returns a boolean value. True if the browser window width >= the breakpoint value otherwise false.
+
+### useOnlineStatus hook
+
+The custom hook useOnlineStatus() needs no parameters and returns a boolean value. True if there is an online connection otherwise false.
+
+### useProjectsData hook
+
+The custom hook useProjectsData() needs no parameters and returns an array of objects with this format:
+
+```javascript
+[
+  {
+    projectName: String;
+    projectPicturePath: String;
+    projectVideoPath: String;
+    projectDescription: String;
+    deployedPath: String;
+    gitHubClientPath: String;
+    gitHubServerPath: String;
+  },
+  ...
+]
+
+```
+
+### useRequest hook
+
+The custom hook useRequest needs no parameters and return the method createRequest(newRequest, callbackFunction) to send a request to the database.
+
+#### createRequest() method
+
+The custom method createRequest() needs two parameters and returns nothing:
+
+- newRequest: an object in this format:
+
+```javascript
+{
+  email: String;
+  subject: String;
+  message: String;
+}
+```
+
+- callBackFunction: It is called after the successful sending of the request to the database.
 
 ## External API
 
