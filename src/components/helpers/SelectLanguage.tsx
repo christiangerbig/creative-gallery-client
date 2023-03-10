@@ -27,7 +27,9 @@ const SelectLanguage = ({
       >
         <option value="">{t("select.language.placeholder")}</option>
         <option value="de">{t("select.language.german")}</option>
-        <option value="en">{t("select.language.english")}</option>
+        <option value="en" className="navigation-list__select-language__option">
+          {t("select.language.english")}
+        </option>
       </select>
     </div>
   );

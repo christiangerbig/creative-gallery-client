@@ -13,7 +13,7 @@ const ErrorModal = ({ message }: ErrorModalProps): JSX.Element | null => {
       case "Create request failed":
         return t("errorTexts.createRequest.createRequestFailed");
       default:
-        return t("errors.general");
+        return t("errorTexts.general");
     }
   };
 

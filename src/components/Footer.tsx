@@ -8,32 +8,28 @@ const Footer = (): JSX.Element => {
   const year = currentTime.getFullYear();
 
   return (
-    <div>
-      <footer>
-        <div className="footer-container">
-          <span className="copyright-text">
-            {" "}
-            {t("texts.footer.copyright")} {year} {t("texts.footer.appAuthor")}{" "}
-          </span>
-          <ul className="footer-subcontainer navigation-list">
-            <li>
-              <ExternalLink
-                path={linkedInPath}
-                styleClass="footer-link"
-                faClass="fa-linkedin"
-              />
-            </li>
-            <li>
-              <ExternalLink
-                path={gitHubPath}
-                styleClass="footer-link"
-                faClass="fa-github"
-              />
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+    <footer className="footer">
+      <span className="footer__copyright-text">
+        {" "}
+        {t("texts.footer.copyright")} {year} {t("texts.footer.appAuthor")}
+      </span>
+      <ul className="navigation-list navigation-list--no-style">
+        <li>
+          <ExternalLink
+            path={linkedInPath}
+            styleClass="footer__link"
+            faClass="fa-linkedin"
+          />
+        </li>
+        <li>
+          <ExternalLink
+            path={gitHubPath}
+            styleClass="footer__link"
+            faClass="fa-github"
+          />
+        </li>
+      </ul>
+    </footer>
   );
 };
 

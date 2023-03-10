@@ -14,17 +14,17 @@ const NavDesktopViewItems = (): JSX.Element => {
 
   const highliteNavItem = (currentMenuItem: MenuItem): string =>
     currentMenuItem === menuItem
-      ? "navigation-link is-navigation-link-active"
-      : "navigation-link";
+      ? "navigation-list__link navigation-list__link--active"
+      : "navigation-list__link";
 
   return (
-    <div className="navigation-container">
-      <ul className="navigation-subcontainer-left navigation-list">
+    <div className="nav-desktop-items">
+      <ul className="navigation-list navigation-list--no-style">
         <li>
           <Link
             to={"/about"}
             className={highliteNavItem("about")}
-            data-cy="about-link"
+            data-cy="nav-bar-about-link"
             onClick={(): void => {
               dispatch(setNavItem("about"));
             }}
@@ -36,7 +36,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/projects"}
             className={highliteNavItem("projects")}
-            data-cy="projects-link"
+            data-cy="nav-bar-projects-link"
             onClick={(): void => {
               dispatch(setNavItem("projects"));
             }}
@@ -48,7 +48,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/techstack"}
             className={highliteNavItem("techStack")}
-            data-cy="techstack-link"
+            data-cy="nav-bar-techstack-link"
             onClick={(): void => {
               dispatch(setNavItem("techStack"));
             }}
@@ -57,11 +57,11 @@ const NavDesktopViewItems = (): JSX.Element => {
           </Link>
         </li>
       </ul>
-      <ul className="navigation-subcontainer-right navigation-list">
+      <ul className="navigation-list navigation-list--no-style">
         <li>
           <ExternalLink
             path={resumePath}
-            styleClass="navigation-link"
+            styleClass="navigation-list__link"
             text={t("link.resume")}
           />
         </li>
@@ -69,7 +69,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           <Link
             to={"/contact"}
             className={highliteNavItem("contact")}
-            data-cy="contact-link"
+            data-cy="nav-bar-contact-link"
             onClick={(): void => {
               dispatch(setNavItem("contact"));
             }}
@@ -78,7 +78,7 @@ const NavDesktopViewItems = (): JSX.Element => {
           </Link>
         </li>
         <li>
-          <SelectLanguage styleClass={"select-language"} />
+          <SelectLanguage styleClass={"navigation-list__select-language"} />
         </li>
       </ul>
     </div>

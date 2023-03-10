@@ -74,8 +74,8 @@ const Contact = (): JSX.Element => {
   };
 
   return (
-    <div className="contact-page-container" data-cy="contact-page">
-      <header className="headline">
+    <div className="contact" data-cy="contact-page">
+      <header className="header">
         <HeaderText
           headlines={{
             headline: t("texts.contact.headline"),
@@ -84,12 +84,14 @@ const Contact = (): JSX.Element => {
           borderColorName={"blue"}
         />
       </header>
-      <div className="contact-container">
-        <h1>{t("texts.contact.name")}</h1>
-        <h2>{t("texts.contact.jobname")}</h2>
-        <div className="contact-ways-container">
-          <div className="contact-email-container">
-            <h3>
+      <div className="contact__details">
+        <h1 className="contact__details__name">{t("texts.contact.name")}</h1>
+        <h2 className="contact__details__jobname">
+          {t("texts.contact.jobname")}
+        </h2>
+        <div className="contact__ways">
+          <div>
+            <h3 className="contact__ways__email-headline">
               <FontAwesomeIcon icon={faEnvelopeSquare} />{" "}
               {t("texts.contact.email")}
             </h3>
@@ -99,8 +101,8 @@ const Contact = (): JSX.Element => {
               text={t("texts.contact.emailAddress")}
             />
           </div>
-          <div className="contact-phone-container">
-            <h3>
+          <div>
+            <h3 className="contact__ways__phone-headline">
               <FontAwesomeIcon icon={faMobileAlt} /> {t("texts.contact.phone")}
             </h3>
             <ContactLink
@@ -109,20 +111,20 @@ const Contact = (): JSX.Element => {
               text={t("texts.contact.phoneNumber")}
             />
           </div>
+          <div>
+            <h3 className="contact__ways__form-headline">
+              <FontAwesomeIcon icon={faPen} /> {t("texts.contact.submit")}
+            </h3>
+            <ErrorMessage
+              message={errorMessage}
+              outputFunction={convertErrorMessage}
+            />
+            <ContactForm
+              isCreatingRequest={isCreatingRequest}
+              handleSubmitRequest={handleSubmitRequest}
+            />
+          </div>
         </div>
-        <div>
-          <h3>
-            <FontAwesomeIcon icon={faPen} /> {t("texts.contact.submit")}
-          </h3>
-        </div>
-        <ErrorMessage
-          message={errorMessage}
-          outputFunction={convertErrorMessage}
-        />
-        <ContactForm
-          isCreatingRequest={isCreatingRequest}
-          handleSubmitRequest={handleSubmitRequest}
-        />
       </div>
     </div>
   );

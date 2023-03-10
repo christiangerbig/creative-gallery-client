@@ -20,7 +20,7 @@ const ProjectDetails = ({
   const { t } = useTranslation();
 
   return (
-    <div className="project-details-container">
+    <div className="project-details">
       <video
         width="320"
         height="170"
@@ -29,28 +29,30 @@ const ProjectDetails = ({
         poster={projectPicturePath}
         src={projectVideoPath}
       />
-      <div className="project-description">
+      <div className="project-details__description">
         <article>
           <header>
-            <h2>{projectName}</h2>
+            <h2 className="project-details__description__project-name">
+              {projectName}
+            </h2>
           </header>
-          <div className="project-description-container">
-            <p>{projectDescription}</p>
-          </div>
+          <p className="project-details__description__paragraph">
+            {projectDescription}
+          </p>
         </article>
       </div>
-      <div className="project-links-container">
+      <div className="project-links">
         <div>
           <ExternalLink
             path={deployedPath}
-            styleClass="project-try-it-link"
+            styleClass="project-links__try-it-link"
             text={t("link.startApp")}
           />
         </div>
         <div>
           <ExternalLink
             path={gitHubClientPath}
-            styleClass="project-github-link"
+            styleClass="project-links__github-link"
             text={t("link.gitHubClient")}
           />
         </div>
@@ -58,7 +60,7 @@ const ProjectDetails = ({
           <div>
             <ExternalLink
               path={gitHubServerPath}
-              styleClass="project-github-link"
+              styleClass="project-links__github-link"
               text={t("link.gitHubServer")}
             />
           </div>

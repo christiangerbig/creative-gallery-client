@@ -16,8 +16,8 @@ const About = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="about-page-container" data-cy="about-page">
-      <header className="headline">
+    <div className="about" data-cy="about-page">
+      <header className="header">
         <HeaderText
           headlines={{
             headline: t("texts.about.headline"),
@@ -26,8 +26,8 @@ const About = (): JSX.Element => {
           borderColorName={"green"}
         />
       </header>
-      <div className="about-text-container">
-        <div className="about-text-colum-container">
+      <div className="about__text">
+        <div className="about__text__text-colum">
           <article>
             <header>
               <h3>{t("texts.about.personalDetails.headline")}</h3>
@@ -38,7 +38,7 @@ const About = (): JSX.Element => {
             <p>{t("texts.about.personalDetails.paragraph4")}</p>
           </article>
         </div>
-        <div className="about-text-colum-container">
+        <div className="about__text__text-colum">
           <article>
             <header>
               <h3>{t("texts.about.experience.headline")}</h3>
@@ -49,12 +49,15 @@ const About = (): JSX.Element => {
             <p>{t("texts.about.experience.paragraph4")}</p>
             <p>
               <span
-                className="about-contact-link"
                 onClick={(): void => {
                   dispatch(setNavItem("contact"));
                 }}
               >
-                <Link to={{ pathname: "/contact" }} data-cy="alt-contact-link">
+                <Link
+                  to={{ pathname: "/contact" }}
+                  className="about__contact-link"
+                  data-cy="alt-contact-link"
+                >
                   {t("texts.about.experience.contact")}
                 </Link>
               </span>

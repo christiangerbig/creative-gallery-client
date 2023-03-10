@@ -31,15 +31,15 @@ const ModalBody = ({
   return (
     <div
       ref={divElementRef}
-      className="error-modal fade-error-modal-in"
+      className="modal-body modal-body--fade-in"
       onClick={handleClickOutside}
     >
-      <div className="error-modal-box">
+      <div className="modal-body__box">
         <h1>{headline}</h1>
         <h2>{text}</h2>
         {isClose && (
           <button
-            className="error-modal-button mt-4 mb-3"
+            className="modal-body__box__button"
             onClick={handleCloseModal}
           >
             {t("button.proceed")}

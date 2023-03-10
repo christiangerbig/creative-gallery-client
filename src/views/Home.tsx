@@ -13,15 +13,17 @@ const Home = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="home-page-container" data-cy="home-page">
+    <div className="home" data-cy="home-page">
       <Logo />
-      <HeaderText
-        headlines={{
-          headline: t("texts.home.welcome.headline"),
-          subheadline: t("texts.home.welcome.subheadline"),
-        }}
-        borderColorName={""}
-      />
+      <header className="header">
+        <HeaderText
+          headlines={{
+            headline: t("texts.home.welcome.headline"),
+            subheadline: t("texts.home.welcome.subheadline"),
+          }}
+          borderColorName={""}
+        />
+      </header>
     </div>
   );
 };

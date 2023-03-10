@@ -37,19 +37,19 @@ const NavMenu = (): JSX.Element | null => {
   const fadeMenu = useMemo(
     (): string =>
       isOpenMenu
-        ? "menu fade-menu-in"
+        ? "nav-menu nav-menu--fade-in"
         : isCloseMenu
-        ? "menu fade-menu-out"
-        : "menu",
+        ? "nav-menu nav-menu--fade-out"
+        : "nav-menu",
     [isOpenMenu, isCloseMenu]
   );
 
   const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string =>
     isOpenMenu
-      ? `menu-item is-warning ${fadeInSpeed}`
+      ? `nav-menu-list__item__link ${fadeInSpeed}`
       : isCloseMenu
-      ? `menu-item is-warning ${fadeOutSpeed}`
-      : "menu-item is-warning";
+      ? `nav-menu-list__item__link ${fadeOutSpeed}`
+      : "nav-menu-list__item__link";
 
   if (isLargeDevice || !isMenuVisible) {
     return null;
@@ -58,91 +58,89 @@ const NavMenu = (): JSX.Element | null => {
   return (
     <>
       <div className={fadeMenu}>
-        <div className="close-menu-container">
-          <FontAwesomeIcon
-            icon={faTimes}
-            className="close-menu is-white"
+        <div className="close-button-container">
+          <button
+            type="button"
+            className="close-button-container__button"
             onClick={handleCloseMenu}
-          />
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
         </div>
-        <div className="menu-container">
-          <div className="menu-subcontainer">
-            <ul className="navigation-list">
-              <li>
-                <Link
-                  to={"/about"}
-                  className={fadeMenuItem(
-                    "menu-item-fade-in-speed1",
-                    "menu-item-fade-out-speed1"
-                  )}
-                  data-cy="menu-about-link"
-                  onClick={handleCloseMenu}
-                >
-                  {t("link.about")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/projects"}
-                  className={fadeMenuItem(
-                    "menu-item-fade-in-speed2",
-                    "menu-item-fade-out-speed2"
-                  )}
-                  data-cy="menu-projects-link"
-                  onClick={handleCloseMenu}
-                >
-                  {t("link.projects")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/techstack"}
-                  className={fadeMenuItem(
-                    "menu-item-fade-in-speed3",
-                    "menu-item-fade-out-speed3"
-                  )}
-                  data-cy="menu-techstack-link"
-                  onClick={handleCloseMenu}
-                >
-                  {t("link.techStack")}
-                </Link>
-              </li>
-              <li>
-                <ExternalLink
-                  path={resumePath}
-                  styleClass={fadeMenuItem(
-                    "menu-item-fade-in-speed4",
-                    "menu-item-fade-out-speed4"
-                  )}
-                  text={t("link.resume")}
-                  closeMenuHandler={handleCloseMenu}
-                />
-              </li>
-              <li>
-                <Link
-                  to={"/contact"}
-                  className={fadeMenuItem(
-                    "menu-item-fade-in-speed5",
-                    "menu-item-fade-out-speed5"
-                  )}
-                  data-cy="menu-contact-link"
-                  onClick={handleCloseMenu}
-                >
-                  {t("link.contact")}
-                </Link>
-              </li>
-              <li>
-                <SelectLanguage
-                  styleClass={`${fadeMenuItem(
-                    "menu-item-fade-in-speed6",
-                    "menu-item-fade-out-speed6"
-                  )} menu-select-language`}
-                  closeMenuHandler={handleCloseMenu}
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ul className="nav-menu-list nav-menu-list--no-style">
+          <li className="nav-menu-list__item">
+            <Link
+              to={"/about"}
+              className={fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed1",
+                "nav-menu-list__item--fade-out-speed1"
+              )}
+              data-cy="nav-menu-about-link"
+              onClick={handleCloseMenu}
+            >
+              {t("link.about")}
+            </Link>
+          </li>
+          <li className="nav-menu-list__item">
+            <Link
+              to={"/projects"}
+              className={fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed2",
+                "nav-menu-list__item--fade-out-speed2"
+              )}
+              data-cy="nav-menu-projects-link"
+              onClick={handleCloseMenu}
+            >
+              {t("link.projects")}
+            </Link>
+          </li>
+          <li className="nav-menu-list__item">
+            <Link
+              to={"/techstack"}
+              className={fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed3",
+                "nav-menu-list__item--fade-out-speed3"
+              )}
+              data-cy="nav-menu-techstack-link"
+              onClick={handleCloseMenu}
+            >
+              {t("link.techStack")}
+            </Link>
+          </li>
+          <li className="nav-menu-list__item">
+            <ExternalLink
+              path={resumePath}
+              styleClass={fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed4",
+                "nav-menu-list__item--fade-out-speed4"
+              )}
+              text={t("link.resume")}
+              closeMenuHandler={handleCloseMenu}
+            />
+          </li>
+          <li className="nav-menu-list__item">
+            <Link
+              to={"/contact"}
+              className={fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed5",
+                "nav-menu-list__item--fade-out-speed5"
+              )}
+              data-cy="nav-menu-contact-link"
+              onClick={handleCloseMenu}
+            >
+              {t("link.contact")}
+            </Link>
+          </li>
+          <li className="nav-menu-list__item">
+            <SelectLanguage
+              styleClass={`nav-menu-list__item__select-language ${fadeMenuItem(
+                "nav-menu-list__item--fade-in-speed6",
+                "nav-menu-list__item--fade-out-speed6"
+              )}`}
+              closeMenuHandler={handleCloseMenu}
+            />
+          </li>
+        </ul>
       </div>
     </>
   );

@@ -15,13 +15,13 @@ const HeaderText = ({
   const borderColor = (borderColorName: string): string => {
     switch (borderColorName) {
       case "green":
-        return "header-text is-border-green";
+        return "header-text header-text--left-border-green";
       case "orange":
-        return "header-text is-border-orange";
+        return "header-text header-text--left-border-orange";
       case "violet":
-        return "header-text is-border-violet";
+        return "header-text header-text--left-border-violet";
       case "blue":
-        return "header-text is-border-blue";
+        return "header-text header-text--left-border-blue";
       default:
         return "header-text";
     }
@@ -29,8 +29,14 @@ const HeaderText = ({
 
   return (
     <div className={borderColor(borderColorName)}>
-      <h1 className="is-text-large-size"> {headline} </h1>
-      <h2 className="is-text-small-size"> {subheadline} </h2>
+      <h1 className="header-text__headline header-text--fontsize-large">
+        {" "}
+        {headline}{" "}
+      </h1>
+      <h2 className="header-text__subheadline header-text--fontsize-small">
+        {" "}
+        {subheadline}{" "}
+      </h2>
     </div>
   );
 };

@@ -12,53 +12,17 @@ $red: rgb(255,0,0)
 $light-green: rgb(50,168,82)
 
 
+/* Base */
 html, 
 body 
   background-color: $black
-  /* Height and width fallback for older browsers. */
   height: 100%
   width: 100%
-  /* Set the height to match that of the viewport. */
   height: 100vh
-  /* Remove any browser-default margins. */
   margin: 0
 
 
-/* Main classes */
-
-.is-text-small-size
-  font-size: 2rem
-
-.is-text-medium-size
-  font-size: 2.5rem
-
-.is-text-large-size
-  font-size: 3.1rem
-
-.is-text-bold
-  font-weight: bold
-
-.is-text-style-plain
-  text-decoration: none
-
-.is-text-nowrap
-  white-space: nowrap
-
-.is-black
-  color: $black
-
-.is-white
-  color: $white
-
-.is-warning
-  color: $orange
-
-.is-danger
-  color: $red
-
-
-/* Fader routines */
-
+/* Fader classes */
 @keyframes fade-page-in 
   from
     opacity: 0
@@ -91,151 +55,135 @@ body
     
 
 /* Navigation Bar */
-
-nav
+.nav-bar
   position: fixed
   top: 0
   left: 0
+  height: 5rem
   width: 100%
   z-index: 3
   background-color: rgba(0,0,0,0.4)
   color: $white
   backdrop-filter: blur(15px)
-    
-.navbar-container
-  display: flex
-  justify-content: space-between
-  align-items: center
   padding:
-    top: 0.5rem
-    bottom: 0.5rem
-  margin:
-    left: 4.2rem
-    right: 4.2rem
-
-@media (min-width: 320px) and (max-width: 480px)
-  .navbar-container
+    top: 1rem
+    bottom: 1rem
+  &__items
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding:
+      top: 0.5rem
+      bottom: 0.5rem
     margin:
       left: 4.2rem
-      right: 2.2rem
+      right: 4.2rem
+    @media (min-width: 320px) and (max-width: 480px)
+      margin:
+        left: 4.2rem
+        right: 2.2rem
 
-.logo-container
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  width: max-content
-  height: 5rem
-  white-space: nowrap
-  padding: 0
-
-.logo-subcontainer
+.nav-bar-logo
   display: flex
   background-color: $white
   padding: 0.3rem
   border-radius: 4.5px
+  &__letter-c-outline
+    width: 1.32rem
+    height: 1.8rem
+    background-color: black
+    border-radius: 50% 0 0 50%
+    margin-right: 0.3rem
+  &__letter-c-inline
+    width: 1.08rem
+    height: 1.26rem
+    background: $white
+    padding: 0
+    border-radius: 50% 0 0 50%
+    margin:
+      top: 0.27rem
+      left: 0.27rem
+  &__letter-g-outline
+    width: 1.44rem
+    height: 1.8rem
+    background-color: $black
+    border-radius: 0 50% 50% 0
+  &__letter-g-inline
+    width: 1.18rem
+    height: 1.26rem
+    background-color: $white
+    padding: 0
+    border-radius: 0 50% 50% 0
+    margin:
+      top: 0.27rem
+      right: 0.45rem
+      left: 0
+  &__letter-g-box
+    width: 0.27rem
+    height: 0.63rem
+    background-color: $white
+    padding-top: 0.63rem
+    margin-bottom: 0
+  &__letter-g-box2
+    width: 0.25rem
+    height: 0.27rem
+    background-color: $black
+    padding-top: 0.63rem
 
-.logo-letter-c-outline
-  width: 1.32rem
-  height: 1.8rem
-  background-color: black
-  border-radius: 50% 0 0 50%
-  margin-right: 0.3rem
-
-.logo-letter-c-inline
-  width: 1.08rem
-  height: 1.26rem
-  background: $white
-  padding: 0
-  border-radius: 50% 0 0 50%
-  margin:
-    top: 0.27rem
-    left: 0.27rem  
-
-.logo-letter-g-outline
-  width: 1.44rem
-  height: 1.8rem
-  background-color: $black
-  border-radius: 0 50% 50% 0
-
-.logo-letter-g-inline
-  width: 1.18rem
-  height: 1.26rem
-  background-color: $white
-  padding: 0
-  border-radius: 0 50% 50% 0
-  margin:
-    top: 0.27rem
-    right: 0.45rem
-    left: 0
-
-.logo-letter-g-box
-  width: 0.27rem
-  height: 0.63rem
-  background-color: $white
-  padding-top: 0.63rem
-  margin-bottom: 0
-
-.logo-letter-g-box2
-  width: 0.25rem
-  height: 0.27rem
-  background-color: $black
-  padding-top: 0.63rem
-
-.navigation-container
+.nav-desktop-items
   display: flex
   justify-content: space-between
   align-items: center
   width: 100%
 
-.navigation-subcontainer-left
-  display: flex
-  justify-content: center
-  align-items: center
-  padding-inline-start: 0
-
-.navigation-subcontainer-right
-  display: flex
-  justify-content: center
-  align-items: center
-  padding-inline-start: 0
-
-.navigation-link
-  font-size: 1rem
-  text-decoration: none
-  display: inline-block
-  background-color: rgba(0,0,0,0)
-  color: $white
-  padding: 0.3rem 0.8rem
-  margin-left: 0.8rem
-  transition: all 0.5s
-  &:hover 
-    background-color: $white
-    color: $black
-
-.is-navigation-link-active
-  background-color: $white
-  color: $black
-
 .navigation-list
-  list-style: none
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-inline-start: 0
   padding-left: 0
+  &--no-style
+    list-style: none
+  &__link
+    font-size: 1rem
+    text-decoration: none
+    display: inline-block
+    background-color: rgba(0,0,0,0)
+    color: $white
+    padding: 0.3rem 0.8rem
+    margin-left: 0.8rem
+    transition: all 0.5s
+    &--active
+      background-color: $white
+      color: $black
+    &:hover 
+      background-color: $white
+      color: $black
+  &__select-language
+    font-family: inherit
+    font-size: inherit
+    background-color: rgba(0,0,0,0)
+    color: $white
+    padding: 0.5rem 0.8rem 0.3rem 0.8rem
+    margin-left: 0.8rem
+    border: none
+    &:hover
+      background: $white
+      color: $black
+    &__option
+      background: $black
+      color: $white
 
-.select-language
-  font-size: 0.7rem
-  background-color: rgba(0,0,0,0)
+.nav-toggler
+  background: transparent
   color: $white
-  padding: 0.5rem 0.8rem 0.3rem 0.8rem
-  margin-left: 0.8rem
+  padding: 0
   border: none
-  option
-    background-color: $white
-    color: $black
+  margin-top: 0.5rem
 
 
-/* Menu */
-
-.menu
+/* Navigation-Menu */
+.nav-menu
   position: fixed
   top: 0
   left: 0
@@ -245,104 +193,80 @@ nav
   background-color: rgba(0, 0, 0, 0.4)
   color: $white
   backdrop-filter: blur(15px)
-  
-.fade-menu-in
-  animation: fade-page-in 1s forwards
+  &--fade-in
+    animation: fade-page-in 1s forwards
+  &--fade-out
+    animation: fade-page-out 0.8s forwards
 
-.fade-menu-out
-  animation: fade-page-out 0.5s forwards
-
-.menu-container
-  display: flex
-  justify-content: center
-  align-items: center
-
-.close-menu-container
-  display: flex
-  justify-content: flex-end
-  align-items: center
-  margin-right: 4.3rem
-
-@media (min-width: 320px) and (max-width: 480px)
-  .close-menu-container
-    margin-right: 2.3rem
-
-.close-menu
-  margin-top: 2.5rem
-
-.menu-subcontainer
-  text-align: center
+.nav-menu-list
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
-  margin-top: 0
-  li
+  text-align: center
+  padding-inline-start: 0
+  margin-top: 2rem
+  &--no-style
+    list-style: none
+  &__item
     margin-bottom: 1.4rem
+    &--fade-in-speed1
+      animation: zoom-text-in 0.1s forwards
+    &--fade-in-speed2
+      animation: zoom-text-in 0.25s forwards
+    &--fade-in-speed3
+      animation: zoom-text-in 0.5s forwards
+    &--fade-in-speed4
+      animation: zoom-text-in 1s forwards
+    &--fade-in-speed5
+      animation: zoom-text-in 1.2s forwards
+    &--fade-in-speed6
+      animation: zoom-text-in 1.4s forwards
+    &--fade-out-speed1
+      animation: zoom-text-out 0.05s forwards
+    &--fade-out-speed2
+      animation: zoom-text-out 0.1s forwards
+    &--fade-out-speed3
+      animation: zoom-text-out 0.25s forwards
+    &--fade-out-speed4
+      animation: zoom-text-out 0.5s forwards
+    &--fade-out-speed5
+      animation: zoom-text-out 1s forwards
+    &--fade-out-speed6
+      animation: zoom-text-out 1.5s forwards
+    &__link
+      text-decoration: none
+      color: $orange
+    &__select-language
+      font-family: inherit
+      font-size: inherit
+      background-color: transparent
+      padding: 0.2rem 0.8rem 0.3rem 0.8rem
+      border: none
+      margin-top: 0
+      margin-left: 0.8rem
 
-.menu-select-language
-  font-size: 0.9rem
-  background-color: transparent
-  padding: 0.2rem 0.8rem 0.3rem 0.8rem
-  margin-top: 0rem
-  margin-left: 0.8rem
-  border: none
-  option
-    background-color: $black
-    color: $orange
-
-.menu-item
-  text-decoration: none
-
-.menu-item-fade-in-speed1
-  animation: zoom-text-in 0.1s forwards
-
-.menu-item-fade-in-speed2
-  animation: zoom-text-in 0.25s forwards
-
-.menu-item-fade-in-speed3
-  animation: zoom-text-in 0.5s forwards
-
-.menu-item-fade-in-speed4
-  animation: zoom-text-in 1s forwards
-
-.menu-item-fade-in-speed5
-  animation: zoom-text-in 1.2s forwards
-
-.menu-item-fade-in-speed6
-  animation: zoom-text-in 1.4s forwards
-
-.menu-item-fade-out-speed1
-  animation: zoom-text-out 0.05s forwards
-
-.menu-item-fade-out-speed2
-  animation: zoom-text-out 0.1s forwards
-
-.menu-item-fade-out-speed3
-  animation: zoom-text-out 0.25s forwards
-
-.menu-item-fade-out-speed4
-  animation: zoom-text-out 0.5s forwards
-
-.menu-item-fade-out-speed5
-  animation: zoom-text-out 1s forwards
-
-.menu-item-fade-out-speed6
-  animation: zoom-text-out 1.5s forwards
-
-.blur-in
-  animation: blur-element-in 1.5s forwards
+.close-button-container
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  margin-right: 4.3rem
+  @media (min-width: 320px) and (max-width: 480px)
+    margin-right: 2.3rem
+  &__button
+    background: transparent
+    color: $white
+    padding: 0
+    border: none
+    margin-top: 2.5rem
 
 
 /* Header */
-
-.headline
+.header
   display: flex
   align-items: center
-  margin-left: 1.5rem
-
-@media (min-width: 320px) and (max-width: 480px)
-  .headline
+  margin-left: 1.5rem 
+  @media (min-width: 320px) and (max-width: 480px)
     margin:
       left: 2rem
       right: 3rem
@@ -354,77 +278,63 @@ nav
   padding:
     top: 1rem
     bottom: 1.7rem
-    left: 1rem
+    left: 1.5rem
   margin-left: 3rem
-  h1
+  @media (min-width: 320px) and (max-width: 480px)
+    margin-left: 2rem
+  &--left-border-blue
+    border-left: solid $dark-blue 10px
+  &--left-border-green
+    border-left: solid $light-green 10px
+  &--left-border-orange
+    border-left: solid $orange 10px
+  &--left-border-violet
+    border-left: solid $violet 10px
+  &--fontsize-small
+    font-size: 2rem
+  &--fontsize-medium
+    font-size: 2.5rem
+  &--fontsize-large
+    font-size: 3.1rem
+  &__headline
     margin:
       top: 0
       bottom: 0.5rem
-  h2
+  &__subheadline
     margin:
       top: 0
       bottom: 0
 
-@media (min-width: 320px) and (max-width: 480px)
-  .header-text
-    margin-left: 2rem
-
-.is-border-blue
-  border-left: solid $dark-blue 10px
-
-.is-border-green
-  border-left: solid $light-green 10px
-
-.is-border-orange
-  border-left: solid $orange 10px
-
-.is-border-violet
-  border-left: solid $violet 10px
-
 
 /* Footer */
-
-footer 
-  background-color: $black
-  color: $white
-
-.footer-container 
+.footer 
   display: flex
   justify-content: center
   align-items: center
+  @media (min-width: 320px) and (max-width: 767px) 
+    flex-wrap: wrap
+  background-color: $black
+  color: $white
   padding:
     top: 0.5rem
     bottom: 0.5rem
   margin:
     left: 4.2rem
     right: 4.2rem
-
-@media (min-width: 320px) and (max-width: 767px)
-  .footer-container 
-    flex-wrap: wrap
-
-.copyright-text
-  font-size: 1rem
-  margin-right: 1rem
-
-.footer-subcontainer
-  display: flex
-  justify-content: space-around
-  align-items: center
-  padding: 0
-
-.footer-link
-  background-color: black
-  color: $white
-  padding: 0.1rem 0.3rem
-  margin:
-    left: 0.2rem
-    right: 0.2rem
+  &__copyright-text
+    font-size: 1rem
+    margin-right: 1rem
+  &__link
+    background-color: black
+    color: $white
+    padding: 0.1rem 0.3rem
+    margin:
+      left: 0.2rem
+      right: 0.2rem
 
 
 /* Home */
-
-.home-page-container
+.home
   display: flex
   justify-content: center
   align-items: center
@@ -436,115 +346,101 @@ footer
     top: 8rem
     bottom: 8rem
 
-.home-logo-subcontainer
+.home-logo
   display: flex
   background-color: $white
   padding: 1rem
   border-radius: 20px
-
-.home-logo-letter-c-outline
-  width: 6rem
-  height: 8rem
-  background-color: $black
-  border-radius: 50% 0 0 50%
-  margin-right: 1.1rem
-
-.home-logo-letter-c-inline
-  width: 4.8rem
-  height: 5.6rem
-  background: $white
-  padding: 0
-  border-radius: 50% 0 0 50%
-  margin:
-    top: 1.2rem
-    left: 1.2rem
-
-.home-logo-letter-g-outline
-  width: 6rem
-  height: 8rem
-  background-color: $black
-  border-radius: 0 50% 50% 0
-
-.home-logo-letter-g-inline
-  width: 4.8rem
-  height: 5.6rem
-  background-color: $white
-  padding: 0
-  border-radius: 0 50% 50% 0
-  margin:
-    top: 1.2rem
-    right: 2rem
-    left: 0
-  
-.home-logo-letter-g-box
-  width: 1.2rem
-  height: 2.8rem
-  background-color: $white
-  padding-top: 2.8rem
-  margin-bottom: 0
-
-.home-logo-letter-g-box2
-  width: 1.2rem
-  height: 1.2rem
-  background-color: $black
-  padding-top: 2.8rem
+  &__letter-c-outline
+    width: 6rem
+    height: 8rem
+    background-color: $black
+    border-radius: 50% 0 0 50%
+    margin-right: 1.1rem
+  &__letter-c-inline
+    width: 4.8rem
+    height: 5.6rem
+    background: $white
+    padding: 0
+    border-radius: 50% 0 0 50%
+    margin:
+      top: 1.2rem
+      left: 1.2rem
+  &__letter-g-outline
+    width: 6rem
+    height: 8rem
+    background-color: $black
+    border-radius: 0 50% 50% 0
+  &__letter-g-inline
+    width: 4.8rem
+    height: 5.6rem
+    background-color: $white
+    padding: 0
+    border-radius: 0 50% 50% 0
+    margin:
+      top: 1.2rem
+      right: 2rem
+      left: 0 
+  &__letter-g-box
+    width: 1.2rem
+    height: 2.8rem
+    background-color: $white
+    padding-top: 2.8rem
+    margin-bottom: 0
+  &__letter-g-box2
+    width: 1.2rem
+    height: 1.2rem
+    background-color: $black
+    padding-top: 2.8rem
+  &--blur-in
+    animation: blur-element-in 1.5s forwards
 
 
 /* About */
-
-.about-page-container 
+.about
   display: flex
   flex-direction: column
   color: $white
   margin-top: 8rem
   animation: fade-page-in 1s forwards
-
-.about-text-container
-  display: flex
-  justify-content: center
-  margin: 3rem 0 4rem 4rem
-
-@media (min-width: 320px) and (max-width: 767px)
-  .about-text-container
-    align-items: center
-    flex-wrap: wrap
-    margin:
-      right: 0
-      bottom: 4rem
-      left: 4rem
-    
-.about-text-colum-container
-  width: 50%
-  padding-right: 5rem
-
-@media (min-width: 320px) and (max-width: 767px)
-  .about-text-colum-container
-    width: 100%
-    padding-right: 3rem
-
-.about-contact-link a 
-  text-decoration: none
-  color: $dark-blue
-  transition: all 0.5s
-  &:hover 
-    color: $light-blue
+  &__text
+    display: flex
+    justify-content: center
+    margin: 3rem 0 4rem 4rem
+    @media (min-width: 320px) and (max-width: 767px)
+      align-items: center
+      flex-wrap: wrap
+      margin:
+        right: 0
+        bottom: 4rem
+        left: 4rem
+    &__text-colum
+      width: 50%
+      padding-right: 5rem
+      @media (min-width: 320px) and (max-width: 767px)
+        width: 100%
+        padding-right: 3rem
+  &__contact-link
+    text-decoration: none
+    color: $dark-blue
+    transition: all 0.5s
+    &:hover 
+      color: $light-blue
 
 
 /* Projects */
-
-.projects-page-container
+.projects
   color: $white
   margin-top: 8rem
   animation: fade-page-in 1s forwards
+  &__collection
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    margin: 4rem 2.2rem 3rem 2.2rem
 
-.projects-container
-  display: flex
-  justify-content: space-around
-  align-items: center
-  flex-wrap: wrap
-  margin: 4rem 2.2rem 3rem 2.2rem
-
-.project-details-container
+.project-details
   display: flex
   justify-content: space-between
   align-items: center
@@ -554,26 +450,20 @@ footer
   height: 30rem
   border: solid 1px $dark
   margin: 0 1.5rem 1.5rem 1.5rem
-
-.project-description
-  height: 11rem
-  color: $white
-  padding:
-    left: 1rem
-    right: 1rem
-  article
-    p
+  &__description
+    height: 11rem
+    color: $white
+    padding:
+      left: 1rem
+      right: 1rem
+    &__project-name
+      font-size: 1.6rem
+      margin: 0 0 0.6rem 0
+    &__paragraph
       font-size: 1rem
-      width: 17.5rem
-    header
-      h2
-        margin: 0 0 0.6rem 0
+      width: 16rem
 
-.project-description-container
-  p
-    margin-bottom: 2.5rem
-
-.project-links-container 
+.project-links
   display: flex
   justify-content: space-between
   align-items: center
@@ -582,218 +472,176 @@ footer
     top: 0
     bottom: 1rem
   padding-bottom: 1.5rem
-  
-.project-try-it-link
-  text-decoration: none
-  font-size: 0.9rem
-  display: inline-block
-  color: $white
-  padding: 0.3rem 0.8rem
-  border: solid 2px $light-green
-  margin:
-    right: 0.3rem
-    left: 0.3rem
-  transition: all 1s
-  &:hover 
-    background-color: $light-green
-
-.project-github-link  
-  text-decoration: none
-  font-size: 0.9rem
-  display: inline-block
-  color: $white
-  padding: 0.3rem 0.8rem
-  border: solid 2px $blue
-  margin:
-    right: 0.3rem
-    left: 0.3rem
-  transition: all 1s
-  &:hover 
-    background-color: $blue
+  &__try-it-link
+    text-decoration: none
+    font-size: 0.9rem
+    display: inline-block
+    color: $white
+    padding: 0.3rem 0.8rem
+    border: solid 2px $light-green
+    margin:
+      right: 0.3rem
+      left: 0.3rem
+    transition: all 1s
+    &:hover 
+      background-color: $light-green
+  &__github-link  
+    text-decoration: none
+    font-size: 0.9rem
+    display: inline-block
+    color: $white
+    padding: 0.3rem 0.8rem
+    border: solid 2px $blue
+    margin:
+      right: 0.3rem
+      left: 0.3rem
+    transition: all 1s
+    &:hover 
+      background-color: $blue
 
 
 /* Tech stack */
-
-.tech-stack-page-container
+.tech-stack
   color: $white 
   margin-top: 8rem
   animation: fade-page-in 1s forwards
-
-.tech-stack-logos-container
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-wrap: wrap
-  background-color: $white
-  margin: 4rem 4rem 6rem
+  &__logo-collection
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    background-color: $white
+    margin: 4rem 4rem 6rem
 
 .tech-stack-logo
   width: 4.5rem
   margin: 1rem
-  img
+  &__image
     width: 100%
     height: auto
   
-/* Contact */
 
-.contact-page-container
+/* Contact */
+.contact
   color: $white
   margin-top: 8rem
   animation: fade-page-in 1s forwards
-
-.contact-container
-  text-align: center
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  width: 30rem
-  background-color: $dark
-  color: $white
-  padding: 0
-  border: solid 1px $dark
-  margin: 4rem auto
-
-@media (min-width: 320px) and (max-width: 767px)
-  .contact-container 
-    width: 66%
-    h1 
+  &__details
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 30rem
+    @media (min-width: 320px) and (max-width: 767px)
+      width: 66%
+    background-color: $dark
+    color: $white
+    padding: 0
+    border: solid 1px $dark
+    margin: 4rem auto
+    &__name
       margin:
         top: 2rem
         bottom: 0
-    h2 
+    &__jobname
       margin:
         top: 0.5rem
         bottom: 0
+  &__ways
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-top: 1rem
+    &__email-headline
+      margin-bottom: 0
+    &__phone-headline 
+      margin-bottom: 0
+    &__form-headline
+      margin-bottom: 0
 
-.contact-ways-container  
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  div 
-    padding:
-      top: 0rem
-      right: 5%
-      left: 5%
-
-.contact-email-container
-  display: flex
-  justify-content: center
-  align-items: center
-  flex:
-    direction: column
-    wrap: wrap
-  h3 
-    margin-bottom: 0.6rem
-  h4 
-    margin:
-      top: 0rem
-      bottom: 0.7rem
-
-.contact-phone-container
-  display: flex
-  justify-content: center
-  align-items: center
-  flex:
-    direction: column
-    wrap: wrap
-  h3 
-    margin-bottom: 0.6rem
-  h4 
-    margin:
-      top: 0rem
-      bottom: 0.7rem
-
-.contact-link 
-  a 
-    text-decoration: none
-    color: $dark-blue
-    transition: all 0.5s
-    &:hover 
-      color: $light-blue
-
-form
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  h3 
-    padding-bottom: 0
-    margin-bottom: 0.3rem
-
-.form-input
-  width: 100%
-  padding: 0.3rem
-  border: none
-  margin-bottom: 1rem
-
-@media (min-width: 320px) and (max-width: 767px)
-  .form-input 
-      width: 80%
-
-.form-textarea 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
-  width: 100%
-  background-color: $white
-  padding: 0.3rem
-  border: none
-  margin-bottom: 1rem
-
-@media (min-width: 320px) and (max-width: 767px)
-  .form-textarea 
-    width: 80%
-
-.form-submit
-  width: auto
-  font-size: 0.9rem
-  background-color: black
-  color: $white
-  padding: 0.3rem 0.8rem
-  border: solid 2px $light-green
-  margin-bottom: 1.5rem
+.contact-link
+  text-decoration: none
+  color: $dark-blue
+  white-space: nowrap
   transition: all 0.5s
   &:hover 
-    background-color: $light-green
+    color: $light-blue
 
-.error-output
+.contact-form
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-top: 1.5rem
+  &__input
+    box-sizing: border-box
+    width: 100%
+    @media (min-width: 320px) and (max-width: 767px)
+      width: 80%
+    padding: 0.3rem
+    border: none
+    margin-bottom: 1rem
+  &__text-area
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+    box-sizing: border-box
+    width: 100%
+    @media (min-width: 320px) and (max-width: 767px)
+      width: 80%
+    background-color: $white
+    padding: 0.3rem
+    box-sizing: border-box
+    border: none
+    margin-bottom: 1rem
+  &__button
+    width: auto
+    font-size: 0.9rem
+    background-color: black
+    color: $white
+    padding: 0.3rem 0.8rem
+    border: solid 2px $light-green
+    margin-bottom: 1.5rem
+    transition: all 0.5s
+    &:hover 
+      background-color: $light-green
+
+.error-message
+  margin-top: 1rem
   text-align: center
-  margin: 0.5rem
+  &--color-red
+    color: $red
 
 
 /* Page not found */
-
-.page-not-found-container
+.page-not-found
   color: $white
   margin-top: 8rem
   animation: fade-page-in 1s forwards
-
-.page-not-found-get-back-container 
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: $dark
-  border: solid $dark-grey 1px
-  margin: 4rem
-
-.page-not-found-get-back-link 
-  text-decoration: none
-  font-size: 0.9rem
-  display: inline-block
-  color: $white
-  padding: 0.3rem 0.8rem
-  border: solid 2px $light-green
-  margin:
-    top: 2rem
-    bottom: 2rem
-  transition: all 0.5s
-  &:hover 
-    background-color: $light-green
+  &__get-back-container 
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $dark
+    border: solid $dark-grey 1px
+    margin: 4rem
+    &__link 
+      text-decoration: none
+      font-size: 0.9rem
+      display: inline-block
+      color: $white
+      padding: 0.3rem 0.8rem
+      border: solid 2px $light-green
+      margin:
+        top: 2rem
+        bottom: 2rem
+      transition: all 0.5s
+      &:hover 
+        background-color: $light-green
 
 
   /* Error modal */
-
-.error-modal
+.modal-body
   position: fixed
   top: 0
   left: 0
@@ -806,34 +654,29 @@ form
   z-index: 7
   background-color: rgba(0, 0, 0, 0.4)
   backdrop-filter: blur(15px)
-
-.error-modal-box
-  text-align: center
-  width: 50%
-  background-color: $white
-  padding: 1.5rem 2rem 2rem 2rem
-  border: solid 1px $dark
-  h2
-    margin-bottom: 3rem
-
-@media (min-width: 320px) and (max-width: 480px)
-  .error-modal-box
-    width: 60%
-
-.error-modal-button 
-  text-decoration: none
-  font-size: 0.9rem
-  display: inline-block
-  color: $black
-  padding: 0.3rem 0.8rem
-  border: solid 2px $light-green
-  margin:
-    right: 0.5rem
-    left: 0.5rem
-  transition: all 1s
-  &:hover 
-    background-color: $light-green
-    color: $white
-
-.fade-error-modal-in
-  animation: fade-page-in 0.5s forwards
+  &__box
+    text-align: center
+    width: 50%
+    @media (min-width: 320px) and (max-width: 480px)
+      width: 60%
+    background-color: $white
+    padding: 1.5rem 2rem 2rem 2rem
+    border: solid 1px $dark
+    &__text
+      margin-bottom: 3rem
+    &__button 
+      text-decoration: none
+      font-size: 0.9rem
+      display: inline-block
+      color: $black
+      padding: 0.3rem 0.8rem
+      border: solid 2px $light-green
+      margin:
+        right: 0.5rem
+        left: 0.5rem
+      transition: all 1s
+      &:hover 
+        background-color: $light-green
+        color: $white
+  &--fade-in
+    animation: fade-page-in 0.5s forwards

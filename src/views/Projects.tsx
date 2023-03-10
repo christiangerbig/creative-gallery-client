@@ -16,8 +16,8 @@ const Projects = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="projects-page-container" data-cy="projects-page">
-      <header className="headline">
+    <div className="projects" data-cy="projects-page">
+      <header className="header">
         <HeaderText
           headlines={{
             headline: t("texts.projects.headline"),
@@ -26,7 +26,7 @@ const Projects = (): JSX.Element => {
           borderColorName={"orange"}
         />
       </header>
-      <div className="projects-container">
+      <div className="projects__collection">
         {projectsData.map(
           (projectItem: ProjectItem, index: number): JSX.Element => (
             <ProjectDetails

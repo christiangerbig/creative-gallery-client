@@ -12,11 +12,11 @@ const ErrorMessage = ({
   }
 
   return (
-    <>
-      <span className="error-output is-danger" data-cy="error-message">
+    <div className="error-message">
+      <span className="error-message--color-red" data-cy="error-text">
         {outputFunction(message)}
       </span>
-    </>
+    </div>
   );
 };
 

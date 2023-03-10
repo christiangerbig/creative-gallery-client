@@ -23,7 +23,7 @@ const ExternalLink = ({
     text ? (
       <span>{text}</span>
     ) : faClass ? (
-      <i className={`fab ${faClass} is-white`} />
+      <i className={`fab ${faClass}`} />
     ) : null;
 
   return (

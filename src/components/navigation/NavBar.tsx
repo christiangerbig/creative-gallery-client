@@ -16,24 +16,19 @@ const NavBar = (): JSX.Element => {
   dispatch(setIsLargeDevice(useCheckBreakpoint(992)));
 
   return (
-    <div>
-      <nav>
-        <div className="navbar-container navbar-border">
-          <div className="logo-container">
-            <Link
-              to={"/"}
-              className="is-text-style-plain is-white"
-              onClick={(): void => {
-                dispatch(setNavItem("home"));
-              }}
-            >
-              <NavBarLogo />
-            </Link>
-          </div>
-          <NavView isLargeDevice={isLargeDevice} />
-        </div>
-      </nav>
-    </div>
+    <nav className="nav-bar">
+      <div className="nav-bar__items">
+        <Link
+          to={"/"}
+          onClick={(): void => {
+            dispatch(setNavItem("home"));
+          }}
+        >
+          <NavBarLogo />
+        </Link>
+        <NavView isLargeDevice={isLargeDevice} />
+      </div>
+    </nav>
   );
 };
 

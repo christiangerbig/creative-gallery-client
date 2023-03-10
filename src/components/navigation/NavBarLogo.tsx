@@ -1,13 +1,13 @@
 const NavBarLogo = (): JSX.Element => {
   return (
-    <div className="logo-subcontainer">
-      <div className="logo-letter-c-outline">
-        <div className="logo-letter-c-inline" />
+    <div className="nav-bar-logo">
+      <div className="nav-bar-logo__letter-c-outline">
+        <div className="nav-bar-logo__letter-c-inline" />
       </div>
-      <div className="logo-letter-g-outline">
-        <div className="logo-letter-g-inline">
-          <div className="logo-letter-g-box">
-            <div className="logo-letter-g-box2" />
+      <div className="nav-bar-logo__letter-g-outline">
+        <div className="nav-bar-logo__letter-g-inline">
+          <div className="nav-bar-logo__letter-g-box">
+            <div className="nav-bar-logo__letter-g-box2" />
           </div>
         </div>
       </div>

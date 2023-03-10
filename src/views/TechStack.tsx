@@ -13,8 +13,8 @@ const TechStack = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="tech-stack-page-container" data-cy="tech-stack-page">
-      <header className="headline">
+    <div className="tech-stack" data-cy="tech-stack-page">
+      <header className="header">
         <HeaderText
           headlines={{
             headline: t("texts.techStack.headline"),
@@ -23,11 +23,16 @@ const TechStack = (): JSX.Element => {
           borderColorName={"violet"}
         />
       </header>
-      <div className="tech-stack-logos-container">
+      <div className="tech-stack__logo-collection">
         {toolsLogos.map(
           (logo: string, index: number): JSX.Element => (
             <div key={`${logo}${index.toString()}`} className="tech-stack-logo">
-              <img src={logo} loading="lazy" alt="firm logo" />
+              <img
+                src={logo}
+                loading="lazy"
+                alt="firm logo"
+                className="tech-stack-logo__image"
+              />
             </div>
           )
         )}

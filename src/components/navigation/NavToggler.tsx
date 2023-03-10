@@ -18,13 +18,16 @@ const NavToggler = (): JSX.Element => {
   };
 
   return (
-    <div>
-      <FontAwesomeIcon
-        icon={faBars}
+    <>
+      <button
+        type="button"
+        className="nav-toggler"
         data-cy="toggler"
         onClick={handleOpenMenu}
-      />
-    </div>
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </button>
+    </>
   );
 };
 

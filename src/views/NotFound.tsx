@@ -6,8 +6,8 @@ const NotFound = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <div className="page-not-found-container">
-      <header className="headline">
+    <div className="page-not-found">
+      <header className="header">
         <HeaderText
           headlines={{
             headline: t("texts.pageNotFound.headline"),
@@ -16,8 +16,8 @@ const NotFound = (): JSX.Element => {
           borderColorName={"orange"}
         />
       </header>
-      <div className="page-not-found-get-back-container">
-        <Link to={"/"} className="page-not-found-get-back-link">
+      <div className="page-not-found__get-back-container">
+        <Link to={"/"} className="page-not-found__get-back-container__link">
           {t("link.getBack")}
         </Link>
       </div>

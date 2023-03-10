@@ -20,6 +20,7 @@ const ContactForm = ({
   return (
     <>
       <form
+        className="contact-form"
         onSubmit={(event: React.FormEvent<HTMLFormElement>): void => {
           handleSubmitRequest(event);
         }}
@@ -28,14 +29,14 @@ const ContactForm = ({
           type="email"
           name="email"
           placeholder={t("texts.contact.createRequest.form.inputEmail")}
-          className="form-input"
+          className="contact-form__input"
           data-cy="form-input-email"
         />
         <input
           type="text"
           name="subject"
           placeholder={t("texts.contact.createRequest.form.inputSubject")}
-          className="form-input"
+          className="contact-form__input"
           data-cy="form-input-subject"
         />
         <textarea
@@ -43,14 +44,14 @@ const ContactForm = ({
           placeholder={t("texts.contact.createRequest.form.inputMessage")}
           cols={35}
           rows={7}
-          className="form-textarea"
+          className="contact-form__text-area"
           data-cy="form-input-message"
         />
         <button
           type="submit"
           disabled={buttonState}
           formNoValidate
-          className="form-submit"
+          className="contact-form__button"
           data-cy="form-submit-request"
         >
           {t("button.submit")}
