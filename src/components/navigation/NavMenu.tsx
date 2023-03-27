@@ -37,19 +37,22 @@ const NavMenu = (): JSX.Element | null => {
   const fadeMenu = useMemo(
     (): string =>
       isOpenMenu
-        ? "nav-menu nav-menu--fade-in"
+        ? "nav-menu--fade-in"
         : isCloseMenu
-        ? "nav-menu nav-menu--fade-out"
-        : "nav-menu",
+        ? "nav-menu--fade-out"
+        : "",
     [isOpenMenu, isCloseMenu]
   );
 
-  const fadeMenuItem = (fadeInSpeed: string, fadeOutSpeed: string): string =>
+  const fadeMenuItem = (
+    fadeInSpeedClass: string,
+    fadeOutSpeedClass: string
+  ): string =>
     isOpenMenu
-      ? `nav-menu-list__item__link ${fadeInSpeed}`
+      ? `${fadeInSpeedClass}`
       : isCloseMenu
-      ? `nav-menu-list__item__link ${fadeOutSpeed}`
-      : "nav-menu-list__item__link";
+      ? `${fadeOutSpeedClass}`
+      : "";
 
   if (isLargeDevice || !isMenuVisible) {
     return null;
@@ -57,86 +60,98 @@ const NavMenu = (): JSX.Element | null => {
 
   return (
     <>
-      <div className={fadeMenu}>
-        <div className="close-button-container">
+      <div className={`nav-menu ${fadeMenu}`}>
+        <div className="close-menu">
           <button
             type="button"
-            className="close-button-container__button"
+            className="close-menu__button"
             onClick={handleCloseMenu}
           >
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>
-        <ul className="nav-menu-list nav-menu-list--no-style">
-          <li className="nav-menu-list__item">
+        <ul className="nav-menu__menu-list">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed1",
+              "nav-menu__menu-list__menu-item--fade-out-speed1"
+            )}`}
+          >
             <Link
               to={"/about"}
-              className={fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed1",
-                "nav-menu-list__item--fade-out-speed1"
-              )}
+              className="nav-menu__menu-list__menu-link"
               data-cy="nav-menu-about-link"
               onClick={handleCloseMenu}
             >
               {t("link.about")}
             </Link>
           </li>
-          <li className="nav-menu-list__item">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed2",
+              "nav-menu__menu-list__menu-item--fade-out-speed2"
+            )}`}
+          >
             <Link
               to={"/projects"}
-              className={fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed2",
-                "nav-menu-list__item--fade-out-speed2"
-              )}
+              className="nav-menu__menu-list__menu-link"
               data-cy="nav-menu-projects-link"
               onClick={handleCloseMenu}
             >
               {t("link.projects")}
             </Link>
           </li>
-          <li className="nav-menu-list__item">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed3",
+              "nav-menu__menu-list__menu-item--fade-out-speed3"
+            )}`}
+          >
             <Link
               to={"/techstack"}
-              className={fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed3",
-                "nav-menu-list__item--fade-out-speed3"
-              )}
+              className="nav-menu__menu-list__menu-link"
               data-cy="nav-menu-techstack-link"
               onClick={handleCloseMenu}
             >
               {t("link.techStack")}
             </Link>
           </li>
-          <li className="nav-menu-list__item">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed4",
+              "nav-menu__menu-list__menu-item--fade-out-speed4"
+            )}`}
+          >
             <ExternalLink
               path={resumePath}
-              styleClass={fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed4",
-                "nav-menu-list__item--fade-out-speed4"
-              )}
+              styleClass="nav-menu__menu-list__menu-link"
               text={t("link.resume")}
               closeMenuHandler={handleCloseMenu}
             />
           </li>
-          <li className="nav-menu-list__item">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed5",
+              "nav-menu__menu-list__menu-item--fade-out-speed5"
+            )}`}
+          >
             <Link
               to={"/contact"}
-              className={fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed5",
-                "nav-menu-list__item--fade-out-speed5"
-              )}
+              className="nav-menu__menu-list__menu-link"
               data-cy="nav-menu-contact-link"
               onClick={handleCloseMenu}
             >
               {t("link.contact")}
             </Link>
           </li>
-          <li className="nav-menu-list__item">
+          <li
+            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+              "nav-menu__menu-list__menu-item--fade-in-speed6",
+              "nav-menu__menu-list__menu-item--fade-out-speed6"
+            )}`}
+          >
             <SelectLanguage
-              styleClass={`nav-menu-list__item__select-language ${fadeMenuItem(
-                "nav-menu-list__item--fade-in-speed6",
-                "nav-menu-list__item--fade-out-speed6"
-              )}`}
+              styleClass="nav-menu__menu-list__menu-link nav-menu__menu-list__select-language"
               closeMenuHandler={handleCloseMenu}
             />
           </li>

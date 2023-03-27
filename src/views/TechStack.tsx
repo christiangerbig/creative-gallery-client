@@ -26,12 +26,15 @@ const TechStack = (): JSX.Element => {
       <div className="tech-stack__logo-collection">
         {toolsLogos.map(
           (logo: string, index: number): JSX.Element => (
-            <div key={`${logo}${index.toString()}`} className="tech-stack-logo">
+            <div
+              key={`${logo}${index.toString()}`}
+              className="tech-stack__logo"
+            >
               <img
                 src={logo}
                 loading="lazy"
                 alt="firm logo"
-                className="tech-stack-logo__image"
+                className="tech-stack__logo__image"
               />
             </div>
           )

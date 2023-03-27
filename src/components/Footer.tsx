@@ -13,18 +13,18 @@ const Footer = (): JSX.Element => {
         {" "}
         {t("texts.footer.copyright")} {year} {t("texts.footer.appAuthor")}
       </span>
-      <ul className="navigation-list navigation-list--no-style">
+      <ul className="footer__navigation-list">
         <li>
           <ExternalLink
             path={linkedInPath}
-            styleClass="footer__link"
+            styleClass="footer__navigation-link"
             faClass="fa-linkedin"
           />
         </li>
         <li>
           <ExternalLink
             path={gitHubPath}
-            styleClass="footer__link"
+            styleClass="footer__navigation-link"
             faClass="fa-github"
           />
         </li>

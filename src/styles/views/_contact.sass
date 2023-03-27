@@ -1,0 +1,41 @@
+@import "../base/_animation.sass"
+@import "../base/_colors.sass"
+
+.contact
+  color: $white
+  margin-top: 8rem
+  animation: fade-page-in 1s forwards
+  &__details
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 30rem
+    @media (min-width: 320px) and (max-width: 767px)
+      width: 66%
+    background-color: $dark
+    color: $white
+    padding: 0
+    border: solid 1px $dark
+    margin: 4rem auto
+    &__name
+      margin:
+        top: 2rem
+        bottom: 0
+    &__jobname
+      margin:
+        top: 0.5rem
+        bottom: 0
+  &__ways
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-top: 1rem
+    &__email-headline
+      margin-bottom: 0
+    &__phone-headline 
+      margin-bottom: 0
+    &__form-headline
+      margin-bottom: 0

@@ -14,12 +14,12 @@ const NavDesktopViewItems = (): JSX.Element => {
 
   const highliteNavItem = (currentMenuItem: MenuItem): string =>
     currentMenuItem === menuItem
-      ? "navigation-list__link navigation-list__link--active"
-      : "navigation-list__link";
+      ? "nav-desktop-items__nav-list__nav-link nav-desktop-items__nav-list__nav-link--active"
+      : "nav-desktop-items__nav-list__nav-link";
 
   return (
     <div className="nav-desktop-items">
-      <ul className="navigation-list navigation-list--no-style">
+      <ul className="nav-desktop-items__nav-list">
         <li>
           <Link
             to={"/about"}
@@ -57,11 +57,11 @@ const NavDesktopViewItems = (): JSX.Element => {
           </Link>
         </li>
       </ul>
-      <ul className="navigation-list navigation-list--no-style">
+      <ul className="nav-desktop-items__nav-list">
         <li>
           <ExternalLink
             path={resumePath}
-            styleClass="navigation-list__link"
+            styleClass="nav-desktop-items__nav-list__nav-link"
             text={t("link.resume")}
           />
         </li>
@@ -78,7 +78,9 @@ const NavDesktopViewItems = (): JSX.Element => {
           </Link>
         </li>
         <li>
-          <SelectLanguage styleClass={"navigation-list__select-language"} />
+          <SelectLanguage
+            styleClass={"nav-desktop-items__nav-list__select-language"}
+          />
         </li>
       </ul>
     </div>

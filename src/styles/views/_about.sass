@@ -1,0 +1,32 @@
+@import "../base/_animation.sass"
+@import "../base/_colors.sass"
+
+.about
+  display: flex
+  flex-direction: column
+  color: $white
+  margin-top: 8rem
+  animation: fade-page-in 1s forwards
+  &__text
+    display: flex
+    justify-content: center
+    margin: 3rem 0 4rem 4rem
+    @media (min-width: 320px) and (max-width: 767px)
+      align-items: center
+      flex-wrap: wrap
+      margin:
+        right: 0
+        bottom: 4rem
+        left: 4rem
+    &__text-colum
+      width: 50%
+      padding-right: 5rem
+      @media (min-width: 320px) and (max-width: 767px)
+        width: 100%
+        padding-right: 3rem
+  &__contact-link
+    text-decoration: none
+    color: $dark-blue
+    transition: all 0.5s
+    &:hover 
+      color: $light-blue

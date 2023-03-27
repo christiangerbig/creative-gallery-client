@@ -17,7 +17,7 @@ const NavBar = (): JSX.Element => {
 
   return (
     <nav className="nav-bar">
-      <div className="nav-bar__items">
+      <div className="nav-bar__nav-items">
         <Link
           to={"/"}
           onClick={(): void => {
