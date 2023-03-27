@@ -8,7 +8,7 @@ type ErrorMessage = string | null;
 
 interface InitialState {
   menuItem: MenuItem;
-  isLargeDevice: boolean;
+  isDeskLarge: boolean;
   isMenuVisible: boolean;
   isOpenMenu: boolean;
   isCloseMenu: boolean;
@@ -18,7 +18,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   menuItem: null,
-  isLargeDevice: false,
+  isDeskLarge: false,
   isMenuVisible: false,
   isOpenMenu: false,
   isCloseMenu: false,
@@ -53,8 +53,8 @@ export const creativeGallerySlice = createSlice({
 
   reducers: {
     // ----- Menu -----
-    setIsLargeDevice: (state, { payload }: PayloadAction<boolean>) => {
-      state.isLargeDevice = payload;
+    setIsDeskLarge: (state, { payload }: PayloadAction<boolean>) => {
+      state.isDeskLarge = payload;
     },
     setIsMenuVisible: (state, { payload }: PayloadAction<boolean>) => {
       state.isMenuVisible = payload;
@@ -94,8 +94,8 @@ export const creativeGallerySlice = createSlice({
 const selectors = {
   // ----- Menu -----
   selectMenuItem: ({ creativeGallery: { menuItem } }: RootState) => menuItem,
-  selectIsLargeDevice: ({ creativeGallery: { isLargeDevice } }: RootState) =>
-    isLargeDevice,
+  selectIsDeskLarge: ({ creativeGallery: { isDeskLarge } }: RootState) =>
+    isDeskLarge,
   selectIsMenuVisible: ({ creativeGallery: { isMenuVisible } }: RootState) =>
     isMenuVisible,
   selectIsOpenMenu: ({ creativeGallery: { isOpenMenu } }: RootState) =>
@@ -116,7 +116,7 @@ const selectors = {
 // ----- Slice actions -----
 export const {
   // ----- Menu -----
-  setIsLargeDevice,
+  setIsDeskLarge,
   setIsMenuVisible,
   setIsOpenMenu,
   setIsCloseMenu,
@@ -133,7 +133,7 @@ export const {
 export const {
   // ----- Menu -----
   selectMenuItem,
-  selectIsLargeDevice,
+  selectIsDeskLarge,
   selectIsMenuVisible,
   selectIsOpenMenu,
   selectIsCloseMenu,

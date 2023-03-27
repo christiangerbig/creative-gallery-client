@@ -2,11 +2,11 @@ import NavDesktopItems from "./NavDesktopItems";
 import NavToggler from "./NavToggler";
 
 interface NavViewProps {
-  isLargeDevice: boolean;
+  isDeskLarge: boolean;
 }
 
-const NavView = ({ isLargeDevice }: NavViewProps): JSX.Element => {
-  if (isLargeDevice) {
+const NavView = ({ isDeskLarge }: NavViewProps): JSX.Element => {
+  if (isDeskLarge) {
     return <NavDesktopItems />;
   }
   return <NavToggler />;

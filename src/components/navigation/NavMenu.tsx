@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsCloseMenu,
-  selectIsLargeDevice,
+  selectIsDeskLarge,
   selectIsMenuVisible,
   selectIsOpenMenu,
   selectIsCloseMenu,
@@ -17,7 +17,7 @@ import ExternalLink from "../helpers/ExternalLink";
 import SelectLanguage from "../helpers/SelectLanguage";
 
 const NavMenu = (): JSX.Element | null => {
-  const isLargeDevice = useAppSelector(selectIsLargeDevice);
+  const isLargeDevice = useAppSelector(selectIsDeskLarge);
   const isMenuVisible = useAppSelector(selectIsMenuVisible);
   const isOpenMenu = useAppSelector(selectIsOpenMenu);
   const isCloseMenu = useAppSelector(selectIsCloseMenu);

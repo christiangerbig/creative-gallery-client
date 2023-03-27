@@ -2,18 +2,19 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { useCheckBreakpoint } from "../../app/custom-hooks/useCheckBreakpoint";
 import {
-  selectIsLargeDevice,
-  setIsLargeDevice,
+  selectIsDeskLarge,
+  setIsDeskLarge,
   setNavItem,
 } from "../../reducer/creativeGallerySlice";
 import NavBarLogo from "./NavBarLogo";
 import NavView from "./NavView";
 
 const NavBar = (): JSX.Element => {
-  const isLargeDevice = useAppSelector(selectIsLargeDevice);
+  const isDeskLarge = useAppSelector(selectIsDeskLarge);
   const dispatch = useAppDispatch();
+  const breakpointDeskLarge = 992; // horizontal 992 px
 
-  dispatch(setIsLargeDevice(useCheckBreakpoint(992)));
+  dispatch(setIsDeskLarge(useCheckBreakpoint(breakpointDeskLarge)));
 
   return (
     <nav className="nav-bar">
@@ -26,7 +27,7 @@ const NavBar = (): JSX.Element => {
         >
           <NavBarLogo />
         </Link>
-        <NavView isLargeDevice={isLargeDevice} />
+        <NavView isDeskLarge={isDeskLarge} />
       </div>
     </nav>
   );
