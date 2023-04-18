@@ -5,7 +5,6 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsCloseMenu,
-  selectIsDeskLarge,
   selectIsMenuVisible,
   selectIsOpenMenu,
   selectIsCloseMenu,
@@ -17,7 +16,6 @@ import ExternalLink from "../helpers/ExternalLink";
 import SelectLanguage from "../helpers/SelectLanguage";
 
 const NavMenu = (): JSX.Element | null => {
-  const isLargeDevice = useAppSelector(selectIsDeskLarge);
   const isMenuVisible = useAppSelector(selectIsMenuVisible);
   const isOpenMenu = useAppSelector(selectIsOpenMenu);
   const isCloseMenu = useAppSelector(selectIsCloseMenu);
@@ -54,111 +52,105 @@ const NavMenu = (): JSX.Element | null => {
       ? `${fadeOutSpeedClass}`
       : "";
 
-  if (isLargeDevice || !isMenuVisible) {
-    return null;
-  }
-
-  return (
-    <>
-      <div className={`nav-menu ${fadeMenu}`}>
-        <div className="close-menu">
-          <button
-            type="button"
-            className="close-menu__button"
+  return isMenuVisible ? (
+    <div className={`nav-menu ${fadeMenu}`}>
+      <div className="nav-menu__close">
+        <button
+          type="button"
+          className="nav-menu__close__button"
+          onClick={handleCloseMenu}
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
+      </div>
+      <ul className="nav-menu__menu-list">
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed1",
+            "nav-menu__menu-list__menu-item--fade-out-speed1"
+          )}`}
+        >
+          <Link
+            to={"/about"}
+            className="nav-menu__menu-list__menu-link"
+            data-cy="nav-menu-about-link"
             onClick={handleCloseMenu}
           >
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-        </div>
-        <ul className="nav-menu__menu-list">
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed1",
-              "nav-menu__menu-list__menu-item--fade-out-speed1"
-            )}`}
+            {t("link.about")}
+          </Link>
+        </li>
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed2",
+            "nav-menu__menu-list__menu-item--fade-out-speed2"
+          )}`}
+        >
+          <Link
+            to={"/projects"}
+            className="nav-menu__menu-list__menu-link"
+            data-cy="nav-menu-projects-link"
+            onClick={handleCloseMenu}
           >
-            <Link
-              to={"/about"}
-              className="nav-menu__menu-list__menu-link"
-              data-cy="nav-menu-about-link"
-              onClick={handleCloseMenu}
-            >
-              {t("link.about")}
-            </Link>
-          </li>
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed2",
-              "nav-menu__menu-list__menu-item--fade-out-speed2"
-            )}`}
+            {t("link.projects")}
+          </Link>
+        </li>
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed3",
+            "nav-menu__menu-list__menu-item--fade-out-speed3"
+          )}`}
+        >
+          <Link
+            to={"/techstack"}
+            className="nav-menu__menu-list__menu-link"
+            data-cy="nav-menu-techstack-link"
+            onClick={handleCloseMenu}
           >
-            <Link
-              to={"/projects"}
-              className="nav-menu__menu-list__menu-link"
-              data-cy="nav-menu-projects-link"
-              onClick={handleCloseMenu}
-            >
-              {t("link.projects")}
-            </Link>
-          </li>
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed3",
-              "nav-menu__menu-list__menu-item--fade-out-speed3"
-            )}`}
+            {t("link.techStack")}
+          </Link>
+        </li>
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed4",
+            "nav-menu__menu-list__menu-item--fade-out-speed4"
+          )}`}
+        >
+          <ExternalLink
+            path={resumePath}
+            styleClass="nav-menu__menu-list__menu-link"
+            text={t("link.resume")}
+            closeMenuHandler={handleCloseMenu}
+          />
+        </li>
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed5",
+            "nav-menu__menu-list__menu-item--fade-out-speed5"
+          )}`}
+        >
+          <Link
+            to={"/contact"}
+            className="nav-menu__menu-list__menu-link"
+            data-cy="nav-menu-contact-link"
+            onClick={handleCloseMenu}
           >
-            <Link
-              to={"/techstack"}
-              className="nav-menu__menu-list__menu-link"
-              data-cy="nav-menu-techstack-link"
-              onClick={handleCloseMenu}
-            >
-              {t("link.techStack")}
-            </Link>
-          </li>
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed4",
-              "nav-menu__menu-list__menu-item--fade-out-speed4"
-            )}`}
-          >
-            <ExternalLink
-              path={resumePath}
-              styleClass="nav-menu__menu-list__menu-link"
-              text={t("link.resume")}
-              closeMenuHandler={handleCloseMenu}
-            />
-          </li>
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed5",
-              "nav-menu__menu-list__menu-item--fade-out-speed5"
-            )}`}
-          >
-            <Link
-              to={"/contact"}
-              className="nav-menu__menu-list__menu-link"
-              data-cy="nav-menu-contact-link"
-              onClick={handleCloseMenu}
-            >
-              {t("link.contact")}
-            </Link>
-          </li>
-          <li
-            className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
-              "nav-menu__menu-list__menu-item--fade-in-speed6",
-              "nav-menu__menu-list__menu-item--fade-out-speed6"
-            )}`}
-          >
-            <SelectLanguage
-              styleClass="nav-menu__menu-list__menu-link nav-menu__menu-list__select-language"
-              closeMenuHandler={handleCloseMenu}
-            />
-          </li>
-        </ul>
-      </div>
-    </>
-  );
+            {t("link.contact")}
+          </Link>
+        </li>
+        <li
+          className={`nav-menu__menu-list__menu-item ${fadeMenuItem(
+            "nav-menu__menu-list__menu-item--fade-in-speed6",
+            "nav-menu__menu-list__menu-item--fade-out-speed6"
+          )}`}
+        >
+          <SelectLanguage
+            styleClass="nav-menu__menu-list__menu-link nav-menu__menu-list__select-language"
+            closeMenuHandler={handleCloseMenu}
+          />
+        </li>
+      </ul>
+    </div>
+  ) : null;
 };
 
 export default NavMenu;

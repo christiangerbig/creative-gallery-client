@@ -1,8 +1,10 @@
+@import "../base/breakpoints"
+
 .header
   display: flex
   align-items: center
   margin-left: 1.5rem 
-  @media (min-width: 320px) and (max-width: 480px)
+  @include respond-to("mobile")
     margin:
       left: 2rem
       right: 3rem

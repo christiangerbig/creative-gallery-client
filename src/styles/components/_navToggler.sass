@@ -1,8 +1,12 @@
 @import "../base/variables"
+@import "../base/breakpoints"
 
 .nav-toggler
-  background: transparent
-  color: $white
-  padding: 0
-  border: none
-  margin-top: 0.5rem
+  display: none
+  @include respond-to("desktop-small")
+    display: block
+    background: transparent
+    color: $white
+    padding: 0
+    border: none
+    margin-top: 0.5rem

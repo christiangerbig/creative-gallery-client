@@ -1,4 +1,5 @@
 @import "../base/variables"
+@import "../base/breakpoints"
 
 .about
   display: flex
@@ -9,9 +10,9 @@
   &__text
     display: flex
     justify-content: center
+    align-items: flex-start   
     margin: 3rem 0 4rem 4rem
-    @media (min-width: 320px) and (max-width: 767px)
-      align-items: center
+    @include respond-to("tablet")
       flex-wrap: wrap
       margin:
         right: 0
@@ -20,7 +21,7 @@
     &__text-colum
       width: 50%
       padding-right: 5rem
-      @media (min-width: 320px) and (max-width: 767px)
+      @include respond-to("tablet")
         width: 100%
         padding-right: 3rem
   &__contact-link

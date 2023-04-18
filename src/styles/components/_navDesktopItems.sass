@@ -1,43 +1,46 @@
 @import "../base/variables"
+@import "../base/breakpoints"
 
 .nav-desktop-items
-  display: flex
-  justify-content: space-between
-  align-items: center
-  width: 100%
-  &__nav-list
+  display: none
+  @include respond-to("desktop-large")
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    list-style: none
-    padding-inline-start: 0
-    padding-left: 0
-    &__nav-link
-      font-size: 1rem
-      text-decoration: none
-      display: inline-block
-      background-color: rgba(0,0,0,0)
-      color: $white
-      padding: 0.3rem 0.8rem
-      margin-left: 0.8rem
-      transition: all 0.5s
-      &--active
-        background-color: $white
-        color: $black
-      &:hover 
-        background-color: $white
-        color: $black
-    &__select-language
-      font-family: inherit
-      font-size: inherit
-      background-color: rgba(0,0,0,0)
-      color: $white
-      padding: 0.5rem 0.8rem 0.3rem 0.8rem
-      margin-left: 0.8rem
-      border: none
-      &:hover
-        background: $white
-        color: $black
-      &__option
-        background: $black
+    width: 100%
+    &__nav-list
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style: none
+      padding-inline-start: 0
+      padding-left: 0
+      &__nav-link
+        font-size: 1rem
+        text-decoration: none
+        display: inline-block
+        background-color: rgba(0,0,0,0)
         color: $white
+        padding: 0.3rem 0.8rem
+        margin-left: 0.8rem
+        transition: all 0.5s
+        &--active
+          background-color: $white
+          color: $black
+        &:hover 
+          background-color: $white
+          color: $black
+      &__select-language
+        font-family: inherit
+        font-size: inherit
+        background-color: rgba(0,0,0,0)
+        color: $white
+        padding: 0.5rem 0.8rem 0.3rem 0.8rem
+        margin-left: 0.8rem
+        border: none
+        &:hover
+          background: $white
+          color: $black
+        &__option
+          background: $black
+          color: $white

@@ -1,12 +1,14 @@
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   setIsMenuVisible,
   setIsOpenMenu,
+  selectIsMenuVisible,
 } from "../../reducer/creativeGallerySlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const NavToggler = (): JSX.Element => {
+const NavToggler = (): JSX.Element | null => {
+  const isMenuVisible = useAppSelector(selectIsMenuVisible);
   const dispatch = useAppDispatch();
 
   const handleOpenMenu = (): void => {
@@ -17,7 +19,7 @@ const NavToggler = (): JSX.Element => {
     }, 1000); // 1 second
   };
 
-  return (
+  return isMenuVisible ? null : (
     <>
       <button
         type="button"

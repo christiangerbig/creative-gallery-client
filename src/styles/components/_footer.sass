@@ -1,10 +1,11 @@
 @import "../base/variables"
+@import "../base/breakpoints"
 
 .footer 
   display: flex
   justify-content: center
   align-items: center
-  @media (min-width: 320px) and (max-width: 767px) 
+  @include respond-to("mobile")
     flex-wrap: wrap
   background-color: $black
   color: $white

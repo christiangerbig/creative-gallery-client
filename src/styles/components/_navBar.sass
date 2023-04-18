@@ -1,4 +1,5 @@
 @import "../base/variables"
+@import "../base/breakpoints"
 
 .nav-bar
   position: fixed
@@ -23,7 +24,7 @@
     margin:
       left: 4.2rem
       right: 4.2rem
-    @media (min-width: 320px) and (max-width: 480px)
+    @include respond-to("mobile")
       margin:
         left: 4.2rem
         right: 2.2rem
