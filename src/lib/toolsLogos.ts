@@ -18,6 +18,8 @@ import visualStudioCodeLogo from "../images/Visual-Studio-Code-Logo.svg";
 import vueJsLogo from "../images/Vue.js-Logo.svg";
 import webstormLogo from "../images/Webstorm-Logo.svg";
 import yarnLogo from "../images/Yarn-Logo.svg";
+import gitKrakenLogo from "../images/GitKraken-Logo.svg";
+import bitbucketLogo from "../images/Bitbucket-Logo.svg";
 
 export const toolsLogos: string[] = [
   reactLogo,
@@ -38,6 +40,8 @@ export const toolsLogos: string[] = [
   yarnLogo,
   gitHubLogo,
   gitLabLogo,
+  bitbucketLogo,
+  gitKrakenLogo,
   visualStudioCodeLogo,
   webstormLogo,
 ];
