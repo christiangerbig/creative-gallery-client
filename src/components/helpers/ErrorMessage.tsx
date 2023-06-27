@@ -1,11 +1,11 @@
 interface ErrorMessageProps {
   message: string | null;
-  outputFunction: Function;
+  output: (message: string) => string;
 }
 
 const ErrorMessage = ({
   message,
-  outputFunction,
+  output,
 }: ErrorMessageProps): JSX.Element | null => {
   if (!message || !message.includes("Form")) {
     return null;
@@ -13,7 +13,7 @@ const ErrorMessage = ({
 
   return (
     <div className="error-message error-message--color-red">
-      <span data-cy="error-text">{outputFunction(message)}</span>
+      <span data-cy="error-text">{output(message)}</span>
     </div>
   );
 };

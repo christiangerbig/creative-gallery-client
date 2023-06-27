@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 interface SelectLanguageProps {
   styleClass: string;
-  closeMenuHandler?: Function;
+  closeMenuHandler?: () => void;
 }
 
 const SelectLanguage = ({

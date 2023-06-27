@@ -20,6 +20,7 @@ import webstormLogo from "../images/Webstorm-Logo.svg";
 import yarnLogo from "../images/Yarn-Logo.svg";
 import gitKrakenLogo from "../images/GitKraken-Logo.svg";
 import bitbucketLogo from "../images/Bitbucket-Logo.svg";
+import mantineLogo from "../images/Mantine-Logo.svg";
 
 export const toolsLogos: string[] = [
   reactLogo,
@@ -32,6 +33,7 @@ export const toolsLogos: string[] = [
   cypressLogo,
   sassLogo,
   tailwindCssLogo,
+  mantineLogo,
   bootstrapLogo,
   bulmaLogo,
   mongoDBLogo,

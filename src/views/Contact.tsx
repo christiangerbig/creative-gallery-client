@@ -115,10 +115,7 @@ const Contact = (): JSX.Element => {
             <h3 className="contact__ways__form-headline">
               <FontAwesomeIcon icon={faPen} /> {t("texts.contact.submit")}
             </h3>
-            <ErrorMessage
-              message={errorMessage}
-              outputFunction={convertErrorMessage}
-            />
+            <ErrorMessage message={errorMessage} output={convertErrorMessage} />
             <ContactForm
               isCreatingRequest={isCreatingRequest}
               handleSubmitRequest={handleSubmitRequest}

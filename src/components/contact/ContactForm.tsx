@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 interface ContactFormProps {
   isCreatingRequest: boolean;
-  handleSubmitRequest: Function;
+  handleSubmitRequest: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
 const ContactForm = ({

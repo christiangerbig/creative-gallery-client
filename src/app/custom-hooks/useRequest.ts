@@ -6,17 +6,17 @@ import {
 import { Request } from "../typeDefinitions";
 
 interface RequestMethods {
-  createRequest: Function;
+  createRequest: (newRequest: Request, callback: () => void) => void;
 }
 
 export const useRequest = (): RequestMethods => {
   const dispatch = useAppDispatch();
   return {
-    createRequest: (newRequest: Request, callbackFunction: Function): void => {
+    createRequest: (newRequest: Request, callback: () => void): void => {
       dispatch(createRequest(newRequest))
         .unwrap()
         .then((): void => {
-          callbackFunction();
+          callback();
         })
         .catch((err: any): void => {
           dispatch(setErrorMessage(err.message));
