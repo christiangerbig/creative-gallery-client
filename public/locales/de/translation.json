@@ -53,17 +53,17 @@
     "projects": {
       "headline": "Meine Projekte",
       "subheadline": "an denen ich arbeite",
+      "pahnkeMovieNight": {
+        "name": "Pahnke Movie Night",
+        "description": "Verwalte Shows und Reservierungen für eine private Kinovorstellung."
+      },
       "jungleSwap": {
-        "name": "JungleSwap",
-        "description": "Teile deine Pflanzenableger und verdiene damit Geld oder tausche sie gegen eine andere Pflanze. Kaufe eine Pflanze und gib ihr ein neues Zuhause."
+        "name": "Jungle Swap",
+        "description": "Tausche oder verkaufe deine Pflanzenableger und gib deinen Pflanzen ein neues Zuhause."
       },
       "trackerTools": {
         "name": "Trackertools",
-        "description": "Vier leistungsstarke Tools, die das Arbeiten mit dem Musikeditor Protracker und seinen Modulen komfortabler machen."
-      },
-      "letterShooter": {
-        "name": "LETTER SHOOTER",
-        "description": "Ein Koordinations- und Strategiespiel mit dem Ziel, die fehlenden Buchstaben mit präzisen Schüssen zu treffen."
+        "description": "Vier leistungsstarke Tools für das Arbeiten mit Modulen des Musikeditors Protracker."
       }
     },
     "techStack": {

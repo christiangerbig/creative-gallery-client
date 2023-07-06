@@ -1,11 +1,15 @@
+// Pahnke Movie Night
+export const pahnkeMovieNightGitHubPath: string =
+  "https://github.com/christiangerbig/pahnke-movie-night";
+
 // Jungle Swap
 export const jungleSwapGitHubClientPath: string =
   "https://github.com/christiangerbig/jungle-swap-client";
 export const jungleSwapGitHubServerPath: string =
   "https://github.com/christiangerbig/jungle-swap-server";
 
-// Tracker Tools
-export const trackerToolsGitHubClientPath: string =
+// Trackertools
+export const trackerToolsGitHubPath: string =
   "https://github.com/christiangerbig/Trackertools";
 
 // Resume

@@ -576,7 +576,7 @@ body {
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
-  width: 28rem;
+  width: 24rem;
   height: 42rem;
   border: solid 1px rgb(15, 15, 15);
   margin: 0 1.5rem 1.5rem 1.5rem;
@@ -586,7 +586,7 @@ body {
 }
 .project-details__screenshot-desktop {
   top: 0;
-  width: 28rem;
+  width: 24rem;
   height: 16rem;
   position: absolute;
   z-index: 1;
@@ -596,8 +596,8 @@ body {
   height: 100%;
 }
 .project-details__screenshot-mobile {
-  top: 10rem;
-  left: 17rem;
+  top: 11rem;
+  left: 14rem;
   width: 10rem;
   height: 19rem;
   z-index: 10;
@@ -608,6 +608,7 @@ body {
   height: 100%;
 }
 .project-details__description {
+  width: 14rem;
   height: 10rem;
   color: rgb(238, 236, 236);
   padding-left: 1rem;
@@ -617,19 +618,21 @@ body {
   margin: 1.5rem 0 0.6rem 0;
 }
 .project-details__description__paragraph {
-  width: 15rem;
+  width: 13rem;
+  height: 4.5rem;
 }
 
 .project-links {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 90%;
   padding-bottom: 1.5rem;
   margin-top: 2rem;
 }
 .project-links__github-link {
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   display: inline-block;
   color: rgb(238, 236, 236);
   padding: 0.3rem 0.8rem;
@@ -780,7 +783,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 4rem 2.2rem 3rem 2.2rem;
+  margin: 0rem 2.2rem 3rem 2.2rem;
 }
 
 .tech-stack {
