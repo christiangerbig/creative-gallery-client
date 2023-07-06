@@ -1,20 +1,14 @@
 import { useTranslation } from "react-i18next";
 import {
-  jungleSwapDeployedPath,
   jungleSwapGitHubClientPath,
   jungleSwapGitHubServerPath,
-  jungleSwapVideoPath,
-  letterShooterDeployedPath,
-  letterShooterGitHubClientPath,
-  letterShooterVideoPath,
-  trackerToolsDeployedPath,
   trackerToolsGitHubClientPath,
-  trackerToolsVideoPath,
 } from "../../lib/externalLinkPaths";
 import { ProjectItem } from "../typeDefinitions";
-import jungleSwapImage from "../../images/jungle-swap.png";
-import trackerToolsImage from "../../images/trackertools.png";
-import letterShooterImage from "../../images/letter-shooter.png";
+import jungleSwapImageDesktop from "../../images/Jungleswap-Screenshot-desktop.png";
+import jungleSwapImageMobile from "../../images/JungleSwap-Screenshot-Mobile.png";
+import trackertoolsImageDesktop from "../../images/Trackertools-screenshot-desktop.png";
+import trackertoolsImageMobile from "../../images/Trackertools-screenshow-mobile.png";
 
 export const useProjectsData = (): ProjectItem[] => {
   const { t } = useTranslation();
@@ -22,29 +16,18 @@ export const useProjectsData = (): ProjectItem[] => {
   return [
     {
       projectName: t("texts.projects.jungleSwap.name"),
-      projectPicturePath: jungleSwapImage,
-      projectVideoPath: jungleSwapVideoPath,
+      projectPicturePath1: jungleSwapImageDesktop,
+      projectPicturePath2: jungleSwapImageMobile,
       projectDescription: t("texts.projects.jungleSwap.description"),
-      deployedPath: jungleSwapDeployedPath,
       gitHubClientPath: jungleSwapGitHubClientPath,
       gitHubServerPath: jungleSwapGitHubServerPath,
     },
     {
       projectName: t("texts.projects.trackerTools.name"),
-      projectPicturePath: trackerToolsImage,
-      projectVideoPath: trackerToolsVideoPath,
+      projectPicturePath1: trackertoolsImageDesktop,
+      projectPicturePath2: trackertoolsImageMobile,
       projectDescription: t("texts.projects.trackerTools.description"),
-      deployedPath: trackerToolsDeployedPath,
       gitHubClientPath: trackerToolsGitHubClientPath,
-      gitHubServerPath: "",
-    },
-    {
-      projectName: t("texts.projects.letterShooter.name"),
-      projectPicturePath: letterShooterImage,
-      projectVideoPath: letterShooterVideoPath,
-      projectDescription: t("texts.projects.letterShooter.description"),
-      deployedPath: letterShooterDeployedPath,
-      gitHubClientPath: letterShooterGitHubClientPath,
       gitHubServerPath: "",
     },
   ];

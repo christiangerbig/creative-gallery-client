@@ -573,52 +573,59 @@ body {
 
 .project-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-direction: column;
-  background-color: rgb(15, 15, 15);
-  width: 22rem;
-  height: 30rem;
+  width: 28rem;
+  height: 42rem;
   border: solid 1px rgb(15, 15, 15);
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
+.project-details__screenshots-box {
+  position: relative;
+}
+.project-details__screenshot-desktop {
+  top: 0;
+  width: 28rem;
+  height: 16rem;
+  position: absolute;
+  z-index: 1;
+}
+.project-details__screenshot-desktop__image {
+  width: 100%;
+  height: 100%;
+}
+.project-details__screenshot-mobile {
+  top: 10rem;
+  left: 17rem;
+  width: 10rem;
+  height: 19rem;
+  z-index: 10;
+  position: absolute;
+}
+.project-details__screenshot-mobile__image {
+  width: 100%;
+  height: 100%;
+}
 .project-details__description {
-  height: 11rem;
+  height: 10rem;
   color: rgb(238, 236, 236);
   padding-left: 1rem;
   padding-right: 1rem;
 }
 .project-details__description__project-name {
-  font-size: 1.6rem;
-  margin: 0 0 0.6rem 0;
+  margin: 1.5rem 0 0.6rem 0;
 }
 .project-details__description__paragraph {
-  font-size: 1rem;
-  width: 16rem;
+  width: 15rem;
 }
 
 .project-links {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 1rem;
   padding-bottom: 1.5rem;
-}
-.project-links__try-it-link {
-  text-decoration: none;
-  font-size: 0.9rem;
-  display: inline-block;
-  color: rgb(238, 236, 236);
-  padding: 0.3rem 0.8rem;
-  border: solid 2px rgb(50, 168, 82);
-  margin-right: 0.3rem;
-  margin-left: 0.3rem;
-  transition: all 1s;
-}
-.project-links__try-it-link:hover {
-  background-color: rgb(50, 168, 82);
+  margin-top: 2rem;
 }
 .project-links__github-link {
   text-decoration: none;

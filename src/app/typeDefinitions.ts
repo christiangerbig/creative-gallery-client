@@ -11,10 +11,9 @@ export interface Request {
 // ----- Projects -----
 export interface ProjectItem {
   projectName: string;
-  projectPicturePath: string;
-  projectVideoPath: string;
+  projectPicturePath1: string;
+  projectPicturePath2: string;
   projectDescription: string;
-  deployedPath: string;
   gitHubClientPath: string;
   gitHubServerPath: string;
 }

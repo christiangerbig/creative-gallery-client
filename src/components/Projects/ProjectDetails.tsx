@@ -9,10 +9,9 @@ interface ProjectDetailsProps {
 const ProjectDetails = ({
   projectItem: {
     projectName,
-    projectPicturePath,
-    projectVideoPath,
+    projectPicturePath1,
+    projectPicturePath2,
     projectDescription,
-    deployedPath,
     gitHubClientPath,
     gitHubServerPath,
   },
@@ -21,50 +20,51 @@ const ProjectDetails = ({
 
   return (
     <div className="project-details">
-      <video
-        width="320"
-        height="170"
-        muted
-        controls
-        poster={projectPicturePath}
-        src={projectVideoPath}
-      />
+      <div className="project-details__screenshots-box">
+        <div className="project-details__screenshot-desktop">
+          <img
+            src={projectPicturePath1}
+            alt=""
+            className="project-details__screenshot-desktop__image"
+          />
+        </div>
+        <div className="project-details__screenshot-mobile">
+          <img
+            src={projectPicturePath2}
+            alt=""
+            className="project-details__screenshot-mobile__image"
+          />
+        </div>
+      </div>
       <div className="project-details__description">
         <article>
           <header>
-            <h2 className="project-details__description__project-name">
+            <h3 className="project-details__description__project-name">
               {projectName}
-            </h2>
+            </h3>
           </header>
           <p className="project-details__description__paragraph">
             {projectDescription}
           </p>
         </article>
-      </div>
-      <div className="project-links">
-        <div>
-          <ExternalLink
-            path={deployedPath}
-            styleClass="project-links__try-it-link"
-            text={t("link.startApp")}
-          />
-        </div>
-        <div>
-          <ExternalLink
-            path={gitHubClientPath}
-            styleClass="project-links__github-link"
-            text={t("link.gitHubClient")}
-          />
-        </div>
-        {gitHubServerPath && (
+        <div className="project-links">
           <div>
             <ExternalLink
-              path={gitHubServerPath}
+              path={gitHubClientPath}
               styleClass="project-links__github-link"
-              text={t("link.gitHubServer")}
+              text={t("link.gitHubClient")}
             />
           </div>
-        )}
+          {gitHubServerPath && (
+            <div>
+              <ExternalLink
+                path={gitHubServerPath}
+                styleClass="project-links__github-link"
+                text={t("link.gitHubServer")}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
