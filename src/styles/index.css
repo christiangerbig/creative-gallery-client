@@ -641,6 +641,11 @@ body {
     width: 10rem;
   }
 }
+@media (max-width: 768px) {
+  .project-details__description__paragraph {
+    height: 6.5rem;
+  }
+}
 
 .project-links {
   display: flex;
