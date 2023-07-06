@@ -667,8 +667,8 @@ body {
   color: rgb(238, 236, 236);
   padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 113, 168);
-  margin-right: 0.3rem;
-  margin-left: 0.3rem;
+  margin-right: 0;
+  margin-left: 0;
   margin-bottom: 1rem;
   transition: all 1s;
 }
