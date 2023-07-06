@@ -90,10 +90,10 @@ body {
 }
 .contact-form__button {
   width: auto;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   background-color: black;
   color: rgb(238, 236, 236);
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 168, 82);
   margin-bottom: 1.5rem;
   transition: all 0.5s;
@@ -576,20 +576,30 @@ body {
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
-  width: 24rem;
+  width: 26rem;
   height: 42rem;
   border: solid 1px rgb(15, 15, 15);
   margin: 0 1.5rem 1.5rem 1.5rem;
+}
+@media (max-width: 768px) {
+  .project-details {
+    width: 24rem;
+  }
 }
 .project-details__screenshots-box {
   position: relative;
 }
 .project-details__screenshot-desktop {
   top: 0;
-  width: 24rem;
+  width: 26rem;
   height: 16rem;
   position: absolute;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .project-details__screenshot-desktop {
+    width: 24rem;
+  }
 }
 .project-details__screenshot-desktop__image {
   width: 100%;
@@ -597,11 +607,16 @@ body {
 }
 .project-details__screenshot-mobile {
   top: 11rem;
-  left: 14rem;
+  left: 17rem;
   width: 10rem;
   height: 19rem;
   z-index: 10;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .project-details__screenshot-mobile {
+    left: 14rem;
+  }
 }
 .project-details__screenshot-mobile__image {
   width: 100%;
@@ -618,27 +633,38 @@ body {
   margin: 1.5rem 0 0.6rem 0;
 }
 .project-details__description__paragraph {
-  width: 13rem;
+  width: 14rem;
   height: 4.5rem;
+}
+@media (max-width: 768px) {
+  .project-details__description__paragraph {
+    width: 10rem;
+  }
 }
 
 .project-links {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 90%;
+  width: 95%;
   padding-bottom: 1.5rem;
   margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .project-links {
+    width: 60%;
+  }
 }
 .project-links__github-link {
   text-decoration: none;
   font-size: 0.8rem;
   display: inline-block;
   color: rgb(238, 236, 236);
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 113, 168);
   margin-right: 0.3rem;
   margin-left: 0.3rem;
+  margin-bottom: 1rem;
   transition: all 1s;
 }
 .project-links__github-link:hover {
