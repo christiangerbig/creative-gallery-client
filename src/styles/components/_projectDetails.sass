@@ -8,7 +8,7 @@
   flex-direction: column
   width: 24rem
   @include respond-to("tablet")
-      width: 18rem
+      width: 17rem
   height: 42rem
   border: solid 1px $dark
   margin: 0 1.5rem 1.5rem 1.5rem
@@ -18,7 +18,7 @@
     top: 0
     width: 24rem
     @include respond-to("tablet")
-      width: 18rem
+      width: 17rem
     height: 15rem
     @include respond-to("tablet")
       height: 13rem
@@ -33,7 +33,7 @@
       top: 17rem
     left: 18rem
     @include respond-to("tablet")
-      left: 11rem
+      left: 10rem
     width: 8rem
     @include respond-to("tablet")
       width: 7rem
@@ -53,11 +53,14 @@
       left: 1rem
       right: 1rem
     &__project-name
+      width: 100%
+      @include respond-to("tablet")
+        width: 60%
       margin: 1.5rem 0 0.6rem 0
     &__paragraph
       width: 14rem
       @include respond-to("tablet")
-        width: 9.5rem
+        width: 8.5rem
       height: 4.5rem
       @include respond-to("tablet")
         height: 6.5rem

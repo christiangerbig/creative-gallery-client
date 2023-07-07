@@ -583,7 +583,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details {
-    width: 18rem;
+    width: 17rem;
   }
 }
 .project-details__screenshots-box {
@@ -598,7 +598,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__screenshot-desktop {
-    width: 18rem;
+    width: 17rem;
   }
 }
 @media (max-width: 768px) {
@@ -625,7 +625,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__screenshot-mobile {
-    left: 11rem;
+    left: 10rem;
   }
 }
 @media (max-width: 768px) {
@@ -650,7 +650,13 @@ body {
   padding-right: 1rem;
 }
 .project-details__description__project-name {
+  width: 100%;
   margin: 1.5rem 0 0.6rem 0;
+}
+@media (max-width: 768px) {
+  .project-details__description__project-name {
+    width: 60%;
+  }
 }
 .project-details__description__paragraph {
   width: 14rem;
@@ -658,7 +664,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__description__paragraph {
-    width: 9.5rem;
+    width: 8.5rem;
   }
 }
 @media (max-width: 768px) {
