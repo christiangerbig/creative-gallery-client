@@ -583,7 +583,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details {
-    width: 20rem;
+    width: 18rem;
   }
 }
 .project-details__screenshots-box {
@@ -598,7 +598,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__screenshot-desktop {
-    width: 20rem;
+    width: 18rem;
   }
 }
 @media (max-width: 768px) {
@@ -625,7 +625,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__screenshot-mobile {
-    left: 13rem;
+    left: 11rem;
   }
 }
 @media (max-width: 768px) {
@@ -658,7 +658,7 @@ body {
 }
 @media (max-width: 768px) {
   .project-details__description__paragraph {
-    width: 10rem;
+    width: 9.5rem;
   }
 }
 @media (max-width: 768px) {
