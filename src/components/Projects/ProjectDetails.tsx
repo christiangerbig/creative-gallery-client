@@ -52,7 +52,7 @@ const ProjectDetails = ({
             <ExternalLink
               path={gitHubClientPath}
               styleClass="project-links__github-link"
-              text={t("link.gitHubClient")}
+              text={`${t("link.gitHub")} ${gitHubServerPath ? "1" : ""}`}
             />
           </div>
           {gitHubServerPath && (
@@ -60,7 +60,7 @@ const ProjectDetails = ({
               <ExternalLink
                 path={gitHubServerPath}
                 styleClass="project-links__github-link"
-                text={t("link.gitHubServer")}
+                text={`${t("link.gitHub")} 2`}
               />
             </div>
           )}

@@ -21,6 +21,7 @@ import yarnLogo from "../images/Yarn-Logo.svg";
 import gitKrakenLogo from "../images/GitKraken-Logo.svg";
 import bitbucketLogo from "../images/Bitbucket-Logo.svg";
 import mantineLogo from "../images/Mantine-Logo.svg";
+import supabaseLogo from "../images/Supabase-Logo.svg";
 
 export const toolsLogos: string[] = [
   reactLogo,
@@ -37,6 +38,7 @@ export const toolsLogos: string[] = [
   bootstrapLogo,
   bulmaLogo,
   mongoDBLogo,
+  supabaseLogo,
   cloudinaryLogo,
   npmLogo,
   yarnLogo,
