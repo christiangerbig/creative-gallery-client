@@ -96,7 +96,8 @@ body {
   padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 168, 82);
   margin-bottom: 1.5rem;
-  transition: all 0.5s;
+  will-change: background-color;
+  transition: background-color 0.5s;
 }
 .contact-form__button:hover {
   background-color: rgb(50, 168, 82);
@@ -106,7 +107,8 @@ body {
   text-decoration: none;
   color: rgb(31, 111, 225);
   white-space: nowrap;
-  transition: all 0.5s;
+  will-change: color;
+  transition: color 0.5s;
 }
 .contact-link:hover {
   color: rgb(126, 172, 252);
@@ -308,7 +310,8 @@ body {
   border: solid 2px rgb(50, 168, 82);
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  transition: all 1s;
+  will-change: background-color;
+  transition: background-color 1s;
 }
 .modal-body__box__button:hover {
   background-color: rgb(50, 168, 82);
@@ -697,7 +700,8 @@ body {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 1rem;
-  transition: all 1s;
+  will-change: background-color;
+  transition: background-color 1s;
 }
 .project-links__github-link:hover {
   background-color: rgb(50, 113, 168);
@@ -737,7 +741,8 @@ body {
 .about__contact-link {
   text-decoration: none;
   color: rgb(31, 111, 225);
-  transition: all 0.5s;
+  will-change: color;
+  transition: color 0.5s;
 }
 .about__contact-link:hover {
   color: rgb(126, 172, 252);
@@ -825,7 +830,8 @@ body {
   border: solid 2px rgb(50, 168, 82);
   margin-top: 2rem;
   margin-bottom: 2rem;
-  transition: all 0.5s;
+  will-change: background-color;
+  transition: background-color 0.5s;
 }
 .not-found__get-back__link:hover {
   background-color: rgb(50, 168, 82);
