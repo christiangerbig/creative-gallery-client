@@ -14,7 +14,7 @@ export const trackerToolsGitHubPath: string =
 
 // Resume
 export const resumePath: string =
-  "https://www.dropbox.com/s/mxp54x73yfut1z9/CV-Gerbig.pdf?dl=0";
+  "https://www.dropbox.com/scl/fi/f8nsepvyi5y8pogtkar5h/CV-Gerbig.pdf?rlkey=6jlaxkifu6k9qw5cubntcaa0l&dl=0";
 
 // LinkedIn
 export const linkedInPath: string =
