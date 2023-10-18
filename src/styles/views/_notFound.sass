@@ -1,27 +1,26 @@
 @import "../base/variables"
 
 .not-found
-  color: $white
+  color: $black
   margin-top: 8rem
   animation: fade-page-in 1s forwards
   &__get-back
     display: flex
     justify-content: center
     align-items: center
-    background-color: $dark
-    border: solid $dark-grey 1px
     margin: 4rem
     &__link 
       text-decoration: none
       font-size: 0.9rem
       display: inline-block
-      color: $white
+      color: $black
       padding: 0.3rem 0.8rem
       border: solid 2px $light-green
       margin:
         top: 2rem
         bottom: 2rem
-      will-change: background-color
+      will-change: background-color, color
       transition: background-color 0.5s
       &:hover 
         background-color: $light-green
+        color: §white

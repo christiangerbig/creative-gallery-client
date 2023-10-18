@@ -10,7 +10,6 @@
   @include respond-to("tablet")
       width: 17rem
   height: 42rem
-  border: solid 1px $dark
   margin: 0 1.5rem 1.5rem 1.5rem
   &__screenshots-box
     position: relative
@@ -48,7 +47,7 @@
   &__description
     width: 14rem
     height: 10rem
-    color: $white
+    color: $black
     padding:
       left: 1rem
       right: 1rem
@@ -79,14 +78,15 @@
     text-decoration: none
     font-size: 0.8rem
     display: inline-block
-    color: $white
+    color: $black
     padding: 0.3rem 0.6rem
     border: solid 2px $blue
     margin:
       right: 0
       left: 0
       bottom: 1rem
-    will-change: background-color
-    transition: background-color 1s
+    will-change: background-color, color
+    transition: background-color, color 0.5s
     &:hover 
       background-color: $blue
+      color: $white

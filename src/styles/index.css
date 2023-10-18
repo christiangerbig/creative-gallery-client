@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fade-page-in {
   from {
     opacity: 0;
@@ -45,7 +46,8 @@
   font-style: normal;
 }
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   height: 100%;
   width: 100%;
   height: 100vh;
@@ -77,7 +79,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
   width: 100%;
-  background-color: rgb(238, 236, 236);
+  background-color: white;
   padding: 0.3rem;
   box-sizing: border-box;
   border: none;
@@ -91,8 +93,8 @@ body {
 .contact-form__button {
   width: auto;
   font-size: 0.8rem;
-  background-color: black;
-  color: rgb(238, 236, 236);
+  background-color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 168, 82);
   margin-bottom: 1.5rem;
@@ -101,6 +103,7 @@ body {
 }
 .contact-form__button:hover {
   background-color: rgb(50, 168, 82);
+  color: rgb(238, 236, 236);
 }
 
 .contact-link {
@@ -126,8 +129,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  color: rgb(238, 236, 236);
+  background-color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-left: 4.2rem;
@@ -162,6 +165,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 1.5rem;
+  color: rgb(0, 0, 0);
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .header {
@@ -310,8 +314,8 @@ body {
   border: solid 2px rgb(50, 168, 82);
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  will-change: background-color;
-  transition: background-color 1s;
+  will-change: background-color, color;
+  transition: background-color, color 0.5s;
 }
 .modal-body__box__button:hover {
   background-color: rgb(50, 168, 82);
@@ -581,7 +585,6 @@ body {
   flex-direction: column;
   width: 24rem;
   height: 42rem;
-  border: solid 1px rgb(15, 15, 15);
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 @media (max-width: 768px) {
@@ -648,7 +651,7 @@ body {
 .project-details__description {
   width: 14rem;
   height: 10rem;
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -694,23 +697,24 @@ body {
   text-decoration: none;
   font-size: 0.8rem;
   display: inline-block;
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding: 0.3rem 0.6rem;
   border: solid 2px rgb(50, 113, 168);
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 1rem;
-  will-change: background-color;
-  transition: background-color 1s;
+  will-change: background-color, color;
+  transition: background-color, color 0.5s;
 }
 .project-links__github-link:hover {
   background-color: rgb(50, 113, 168);
+  color: rgb(238, 236, 236);
 }
 
 .about {
   display: flex;
   flex-direction: column;
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   margin-top: 8rem;
   animation: fade-page-in 1s forwards;
 }
@@ -760,10 +764,8 @@ body {
   align-items: center;
   flex-direction: column;
   width: 30rem;
-  background-color: rgb(15, 15, 15);
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding: 0;
-  border: solid 1px rgb(15, 15, 15);
   margin: 4rem auto;
 }
 @media (max-width: 768px) {
@@ -809,7 +811,7 @@ body {
 }
 
 .not-found {
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   margin-top: 8rem;
   animation: fade-page-in 1s forwards;
 }
@@ -817,28 +819,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(15, 15, 15);
-  border: solid rgb(40, 40, 40) 1px;
   margin: 4rem;
 }
 .not-found__get-back__link {
   text-decoration: none;
   font-size: 0.9rem;
   display: inline-block;
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   padding: 0.3rem 0.8rem;
   border: solid 2px rgb(50, 168, 82);
   margin-top: 2rem;
   margin-bottom: 2rem;
-  will-change: background-color;
+  will-change: background-color, color;
   transition: background-color 0.5s;
 }
 .not-found__get-back__link:hover {
   background-color: rgb(50, 168, 82);
+  color: §white;
 }
 
 .projects {
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   margin-top: 8rem;
   animation: fade-page-in 1s forwards;
 }
@@ -851,7 +852,7 @@ body {
 }
 
 .tech-stack {
-  color: rgb(238, 236, 236);
+  color: rgb(0, 0, 0);
   margin-top: 8rem;
   animation: fade-page-in 1s forwards;
 }
